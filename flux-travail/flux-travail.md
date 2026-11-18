@@ -113,6 +113,11 @@ Pour chaque étape de flux de travail, l'apprenant est amené à créer un promp
 - **Liens relatifs** : Interdiction des liens absolus, utiliser uniquement des liens relatifs.
 - **Indexation** : Ajouter le prompt dans `prompts/prompts-index.yml` avec son `name` et sa `description`.
 
+### Références 
+
+- https://www.promptingguide.ai/fr
+
+
 ### Livrable 
 - `prompts/README.md`
 - `prompts/prompts-index.yml`
