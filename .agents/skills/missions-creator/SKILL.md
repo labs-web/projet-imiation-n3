@@ -26,10 +26,11 @@ Chaque mission générée dans `missions/` doit respecter :
   - Exécution directe sans plan si l'apprenant spécifie une tâche précise.
   - Audit des livrables et proposition d'un artefact plan si la demande est globale.
 - `## Structure du livrable` (template ou plan standard si génération de document)
-- `## Règles` (Français A1, termes techniques, aucun tableau Markdown, liens relatifs)
+- `## Règles spécifiques` (Optionnel : uniquement si contraintes techniques particulières propres à l'étape).
 
 ## 3. Règles de conception obligatoires
 - **Séparation consigne / données** : La mission ne contient jamais le travail à faire en dur ni de placeholder. Le travail est fourni par l'apprenant ou déduit de la conversation.
+- **Principe DRY et Héritage** : Ne jamais recopier les règles générales (Français A1, aucun tableau, liens relatifs) déjà formalisées dans `init-ia.mission.md` et `init-agent.mission.md`.
 - **Compacité stricte** : Rédiger la mission de façon la plus concise possible, sans texte superflu.
 - **Généricité** : 100% générique (applicable à tout projet informatique).
 - **Indexation** : Enregistrer obligatoirement la nouvelle mission dans `missions/missions-index.yml`.
