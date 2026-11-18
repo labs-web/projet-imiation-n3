@@ -8,7 +8,8 @@ Ce dossier regroupe tous les tutoriels d'apprentissage réalisés pour acquérir
 
 Les tutoriels sont organisés par domaine de formation puis par unité d'apprentissage :
 - `tutoriels/[slug-domaine]/` : Regroupe les tutoriels rattachés à un même domaine de compétence.
-- `tutoriels/[slug-domaine]/[slug-tutoriel]/` : Dossier spécifique d'un tutoriel contenant ses livrables complets.
+- `tutoriels/[slug-domaine]/[slug-ua]/` : Regroupe les tutoriels rattachés à une même unité d'apprentissage.
+- `tutoriels/[slug-domaine]/[slug-ua]/[slug-tutoriel]/` : Dossier spécifique d'un tutoriel contenant ses livrables complets.
 
 ---
 
