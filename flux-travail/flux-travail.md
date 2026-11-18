@@ -21,19 +21,27 @@ en suivan, les étape déja réaliser dans notre projet :
 
 
 
-## Création et initialisation de Projet 
+## 1. Création et initialisation de Projet 
 
 
-- Créer le projet 
-- git init
-- Création de fichier README.md qui contient la description de projet.
+### Pré-repquis d'apprentissage 
 
-### Livrable 
-- Dépôt github
-- README.md
+- Présentation de Projet d'imiation par le foramteur 
+
+### Tâches à réaliser 
+
+- **Tâche 1 : Initialisation locale** : Créer le projet, initialiser Git (`git init`) et créer le premier commit.
+- **Tâche 2 : Publication sur GitHub** :
+  - Publier le dépôt via GitHub CLI avec la commande : `gh repo create`.
+  - Si GitHub CLI n'est pas installé ou non connecté : réaliser le lab `lab-github : installation et utilisation de github CLI`.
+- **Tâche 3 : Rédaction du README.md** : Nettoyer et structurer le fichier `README.md` racine selon la structure standard.
+
+### Livrables 
+- Dépôt GitHub distant publié et accessible.
+- Fichier `README.md` racine propre et conforme.
 
 
-##  Création de prompt-creator.prompt.md 
+## 2. Init l'agent IA 
 
 
 ### Pré-repquis d'apprentissage 
@@ -45,11 +53,11 @@ Ce lab permet  à l'apprenant de savoire comment écrie des prompt, selon la mé
 
 ### Travail à réaliser
 
+Création de prompt-creator.prompt.md 
+
 
 on va créer au début le prompt : /prompts/1.init-projet.prompt.md, 
 puis aprés sa validation on va créer le prompt : /prompt/prompt-creator.prompt.md
-- 
-
 
 Créer le prompt qui permet de réaliser : init-projet 
 
@@ -72,7 +80,12 @@ Création d'un prompt qui permet d'initialisation un projet avec le fichier READ
 
 
 
-## Comment et noter les étape de Flux de travail 
+## 3. Flux de Travail  
+
+### Pré-repquis d'apprentissage 
+
+- Définition de flux de travail, son importance pour la réalisation d'un agnet IA.
+
 
 ### Travail réalisé
 Documentation de flux de travail, noter chaque étape de réalisation de projet en noter les élément suivant : 
@@ -80,9 +93,11 @@ Documentation de flux de travail, noter chaque étape de réalisation de projet 
 - Travail réalisé
 - Livrable 
 
-### Livrable 
-- Livrable : docs/flux-travail.md
+Comment et noter les étape de Flux de travail 
 
+### Livrable 
+- Livrable : flux-travail/flux-travail.md
+- prompt/flux-traval.prompt.md
 
 
 ## Création de prompt pour chaque étape de flux de travail 
@@ -90,6 +105,7 @@ Documentation de flux de travail, noter chaque étape de réalisation de projet 
 Pour chaque étape de flux de travail, l'apprenant est amené à créer un prompt pour que l'IA soit capable de réaliser les livrables d'un flux de travail.
 
 ### Règles pour concevoir un prompt :
+- **Séparation consigne / données** : Le prompt ne contient jamais le travail à faire en dur. Il définit uniquement les instructions et la structure attendue. Le travail à faire est apporté par l'apprenant ou déduit de la conversation.
 - **Nommage** : Chaque étape doit avoir un slug et le fichier doit se terminer par `.prompt.md` (format : `[numéro].[slug].prompt.md`).
 - **Compacité stricte** : Le prompt doit être le plus compact possible, uniquement pour expliquer la règle et la consigne à l'IA, sans texte superflu.
 - **Généricité** : Le prompt doit être générique et applicable à tout projet informatique.

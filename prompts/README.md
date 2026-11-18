@@ -38,6 +38,7 @@ Ce dossier regroupe :
 ## 4. Règles pour ajouter un nouveau prompt
 
 Lorsque vous créez un nouveau prompt pour une nouvelle étape du flux de travail :
+- **Séparation consigne / données** : le prompt ne contient jamais le travail à faire en dur. Il définit le cadre méthodologique. Le travail est fourni par l'apprenant ou déduit de la conversation.
 - Nommer le fichier au format `[numéro].[slug].prompt.md`.
 - Écrire le prompt de manière **générique** pour qu'il soit réutilisable sur d'autres projets.
 - Rédiger en français simple (niveau A1) avec le vocabulaire technique des développeurs.
