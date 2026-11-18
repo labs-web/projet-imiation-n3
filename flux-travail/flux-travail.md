@@ -12,7 +12,7 @@ Les projets suivent les démarches d'ingénierie logicielle : 2TUP, Design Think
 
 ### Base théorique et pratique
 - `lab-github` : Installation et utilisation de GitHub CLI (`gh repo create`).
-- `lab-git-branches` : Création et gestion des branches Git.
+- `lab-git` : Création et gestion des branches Git.
 
 ### Prérequis
 - Présentation du projet d'imitation par le formateur.
