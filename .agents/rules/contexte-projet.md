@@ -22,7 +22,17 @@ Ce document définit le cadre spécifique du projet pour l'Agent IA.
 
 ---
 
-## 3. Démarche d'ingénierie logicielle
+## 3. Stack technique de l'application
+
+- **Framework Backend** : Laravel (PHP).
+- **Frontend & Vues** : Blade, HTML5, CSS3, JavaScript.
+- **Base de données** : MySQL.
+- **Gestion de versions & Outils** : Git, GitHub CLI (`gh`).
+- **Intelligence Artificielle & Automatisation** : Agent Antigravity.
+
+---
+
+## 4. Démarche d'ingénierie logicielle
 
 L'apprenant et l'Agent IA appliquent les méthodes suivantes :
 - **Méthode par imitation** : Progression par étapes avec tutoriels, labs guidés et veilles technologiques.

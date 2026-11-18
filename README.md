@@ -32,10 +32,12 @@ Ce projet s'appuie sur la méthode par imitation pour guider l'apprenant pas à 
 ---
 
 ## 3. Stack technique
-- **Gestion de versions** : Git et GitHub CLI (`gh`).
+- **Framework Backend** : Laravel (PHP).
+- **Frontend & Vues** : Blade, HTML5, CSS3, JavaScript.
+- **Base de données** : MySQL.
+- **Gestion de versions & Outils** : Git et GitHub CLI (`gh`).
 - **Intelligence Artificielle & Automatisation** : Agent Antigravity (Skills natifs et règles Always-On).
 - **Documentation et Présentations** : Markdown standard et Marp.
-- **Technologies applicatives** : Stack web full-stack définie pour le Niveau 3.
 
 ---
 
