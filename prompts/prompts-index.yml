@@ -1,0 +1,6 @@
+- name: init-ia.prompt.md
+  description: Initialisation générale de l'IA avec le contexte du projet et les règles obligatoires.
+- name: init-agent.prompt.md
+  description: Workflow d'assistance et règles opérationnelles pour l'Agent IA outillé.
+- name: 1.init-projet.prompt.md
+  description: Nettoyer et structurer le fichier README.md du projet à partir d'un texte brut ou brouillon.
