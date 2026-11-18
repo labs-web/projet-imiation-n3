@@ -1,4 +1,4 @@
-# Initialisation générale de l'IA (`init-ia.prompt.md`)
+# Initialisation générale de l'IA (`init-ia.mission.md`)
 
 Ce document présente le contexte spécifique de notre projet ainsi que les règles générales obligatoires à respecter pour toutes les interactions avec l'IA (mode Chat ou mode Agent).
 

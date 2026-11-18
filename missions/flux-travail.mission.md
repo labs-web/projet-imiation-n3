@@ -1,8 +1,8 @@
-# Documentation du Flux de Travail (`flux-travail.prompt.md`)
+# Documentation du Flux de Travail (`flux-travail.mission.md`)
 
 Gérer, insérer et restructurer les étapes du flux de travail dans `flux-travail/flux-travail.md`.
 
-## Tâches de la capacité
+## Tâches de la mission
 - **Tâche 1 : Insérer une étape** :
   - À partir de la description rédigée par le concepteur, ou
   - À partir des livrables d'une étape déjà réalisée.

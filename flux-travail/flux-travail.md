@@ -6,6 +6,8 @@ Les projets suivent les démarches d'ingénierie logicielle : 2TUP, Design Think
 
 ---
 
+<!-- Sprint 1 -->
+
 ## 1. Création et initialisation du projet
 
 ### Prérequis
@@ -24,7 +26,7 @@ Les projets suivent les démarches d'ingénierie logicielle : 2TUP, Design Think
 ### Livrables
 - Dépôt GitHub distant publié et accessible.
 - Fichier `README.md` propre et conforme.
-- Prompt d'étape : `prompts/1.init-projet.prompt.md`.
+- Mission d'étape : `missions/1.init-projet.mission.md`.
 
 ---
 
@@ -34,18 +36,18 @@ Les projets suivent les démarches d'ingénierie logicielle : 2TUP, Design Think
 - Réalisation du lab : Prompt-Engineering (formulation de consignes, rôles et règles IA).
 
 ### Travail à faire
-- Définir le socle commun des règles et contexte du projet : `prompts/init-ia.prompt.md`.
-- Définir le protocole de fonctionnement de l'Agent IA : `prompts/init-agent.prompt.md`.
-- Créer la capacité de génération de prompts : `prompts/prompt-creator.prompt.md`.
-- Mettre en place le catalogue des capacités : `prompts/prompts-index.yml`.
-- Rédiger le guide d'utilisation du dossier : `prompts/README.md`.
+- Définir le socle commun des règles et contexte du projet : `missions/init-ia.mission.md`.
+- Définir le protocole de fonctionnement de l'Agent IA : `missions/init-agent.mission.md`.
+- Créer la mission de génération de missions : `missions/missions-creator.mission.md`.
+- Mettre en place le catalogue des missions : `missions/missions-index.yml`.
+- Rédiger le guide d'utilisation du dossier : `missions/README.md`.
 
 ### Livrables
-- `prompts/init-ia.prompt.md`
-- `prompts/init-agent.prompt.md`
-- `prompts/prompt-creator.prompt.md`
-- `prompts/prompts-index.yml`
-- `prompts/README.md`
+- `missions/init-ia.mission.md`
+- `missions/init-agent.mission.md`
+- `missions/missions-creator.mission.md`
+- `missions/missions-index.yml`
+- `missions/README.md`
 
 ---
 
@@ -57,12 +59,12 @@ Les projets suivent les démarches d'ingénierie logicielle : 2TUP, Design Think
 ### Travail à faire
 - Initialiser le document de suivi du flux de travail : `flux-travail/flux-travail.md`.
 - Formaliser la structure standardisée des étapes (`Priorité`, `Prérequis`, `Travail à faire`, `Livrables`).
-- Créer la capacité de gestion du flux : `prompts/flux-travail.prompt.md`.
+- Créer la mission de gestion du flux : `missions/flux-travail.mission.md`.
 - Rédiger le guide du dossier : `flux-travail/README.md`.
 
 ### Livrables
 - Fichier `flux-travail/flux-travail.md`.
-- Prompt d'étape : `prompts/flux-travail.prompt.md`.
+- Mission d'étape : `missions/flux-travail.mission.md`.
 - Guide pédagogique : `flux-travail/README.md`.
 
 ---

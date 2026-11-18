@@ -1,10 +1,10 @@
-- name: init-ia.prompt.md
+- name: init-ia.mission.md
   description: Initialisation générale de l'IA avec le contexte du projet et les règles obligatoires.
-- name: init-agent.prompt.md
+- name: init-agent.mission.md
   description: Workflow d'assistance et règles opérationnelles pour l'Agent IA outillé.
-- name: prompt-creator.prompt.md
-  description: Créer un nouveau prompt compact et générique pour une étape du flux de travail.
-- name: flux-travail.prompt.md
+- name: missions-creator.mission.md
+  description: Créer une nouvelle mission compacte et générique pour une étape du flux de travail.
+- name: flux-travail.mission.md
   description: Insérer une nouvelle étape ou restructurer le flux de travail selon le template standard.
-- name: 1.init-projet.prompt.md
+- name: 1.init-projet.mission.md
   description: Nettoyer et structurer le fichier README.md du projet à partir d'un texte brut ou brouillon.
