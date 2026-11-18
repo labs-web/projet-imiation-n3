@@ -12,4 +12,4 @@ En complément de `init-ia.prompt.md`, applique ce workflow et ces règles :
 ## Règles obligatoires
 - **Liens relatifs** : Jamais de liens absolus (`file:///`, chemins machine). Uniquement des liens relatifs (`./`, `../`).
 - **Généricité** : Tout prompt de travail créé doit être générique (seul `init-ia.prompt.md` porte le contexte projet).
-- **Compacité** : Rédiger des prompts strictement compacts, directs et sans texte superflu.
+- **Compacité** : Le prompt doit être le plus compact possible (uniquement pour expliquer la règle et la tâche à l'IA, sans texte superflu).

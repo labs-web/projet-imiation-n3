@@ -65,13 +65,20 @@ Documentation de flux de travail, noter chaque étape de réalisation de projet 
 
 ## Création de prompt pour chaque étape de flux de travail 
 
-pour chaque étape de flux de travail, l'apprnant est amenier à créer un prompt pour que l'IA soit capable de réaliser les livrable d'un flux de travail.
+Pour chaque étape de flux de travail, l'apprenant est amené à créer un prompt pour que l'IA soit capable de réaliser les livrables d'un flux de travail.
 
-chque étape de flix de travail doit avoire un slug
+### Règles pour concevoir un prompt :
+- **Nommage** : Chaque étape doit avoir un slug et le fichier doit se terminer par `.prompt.md` (format : `[numéro].[slug].prompt.md`).
+- **Compacité stricte** : Le prompt doit être le plus compact possible, uniquement pour expliquer la règle et la consigne à l'IA, sans texte superflu.
+- **Généricité** : Le prompt doit être générique et applicable à tout projet informatique.
+- **Format Markdown sans tableau** : Utiliser exclusivement des listes à puces pour faciliter la modification par l'apprenant.
+- **Liens relatifs** : Interdiction des liens absolus, utiliser uniquement des liens relatifs.
+- **Indexation** : Ajouter le prompt dans `prompts/prompts-index.yml` avec son `name` et sa `description`.
 
 ### Livrable 
-- prompts/README.md
-- prpmpts/slug.prompt.md
+- `prompts/README.md`
+- `prompts/prompts-index.yml`
+- `prompts/[slug].prompt.md`
 
 
 

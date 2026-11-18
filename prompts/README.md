@@ -46,5 +46,5 @@ Lorsque vous créez un nouveau prompt pour une nouvelle étape du flux de travai
 - Rédiger en français simple (niveau A1) avec le vocabulaire technique des développeurs.
 - **Interdiction formelle des tableaux Markdown** : utiliser uniquement des listes à puces (`- `) pour que les apprenants puissent facilement modifier les livrables.
 - **Interdiction des liens absolus** : utiliser exclusivement des liens relatifs.
-- **Compacité stricte** : rédiger le prompt de façon la plus compacte possible, en allant droit au but pour expliquer la règle et la tâche à l'IA sans texte superflu.
+- **Compacité stricte** : le prompt doit être le plus compact possible, uniquement pour expliquer la règle et la tâche à l'IA, sans texte superflu.
 - Ajouter le nouveau prompt dans [prompts-index.yml](./prompts-index.yml) avec son `name` et sa `description`.
