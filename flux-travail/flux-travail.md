@@ -8,13 +8,9 @@ La planification des sprints et l'identification du sprint actif sont centralis�
 
 ---
 
-# Sprint 1 : Initialisation, Cadrage & Première Fonctionnalité Laravel 12
+# Sprint 1
 
-### Compétence visée du Sprint 1
-Au terme de la session, l'apprenant est capable d'initialiser un dépôt distant avec GitHub CLI, d'outiller l'environnement avec un Agent IA et un catalogue de missions, de formaliser le processus de développement et le flux de travail, de cadrer le projet sous gouvernance Scrum, de modéliser le diagramme de contexte et les cas d'utilisation avec Mermaid, de gérer les tâches via le dossier `issues/`, et de développer sous Laravel 12 une page de consultation détaillée d'un article selon une architecture 2 couches (Contrôleur mince -> Classe Service) avec gabarit Blade responsive et gestion de l'erreur 404.
-
-### Déroulement de la session (Vue d'ensemble du travail réalisé)
-Initialiser le projet et publier sur GitHub, outiller l'environnement avec un Agent IA et son catalogue de missions, formaliser le flux de travail d'ingénierie, cadrer le périmètre sous gouvernance Scrum, modéliser le contexte et les cas d’utilisation, structurer le Product Backlog et les issues, concevoir l’architecture en 2 couches avant d’implémenter la consultation d’un article sous Laravel 12.
+Les objectifs détaillés et le déroulement du sprint sont définis dans [sprints/sprints.md](../sprints/sprints.md).
 
 ---
 
