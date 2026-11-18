@@ -50,12 +50,12 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 
 ### Travail à faire
 - Définir le socle commun des règles et contexte du projet : `.agents/rules/contexte-projet.md` et `.agents/rules/regles-generales.md`.
-- Mettre en place les skills agentiques dans `.agents/skills/` (`skills-dev`, `gestion-depot` avec ses missions `init-depot.md` et `init-projet.md`, `flux-travail`, `marp`, `realisation-ua-lab`).
+- Mettre en place les skills agentiques initiaux dans `.agents/skills/` : méta-gouvernance (`skills-dev`) et gestion du dépôt (`gestion-depot` avec ses missions `init-depot.md` et `init-projet.md`).
 - Configurer l'environnement agentique pour la découverte native des skills.
 
 ### Livrables
 - Règles permanentes : `.agents/rules/contexte-projet.md`, `.agents/rules/regles-generales.md`.
-- Skills agentiques configurés dans `.agents/skills/`.
+- Skills agentiques initiaux configurés : `.agents/skills/skills-dev/` et `.agents/skills/gestion-depot/` (avec `missions/init-depot.md` et `missions/init-projet.md`).
 
 ---
 
