@@ -10,17 +10,17 @@ Les projets suivent les démarches d'ingénierie logicielle : 2TUP, Design Think
 
 ## 1. Création et initialisation du projet
 
+### Base théorique et pratique
+- `lab-github` : Installation et utilisation de GitHub CLI (`gh repo create`).
+- `lab-git-branches` : Création et gestion des branches Git.
+
 ### Prérequis
 - Présentation du projet d'imitation par le formateur.
 - Notions de base sur Git et GitHub.
-  - Installation et utilisation de githuib CLI
-  - Création des branche
 
 ### Travail à faire
 - **Tâche 1 : Initialisation locale** : Créer le projet, initialiser Git (`git init`) et réaliser le premier commit.
-- **Tâche 2 : Publication sur GitHub** :
-  - Publier le dépôt via GitHub CLI avec la commande : `gh repo create`.
-  - Si GitHub CLI n'est pas installé ou non connecté : Il faut informer l'apprenant de réaliser réaliser le lab `lab-github : installation et utilisation de github CLI`.
+- **Tâche 2 : Publication sur GitHub** : Publier le dépôt via GitHub CLI avec la commande : `gh repo create`.
 - **Tâche 3 : Rédaction du README.md** : Nettoyer et structurer le fichier `README.md` racine selon le template standard.
 
 ### Livrables
@@ -30,10 +30,14 @@ Les projets suivent les démarches d'ingénierie logicielle : 2TUP, Design Think
 
 ---
 
-## Priorité 2. Initialisation de l'Agent IA
+## 2. Initialisation de l'Agent IA
+
+### Base théorique et pratique
+- `lab-prompt-engineering` : Formulation de consignes, rôles et règles IA.
+- `lab-agent-ia` : Architecture d'un agent outillé (règles et skills).
 
 ### Prérequis
-- Réalisation du lab : Prompt-Engineering (formulation de consignes, rôles et règles IA).
+- Dépôt Git initialisé et publié sur GitHub (Étape 1).
 
 ### Travail à faire
 - Définir le socle commun des règles et contexte du projet : `missions/init-ia.mission.md`.
@@ -51,14 +55,17 @@ Les projets suivent les démarches d'ingénierie logicielle : 2TUP, Design Think
 
 ---
 
-## Priorité 3. Documentation du Flux de Travail
+## 3. Documentation du Flux de Travail
+
+### Base théorique et pratique
+- `lab-flux-travail` : Démarche 2TUP, ingénierie logicielle et formalisation des étapes.
 
 ### Prérequis
-- Définition du flux de travail et de son rôle pour outiller l'Agent IA.
+- Initialisation de l'Agent IA terminée (Étape 2).
 
 ### Travail à faire
 - Initialiser le document de suivi du flux de travail : `flux-travail/flux-travail.md`.
-- Formaliser la structure standardisée des étapes (`Priorité`, `Prérequis`, `Travail à faire`, `Livrables`).
+- Formaliser la structure standardisée des étapes (`Base théorique et pratique`, `Prérequis`, `Travail à faire`, `Livrables`).
 - Créer la mission de gestion du flux : `missions/flux-travail.mission.md`.
 - Rédiger le guide du dossier : `flux-travail/README.md`.
 
@@ -69,10 +76,13 @@ Les projets suivent les démarches d'ingénierie logicielle : 2TUP, Design Think
 
 ---
 
-## Priorité 4. Création et Planification des issues
+## 4. Création et Planification des issues
+
+### Base théorique et pratique
+- `lab-scrum-planning` : Méthodologie Agile/Scrum, découpage en user stories et planification de sprint.
 
 ### Prérequis
-- Méthodologie Agile/Scrum et planification de sprint.
+- Documentation du flux de travail initialisée (Étape 3).
 
 ### Travail à faire
 - Créer l'espace de suivi des tâches du projet : dossier `issues/`.

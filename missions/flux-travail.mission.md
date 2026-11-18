@@ -18,10 +18,11 @@ Gérer, insérer et restructurer les étapes du flux de travail dans `flux-trava
 - **Si la demande est globale** : Analyser `flux-travail/flux-travail.md` et proposer les restructurations dans un artefact plan avant de modifier le fichier.
 
 ## Structure standard d'une étape de flux de travail
-- `## Priorité [N]. [Nom de l'étape]`
-- `### Prérequis` (tutoriels, labs, notions préalables requises)
+- `## [N]. [Nom de l'étape]`
+- `### Base théorique et pratique` (labs, tutoriels, apprentissages théoriques et pratiques)
+- `### Prérequis` (contexte, validations formateur, prérequis techniques)
 - `### Travail à faire` (liste ordonnée des actions et tâches concrètes)
-- `### Livrables` (fichiers, dépôts, issues produits)
+- `### Livrables` (fichiers, dépôts, issues, missions produits)
 
 ## Règles
 - Français A1 et vocabulaire technique professionnel de développeur.
