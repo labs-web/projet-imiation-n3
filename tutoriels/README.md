@@ -15,11 +15,12 @@ Les tutoriels sont organisés par domaine de formation puis par unité d'apprent
 
 ## 2. Structure type d'un tutoriel
 
-Chaque dossier de tutoriel contient obligatoirement :
-- `README.md` : Fiche synthétique du tutoriel (contexte, compétence visée, objectifs pédagogiques, index des livrables).
-- `[slug-tutoriel].md` : Document d'explication théorique et compte-rendu des ateliers pratiques.
+Chaque dossier de tutoriel contient :
+- `[slug-tutoriel].md` : Document d'explication théorique ou compte-rendu des ateliers pratiques.
 - `presentation-[slug-tutoriel].md` : Diaporama au format Marp Markdown pour la restitution orale.
-- Livrables pratiques spécifiques du tutoriel (ex : scripts, maquettes, code source).
+- Livrables pratiques spécifiques du tutoriel (ex : scripts, manifestes, code source).
+
+*(Note : Aucun fichier `README.md` n'est créé dans les sous-dossiers de tutoriels unitaires pour éviter toute redondance avec `[slug-tutoriel].md`).*
 
 ---
 
