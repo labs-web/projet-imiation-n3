@@ -41,3 +41,14 @@ Ces règles s'appliquent de manière générique à tous les fichiers et toutes 
   - Ce `README.md` doit expliquer clairement à l'apprenant :
     - Le rôle et l'objectif du dossier dans le projet.
     - Ce qu'il doit y mettre et comment l'utiliser.
+
+---
+
+## 5. Gestion des Sprints et branches Git
+
+- **Interdiction de travailler directement sur `main`** :
+  - Tout travail de développement, de documentation ou de sprint doit s'effectuer sur la branche dédiée au sprint actif (`sprint[N]`).
+- **Détection du sprint actif** :
+  - L'Agent IA consulte `sprints/sprints.md` pour identifier le sprint ayant le statut **Actif**.
+  - L'Agent IA ne doit jamais inventer de futurs sprints : seuls les sprints validés par le concepteur sont pris en compte.
+  - L'Agent IA vérifie sa branche Git (`git branch --show-current`) et bascule sur la branche correspondante (`git checkout -b sprint[N]`).
