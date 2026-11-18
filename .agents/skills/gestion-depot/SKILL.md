@@ -26,7 +26,7 @@ Piloter l'initialisation et la configuration de base du dépôt du projet, la d�
   - Vérifier la branche active (`git branch --show-current`). Si sur `main`, basculer ou créer la branche : `git checkout -b sprint[N]`.
 - **Tâche 2 : Initialisation locale Git & Publication GitHub** :
   - Si Git non initialisé : exécuter `git init`.
-  - Contrôler `gh auth status`. Si non connecté, orienter vers `lab-github`.
+  - Contrôler `gh auth status`. Si non connecté, orienter vers l'installation et l'authentification de GitHub CLI.
   - Publier le dépôt via GitHub CLI (`gh repo create`) et pousser la branche de sprint (`git push -u origin sprint[N]`).
 - **Tâche 3 : Rédaction et structuration du README.md racine** :
   - Analyser les notes brutes du projet.

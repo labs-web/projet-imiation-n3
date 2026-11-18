@@ -17,8 +17,8 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 ## 1. Création et initialisation du projet
 
 ### Base théorique et pratique
-- `lab-github` : Installation et utilisation de GitHub CLI (`gh repo create`).
-- `lab-git` : Création et gestion des branches Git (`sprint[N]`).
+- Installation et utilisation de GitHub CLI (`gh repo create`).
+- Création et gestion des branches Git (`sprint[N]`).
 
 ### Prérequis
 - Présentation du projet d'imitation par le formateur.
@@ -41,8 +41,8 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 ## 2. Initialisation de l'Agent IA
 
 ### Base théorique et pratique
-- `lab-prompt-engineering` : Formulation de consignes, rôles et règles IA.
-- `lab-agent-ia` : Architecture d'un agent outillé (règles et skills).
+- Formulation de consignes, rôles et règles IA.
+- Architecture d'un agent outillé (règles et skills).
 
 ### Prérequis
 - Dépôt Git initialisé et publié sur GitHub sur la branche `sprint1` (Étape 1).
@@ -64,7 +64,7 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 ## 3. Documentation du Flux de Travail
 
 ### Base théorique et pratique
-- `lab-flux-travail` : Démarche 2TUP, ingénierie logicielle et formalisation des étapes.
+- Démarche 2TUP, ingénierie logicielle et formalisation des étapes.
 
 ### Prérequis
 - Initialisation de l'Agent IA terminée (Étape 2).
@@ -85,7 +85,7 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 ## 4. Cadrage du projet sous gouvernance Scrum
 
 ### Base théorique et pratique
-- `lab-scrum-governance` : Piliers Scrum, rôles d'équipe et formalisation du sprint.
+- Piliers Scrum, rôles d'équipe et formalisation du sprint.
 
 ### Prérequis
 - Documentation du flux de travail initialisée (Étape 3).
@@ -105,7 +105,7 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 ## 5. Structuration du Product Backlog et des issues
 
 ### Base théorique et pratique
-- `lab-scrum-planning` : Découpage en user stories, priorisation et gestion du backlog.
+- Découpage en user stories, priorisation et gestion du backlog.
 
 ### Prérequis
 - Cadrage Scrum du Sprint 1 formalisé (Étape 4).
@@ -125,7 +125,7 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 ## 6. Modélisation du contexte et des cas d'utilisation avec Mermaid
 
 ### Base théorique et pratique
-- `lab-mermaid-uml` : Modélisation UML textuelle avec la syntaxe Mermaid (diagramme de contexte, cas d'utilisation).
+- Modélisation UML textuelle avec la syntaxe Mermaid (diagramme de contexte, cas d'utilisation).
 
 ### Prérequis
 - User stories et tâches du Sprint 1 recensées dans `issues/` (Étape 5).
@@ -144,7 +144,7 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 ## 7. Conception de l'architecture logicielle en 2 couches
 
 ### Base théorique et pratique
-- `lab-laravel-architecture` : Séparation des responsabilités, contrôleurs minces et classes Services.
+- Séparation des responsabilités, contrôleurs minces et classes Services.
 
 ### Prérequis
 - Modélisation des cas d'utilisation validée (Étape 6).
@@ -162,7 +162,7 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 ## 8. Implémentation sous Laravel 12 de la consultation d'un article
 
 ### Base théorique et pratique
-- `lab-laravel-blade` : Routage Laravel 12, injection de service, gabarit Blade responsive et gestion d'erreur HTTP 404.
+- Routage Laravel 12, injection de service, gabarit Blade responsive et gestion d'erreur HTTP 404.
 
 ### Prérequis
 - Conception de l'architecture 2 couches validée (Étape 7).
