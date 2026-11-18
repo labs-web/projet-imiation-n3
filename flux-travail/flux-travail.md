@@ -19,35 +19,38 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 ### Base théorique et pratique
 - Installation et utilisation de GitHub CLI (`gh repo create`).
 - Création et gestion des branches Git (`sprint[N]`).
+- Structuration modulaire d'un projet et de sa documentation (diaporamas Marp, rapport découpé en chapitres, automatisation Node.js).
 
 ### Prérequis
 - Présentation et cadrage du projet d'imitation par le formateur référent.
 
 ### Travail à faire
-- **Tâche 1 : Initialisation locale** : Créer le projet, initialiser Git (`git init`) et réaliser le premier commit.
-- **Tâche 2 : Publication sur GitHub** : Créer la branche `sprint1` et publier le dépôt via GitHub CLI avec la commande : `gh repo create`.
-- **Tâche 3 : Rédaction du README.md** : Nettoyer et structurer le fichier `README.md` racine selon le template standard Solicode en intégrant la stack technique (Laravel 12).
+- **Tâche 1 : Initialisation locale Git** : Créer le projet, configurer `.gitignore`, initialiser Git (`git init`) et réaliser le premier commit.
+- **Tâche 2 : Publication sur GitHub** : Créer la branche `sprint1` et publier le dépôt distant via GitHub CLI avec la commande : `gh repo create`.
+- **Tâche 3 : Rédaction du README.md** : Rédiger et structurer le fichier `README.md` racine selon le template standard Solicode en intégrant la stack technique (Laravel 12).
+- **Tâche 4 : Initialisation des présentations racine (`presentations/`)** : Créer le dossier racine `presentations/` avec son guide `README.md` et les fichiers diaporamas vides (`presentation-blog.md`, `presentation-sprint1.md`) au format Marp.
+- **Tâche 5 : Initialisation du rapport modulaire racine (`rapport/`)** : Créer le dossier racine `rapport/` avec son guide `README.md`, le document consolidé `rapport-blog.md`, le sous-dossier `chapitres/` avec les chapitres vides (`01-introduction.md`, `02-conclusion.md`), et le script Node.js autonome `concat-chapitres.js` pour la fusion automatique.
 
 ### Livrables
 - Dépôt GitHub distant publié et synchronisé sur la branche `sprint1`.
-- Fichier `README.md` propre et conforme.
-- Planification Scrum : `sprints/sprints.md` et `sprints/README.md`.
-- Skill outillé : `.agents/skills/gestion-depot/` (avec sa mission `missions/init-projet.md`).
+- Fichier `README.md` racine propre et conforme.
+- Dossier `presentations/` avec `presentation-blog.md`, `presentation-sprint1.md` et son `README.md`.
+- Dossier `rapport/` avec `rapport-blog.md`, sous-dossier `chapitres/`, script `concat-chapitres.js` et son `README.md`.
 
 ---
 
 ## 2. Initialisation de l'Agent IA
 
 ### Base théorique et pratique
-- Formulation de consignes, rôles et règles IA.
-- Architecture d'un agent outillé (règles et skills).
+- Formulation de consignes, rôles et règles Always-On.
+- Architecture modulaire d'un agent outillé (règles et catalogue de skills/missions).
 
 ### Prérequis
-- Dépôt Git initialisé et publié sur GitHub sur la branche `sprint1` (Étape 1).
+- Dépôt Git initialisé, `README.md` racine et arborescence documentaire créés sur la branche `sprint1` (Étape 1).
 
 ### Travail à faire
 - Définir le socle commun des règles et contexte du projet : `.agents/rules/contexte-projet.md` et `.agents/rules/regles-generales.md`.
-- Mettre en place les skills initiaux dans `.agents/skills/` (`skills-dev`, `gestion-depot`, `flux-travail`, `marp`, `realisation-ua-lab`).
+- Mettre en place les skills agentiques dans `.agents/skills/` (`skills-dev`, `gestion-depot` avec ses missions `init-depot.md` et `init-projet.md`, `flux-travail`, `marp`, `realisation-ua-lab`).
 - Configurer l'environnement agentique pour la découverte native des skills.
 
 ### Livrables

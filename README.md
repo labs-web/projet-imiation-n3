@@ -49,6 +49,8 @@ Ce projet s'appuie sur la méthode par imitation pour guider l'apprenant pas à 
 - [flux-travail/](./flux-travail/) : Référentiel méthodologique et suivi des étapes de réalisation du projet.
 - [issues/](./issues/) : Gestion et suivi des tâches et user stories du projet.
 - [labs/](./labs/) : Restitution des laboratoires théoriques et pratiques organisés par domaine et UA-Lab.
+- [presentations/](./presentations/) : Diaporamas Marp du projet et des restitutions de sprints.
+- [rapport/](./rapport/) : Rapport modulaire du projet, chapitres et script de compilation Node.js.
 - [sprints/](./sprints/) : Planification Scrum des sprints et suivi de la branche active.
 
 ---

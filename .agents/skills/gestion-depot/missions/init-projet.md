@@ -1,28 +1,32 @@
 # Mission : Initialisation du Projet (`init-projet.md`)
 
-Initialiser le projet en local, sécuriser la branche de sprint active, publier sur GitHub et structurer le fichier `README.md` racine.
+Structurer le fichier `README.md` racine et initialiser les dossiers documentaires racine (`presentations/` et `rapport/`).
 
 ## Tâches de la mission
-- **Tâche 1 : Détection du sprint et contrôle de branche** : Identifier le sprint actif (ex: `sprint1`) et s'assurer que le travail est positionné sur la branche de sprint correspondante (`git checkout -b sprint1` ou `git checkout sprint1`).
-- **Tâche 2 : Initialisation locale Git** : Vérifier ou exécuter l'initialisation Git locale (`git init`), configurer les exclusions (`.gitignore`) et réaliser le commit initial.
-- **Tâche 3 : Publication sur GitHub** :
-  - Publier le dépôt distant via GitHub CLI avec la commande : `gh repo create`.
-  - Si GitHub CLI (`gh`) n'est pas installé ou non connecté : inviter l'apprenant à s'authentifier avec `gh auth login`.
-- **Tâche 4 : Rédaction du README.md** : Reformuler et structurer le fichier `README.md` racine selon le gabarit des 6 sections ci-dessous en intégrant la stack technique du projet (Laravel 12).
+- **Tâche 1 : Rédaction du README.md racine** : Reformuler et structurer le fichier `README.md` racine selon le gabarit des 6 sections ci-dessous en intégrant la stack technique du projet (Laravel 12).
+- **Tâche 2 : Initialisation des présentations racine (`presentations/`)** :
+  - Créer le dossier racine `presentations/` avec son guide `presentations/README.md`.
+  - Créer les fichiers diaporamas vides : `presentation-blog.md` et `presentation-sprint1.md` au format Marp.
+- **Tâche 3 : Initialisation du rapport modulaire racine (`rapport/`)** :
+  - Créer le dossier racine `rapport/` avec son guide `rapport/README.md`.
+  - Créer le document consolidé cible : `rapport/rapport-blog.md`.
+  - Créer le sous-dossier `rapport/chapitres/` avec son guide `README.md` et les chapitres de base (`01-introduction.md`, `02-conclusion.md`).
+  - Mettre en place le script Node.js autonome `rapport/concat-chapitres.js` et le fichier `rapport/package.json` pour la fusion automatique des chapitres.
 
 ## Livrables attendus
-- Dépôt GitHub distant créé et synchronisé sur la branche de sprint active.
 - Fichier `README.md` racine conforme aux standards Solicode.
+- Dossier `presentations/` opérationnel avec ses deux diaporamas (`presentation-blog.md`, `presentation-sprint1.md`).
+- Dossier `rapport/` opérationnel avec son sous-dossier `chapitres/` et son script Node.js de fusion.
 
 ## Protocole d'audit et exécution
 - **Si l'apprenant précise une tâche** : Exécuter directement la tâche demandée sans créer d'artefact plan.
-- **Si aucune tâche n'est précisée** : Auditer l'état des livrables (branche active, Git local, publication GitHub, contenu du `README.md`) et proposer les actions à réaliser dans un artefact plan pour validation.
+- **Si aucune tâche n'est précisée** : Auditer l'état des livrables (`README.md`, `presentations/`, `rapport/`) et proposer les actions à réaliser dans un artefact plan pour validation.
 
 ## Structure du livrable (README.md)
 - `# [Nom du Projet]`
 - `## 1. Description du projet` (résumé en 2-3 phrases, utilisateurs cibles, déploiement)
 - `## 2. Contexte et Objectifs` (contexte Solicode Tanger, formateur, objectifs techniques et pédagogiques)
 - `## 3. Stack technique` (framework backend Laravel 12, frontend, base de données, Git)
-- `## 4. Organisation des dossiers` (rôle des dossiers : `.agents/`, `docs/`, `flux-travail/`, `issues/`, `labs/`, `sprints/`)
+- `## 4. Organisation des dossiers` (rôle des dossiers : `.agents/`, `docs/`, `flux-travail/`, `issues/`, `labs/`, `presentations/`, `rapport/`, `sprints/`)
 - `## 5. Méthodologie` (Agile/Scrum, 2TUP, Design Thinking, modélisation UML)
 - `## 6. Démarrage rapide` (prérequis, cloner, lancer)
