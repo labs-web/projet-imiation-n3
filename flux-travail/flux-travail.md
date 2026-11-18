@@ -6,7 +6,7 @@ Les projets suivent les démarches d'ingénierie logicielle : 2TUP, Design Think
 
 ---
 
-## Priorité 1. Création et initialisation du projet
+## 1. Création et initialisation du projet
 
 ### Prérequis
 - Présentation du projet d'imitation par le formateur.
