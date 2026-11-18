@@ -28,7 +28,7 @@ flowchart TD
 
 L'agent IA s'intègre nativement dans l'environnement de développement (IDE) :
 - **Perception contextuelle** : L'agent a accès aux fichiers du projet via des chemins relatifs.
-- **Cycle Perception $\rightarrow$ Décision $\rightarrow$ Action** :
+- **Cycle Perception → Décision → Action** :
   1. *Perception* : Lecture de la demande du concepteur et audit des fichiers existants.
   2. *Décision* : Établissement d'un plan d'intervention décomposé en micro-tâches.
   3. *Action* : Utilisation des outils dédiés (édition de code, exécution de scripts, contrôles qualité).
