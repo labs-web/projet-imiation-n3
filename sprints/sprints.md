@@ -1,6 +1,6 @@
 # Planification des Sprints
 
-Ce document enregistre les sprints du projet. Les nouveaux sprints sont ajoutés exclusivement par le concepteur.
+Ce document enregistre les sprints du projet. Les sprints suivants seront ajoutés ultérieurement, après chaque session de planification. Pour le moment, seul le Sprint 1 est actif avec la description détaillée du sprint actuel ci-dessous.
 
 ---
 

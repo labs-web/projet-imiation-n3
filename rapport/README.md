@@ -10,14 +10,8 @@ Le rapport est découpé en chapitres indépendants dans le sous-dossier `chapit
 ## 2. Compilation automatique
 Le fichier unique consolidé `rapport-blog.md` est généré automatiquement à partir des chapitres à l'aide d'un script Node.js :
 - Script : `concat-chapitres.js`
-- Commande directe :
-  ```bash
-  node concat-chapitres.js
-  ```
-- Ou via npm :
-  ```bash
-  npm run build
-  ```
+- Commande directe : `node concat-chapitres.js`
+- Ou via npm : `npm run build`
 
 ## 3. Guide de rédaction
 - Rédiger ou modifier les chapitres dans le sous-dossier `chapitres/`.
