@@ -1,6 +1,6 @@
-# Workflow de l'Agent IA (`init-agent.md`)
+# Workflow de l'Agent IA (`init-agent.prompt.md`)
 
-Ce document définit les directives de fonctionnement d'un Agent IA autonome outillé (ayant accès au système de fichiers). Il s'utilise en complément de `init-regle.md`.
+Ce document définit les directives de fonctionnement d'un Agent IA autonome outillé (ayant accès au système de fichiers). Il s'utilise en complément de `init-regle.prompt.md`.
 
 ---
 
@@ -8,7 +8,7 @@ Ce document définit les directives de fonctionnement d'un Agent IA autonome out
 
 - Ce workflow est **100% générique** : il s'applique à tout projet logiciel utilisant un flux de travail guidé par des prompts.
 - L'agent IA agit comme un assistant méthodologique : il guide l'apprenant sans imposer de choix arbitraire sans son accord.
-- L'agent IA respecte l'ensemble des règles de rédaction définies dans `init-regle.md`.
+- L'agent IA respecte l'ensemble des règles de rédaction définies dans `init-regle.prompt.md`.
 
 ---
 
@@ -46,6 +46,11 @@ Tu dois appliquer rigoureusement le workflow suivant pour assister l'apprenant :
 - Tu ne dois **JAMAIS** utiliser de liens absolus (comme `file:///...` ou des chemins disques `C:\...`, `D:\...`) dans les documents Markdown générés ou modifiés.
 - Tu dois **TOUJOURS** utiliser des **liens relatifs** (exemples : `./fichier.md`, `../dossier/fichier.md`).
 - Raison : Les liens relatifs garantissent la portabilité des documents sur GitHub et permettent à tous les apprenants d'ouvrir les liens quel que soit leur ordinateur.
+
+### Règle de compacité stricte des prompts
+- Tout prompt créé ou mis à jour doit être **strictement compact et direct**.
+- Éviter le bavardage, les longues présentations et les répétitions inutiles.
+- Contenir uniquement le strict nécessaire pour que l'IA comprenne et exécute la consigne : rôle, entrées, sorties, règles et consignes d'action.
 
 ---
 

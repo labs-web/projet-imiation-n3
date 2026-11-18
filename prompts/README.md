@@ -16,8 +16,8 @@ Dans la méthode par imitation et la démarche d'ingénierie logicielle :
 ## 2. Contenu du dossier
 
 - **Fichiers d'initialisation** :
-  - `init-regle.md` : Contient le contexte du projet et les règles obligatoires de rédaction (Français A1, vocabulaire technique professionnel, zéro tableau Markdown, un `README.md` par dossier).
-  - `init-agent.md` : Définit le protocole d'assistance pour un Agent IA autonome (analyse du besoin, proposition de prompt, attente de confirmation).
+  - `init-regle.prompt.md` : Contient le contexte du projet et les règles obligatoires de rédaction (Français A1, vocabulaire technique professionnel, zéro tableau Markdown, un `README.md` par dossier).
+  - `init-agent.prompt.md` : Définit le protocole d'assistance pour un Agent IA autonome (analyse du besoin, proposition de prompt, attente de confirmation).
 - **Catalogue des prompts** :
   - `prompts.md` : Liste descriptive de l'ensemble des prompts disponibles, lue par l'Agent IA.
 - **Prompts par étape de travail** :
@@ -28,11 +28,11 @@ Dans la méthode par imitation et la démarche d'ingénierie logicielle :
 ## 3. Comment utiliser les prompts ?
 
 ### Option A : Utilisation en mode Chat (ex. ChatGPT, Claude)
-- Étape 1 : Copier et envoyer le contenu de [init-regle.md](./init-regle.md) au début de la conversation.
+- Étape 1 : Copier et envoyer le contenu de [init-regle.prompt.md](./init-regle.prompt.md) au début de la conversation.
 - Étape 2 : Copier et envoyer le prompt correspondant à l'étape que vous souhaitez réaliser (ex : [1.init-projet.prompt.md](./1.init-projet.prompt.md)) avec vos données d'entrée.
 
 ### Option B : Utilisation en mode Agent (ex. Antigravity, Cursor)
-- Étape 1 : L'agent charge [init-regle.md](./init-regle.md) et [init-agent.md](./init-agent.md).
+- Étape 1 : L'agent charge [init-regle.prompt.md](./init-regle.prompt.md) et [init-agent.prompt.md](./init-agent.prompt.md).
 - Étape 2 : L'agent consulte automatiquement [prompts.md](./prompts.md).
 - Étape 3 : L'agent vous propose le prompt adapté et vous demande votre confirmation avant de travailler.
 
@@ -46,4 +46,5 @@ Lorsque vous créez un nouveau prompt pour une nouvelle étape du flux de travai
 - Rédiger en français simple (niveau A1) avec le vocabulaire technique des développeurs.
 - **Interdiction formelle des tableaux Markdown** : utiliser uniquement des listes à puces (`- `) pour que les apprenants puissent facilement modifier les livrables.
 - **Interdiction des liens absolus** : utiliser exclusivement des liens relatifs.
+- **Compacité stricte** : rédiger le prompt de façon la plus compacte possible, en allant droit au but pour expliquer la règle et la tâche à l'IA sans texte superflu.
 - Ajouter la description du nouveau prompt dans [prompts.md](./prompts.md).

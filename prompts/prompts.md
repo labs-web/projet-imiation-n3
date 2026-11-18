@@ -6,11 +6,11 @@ Ce fichier recense tous les prompts disponibles dans le flux de travail. Il est 
 
 ## Prompts d'initialisation
 
-- **Règles et contexte** : `init-regle.md`
+- **Règles et contexte** : `init-regle.prompt.md`
   - Rôle : Définit le contexte du projet et les règles obligatoires (Français A1, vocabulaire technique professionnel, zéro tableau Markdown, un `README.md` par dossier).
   - Utilisation : Utilisé seul pour le mode Chat, et comme première étape pour le mode Agent.
 
-- **Workflow de l'Agent IA** : `init-agent.md`
+- **Workflow de l'Agent IA** : `init-agent.prompt.md`
   - Rôle : Définit le protocole de l'agent (découverte via `prompts.md`, proposition de prompt, validation par l'apprenant, exécution).
   - Utilisation : Utilisé pour les agents autonomes outillés.
 
