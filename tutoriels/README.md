@@ -28,3 +28,9 @@ Chaque dossier de tutoriel contient :
 - Rédiger en français simple (niveau A1) avec le vocabulaire technique des développeurs.
 - Interdiction formelle des tableaux Markdown (utiliser exclusivement des listes à puces `- `).
 - Utiliser exclusivement des liens relatifs pour garantir la portabilité.
+
+---
+
+## 4. Domaines disponibles
+- [ia/](./ia/) : Domaine Ingénierie de Prompt et Agents IA.
+- [scrum/](./scrum/) : Domaine Méthode Agile Scrum.
