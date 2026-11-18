@@ -8,7 +8,7 @@ description: >-
 # Skill Gestion de Dépôt : /gestion-depot
 
 ## 1. Mission
-Piloter l'initialisation et la configuration de base du dépôt du projet, la détection du sprint actif et la standardisation du fichier `README.md` racine.
+Piloter l'initialisation et la configuration de base du dépôt du projet, la détection du sprint actif et la standardisation du fichier `README.md` racine (mission encapsulée `missions/init-projet.md`).
 
 ## 2. Déclenchement
 - **Quand l'activer** :
@@ -29,15 +29,15 @@ Piloter l'initialisation et la configuration de base du dépôt du projet, la d�
   - Contrôler `gh auth status`. Si non connecté, orienter vers l'installation et l'authentification de GitHub CLI.
   - Publier le dépôt via GitHub CLI (`gh repo create`) et pousser la branche de sprint (`git push -u origin sprint[N]`).
 - **Tâche 3 : Rédaction et structuration du README.md racine** :
-  - Analyser les notes brutes du projet.
+  - S'appuyer sur la mission interne `missions/init-projet.md`.
   - Rédiger le fichier `README.md` racine selon le modèle standard ci-dessous.
 
 ## 4. Structure standard du README.md racine
 - `# [Nom du Projet]`
 - `## 1. Description du projet` (résumé en 2-3 phrases, utilisateurs cibles, déploiement)
 - `## 2. Contexte et Objectifs` (contexte Solicode, Formateur, méthode par imitation, APC)
-- `## 3. Stack technique` (frontend, backend, base de données, Git, IA)
-- `## 4. Organisation des dossiers` (`.agents/`, `docs/`, `flux-travail/`, `issues/`, `labs/`, `missions/`, `sprints/`)
+- `## 3. Stack technique` (frontend, backend Laravel 12, base de données, Git, IA)
+- `## 4. Organisation des dossiers` (`.agents/`, `docs/`, `flux-travail/`, `issues/`, `labs/`, `sprints/`)
 - `## 5. Méthodologie` (Agile/Scrum, 2TUP, Design Thinking)
 - `## 6. Démarrage rapide` (prérequis, cloner, checkout branche sprint)
 

@@ -1,6 +1,6 @@
 # Flux de travail du projet
 
-Ce document formalise les étapes de réalisation du Projet d'imitation Niveau 3. Il sert de référentiel méthodologique pour guider l'apprenant (mode Chatbot) et l'Agent IA (mode Agent outillé) dans la production des livrables.
+Ce document formalise les étapes de réalisation du Projet d'imitation Niveau 3. Il sert de référentiel méthodologique pour guider l'apprenant et l'Agent IA dans la production des livrables.
 
 Les projets suivent les démarches d'ingénierie logicielle : 2TUP, Design Thinking, modélisation UML et méthodologie Agile/Scrum.
 
@@ -32,8 +32,7 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 - Dépôt GitHub distant publié et synchronisé sur la branche `sprint1`.
 - Fichier `README.md` propre et conforme.
 - Planification Scrum : `sprints/sprints.md` et `sprints/README.md`.
-- Skill outillé (mode agent) : `.agents/skills/gestion-depot/SKILL.md`.
-- Mission d'étape (mode chatbot) : `missions/1.init-projet.mission.md`.
+- Skill outillé : `.agents/skills/gestion-depot/` (avec sa mission `missions/init-projet.md`).
 
 ---
 
@@ -47,16 +46,13 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 - Dépôt Git initialisé et publié sur GitHub sur la branche `sprint1` (Étape 1).
 
 ### Travail à faire
-- Définir le socle commun des règles et contexte du projet : `.agents/rules/contexte-projet.md`, `.agents/rules/regles-generales.md` et `missions/init-ia.mission.md`.
-- Définir le protocole de fonctionnement de l'Agent IA : `missions/init-agent.mission.md`.
-- Mettre en place les skills initiaux dans `.agents/skills/` (`skills-dev`, `missions-creator`, `gestion-depot`, `marp`, `realisation-ua-lab`).
-- Mettre en place le catalogue des missions : `missions/missions-index.yml`.
-- Rédiger le guide d'utilisation du dossier : `missions/README.md`.
+- Définir le socle commun des règles et contexte du projet : `.agents/rules/contexte-projet.md` et `.agents/rules/regles-generales.md`.
+- Mettre en place les skills initiaux dans `.agents/skills/` (`skills-dev`, `gestion-depot`, `flux-travail`, `marp`, `realisation-ua-lab`).
+- Configurer l'environnement agentique pour la découverte native des skills.
 
 ### Livrables
 - Règles permanentes : `.agents/rules/contexte-projet.md`, `.agents/rules/regles-generales.md`.
 - Skills agentiques configurés dans `.agents/skills/`.
-- Missions d'initialisation : `missions/init-ia.mission.md`, `missions/init-agent.mission.md`, `missions/missions-creator.mission.md`, `missions/missions-index.yml`, `missions/README.md`.
 
 ---
 
@@ -71,12 +67,12 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 ### Travail à faire
 - Initialiser le document de suivi du flux de travail : `flux-travail/flux-travail.md`.
 - Formaliser la structure standardisée des étapes (`Base théorique et pratique`, `Prérequis`, `Travail à faire`, `Livrables`).
-- Créer la mission de gestion du flux : `missions/flux-travail.mission.md`.
+- Mettre en place le skill de gouvernance du flux : `.agents/skills/flux-travail/SKILL.md`.
 - Rédiger le guide du dossier : `flux-travail/README.md`.
 
 ### Livrables
 - Fichier `flux-travail/flux-travail.md`.
-- Mission d'étape : `missions/flux-travail.mission.md`.
+- Skill outillé : `.agents/skills/flux-travail/SKILL.md`.
 - Guide pédagogique : `flux-travail/README.md`.
 
 ---

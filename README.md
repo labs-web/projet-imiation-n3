@@ -44,12 +44,11 @@ Ce projet s'appuie sur la méthode par imitation pour guider l'apprenant pas à 
 ---
 
 ## 4. Organisation des dossiers
-- [.agents/](./.agents/) : Configuration native de l'Agent IA (règles permanentes et skills outillés).
+- [.agents/](./.agents/) : Configuration native de l'Agent IA (règles permanentes et skills outillés avec leurs missions).
 - [docs/](./docs/) : Documentation libre, recherches et veilles technologiques personnelles.
 - [flux-travail/](./flux-travail/) : Référentiel méthodologique et suivi des étapes de réalisation du projet.
 - [issues/](./issues/) : Gestion et suivi des tâches et user stories du projet.
 - [labs/](./labs/) : Restitution des laboratoires théoriques et pratiques organisés par domaine et UA-Lab.
-- [missions/](./missions/) : Catalogue des missions normalisées pour les apprenants en mode chatbot.
 - [sprints/](./sprints/) : Planification Scrum des sprints et suivi de la branche active.
 
 ---
