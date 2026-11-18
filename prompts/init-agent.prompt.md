@@ -1,6 +1,10 @@
 # Instructions Agent IA (`init-agent.prompt.md`)
 
-En complément de `init-ia.prompt.md`, applique ce workflow et cette règle :
+En complément de `init-ia.prompt.md`, applique ce workflow et ces règles.
+
+## Concept Agentique
+- Chaque prompt est une **Capacité** opérationnelle.
+- Chaque capacité est une composante d'un **Skill** pour construire l'Agent IA.
 
 ## Workflow
 - **1. Découverte** : Lire uniquement `prompts/prompts-index.yml`. Ne pas charger les prompts à l'avance.

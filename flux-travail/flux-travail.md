@@ -1,141 +1,83 @@
-# Flux de travail du projet 
+# Flux de travail du projet
 
+Ce document formalise les étapes de réalisation du Projet d'imitation Niveau 3. Il sert de référentiel méthodologique pour guider l'apprenant et l'Agent IA dans la production des livrables.
 
-## Introduction 
-Ce document, documenter et rapporter les étape de travail afin de noter tous les étape de réalisation de projet, afin de tracer un flux de travail de réalisation de Projet d'imitation de n3. 
+Les projets suivent les démarches d'ingénierie logicielle : 2TUP, Design Thinking, modélisation UML et méthodologie Agile/Scrum.
 
-Aprés l'analys de flux de travail on peut donner deux livrable : 
+---
 
-- Flux de travail pour la réalisation de projet d'imitation
-- Flux de travail de pour la réalisation de projet technique 
-- Flux de travail pour la réalisation de projet file rouge.
+## Priorité 1. Création et initialisation du projet
 
-puisque les trois proche se réaliser en suivant les les même méthode et processus de développemet 
+### Prérequis
+- Présentation du projet d'imitation par le formateur.
+- Notions de base sur Git et GitHub.
+  - Installation et utilisation de githuib CLI
+  - Création des branche
 
-- 2TUP
-- Dégine thinking
-- Conception Oprienté objet avec UML
-- Agiel - Scrum
-
-en suivan, les étape déja réaliser dans notre projet : 
-
-
-
-## 1. Création et initialisation de Projet 
-
-
-### Pré-repquis d'apprentissage 
-
-- Présentation de Projet d'imiation par le foramteur 
-
-### Tâches à réaliser 
-
-- **Tâche 1 : Initialisation locale** : Créer le projet, initialiser Git (`git init`) et créer le premier commit.
+### Travail à faire
+- **Tâche 1 : Initialisation locale** : Créer le projet, initialiser Git (`git init`) et réaliser le premier commit.
 - **Tâche 2 : Publication sur GitHub** :
   - Publier le dépôt via GitHub CLI avec la commande : `gh repo create`.
-  - Si GitHub CLI n'est pas installé ou non connecté : réaliser le lab `lab-github : installation et utilisation de github CLI`.
-- **Tâche 3 : Rédaction du README.md** : Nettoyer et structurer le fichier `README.md` racine selon la structure standard.
+  - Si GitHub CLI n'est pas installé ou non connecté : Il faut informer l'apprenant de réaliser réaliser le lab `lab-github : installation et utilisation de github CLI`.
+- **Tâche 3 : Rédaction du README.md** : Nettoyer et structurer le fichier `README.md` racine selon le template standard.
 
-### Livrables 
+### Livrables
 - Dépôt GitHub distant publié et accessible.
-- Fichier `README.md` racine propre et conforme.
+- Fichier `README.md` propre et conforme.
+- Prompt d'étape : `prompts/1.init-projet.prompt.md`.
 
+---
 
-## 2. Init l'agent IA 
+## Priorité 2. Initialisation de l'Agent IA
 
+### Prérequis
+- Réalisation du lab : Prompt-Engineering (formulation de consignes, rôles et règles IA).
 
-### Pré-repquis d'apprentissage 
+### Travail à faire
+- Définir le socle commun des règles et contexte du projet : `prompts/init-ia.prompt.md`.
+- Définir le protocole de fonctionnement de l'Agent IA : `prompts/init-agent.prompt.md`.
+- Créer la capacité de génération de prompts : `prompts/prompt-creator.prompt.md`.
+- Mettre en place le catalogue des capacités : `prompts/prompts-index.yml`.
+- Rédiger le guide d'utilisation du dossier : `prompts/README.md`.
 
-Réalisation de lab : Prompt-Engineering 
-
-Ce lab permet  à l'apprenant de savoire comment écrie des prompt, selon la méthode RIO.
-
-
-### Travail à réaliser
-
-Création de prompt-creator.prompt.md 
-
-
-on va créer au début le prompt : /prompts/1.init-projet.prompt.md, 
-puis aprés sa validation on va créer le prompt : /prompt/prompt-creator.prompt.md
-
-Créer le prompt qui permet de réaliser : init-projet 
-
-
-
-Création d'un prompt qui permet d'initialisation un projet avec le fichier READE.md 
-
-- input : fichier READE.md qui contient la description et le contexte de projet 
-- output : Fichie READE.md : clean et reformuler selon la strcutre valide
-- règle : 
-  - Le niveau de français A1
-  - Utilisation des mots technique profesionnelle de développeur, même si le niveau est A1
-
-
-
-### Livrable 
-
-/prompts/1.init-projet.prompt.md
-/prompt/prompt-creator.prompt.md
-
-
-
-## 3. Flux de Travail  
-
-### Pré-repquis d'apprentissage 
-
-- Définition de flux de travail, son importance pour la réalisation d'un agnet IA.
-
-
-### Travail réalisé
-Documentation de flux de travail, noter chaque étape de réalisation de projet en noter les élément suivant : 
-
-- Travail réalisé
-- Livrable 
-
-Comment et noter les étape de Flux de travail 
-
-### Livrable 
-- Livrable : flux-travail/flux-travail.md
-- prompt/flux-traval.prompt.md
-
-
-## Création de prompt pour chaque étape de flux de travail 
-
-Pour chaque étape de flux de travail, l'apprenant est amené à créer un prompt pour que l'IA soit capable de réaliser les livrables d'un flux de travail.
-
-### Règles pour concevoir un prompt :
-- **Séparation consigne / données** : Le prompt ne contient jamais le travail à faire en dur. Il définit uniquement les instructions et la structure attendue. Le travail à faire est apporté par l'apprenant ou déduit de la conversation.
-- **Nommage** : Chaque étape doit avoir un slug et le fichier doit se terminer par `.prompt.md` (format : `[numéro].[slug].prompt.md`).
-- **Compacité stricte** : Le prompt doit être le plus compact possible, uniquement pour expliquer la règle et la consigne à l'IA, sans texte superflu.
-- **Généricité** : Le prompt doit être générique et applicable à tout projet informatique.
-- **Format Markdown sans tableau** : Utiliser exclusivement des listes à puces pour faciliter la modification par l'apprenant.
-- **Liens relatifs** : Interdiction des liens absolus, utiliser uniquement des liens relatifs.
-- **Indexation** : Ajouter le prompt dans `prompts/prompts-index.yml` avec son `name` et sa `description`.
-
-### Références 
-
-- https://www.promptingguide.ai/fr
-
-
-### Livrable 
-- `prompts/README.md`
+### Livrables
+- `prompts/init-ia.prompt.md`
+- `prompts/init-agent.prompt.md`
+- `prompts/prompt-creator.prompt.md`
 - `prompts/prompts-index.yml`
-- `prompts/[slug].prompt.md`
+- `prompts/README.md`
 
+---
 
+## Priorité 3. Documentation du Flux de Travail
 
-## 3. Création et Planificiation des issues 
+### Prérequis
+- Définition du flux de travail et de son rôle pour outiller l'Agent IA.
 
-Pendant la réalisation de projet on peut avorie des tâche qui ne sont pas suive par l'application Active LMS. ou l'apprenant veul créer des tâche ou le chef de projet a demande un travail qui n'est pas suivant par l'application Active LMS. dans ce cas l'apprenant est amenier à créer des issues. 
+### Travail à faire
+- Initialiser le document de suivi du flux de travail : `flux-travail/flux-travail.md`.
+- Formaliser la structure standardisée des étapes (`Priorité`, `Prérequis`, `Travail à faire`, `Livrables`).
+- Créer la capacité de gestion du flux : `prompts/flux-travail.prompt.md`.
+- Rédiger le guide du dossier : `flux-travail/README.md`.
 
-ces issues doit être valider par le formateur avant de les déposer dnas le dépôt github. 
+### Livrables
+- Fichier `flux-travail/flux-travail.md`.
+- Prompt d'étape : `prompts/flux-travail.prompt.md`.
+- Guide pédagogique : `flux-travail/README.md`.
 
-###  Livrable 
+---
 
-- issues/README.md
-- isses/issues-closes
-- issues/issues-à-valider.md
-- issues/issues-open.md
+## Priorité 4. Création et Planification des issues
 
+### Prérequis
+- Méthodologie Agile/Scrum et planification de sprint.
 
+### Travail à faire
+- Créer l'espace de suivi des tâches du projet : dossier `issues/`.
+- Recenser les tâches hors LMS ou demandées par le chef de projet.
+- Organiser les issues par statut (`open`, `à-valider`, `closes`).
+- Soumettre les issues à la validation du formateur avant dépôt sur GitHub.
+
+### Livrables
+- Guide pédagogique : `issues/README.md`.
+- Fichiers de suivi des tâches : `issues/issues-open.md`, `issues/issues-à-valider.md`, `issues/issues-closes.md`.

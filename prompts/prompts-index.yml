@@ -4,5 +4,7 @@
   description: Workflow d'assistance et règles opérationnelles pour l'Agent IA outillé.
 - name: prompt-creator.prompt.md
   description: Créer un nouveau prompt compact et générique pour une étape du flux de travail.
+- name: flux-travail.prompt.md
+  description: Insérer une nouvelle étape ou restructurer le flux de travail selon le template standard.
 - name: 1.init-projet.prompt.md
   description: Nettoyer et structurer le fichier README.md du projet à partir d'un texte brut ou brouillon.
