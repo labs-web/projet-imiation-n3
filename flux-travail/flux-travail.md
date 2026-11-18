@@ -33,7 +33,26 @@ en suivan, les étape déja réaliser dans notre projet :
 - README.md
 
 
-## Créer le prompt qui permet de réaliser : init-projet 
+##  Création de prompt-creator.prompt.md 
+
+
+### Pré-repquis d'apprentissage 
+
+Réalisation de lab : Prompt-Engineering 
+
+Ce lab permet  à l'apprenant de savoire comment écrie des prompt, selon la méthode RIO.
+
+
+### Travail à réaliser
+
+
+on va créer au début le prompt : /prompts/1.init-projet.prompt.md, 
+puis aprés sa validation on va créer le prompt : /prompt/prompt-creator.prompt.md
+- 
+
+
+Créer le prompt qui permet de réaliser : init-projet 
+
 
 
 Création d'un prompt qui permet d'initialisation un projet avec le fichier READE.md 
@@ -44,9 +63,12 @@ Création d'un prompt qui permet d'initialisation un projet avec le fichier READ
   - Le niveau de français A1
   - Utilisation des mots technique profesionnelle de développeur, même si le niveau est A1
 
+
+
 ### Livrable 
 
 /prompts/1.init-projet.prompt.md
+/prompt/prompt-creator.prompt.md
 
 
 

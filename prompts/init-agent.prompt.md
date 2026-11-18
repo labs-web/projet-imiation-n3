@@ -9,7 +9,5 @@ En complément de `init-ia.prompt.md`, applique ce workflow et ces règles :
 - **4. Exécution** : Après accord, charger et exécuter le fichier prompt validé (`prompts/[nom].prompt.md`).
 - **5. Affichage** : Toujours indiquer le prompt actif (ex : `Prompt actif : 1.init-projet.prompt.md`).
 
-## Règles obligatoires
+## Règle obligatoire
 - **Liens relatifs** : Jamais de liens absolus (`file:///`, chemins machine). Uniquement des liens relatifs (`./`, `../`).
-- **Généricité** : Tout prompt de travail créé doit être générique (seul `init-ia.prompt.md` porte le contexte projet).
-- **Compacité** : Le prompt doit être le plus compact possible (uniquement pour expliquer la règle et la tâche à l'IA, sans texte superflu).

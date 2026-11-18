@@ -13,28 +13,25 @@ Dans la méthode par imitation et la démarche d'ingénierie logicielle :
 
 ---
 
-## 2. Contenu du dossier
+## 2. Organisation du dossier
 
-- **Fichiers d'initialisation** :
-  - `init-ia.prompt.md` : Contient le contexte du projet et les règles générales obligatoires (Français A1, vocabulaire technique professionnel, zéro tableau Markdown, liens relatifs, un `README.md` par dossier).
-  - `init-agent.prompt.md` : Définit le protocole d'assistance pour un Agent IA autonome (analyse du besoin, proposition de prompt, attente de confirmation, généricité et compacité).
-- **Catalogue des prompts** :
-  - `prompts-index.yml` : Index au format YAML contenant la liste des prompts (`name` et `description`), lu par l'Agent IA.
-- **Prompts par étape de travail** :
-  - Fichiers nommés selon le format `[numéro].[slug].prompt.md` (exemple : `1.init-projet.prompt.md`).
+Ce dossier regroupe :
+- Les prompts d'initialisation pour cadrer les échanges avec l'IA.
+- L'index YAML (`prompts-index.yml`) qui référence l'ensemble des prompts disponibles.
+- Les prompts outillés pour réaliser les étapes du flux de travail.
 
 ---
 
 ## 3. Comment utiliser les prompts ?
 
 ### Option A : Utilisation en mode Chat (ex. ChatGPT, Claude)
-- Étape 1 : Copier et envoyer le contenu de [init-ia.prompt.md](./init-ia.prompt.md) au début de la conversation.
-- Étape 2 : Copier et envoyer le prompt correspondant à l'étape que vous souhaitez réaliser (ex : [1.init-projet.prompt.md](./1.init-projet.prompt.md)) avec vos données d'entrée.
+- Étape 1 : Copier et envoyer le prompt d'initialisation générale (`init-ia.prompt.md`) au début de la conversation.
+- Étape 2 : Choisir dans [prompts-index.yml](./prompts-index.yml) le prompt de l'étape à réaliser et l'envoyer avec vos données de travail.
 
 ### Option B : Utilisation en mode Agent (ex. Antigravity, Cursor)
-- Étape 1 : L'agent charge [init-ia.prompt.md](./init-ia.prompt.md) et [init-agent.prompt.md](./init-agent.prompt.md).
-- Étape 2 : L'agent consulte automatiquement [prompts-index.yml](./prompts-index.yml).
-- Étape 3 : L'agent vous propose le prompt adapté et vous demande votre confirmation avant de travailler.
+- Étape 1 : L'agent charge `init-ia.prompt.md` et `init-agent.prompt.md`.
+- Étape 2 : L'agent consulte automatiquement [prompts-index.yml](./prompts-index.yml) pour identifier le prompt adapté.
+- Étape 3 : Valider la proposition de l'agent pour lancer l'exécution de l'étape.
 
 ---
 
