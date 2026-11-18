@@ -1,9 +1,11 @@
 # Mission : Initialisation du Projet (`init-projet.md`)
 
-Structurer le fichier `README.md` racine et initialiser les dossiers documentaires racine (`presentations/` et `rapport/`).
+Structurer le fichier `README.md` racine, initialiser le dossier du code source (`src/`) et les dossiers documentaires racine (`presentations/` et `rapport/`).
 
 ## Tâches de la mission
-- **Tâche 1 : Rédaction du README.md racine** : Reformuler et structurer le fichier `README.md` racine selon le gabarit des 6 sections ci-dessous en intégrant la stack technique du projet (Laravel 12).
+- **Tâche 1 : Initialisation du dossier applicatif (`src/`) et README.md racine** :
+  - Créer le dossier `src/` avec son guide `src/README.md` pour héberger le code source Laravel 12.
+  - Reformuler et structurer le fichier `README.md` racine selon le gabarit des 6 sections ci-dessous en intégrant la stack technique du projet (Laravel 12).
 - **Tâche 2 : Initialisation des présentations racine (`presentations/`)** :
   - Créer le dossier racine `presentations/` avec son guide `presentations/README.md`.
   - Créer les fichiers diaporamas vides : `presentation-blog.md` et `presentation-sprint1.md` au format Marp.
@@ -15,6 +17,7 @@ Structurer le fichier `README.md` racine et initialiser les dossiers documentair
 
 ## Livrables attendus
 - Fichier `README.md` racine conforme aux standards Solicode.
+- Dossier du code source applicatif `src/` prêt avec son `README.md`.
 - Dossier `presentations/` opérationnel avec ses deux diaporamas (`presentation-blog.md`, `presentation-sprint1.md`).
 - Dossier `rapport/` opérationnel avec son sous-dossier `chapitres/` et son script Node.js de fusion.
 
@@ -27,6 +30,6 @@ Structurer le fichier `README.md` racine et initialiser les dossiers documentair
 - `## 1. Description du projet` (résumé en 2-3 phrases, utilisateurs cibles, déploiement)
 - `## 2. Contexte et Objectifs` (contexte Solicode Tanger, formateur, objectifs techniques et pédagogiques)
 - `## 3. Stack technique` (framework backend Laravel 12, frontend, base de données, Git)
-- `## 4. Organisation des dossiers` (rôle des dossiers : `.agents/`, `docs/`, `flux-travail/`, `issues/`, `labs/`, `presentations/`, `rapport/`, `sprints/`)
+- `## 4. Organisation des dossiers` (rôle des dossiers : `.agents/`, `docs/`, `flux-travail/`, `issues/`, `presentations/`, `rapport/`, `sprints/`, `src/`, `tutoriels/`)
 - `## 5. Méthodologie` (Agile/Scrum, 2TUP, Design Thinking, modélisation UML)
 - `## 6. Démarrage rapide` (prérequis, cloner, lancer)

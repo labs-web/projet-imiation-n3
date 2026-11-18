@@ -25,7 +25,7 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 - Présentation et cadrage du projet d'imitation par le formateur référent.
 
 ### Travail à faire
-- **Tâche 1 : Initialisation locale Git** : Créer le projet, configurer `.gitignore`, initialiser Git (`git init`) et réaliser le premier commit.
+- **Tâche 1 : Initialisation locale Git et structure** : Créer le projet, configurer `.gitignore`, initialiser le dossier du code source `src/`, initialiser Git (`git init`) et réaliser le premier commit.
 - **Tâche 2 : Publication sur GitHub** : Créer la branche `sprint1` et publier le dépôt distant via GitHub CLI avec la commande : `gh repo create`.
 - **Tâche 3 : Rédaction du README.md** : Rédiger et structurer le fichier `README.md` racine selon le template standard Solicode en intégrant la stack technique (Laravel 12).
 - **Tâche 4 : Initialisation des présentations racine (`presentations/`)** : Créer le dossier racine `presentations/` avec son guide `README.md` et les fichiers diaporamas vides (`presentation-blog.md`, `presentation-sprint1.md`) au format Marp.
@@ -34,6 +34,7 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 ### Livrables
 - Dépôt GitHub distant publié et synchronisé sur la branche `sprint1`.
 - Fichier `README.md` racine propre et conforme.
+- Dossier du code source de l'application : `src/` avec son `README.md`.
 - Dossier `presentations/` avec `presentation-blog.md`, `presentation-sprint1.md` et son `README.md`.
 - Dossier `rapport/` avec `rapport-blog.md`, sous-dossier `chapitres/`, script `concat-chapitres.js` et son `README.md`.
 
@@ -166,14 +167,14 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 - Conception de l'architecture 2 couches validée (Étape 7).
 
 ### Travail à faire
-- Configurer la route de consultation d'un article dans Laravel 12.
-- Implémenter le contrôleur mince `ArticleController` injectant `ArticleService`.
-- Développer la classe `ArticleService` pour la logique de récupération des données d'article.
+- Configurer la route de consultation d'un article dans `src/routes/web.php`.
+- Implémenter le contrôleur mince `ArticleController` injectant `ArticleService` dans `src/app/Http/Controllers/`.
+- Développer la classe `ArticleService` pour la logique de récupération des données dans `src/app/Services/`.
 - Gérer explicitement l'exception de ressource introuvable avec renvoi d'une erreur 404 propre.
-- Créer le gabarit Blade responsive pour l'affichage détaillé de l'article.
+- Créer le gabarit Blade responsive pour l'affichage détaillé de l'article dans `src/resources/views/`.
 - Vérifier manuellement le bon affichage responsive et le comportement en cas d'article inexistant.
 
 ### Livrables
-- Code source Laravel 12 : Route, Contrôleur mince, Classe Service et vue Blade responsive.
+- Code source Laravel 12 dans `src/` : Route, Contrôleur mince, Classe Service et vue Blade responsive.
 - Gestion fonctionnelle de l'erreur 404.
 - Page de consultation détaillée d'un article opérationnelle.

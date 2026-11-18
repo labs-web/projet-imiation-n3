@@ -2,7 +2,7 @@
 name: realisation-ua-lab
 description: >-
   Réalise la partie théorique et la partie pratique d'un UA-Lab et dépose les livrables
-  normalisés dans labs/[slug-domaine]/[slug-ua-lab]/ avec documentation et présentation Marp.
+  normalisés dans tutoriels/[slug-domaine]/[slug-ua-lab]/ avec documentation et présentation Marp.
 ---
 
 # Skill Réalisation : /realisation-ua-lab
@@ -18,7 +18,7 @@ Prendre en charge la réalisation complète d'un **UA-Lab** (bases théoriques e
   - Pour une tâche de code propre à l'application du projet (utiliser les missions d'étapes).
 
 ## 3. Arborescence et livrables cibles
-Tous les livrables sont déposés dans : `labs/[slug-domaine]/[slug-ua-lab]/`
+Tous les livrables sont déposés dans : `tutoriels/[slug-domaine]/[slug-ua-lab]/`
 
 Chaque UA-Lab produit obligatoirement 4 types de livrables :
 - `README.md` : Fiche synthétique du lab (compétence, domaine, objectifs, index des livrables).

@@ -1,24 +1,24 @@
-# Dossier des Laboratoires (`labs/`)
+# Dossier des Tutoriels (`tutoriels/`)
 
-Ce dossier regroupe tous les laboratoires d'apprentissage (UA-Labs) réalisés pour acquérir les bases théoriques et pratiques nécessaires au projet.
+Ce dossier regroupe tous les tutoriels d'apprentissage réalisés pour acquérir les bases théoriques et pratiques nécessaires au projet.
 
 ---
 
 ## 1. Organisation du dossier
 
-Les laboratoires sont organisés par domaine de formation puis par unité d'apprentissage :
-- `labs/[slug-domaine]/` : Regroupe les UA-Labs rattachés à un même domaine de compétence.
-- `labs/[slug-domaine]/[slug-ua-lab]/` : Dossier spécifique d'un UA-Lab contenant ses livrables complets.
+Les tutoriels sont organisés par domaine de formation puis par unité d'apprentissage :
+- `tutoriels/[slug-domaine]/` : Regroupe les tutoriels rattachés à un même domaine de compétence.
+- `tutoriels/[slug-domaine]/[slug-tutoriel]/` : Dossier spécifique d'un tutoriel contenant ses livrables complets.
 
 ---
 
-## 2. Structure type d'un UA-Lab
+## 2. Structure type d'un tutoriel
 
-Chaque dossier d'UA-Lab contient obligatoirement :
-- `README.md` : Fiche synthétique de l'UA-Lab (contexte, compétence visée, objectifs pédagogiques, index des tutoriels).
-- `[slug-ua-lab].md` : Document d'explication théorique et compte-rendu des ateliers pratiques.
-- `presentation-[slug-ua-lab].md` : Diaporama au format Marp Markdown pour la restitution orale.
-- Livrables pratiques spécifiques du laboratoire (ex : chartes, scripts, code source).
+Chaque dossier de tutoriel contient obligatoirement :
+- `README.md` : Fiche synthétique du tutoriel (contexte, compétence visée, objectifs pédagogiques, index des livrables).
+- `[slug-tutoriel].md` : Document d'explication théorique et compte-rendu des ateliers pratiques.
+- `presentation-[slug-tutoriel].md` : Diaporama au format Marp Markdown pour la restitution orale.
+- Livrables pratiques spécifiques du tutoriel (ex : scripts, maquettes, code source).
 
 ---
 
