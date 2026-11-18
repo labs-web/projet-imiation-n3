@@ -31,10 +31,12 @@ Ce projet s'appuie sur la méthode par imitation pour guider l'apprenant pas à 
 
 ---
 
-## 3. Stack technique
-- **Framework Backend** : Laravel (PHP).
-- **Frontend & Vues** : Blade, HTML5, CSS3, JavaScript.
+## 3. Stack technique et Architecture
+- **Framework Backend** : Laravel 12 (PHP).
+- **Architecture logicielle** : Architecture en 2 couches (Contrôleur mince -> Classe Service).
+- **Frontend & Vues** : Gabarits Blade responsives, HTML5, CSS3, JavaScript.
 - **Base de données** : MySQL.
+- **Modélisation** : Diagramme de contexte et cas d'utilisation avec Mermaid.
 - **Gestion de versions & Outils** : Git et GitHub CLI (`gh`).
 - **Intelligence Artificielle & Automatisation** : Agent Antigravity (Skills natifs et règles Always-On).
 - **Documentation et Présentations** : Markdown standard et Marp.

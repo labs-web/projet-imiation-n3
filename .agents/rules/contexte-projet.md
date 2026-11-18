@@ -22,10 +22,12 @@ Ce document définit le cadre spécifique du projet pour l'Agent IA.
 
 ---
 
-## 3. Stack technique de l'application
+## 3. Stack technique et Architecture de l'application
 
-- **Framework Backend** : Laravel (PHP).
-- **Frontend & Vues** : Blade, HTML5, CSS3, JavaScript.
+- **Framework Backend** : Laravel 12 (PHP).
+- **Architecture logicielle** : Architecture en 2 couches (Contrôleur mince -> Classe Service).
+- **Frontend & Vues** : Gabarits Blade responsives, HTML5, CSS3, JavaScript.
+- **Gestion des erreurs** : Traitement explicite de l'erreur 404 (ressources introuvables).
 - **Base de données** : MySQL.
 - **Gestion de versions & Outils** : Git, GitHub CLI (`gh`).
 - **Intelligence Artificielle & Automatisation** : Agent Antigravity.
@@ -37,5 +39,5 @@ Ce document définit le cadre spécifique du projet pour l'Agent IA.
 L'apprenant et l'Agent IA appliquent les méthodes suivantes :
 - **Méthode par imitation** : Progression par étapes avec tutoriels, labs guidés et veilles technologiques.
 - **Processus de développement** : 2TUP et Design Thinking.
-- **Modélisation** : Conception Orientée Objet avec UML.
-- **Gestion de projet** : Méthodologie Agile/Scrum (sprints, backlog, issues).
+- **Modélisation** : Diagramme de contexte et cas d'utilisation modélisés en diagrammes Mermaid.
+- **Gestion de projet** : Méthodologie Agile/Scrum (sprints, Product Backlog, dossier `issues/`).
