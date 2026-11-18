@@ -1,47 +1,39 @@
 ---
 name: gestion-depot
 description: >-
-  Gère l'initialisation locale Git, la publication sur GitHub via GitHub CLI
-  et la structuration conforme du README.md racine selon les standards Solicode.
+  Gère les opérations sur le dépôt Git/GitHub et le cycle de vie du projet.
+  Charge et orchestre dynamiquement la mission requise dans son dossier missions/.
 ---
 
 # Skill Gestion de Dépôt : /gestion-depot
 
 ## 1. Mission
-Piloter l'initialisation et la configuration de base du dépôt du projet, la détection du sprint actif et la standardisation du fichier `README.md` racine (mission encapsulée `missions/init-projet.md`).
+Orchestrer la gouvernance et les opérations sur le dépôt Git/GitHub (initialisation, contrôle des branches de sprint, synchronisation et structuration).
+Le skill délègue l'exécution à la mission spécialisée appropriée située dans son sous-dossier `missions/`.
 
 ## 2. Déclenchement
 - **Quand l'activer** :
-  - Exécution de l'étape 1 du flux de travail (`1. Création et initialisation du projet`).
-  - Initialisation locale de Git, contrôle de branche de sprint ou publication sur GitHub.
-  - Nettoyage et structuration du fichier `README.md` racine à partir d'un texte brut.
+  - Sur appel direct `/gestion-depot [nom-mission]`.
+  - Lors de l'étape 1 du flux de travail (`1. Création et initialisation du projet`).
+  - Pour toute opération de configuration, contrôle de branche ou publication sur GitHub.
 - **Quand NE PAS l'activer** :
-  - Rédaction de labs pédagogiques (utiliser `realisation-ua-lab`).
-  - Conception de skills ou règles méta (utiliser `skills-dev`).
+  - Gestion du référentiel méthodologique (utiliser `flux-travail`).
+  - Méta-gouvernance des compétences et règles (utiliser `skills-dev`).
 
-## 3. Procédure opératoire pas-à-pas
-- **Tâche 1 : Détection Scrum du sprint actif et branche Git** :
-  - Vérifier `sprints/sprints.md`. Si absent, le créer avec le Sprint 1 uniquement (ne jamais inventer de futurs sprints).
-  - Identifier le sprint ayant le statut **Actif** et sa branche Git associée (`sprint[N]`).
-  - Vérifier la branche active (`git branch --show-current`). Si sur `main`, basculer ou créer la branche : `git checkout -b sprint[N]`.
-- **Tâche 2 : Initialisation locale Git & Publication GitHub** :
-  - Si Git non initialisé : exécuter `git init`.
-  - Contrôler `gh auth status`. Si non connecté, orienter vers l'installation et l'authentification de GitHub CLI.
-  - Publier le dépôt via GitHub CLI (`gh repo create`) et pousser la branche de sprint (`git push -u origin sprint[N]`).
-- **Tâche 3 : Rédaction et structuration du README.md racine** :
-  - S'appuyer sur la mission interne `missions/init-projet.md`.
-  - Rédiger le fichier `README.md` racine selon le modèle standard ci-dessous.
+## 3. Catalogue des missions du skill
+Le skill dispose des missions unitaires suivantes dans `missions/` :
+- `init-projet.md` : Initialisation Git locale, contrôle de la branche sprint active, publication GitHub et rédaction standardisée du `README.md` racine.
 
-## 4. Structure standard du README.md racine
-- `# [Nom du Projet]`
-- `## 1. Description du projet` (résumé en 2-3 phrases, utilisateurs cibles, déploiement)
-- `## 2. Contexte et Objectifs` (contexte Solicode, Formateur, méthode par imitation, APC)
-- `## 3. Stack technique` (frontend, backend Laravel 12, base de données, Git, IA)
-- `## 4. Organisation des dossiers` (`.agents/`, `docs/`, `flux-travail/`, `issues/`, `labs/`, `sprints/`)
-- `## 5. Méthodologie` (Agile/Scrum, 2TUP, Design Thinking)
-- `## 6. Démarrage rapide` (prérequis, cloner, checkout branche sprint)
+## 4. Protocole de routage et exécution dynamique
+- **Étape 1 : Sélection de la mission** :
+  - Si l'utilisateur mentionne une mission : sélectionner la mission correspondante dans `missions/`.
+  - Si aucune mission n'est fournie : auditer l'état actuel du dépôt pour identifier la mission nécessaire.
+- **Étape 2 : Chargement de la mission** :
+  - Charger et lire le fichier `missions/<nom>.md` retenu.
+- **Étape 3 : Exécution déléguée** :
+  - Appliquer les tâches concrètes et le gabarit de livrable prescrits dans le fichier de mission chargé.
 
 ## 5. Règles obligatoires
 - Français A1 et vocabulaire technique professionnel de développeur.
-- Aucun tableau Markdown (utiliser exclusivement des listes à puces `- `).
+- Zéro tableau Markdown (utiliser exclusivement des listes à puces `- `).
 - Liens relatifs exclusifs (`./`, `../`).
