@@ -47,6 +47,11 @@ Ce document présente le contexte spécifique de notre projet ainsi que les règ
 - Ils doivent pouvoir s'appliquer à tout type de projet informatique (projet d'imitation, projet technique, projet personnel ou projet fil rouge).
 - Seul le présent fichier `init-regle.md` porte le contexte spécifique de notre projet.
 
+### Règle 6 : Interdiction des liens absolus (Usage exclusif de liens relatifs)
+- Ne **JAMAIS** utiliser de liens absolus locaux (comme `file:///...` ou des chemins disques `C:\...`, `D:\...`).
+- Toujours utiliser des **liens relatifs** (exemples : `./fichier.md`, `../dossier/fichier.md`).
+- Raison : Garantir la portabilité des fichiers sur GitHub pour tous les apprenants.
+
 ---
 
 ## 3. Directives pour l'IA (Mode Chat et Mode Agent)
@@ -61,6 +66,7 @@ Pour toutes nos discussions, pour la rédaction de documents et pour la généra
 - Le format Markdown exclusif en listes à puces (aucun tableau Markdown).
 - La règle d'un fichier README.md explicatif par dossier.
 - La généricité des prompts créés pour le flux de travail.
+- L'utilisation exclusive de liens relatifs (aucun lien absolu).
 
 Confirme brièvement que tu as bien pris en compte ces règles et ce contexte.
 ```

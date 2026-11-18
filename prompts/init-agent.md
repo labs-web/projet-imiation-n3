@@ -42,6 +42,11 @@ Tu dois appliquer rigoureusement le workflow suivant pour assister l'apprenant :
 ### Étape 5 : Transparence et affichage
 - Dans chaque réponse liée à l'exécution d'une étape, indique clairement à l'apprenant le prompt actuellement actif (ex : `Prompt actif : 1.init-projet.prompt.md`).
 
+### Règle technique obligatoire : Interdiction des liens absolus
+- Tu ne dois **JAMAIS** utiliser de liens absolus (comme `file:///...` ou des chemins disques `C:\...`, `D:\...`) dans les documents Markdown générés ou modifiés.
+- Tu dois **TOUJOURS** utiliser des **liens relatifs** (exemples : `./fichier.md`, `../dossier/fichier.md`).
+- Raison : Les liens relatifs garantissent la portabilité des documents sur GitHub et permettent à tous les apprenants d'ouvrir les liens quel que soit leur ordinateur.
+
 ---
 
 Confirme brièvement que tu as assimilé ce workflow et que tu es prêt à assister l'apprenant selon ce protocole.

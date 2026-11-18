@@ -28,12 +28,12 @@ Dans la méthode par imitation et la démarche d'ingénierie logicielle :
 ## 3. Comment utiliser les prompts ?
 
 ### Option A : Utilisation en mode Chat (ex. ChatGPT, Claude)
-- Étape 1 : Copier et envoyer le contenu de [init-regle.md](file:///d:/labs-web/projet-imiation-n3/prompts/init-regle.md) au début de la conversation.
-- Étape 2 : Copier et envoyer le prompt correspondant à l'étape que vous souhaitez réaliser (ex : [1.init-projet.prompt.md](file:///d:/labs-web/projet-imiation-n3/prompts/1.init-projet.prompt.md)) avec vos données d'entrée.
+- Étape 1 : Copier et envoyer le contenu de [init-regle.md](./init-regle.md) au début de la conversation.
+- Étape 2 : Copier et envoyer le prompt correspondant à l'étape que vous souhaitez réaliser (ex : [1.init-projet.prompt.md](./1.init-projet.prompt.md)) avec vos données d'entrée.
 
 ### Option B : Utilisation en mode Agent (ex. Antigravity, Cursor)
-- Étape 1 : L'agent charge [init-regle.md](file:///d:/labs-web/projet-imiation-n3/prompts/init-regle.md) et [init-agent.md](file:///d:/labs-web/projet-imiation-n3/prompts/init-agent.md).
-- Étape 2 : L'agent consulte automatiquement [prompts.md](file:///d:/labs-web/projet-imiation-n3/prompts/prompts.md).
+- Étape 1 : L'agent charge [init-regle.md](./init-regle.md) et [init-agent.md](./init-agent.md).
+- Étape 2 : L'agent consulte automatiquement [prompts.md](./prompts.md).
 - Étape 3 : L'agent vous propose le prompt adapté et vous demande votre confirmation avant de travailler.
 
 ---
@@ -45,4 +45,5 @@ Lorsque vous créez un nouveau prompt pour une nouvelle étape du flux de travai
 - Écrire le prompt de manière **générique** pour qu'il soit réutilisable sur d'autres projets.
 - Rédiger en français simple (niveau A1) avec le vocabulaire technique des développeurs.
 - **Interdiction formelle des tableaux Markdown** : utiliser uniquement des listes à puces (`- `) pour que les apprenants puissent facilement modifier les livrables.
-- Ajouter la description du nouveau prompt dans [prompts.md](file:///d:/labs-web/projet-imiation-n3/prompts/prompts.md).
+- **Interdiction des liens absolus** : utiliser exclusivement des liens relatifs.
+- Ajouter la description du nouveau prompt dans [prompts.md](./prompts.md).
