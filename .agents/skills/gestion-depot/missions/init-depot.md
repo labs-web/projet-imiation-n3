@@ -4,11 +4,11 @@ Initialiser le dépôt Git local, contrôler la branche active du sprint et publ
 
 ## Tâches de la mission
 - **Tâche 1 : Détection du sprint et contrôle de branche** : Identifier le sprint actif dans `sprints/sprints.md` (ex: `sprint1`) et s'assurer que le travail est positionné sur la branche de sprint correspondante (`git checkout -b sprint1` ou `git checkout sprint1`).
-- **Tâche 2 : Initialisation locale Git** : Vérifier ou exécuter l'initialisation Git locale (`git init`), configurer les exclusions (`.gitignore`) et réaliser le commit initial.
+- **Tâche 2 : Initialisation locale Git** : Vérifier ou exécuter l'initialisation Git locale (`git init`), configurer les exclusions (`.gitignore`) et préparer les fichiers pour le commit initial réalisé par le concepteur.
 - **Tâche 3 : Publication sur GitHub** :
   - Publier le dépôt distant via GitHub CLI avec la commande : `gh repo create`.
   - Si GitHub CLI (`gh`) n'est pas installé ou non connecté : inviter l'apprenant à s'authentifier avec `gh auth login`.
-  - Pousser la branche de travail active : `git push -u origin sprint1`.
+  - Inviter le concepteur à pousser la branche de travail active : `git push -u origin sprint1`.
 
 ## Livrables attendus
 - Dépôt GitHub distant créé et synchronisé sur la branche de sprint active (`sprint1`).

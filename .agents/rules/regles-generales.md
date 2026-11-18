@@ -46,6 +46,10 @@ Ces règles s'appliquent de manière générique à tous les fichiers et toutes 
 
 ## 5. Gestion des Sprints et branches Git
 
+- **Interdiction formelle de commit et push par l'Agent IA** :
+  - L'Agent IA ne doit jamais exécuter les commandes `git commit` ou `git push`.
+  - Seul le concepteur (l'utilisateur) réalise les commits et les pushs sur le dépôt.
+  - L'Agent IA modifie et crée les fichiers demandés, vérifie leur conformité (`git status`), et invite le concepteur à valider, committer et pousser.
 - **Interdiction de travailler directement sur `main`** :
   - Tout travail de développement, de documentation ou de sprint doit s'effectuer sur la branche dédiée au sprint actif (`sprint[N]`).
 - **Détection du sprint actif** :
