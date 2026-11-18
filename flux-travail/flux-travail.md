@@ -21,8 +21,7 @@ Les objectifs détaillés et le déroulement du sprint sont définis dans [sprin
 - Création et gestion des branches Git (`sprint[N]`).
 
 ### Prérequis
-- Présentation du projet d'imitation par le formateur.
-- Notions de base sur Git et GitHub.
+- Présentation et cadrage du projet d'imitation par le formateur référent.
 
 ### Travail à faire
 - **Tâche 1 : Initialisation locale** : Créer le projet, initialiser Git (`git init`) et réaliser le premier commit.
