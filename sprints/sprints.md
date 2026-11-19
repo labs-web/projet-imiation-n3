@@ -4,7 +4,7 @@ Ce document enregistre les sprints du projet. Les sprints suivants seront ajout�
 
 ---
 
-## Sprint 1 : Initialisation, Cadrage & Première Fonctionnalité Laravel 12
+## Sprint 1 : Initialisation, Cadrage & Première Fonctionnalité Laravel
 - **Statut** : Actif
 - **Branche Git** : `sprint1`
 - **Vision du produit** : Le *Blog des Lauréats* est une vitrine web conçue pour valoriser publiquement les réalisations et profils techniques des lauréats de Solicode auprès des recruteurs et des apprenants.
@@ -22,7 +22,7 @@ Ce document enregistre les sprints du projet. Les sprints suivants seront ajout�
     - Zéro module d'authentification ou de connexion utilisateur.
     - Zéro formulaire de rédaction, modification ou suppression d'article.
     - Zéro base de données relationnelle MySQL (reportée aux sprints ultérieurs).
-- **Objectif pédagogique** : Au terme de la session, l'apprenant est capable d'initialiser un dépôt distant avec GitHub CLI, d'outiller l'environnement avec un Agent IA et un catalogue de missions, de formaliser le processus de développement et le flux de travail, de cadrer le projet sous gouvernance Scrum, de modéliser le diagramme de contexte et les cas d'utilisation avec Mermaid, de gérer les tâches via le dossier `issues/`, et de développer sous Laravel 12 une page de consultation détaillée d'un article selon une architecture 2 couches (Contrôleur mince -> Classe Service) avec gabarit Blade responsive et gestion de l'erreur 404.
+- **Objectif pédagogique** : Au terme de la session, l'apprenant est capable d'initialiser un dépôt distant avec GitHub CLI, d'outiller l'environnement avec un Agent IA et un catalogue de missions, de formaliser le processus de développement et le flux de travail, de cadrer le projet sous gouvernance Scrum, de modéliser le diagramme de contexte et les cas d'utilisation avec Mermaid, de gérer les tâches via le dossier `issues/`, et de développer sous Laravel une page de consultation détaillée d'un article selon une architecture 2 couches (Contrôleur mince -> Classe Service) avec gabarit Blade responsive et gestion de l'erreur 404.
 - **Déroulement (Vue d'ensemble du travail de la session)** :
   - Initialiser le projet et publier sur GitHub.
   - Outiller l'environnement avec un Agent IA et son catalogue de missions.
@@ -31,4 +31,4 @@ Ce document enregistre les sprints du projet. Les sprints suivants seront ajout�
   - Modéliser le contexte et les cas d'utilisation avec Mermaid.
   - Structurer le Product Backlog et les issues dans `issues/`.
   - Concevoir l'architecture en 2 couches (Contrôleur mince -> Classe Service).
-  - Implémenter la consultation d'un article sous Laravel 12 (gabarit Blade responsive et gestion 404).
+  - Implémenter la consultation d'un article sous Laravel (gabarit Blade responsive et gestion 404).

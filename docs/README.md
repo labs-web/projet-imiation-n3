@@ -18,3 +18,9 @@ L'apprenant peut y placer :
 - Des comptes-rendus de recherches ou de veilles technologiques personnelles.
 - Des notes d'expérimentation ou des comparatifs d'outils.
 - Des guides ou mémos techniques personnels utiles pour son travail.
+
+---
+
+## 3. Guides méthodologiques disponibles
+
+- [Guide du Workflow des Tutoriels](./workflow-tuto.md) : Cycle de vie en 6 étapes (Cadrage, Conception, Réalisation, Vérification, Synchronisation, Clôture), gestion de l'espace `.sync/` et traçabilité dans le front-matter.

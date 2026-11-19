@@ -28,9 +28,15 @@ Chaque dossier de tutoriel contient :
 - Rédiger en français simple (niveau A1) avec le vocabulaire technique des développeurs.
 - Interdiction formelle des tableaux Markdown (utiliser exclusivement des listes à puces `- `).
 - Utiliser exclusivement des liens relatifs pour garantir la portabilité.
+- Suivre le workflow en 6 étapes documenté dans [Guide du Workflow des Tutoriels](../docs/workflow-tuto.md).
+- Maintenir l'arborescence miroir des versions dans `../.sync/`.
 
 ---
 
 ## 4. Domaines disponibles
 - [ia/](./ia/) : Domaine Ingénierie de Prompt et Agents IA.
 - [scrum/](./scrum/) : Domaine Méthode Agile Scrum.
+- [uml/](./uml/) : Domaine Modélisation UML.
+- [architecture/](./architecture/) : Domaine Architecture logicielle.
+- [laravel/](./laravel/) : Domaine Développement Laravel 12.
+- [realisation-projet/](./realisation-projet/) : Domaine Réalisation et gestion de projet.
