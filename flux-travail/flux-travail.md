@@ -1,180 +1,50 @@
-# Flux de travail du projet
+# Hub du Flux de Travail (`flux-travail/`)
 
-Ce document formalise les étapes de réalisation du Projet d'imitation Niveau 3. Il sert de référentiel méthodologique pour guider l'apprenant et l'Agent IA dans la production des livrables.
+Ce dossier centralise l'ensemble des référentiels méthodologiques et opérationnels du projet.
 
-Les projets suivent les démarches d'ingénierie logicielle : 2TUP, Design Thinking, modélisation UML et méthodologie Agile/Scrum.
-
-La planification des sprints et l'identification du sprint actif sont centralisées dans [sprints/sprints.md](../sprints/sprints.md).
+Il sépare rigoureusement la **démarche d'ingénierie logicielle universelle** et la **démarche didactique d'apprentissage**.
 
 ---
 
-# Sprint 1
+## 1. Organisation des Flux de Travail
 
-Les objectifs détaillés et le déroulement du sprint sont définis dans [sprints/sprints.md](../sprints/sprints.md).
+Le dossier s'articule autour de deux documents complémentaires conçus selon le principe de responsabilité unique (zéro redondance) :
 
----
+```mermaid
+flowchart TD
+    Hub["flux-travail/ (Point d'Entrée)"] --> FGen["1. flux-travail-generique.md<br/>• Universel pour tout projet web<br/>• Ingénierie logicielle pure (3 phases, 16 étapes)<br/>• DT + GP + Dev OO + Scrum Dual-Track<br/>• De l'idée au déploiement en production"]
+    Hub --> FPed["2. flux-travail-pedagogique.md<br/>• Dédié aux sessions de formation Solicode N3<br/>• Structure didactique normalisée à 4 sections<br/>• Rattachement aux UAs et compétences certifiantes<br/>• Diaporamas Marp, rapports et Agent IA"]
+    Hub --> FDoc["3. docs/<br/>• 5 guides méthodologiques thématiques de référence"]
 
-## 1. Création et initialisation du projet
-
-### Base théorique et pratique
-- Installation et utilisation de GitHub CLI (`gh repo create`).
-- Création et gestion des branches Git (`sprint[N]`).
-- Structuration modulaire d'un projet et de sa documentation (diaporamas Marp, rapport découpé en chapitres, automatisation Node.js).
-
-### Prérequis
-- Présentation et cadrage du projet d'imitation par le formateur référent.
-
-### Travail à faire
-- **Tâche 1 : Initialisation locale Git et structure** : Créer le projet, configurer `.gitignore`, initialiser le dossier du code source `src/`, initialiser Git (`git init`) et réaliser le premier commit.
-- **Tâche 2 : Publication sur GitHub** : Créer la branche `sprint1` et publier le dépôt distant via GitHub CLI avec la commande : `gh repo create`.
-- **Tâche 3 : Rédaction du README.md** : Rédiger et structurer le fichier `README.md` racine selon le template standard Solicode en intégrant la stack technique (Laravel 12).
-- **Tâche 4 : Initialisation des présentations racine (`presentations/`)** : Créer le dossier racine `presentations/` avec son guide `README.md` et les fichiers diaporamas vides (`presentation-blog.md`, `presentation-sprint1.md`) au format Marp.
-- **Tâche 5 : Initialisation du rapport modulaire racine (`rapport/`)** : Créer le dossier racine `rapport/` avec son guide `README.md`, le document consolidé `rapport-blog.md`, le sous-dossier `chapitres/` avec les chapitres vides (`01-introduction.md`, `02-conclusion.md`), et le script Node.js autonome `concat-chapitres.js` pour la fusion automatique.
-
-### Livrables
-- Dépôt GitHub distant publié et synchronisé sur la branche `sprint1`.
-- Fichier `README.md` racine propre et conforme.
-- Dossier du code source de l'application : `src/` avec son `README.md`.
-- Dossier `presentations/` avec `presentation-blog.md`, `presentation-sprint1.md` et son `README.md`.
-- Dossier `rapport/` avec `rapport-blog.md`, sous-dossier `chapitres/`, script `concat-chapitres.js` et son `README.md`.
+    FPed -.->|"Référence les étapes génériques sans les dupliquer"| FGen
+    FDoc -.-> FGen
+    FDoc -.-> FPed
+```
 
 ---
 
-## 2. Initialisation de l'Agent IA
+## 2. Guide d'Utilisation selon votre Contexte
 
-### Base théorique et pratique
-- Formulation de consignes, rôles et règles Always-On.
-- Architecture modulaire d'un agent outillé (règles et catalogue de skills/missions).
-
-### Prérequis
-- Dépôt Git initialisé, `README.md` racine et arborescence documentaire créés sur la branche `sprint1` (Étape 1).
-
-### Travail à faire
-- Définir le socle commun des règles et contexte du projet : `.agents/rules/contexte-projet.md` et `.agents/rules/regles-generales.md`.
-- Mettre en place les skills agentiques initiaux dans `.agents/skills/` : méta-gouvernance (`skills-dev`) et gestion du dépôt (`gestion-depot` avec ses missions `init-depot.md` et `init-projet.md`).
-- Configurer l'environnement agentique pour la découverte native des skills.
-
-### Livrables
-- Règles permanentes : `.agents/rules/contexte-projet.md`, `.agents/rules/regles-generales.md`.
-- Skills agentiques initiaux configurés : `.agents/skills/skills-dev/` et `.agents/skills/gestion-depot/` (avec `missions/init-depot.md` et `missions/init-projet.md`).
-
----
-
-## 3. Documentation du Flux de Travail
-
-### Base théorique et pratique
-- Démarche 2TUP, ingénierie logicielle et formalisation des étapes.
-
-### Prérequis
-- Initialisation de l'Agent IA terminée (Étape 2).
-
-### Travail à faire
-- Initialiser le document de suivi du flux de travail : `flux-travail/flux-travail.md`.
-- Formaliser la structure standardisée des étapes (`Base théorique et pratique`, `Prérequis`, `Travail à faire`, `Livrables`).
-- Mettre en place le skill de gouvernance du flux : `.agents/skills/flux-travail/SKILL.md`.
-- Rédiger le guide du dossier : `flux-travail/README.md`.
-
-### Livrables
-- Fichier `flux-travail/flux-travail.md`.
-- Skill outillé : `.agents/skills/flux-travail/SKILL.md`.
-- Guide pédagogique : `flux-travail/README.md`.
+- **Vous développez une application logicielle (Projet réel, MVP, Projet d'examen)** :
+  - Consultez et appliquez le **[Flux de Travail Générique](./flux-travail-generique.md)**.
+  - Il décrit les 16 étapes d'ingénierie de la Phase 1 (Sprint 0 Cadrage & Socle), Phase 2 (Cycle Dual-Track avec pistes Delivery et Discovery en parallèle) jusqu'à la Phase 3 (Livraison et Déploiement en production).
+  - Il détaille les entrées, les activités techniques et les fichiers de sortie à produire pour chaque étape.
+- **Vous réalisez une session de formation ou un sprint pédagogique** :
+  - Consultez et appliquez le **[Flux de Travail Pédagogique](./flux-travail-pedagogique.md)**.
+  - Il découpe la session de formation en étapes d'apprentissage structurées selon la norme à 4 sections (*Base théorique et pratique*, *Prérequis*, *Travail à faire*, *Livrables*).
+  - Il garantit l'alignement avec les Unités d'Apprentissage (`UA.*`), le principe de Pareto 20/80 et les soutenances orales Marp.
+- **Vous souhaitez approfondir les concepts et méthodes** :
+  - Consultez les guides de référence dans le dossier **[docs/](./docs/)** :
+    - [01-referentiel-methodes.md](./docs/01-referentiel-methodes.md) : Les 4 méthodes de référence, le cadre Dual-Track et la définition détaillée du **User Flow**.
+    - [02-cycle-dual-track.md](./docs/02-cycle-dual-track.md) : Fonctionnement pratique des pistes Discovery (~10% temps) et Delivery.
+    - [03-sprint-0-cadrage.md](./docs/03-sprint-0-cadrage.md) : Guide d'exécution du Sprint 0 (cadrage, stack en amont, UI Kit, socle et Review 0).
+    - [04-norme-etapes-pedagogiques.md](./docs/04-norme-etapes-pedagogiques.md) : Spécification du format standardisé à 4 sections des sessions.
+    - [05-outillage-agent-ia.md](./docs/05-outillage-agent-ia.md) : Guide d'accompagnement de l'Agent IA à chaque étape du flux.
 
 ---
 
-## 4. Cadrage du projet sous gouvernance Scrum
+## 3. Règle Qualité du Dossier
 
-### Base théorique et pratique
-- Piliers Scrum, rôles d'équipe et formalisation du sprint.
-
-### Prérequis
-- Documentation du flux de travail initialisée (Étape 3).
-
-### Travail à faire
-- Formaliser le fichier de planification des sprints : `sprints/sprints.md`.
-- Définir le Sprint 1 en statut Actif avec ses objectifs et sa branche Git `sprint1`.
-- Rédiger le guide du dossier : `sprints/README.md`.
-
-### Livrables
-- Fichier de cadrage Scrum : `sprints/sprints.md`.
-- Guide méthodologique : `sprints/README.md`.
-- Branche Git `sprint1` synchronisée.
-
----
-
-## 5. Structuration du Product Backlog et des issues
-
-### Base théorique et pratique
-- Découpage en user stories, priorisation et gestion du backlog.
-
-### Prérequis
-- Cadrage Scrum du Sprint 1 formalisé (Étape 4).
-
-### Travail à faire
-- Créer l'espace de suivi des tâches du projet : dossier `issues/`.
-- Recenser les user stories et tâches du Sprint 1 issues du Product Backlog.
-- Organiser les issues par statut (`issues-open.md`, `issues-à-valider.md`, `issues-closes.md`).
-- Soumettre les issues à la validation du formateur avant dépôt sur GitHub.
-
-### Livrables
-- Guide pédagogique : `issues/README.md`.
-- Fichiers de suivi des tâches : `issues/issues-open.md`, `issues/issues-à-valider.md`, `issues/issues-closes.md`.
-
----
-
-## 6. Modélisation du contexte et des cas d'utilisation avec Mermaid
-
-### Base théorique et pratique
-- Modélisation UML textuelle avec la syntaxe Mermaid (diagramme de contexte, cas d'utilisation).
-
-### Prérequis
-- User stories et tâches du Sprint 1 recensées dans `issues/` (Étape 5).
-
-### Travail à faire
-- Modéliser le diagramme de contexte du système (utilisateurs lauréats, apprenants, système de publication).
-- Modéliser le diagramme de cas d'utilisation pour la consultation des articles.
-- Déposer les diagrammes dans `docs/modelisation/`.
-
-### Livrables
-- Guide du dossier : `docs/README.md`.
-- Fiches de modélisation Mermaid : `docs/modelisation/contexte.md` et `docs/modelisation/cas-utilisation.md`.
-
----
-
-## 7. Conception de l'architecture logicielle en 2 couches
-
-### Base théorique et pratique
-- Séparation des responsabilités, contrôleurs minces et classes Services.
-
-### Prérequis
-- Modélisation des cas d'utilisation validée (Étape 6).
-
-### Travail à faire
-- Définir le pattern architectural en 2 couches : `ArticleController` (Contrôleur mince) vers `ArticleService` (Classe Service).
-- Spécifier les signatures des méthodes métier pour la récupération d'un article.
-- Documenter le principe d'architecture dans `docs/architecture/`.
-
-### Livrables
-- Documentation de l'architecture logicielle : `docs/architecture/architecture-2-couches.md`.
-
----
-
-## 8. Implémentation sous Laravel 12 de la consultation d'un article
-
-### Base théorique et pratique
-- Routage Laravel 12, injection de service, gabarit Blade responsive et gestion d'erreur HTTP 404.
-
-### Prérequis
-- Conception de l'architecture 2 couches validée (Étape 7).
-
-### Travail à faire
-- Configurer la route de consultation d'un article dans `src/routes/web.php`.
-- Implémenter le contrôleur mince `ArticleController` injectant `ArticleService` dans `src/app/Http/Controllers/`.
-- Développer la classe `ArticleService` pour la logique de récupération des données dans `src/app/Services/`.
-- Gérer explicitement l'exception de ressource introuvable avec renvoi d'une erreur 404 propre.
-- Créer le gabarit Blade responsive pour l'affichage détaillé de l'article dans `src/resources/views/`.
-- Vérifier manuellement le bon affichage responsive et le comportement en cas d'article inexistant.
-
-### Livrables
-- Code source Laravel 12 dans `src/` : Route, Contrôleur mince, Classe Service et vue Blade responsive.
-- Gestion fonctionnelle de l'erreur 404.
-- Page de consultation détaillée d'un article opérationnelle.
+- **Zéro tableau Markdown** : Tous les documents de ce dossier utilisent exclusivement des listes à puces directes (`- `).
+- **Liens 100% relatifs** : Tous les liens entre documents sont relatifs et portables sur GitHub.
+- **Français niveau A1** : Phrases courtes, claires et rédigées à la voix active avec le vocabulaire technique des développeurs professionnels.

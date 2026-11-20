@@ -1,38 +1,38 @@
 ---
 name: flux-travail
 description: >-
-  Gère, insère et audite les étapes de réalisation dans flux-travail/flux-travail.md
-  selon la structure normalisée à 4 sections. À utiliser pour faire évoluer le flux de travail.
+  Gère, insère et audite les étapes de réalisation dans flux-travail/ (flux générique
+  d'ingénierie logicielle et flux pédagogique de formation) selon la structure normalisée.
 ---
 
 # Skill Flux de Travail : /flux-travail
 
 ## 1. Mission
-Piloter la structure, l'insertion et la mise à jour des étapes du projet dans `flux-travail/flux-travail.md` selon la démarche d'ingénierie logicielle (2TUP, Agile/Scrum).
+Piloter la structure, l'insertion et l'audit des étapes dans l'espace `flux-travail/` selon la démarche d'ingénierie logicielle unifiée (Design Thinking, Gestion de Projet PMI, Processus OO et Scrum Dual-Track).
+
+Le skill maintient le découpage rigoureux entre :
+1. **Le flux générique d'ingénierie logicielle** (`flux-travail/flux-travail-generique.md`) : Processus universel en 16 étapes (Sprint 0, Cycle Dual-Track Sprint $N$ avec pistes Discovery et Delivery, Livraison et Clôture).
+2. **Le flux pédagogique de formation** (`flux-travail/flux-travail-pedagogique.md`) : Découpage par session de formation structuré selon la norme à 4 sections.
 
 ## 2. Déclenchement
 - **Quand l'activer** :
-  - Ajout ou reformulation d'une étape de travail (depuis la description du concepteur ou les livrables produits).
-  - Audit et restructuration globale de `flux-travail/flux-travail.md`.
+  - Ajout, reformulation ou audit d'une étape d'ingénierie logicielle dans `flux-travail/flux-travail-generique.md`.
+  - Insertion ou mise à jour d'une étape de formation dans `flux-travail/flux-travail-pedagogique.md`.
+  - Évolution des guides méthodologiques dans `flux-travail/docs/`.
 - **Quand NE PAS l'activer** :
-  - Exécution technique d'une tâche de code (utiliser le skill métier dédié).
-  - Planification globale des sprints (utiliser `sprints/sprints.md`).
+  - Réalisation technique d'une fonctionnalité de code (utiliser le skill métier dédié).
+  - Cérémonies de fin de sprint (utiliser `cloture-sprint`).
+  - Production autonome de livrables d'ateliers (utiliser `realisation-ua-lab`).
 
-## 3. Structure normalisée d'une étape de flux
-Chaque étape insérée doit obligatoirement respecter l'ordre des 4 sections :
-- `## [N]. [Nom de l'étape]`
-- `### Base théorique et pratique` (notions directes ou codes officiels `UA.*` fournis par le concepteur, aucun nom de lab inventé)
-- `### Prérequis` (cadrage préalable, validation formateur ou livrables d'étapes antérieures)
+## 3. Structure d'une Étape Pédagogique (Format Standard à 4 Sections)
+Chaque étape insérée dans `flux-travail-pedagogique.md` doit obligatoirement respecter l'ordre suivant :
+- `## Étape [N] : [Titre de l'étape]` (référence vers l'étape générique correspondante)
+- `### Base théorique et pratique` (codes officiels `UA.*`, liens vers tutoriels de référence)
+- `### Prérequis` (validations préalables, livrables d'étapes antérieures)
 - `### Travail à faire` (tâches opérationnelles ordonnées)
-- `### Livrables` (dépôts, documentation, code, skills)
+- `### Livrables` (fichiers physiques produits et versions dans `.sync/`)
 
-## 4. Procédure opératoire pas-à-pas
-- **Étape 1 : Analyse de l'étape** : Extraire le numéro, l'intitulé, les prérequis réels, les tâches et les livrables attendus.
-- **Étape 2 : Vérification anti-redondance** : S'assurer de l'absence de répétition entre *Base théorique et pratique* et *Prérequis*.
-- **Étape 3 : Intégration dans le fichier** : Insérer l'étape dans la section de sprint correspondante dans `flux-travail/flux-travail.md`.
-- **Étape 4 : Contrôle qualité** : Zéro tableau Markdown, liens relatifs purs, français A1.
-
-## 5. Règles obligatoires
-- Français A1 direct et vocabulaire professionnel de développeur.
-- Aucun tableau Markdown (utiliser exclusivement des listes à puces `- `).
+## 4. Règles Obligatoires
+- Français niveau A1 direct et vocabulaire professionnel de développeur.
+- **Interdiction formelle de tout tableau Markdown** (`| ... |`) : utiliser exclusivement des listes à puces `- `.
 - Liens relatifs exclusifs (`./`, `../`).
