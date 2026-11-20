@@ -28,6 +28,10 @@ flowchart TD
 
     subgraph P2 ["Phase 2 : Cycle Itératif Dual-Track — Sprint N (N >= 1)"]
         direction TB
+        subgraph SocleInit ["Socle Technique & Architecture Initiale (Sprint 1)"]
+            E12["12. Concevoir l'architecture logicielle"] --> E13["13. Préparer le socle technique"]
+            E13 --> E14["14. Valider le socle technique par un composant persistant (TodoList MySQL)"]
+        end
         subgraph TrackDeliv ["Piste Delivery (Incrément N)"]
             E15["15. Planifier le Sprint N (Sprint Planning)"] --> E16["16. Préparer l'environnement de sprint (Branche Git)"]
             E16 --> E17["17. Concevoir en détail et développer"]
@@ -50,6 +54,7 @@ flowchart TD
         E24["24. Déployer en production et valider en conditions réelles"] --> E25["25. Clôturer officiellement le projet (Bilan final)"]
     end
 
+    E11 --> E12
     E14 --> E15
     E23 -->|"Itération suivante"| E15
     E23 -->|"Fin des sprints applicatifs"| E24
@@ -185,6 +190,36 @@ Le Sprint 0 construit le socle technique et méthodologique du projet. Il valide
 ## 4. Phase 2 : Cycle Itératif Dual-Track — Sprint N (N >= 1)
 
 Chaque sprint applicatif applique le modèle **Scrum Dual-Track**. L'équipe mène en parallèle la piste Delivery (production de l'incrément courant) et la piste Discovery (préparation et maquettage du sprint suivant).
+Le premier sprint (Sprint 1) établit au préalable le socle technique applicatif et l'architecture logicielle (Étapes 12, 13 et 14) avant de lancer le flux itératif régulier.
+
+### Étape 12 : Concevoir l'architecture logicielle
+- **Phases de référence :** Dev OO (Architecture & Conception générale).
+- **Entrées :** Maquettes du Sprint 1, User Flow et stack technique validée.
+- **Activités d'ingénierie :**
+  - Modéliser le schéma de données conceptuel en syntaxe déclarative Mermaid (`erDiagram`).
+  - Définir l'architecture applicative : patron **MVC avec couche Service** (contrôleur mince HTTP vers service métier).
+  - Rédiger la décision d'architecture sous format standard ADR (Architectural Decision Record).
+- **Sortie principale :** Dossier d'architecture initiale incluant le modèle relationnel et l'ADR (`docs/architecture/architecture-initiale.md`).
+
+### Étape 13 : Préparer le socle technique applicatif
+- **Phases de référence :** Dev OO (Implémentation du socle technique).
+- **Entrées :** Dossier d'architecture et stack technique validée.
+- **Activités d'ingénierie :**
+  - Déployer le squelette applicatif **Laravel 13**.
+  - Configurer l'environnement dans le fichier `.env` (connexion MySQL, variables d'application).
+  - Installer Tailwind CSS et la bibliothèque de composants **Preline UI**.
+  - Créer la route racine `/` et la vue d'accueil Blade responsive.
+- **Sortie principale :** Vue d'accueil Blade responsive opérationnelle (`resources/views/welcome.blade.php`).
+
+### Étape 14 : Valider le socle technique par un composant persistant (TodoList MySQL)
+- **Phases de référence :** Dev OO (Vérification de la persistance des données).
+- **Entrées :** Squelette Laravel 13 et base de données MySQL opérationnelle.
+- **Activités d'ingénierie :**
+  - Créer la migration de schéma de base de données pour une entité simple (ex: `todos`).
+  - Exécuter la migration avec `php artisan migrate` sur la base MySQL.
+  - Créer un seeder pour insérer des données de test réalistes.
+  - Implémenter le contrôleur et la vue Blade avec Preline UI affichant les données depuis MySQL pour prouver la persistance réelle.
+- **Sortie principale :** Contrôleur validant la persistance MySQL et l'affichage de données réelles (`app/Http/Controllers/TodoController.php`).
 
 ```mermaid
 sequenceDiagram

@@ -1,7 +1,7 @@
 # Flux de Travail Opérationnel — Session S08 : Portabilité NativePHP, Déploiement & Soutenance N3
 
-Ce document définit le flux de travail de la **Session S08** (Sprint 8 - 80 heures / 10 jours ouvrés).
-Il est structuré en **4 phases typées** alternant les unités d'apprentissage (**UA-Lab**) avec leurs applications immédiates sur le projet d'imitation, et les phases opérationnelles d'ingénierie et de clôture (**UA-Tâche**).
+Ce document définit le flux de travail de la **Session S08** (Sprint 8) pour le niveau N3.
+Il est structuré en **4 phases typées** (2 unités d'apprentissage **UA-Lab** et 2 blocs d'ingénierie opérationnelle et de clôture **UA-Tâche**), totalisant **8 étapes de travail**.
 
 ---
 
@@ -9,7 +9,7 @@ Il est structuré en **4 phases typées** alternant les unités d'apprentissage 
 
 - **Identifiant :** Session S08 (Sprint 8)
 - **Titre :** Portabilité NativePHP, Recette Globale, Déploiement en Production & Soutenance N3
-- **Durée totale ferme :** 80 heures (10 jours ouvrés)
+- **Durée indicative :** 80 heures (10 jours ouvrés) — *fournie à titre indicatif pour le concepteur et les formateurs*
 - **Positionnement :** Sprint final de delivery multiplateforme, de déploiement en production et de soutenance de certification N3
 - **Domaines de compétences mobilisés :**
   - Portabilité applicative avec NativePHP et stockage SQLite (`D.321.1-laravel`)
@@ -24,7 +24,7 @@ Il est structuré en **4 phases typées** alternant les unités d'apprentissage 
 
 ---
 
-## 2. Organisation dans le Cadre Tri-Projets (80h / 10 jours)
+## 2. Organisation dans le Cadre Tri-Projets
 
 - **Jours 1 à 7 : Projet d'Imitation (*Blog des Lauréats*)**
   - Réalisation guidée pas-à-pas du packaging NativePHP, de la recette de bout en bout et du déploiement en production.
@@ -54,27 +54,27 @@ Il est structuré en **4 phases typées** alternant les unités d'apprentissage 
 
 ```mermaid
 flowchart TD
-    subgraph P1 ["Phase 1 : UA-Tâche — Planification & Git"]
-        E1["Étape 1 (Application) : Planifier le Sprint N (Sprint Planning S8)"]
-        E2["Étape 2 (Application) : Préparer l'environnement de sprint (Branche Git)"]
+    subgraph P1 ["Phase 1 : UA-Tâche Début — Planification du Sprint 8 & Préparation Git"]
+        E1["Étape 1 : Planifier le Sprint 8"]
+        E2["Étape 2 : Préparer l'environnement de sprint (Branche Git & README.md)"]
         E1 --> E2
     end
 
     subgraph P2 ["Phase 2 : UA-Lab — Portabilité NativePHP (D.321.1-laravel)"]
-        E3["Étape 3 (Apprentissage) : Packaging multiplateforme avec NativePHP"]
-        E4["Étape 4 (Application Blog) : Concevoir en détail et développer la tranche"]
+        E3["Étape 3 : Tutoriel-lab : Packaging multiplateforme avec NativePHP"]
+        E4["Étape 4 : Tutoriel-application : Packager et compiler le Blog sous NativePHP"]
         E3 --> E4
     end
 
     subgraph P3 ["Phase 3 : UA-Lab — Déploiement en Production (D.341.1-devops)"]
-        E5["Étape 5 (Apprentissage) : Recette globale et protocoles de déploiement distant"]
-        E6["Étape 6 (Application Blog) : Déployer et livrer l'Incrément (Mise en production)"]
+        E5["Étape 5 : Tutoriel-lab : Recette globale et déploiement distant"]
+        E6["Étape 6 : Tutoriel-application : Déployer en production sur serveur distant"]
         E5 --> E6
     end
 
-    subgraph P4 ["Phase 4 : UA-Tâche — Clôture Globale & Soutenance N3"]
-        E7["Étape 7 (Application Blog) : Clôturer le projet et mener la rétrospective globale"]
-        E8["Étape 8 (Application Blog) : Soutenir la qualification professionnelle N3"]
+    subgraph P4 ["Phase 4 : UA-Tâche Fin — Clôture Globale & Soutenance N3"]
+        E7["Étape 7 : Clôturer le projet et mener la rétrospective globale"]
+        E8["Étape 8 : Soutenir la qualification professionnelle N3"]
         E7 --> E8
     end
 
@@ -83,14 +83,16 @@ flowchart TD
 
 ---
 
-### Phase 1 : UA-Tâche — Planification du Sprint 8 et Préparation de l'Environnement Git
+### Phase 1 : UA-Tâche Début — Planification du Sprint 8 et Préparation Git
 *Cette phase opérationnelle initialise le dernier sprint sans apport théorique.*
 
-- **Étape 1 (Application) : Planifier le Sprint N (Sprint Planning — Piste Delivery)**
+- **Étape 1 : Planifier le Sprint 8**
+  - Correspondance flux générique : Étape Générique 15 (Planifier le Sprint N).
   - Entrées : Product Backlog actualisé, retours de la Review 7 et jalons de certification.
   - Travail d'application sur le Blog : Définir le Sprint Goal S8 ("Assurer la portabilité multiplateforme du Blog sous NativePHP, valider la recette globale, déployer en production sur serveur distant et réussir la soutenance professionnelle N3"), décomposer les tâches et valider le Sprint Backlog S8.
   - Sortie (1 seul livrable) : `scrum/sprint-backlog-s8.md`.
-- **Étape 2 (Application) : Préparer l'environnement de sprint (Branche Git et README.md)**
+- **Étape 2 : Préparer l'environnement de sprint (Branche Git et README.md)**
+  - Correspondance flux générique : Étape Générique 16 (Préparer l'environnement de sprint).
   - Entrées : Sprint Backlog S8 validé et branche `main`.
   - Travail d'application sur le Blog : Créer la branche Git `sprint-8` et actualiser le fichier `README.md` avec les dates de soutenance et l'URL de production.
   - Sortie (1 seul livrable) : `README.md`.
@@ -98,17 +100,20 @@ flowchart TD
 ---
 
 ### Phase 2 : UA-Lab — Portabilité Multiplateforme avec NativePHP (Domaine D.321.1-laravel)
-*Cette phase introduit le packaging natif d'applications PHP/Laravel. Elle s'organise en une étape d'apprentissage technique suivie de la réalisation complète sur le Blog, le portfolio et le projet fil rouge.*
+*Cette phase introduit le packaging natif d'applications PHP/Laravel avec alternance directe apprentissage et application.*
 
-- **Étape 3 (Apprentissage) : Packaging multiplateforme avec NativePHP**
+- **Étape 3 : Tutoriel-lab : Packaging multiplateforme et binaire autonome avec NativePHP**
   - Entrées : Documentation officielle NativePHP.
   - Notions de base à apprendre :
     - Architecture NativePHP : runtime PHP compilé, intégration Electron (Desktop) et moteur Android embarqué.
     - Configuration du stockage déconnecté SQLite pour l'utilisation locale autonome.
     - APIs natives : notifications système, gestion des fenêtres et barres de menus.
     - Compilation de binaires installables avec `php artisan native:build`.
-  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/laravel/guide-nativephp-packaging.md`.
-- **Étape 4 (Application sur le Blog) : Concevoir en détail et développer (Piste Delivery)**
+  - Sorties de l'atelier d'apprentissage (2 livrables) :
+    - Guide explicatif détaillé : `tutoriels/laravel/guide-nativephp-packaging.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/laravel/presentation-nativephp-packaging.md`.
+- **Étape 4 : Tutoriel-application : Packager et compiler le Blog sous NativePHP**
+  - Correspondance flux générique : Étape Générique 17 (Concevoir en détail et développer).
   - Entrées : Code source complet du Blog des Lauréats et guide NativePHP.
   - Travail d'application sur le Blog :
     - *Projet d'Imitation :* Packager le Blog des Lauréats sous NativePHP, implémenter les notifications natives lors de nouveaux articles et compiler le binaire autonome.
@@ -119,31 +124,35 @@ flowchart TD
 ---
 
 ### Phase 3 : UA-Lab — Recette Globale et Déploiement en Production (Domaine D.341.1-devops)
-*Cette phase introduit la mise en ligne industrielle. Elle s'organise en une étape d'apprentissage méthodologique suivie du déploiement effectif sur serveur distant.*
+*Cette phase introduit la mise en ligne industrielle avec alternance directe apprentissage et application.*
 
-- **Étape 5 (Apprentissage) : Recette globale et protocoles de déploiement distant**
+- **Étape 5 : Tutoriel-lab : Recette globale et protocoles de déploiement distant en production**
   - Entrées : Protocoles DevOps de mise en production.
   - Notions de base à apprendre :
     - Élaboration d'un cahier de recette fonctionnelle et technique de bout en bout (E2E).
     - Préparation de l'environnement de production : variables d'environnement sécurisées, optimisation du cache (`config:cache`, `route:cache`, `view:cache`).
     - Procédures de migration de base de données en production avec zéro interruption de service (*Zero-Downtime Deployment*).
     - Configuration HTTPS, certificats SSL et surveillance des logs applicatifs.
-  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/devops/guide-deploiement-production.md`.
-- **Étape 6 (Application sur le Blog) : Déployer et livrer l'Incrément (Mise en production — Étape Générique 24)**
+  - Sorties de l'atelier d'apprentissage (2 livrables) :
+    - Guide explicatif détaillé : `tutoriels/devops/guide-recette-deploiement-prod.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/devops/presentation-recette-deploiement-prod.md`.
+- **Étape 6 : Tutoriel-application : Déployer et valider la solution en production**
+  - Correspondance flux générique : Étape Générique 24 (Déployer en production et valider en conditions réelles).
   - Entrées : Application packagée, cahier de recette et serveur de production.
   - Travail d'application sur le Blog : Exécuter la recette complète sur l'environnement de staging, déployer le Blog des Lauréats sur le serveur distant de production, exécuter les migrations MySQL et vérifier la disponibilité en ligne.
   - Sortie (1 seul livrable) : `docs/deploiement/rapport-mise-en-production.md`.
 
 ---
 
-### Phase 4 : UA-Tâche — Clôture Globale du Projet et Soutenance Officielle N3
+### Phase 4 : UA-Tâche Fin — Clôture Globale du Projet et Soutenance Officielle N3
 *Cette phase opérationnelle finale conclut l'ensemble de la formation par la capitalisation réflexive et la soutenance de certification devant le jury professionnel.*
 
-- **Étape 7 (Application sur le Blog) : Clôturer le projet et mener la rétrospective globale (Étape Générique 25)**
+- **Étape 7 : Clôturer le projet et mener la rétrospective globale**
+  - Correspondance flux générique : Étape Générique 25 (Clôturer officiellement le projet).
   - Entrées : Historique des 8 sprints, métriques agiles et rapport de production.
   - Travail d'application sur le Blog : Rédiger le bilan global d'ingénierie logicielle capitalisant sur les 800h de travail, mesurer la vélocité acquise, archiver les artéfacts et finaliser la documentation finale du dépôt.
   - Sortie (1 seul livrable) : `scrum/bilan-projet-global.md`.
-- **Étape 8 (Application sur le Blog) : Soutenir la qualification professionnelle N3**
+- **Étape 8 : Soutenir la qualification professionnelle N3**
   - Entrées : Bilan projet global, portfolio technique, application déployée et Skills agentiques créés dans `.agent/skills/`.
   - Travail d'application sur le Blog : Présenter la démarche d'ingénierie, démontrer les applications (Web, Mobile et NativePHP) et les Skills d'assistance IA devant le jury officiel, et valider l'examen professionnel N3.
   - Sortie (1 seul livrable) : `docs/certification/pv-soutenance-n3.md`.
