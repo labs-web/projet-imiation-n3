@@ -7,12 +7,12 @@ Ce document définit les règles de collaboration et d'interface entre le skill 
 ## 1. Séparation des Responsabilités (RACI)
 
 - **Skill `flux-travail` (Gardien du Référentiel)** :
-  - Propriétaire exclusif du flux universel d'ingénierie logicielle (`flux-travail/flux-travail-generique.md` - 25 étapes).
+  - Propriétaire exclusif du flux universel d'ingénierie logicielle (`flux-travail/flux-travail-generique.md`).
   - Responsable de la cohérence globale de l'espace `flux-travail/` et de ses guides méthodologiques (`flux-travail/docs/`).
   - Valide la conformité architecturale des sessions produites.
 - **Skill `conception-session` (Ingénieur Pédagogique)** :
   - Concepteur opérationnel des flux de sessions (`flux-travail/sessions/flux-travail-s{N}.md`).
-  - Découpe le projet d'imitation (*Blog des Lauréats*) en sprints de 80h.
+  - Découpe le projet d'imitation (*Blog des Lauréats*) en sessions opérationnelles.
   - Projette les intentions pédagogiques du concepteur sur les étapes du flux générique.
 
 ---
@@ -25,21 +25,33 @@ Ce document définit les règles de collaboration et d'interface entre le skill 
 
 ---
 
-## 3. Typologie Obligatoire des Phases (`UA-Lab` vs `UA-Tâche`)
+## 3. Typologie des Phases et Règle des 3 UA-Tâches Maximum
 
-Chaque session de formation est obligatoirement découpée en phases typées :
+Chaque session de formation est découpée en phases typées :
 - **Phase de type `UA-Lab`** :
   - S'applique dès qu'un domaine de compétence ou une notion technique nouvelle doit être assimilée.
-  - Se compose obligatoirement de deux étapes consécutives :
-    1. **Étape : Apprentissage** (notions théoriques et atelier guidé de référence).
-    2. **Étape : Application sur le Blog** (mise en œuvre pratique immédiate dans le projet d'imitation *Blog des Lauréats*).
-- **Phase de type `UA-Tâche`** :
-  - S'applique lorsque la phase ne requiert aucun nouvel apport théorique (ex : rituels Scrum, gestion Git, préparation Discovery N+1, tests qualité DoD, revue, rétrospective).
-  - Se compose **exclusivement d'étapes d'application opérationnelle**.
+  - Se compose de :
+    1. **Étape : Tutoriel-lab : [Intitulé]** : Apprentissage théorique et atelier guidé. Produit **obligatoirement 2 livrables** :
+       - Un guide explicatif détaillé au format Markdown (`guide-[nom].md`).
+       - Un support de présentation de diapositives au format Marp Markdown (`presentation-[nom].md`).
+    2. **Étape : Tutoriel-application : [Intitulé]** : Application directe et immédiate sur le Blog des Lauréats. Une étape d'application n'appartient à un UA-Lab que si elle découle directement de l'atelier du lab.
+- **Phase de type `UA-Tâche` (3 blocs au maximum par session)** :
+  - S'applique lorsque les activités ne requièrent aucun apport théorique synchrone.
+  - Afin d'éviter la dispersion et de respecter l'ordre naturel du flux générique, les UA-Tâches sont groupées en **3 blocs au maximum** :
+    1. **UA-Tâche Début :** Lancement, cadrage initial et préparation de l'environnement (Git, README).
+    2. **UA-Tâche Milieu :** Activités transverses de modélisation ou de préparation Discovery non issues d'un lab synchrone.
+    3. **UA-Tâche Fin :** Clôture de session, Qualité DoD, Sprint Review et Sprint Retrospective.
 
 ---
 
-## 4. Règle de Précédence Temporelle de l'Apprentissage
+## 4. Titres Épurés et Référence Générique dans le Corps
+
+- **Titres épurés :** Le titre d'une étape (`### Étape X : [Titre]`) ne doit **jamais** afficher la mention générique (ex: `(Étape Générique N)` proscrit dans les en-têtes).
+- **Traçabilité en description :** La correspondance avec le flux générique est obligatoirement explicitée au début du corps de l'étape : `- Correspondance flux générique : Étape Générique N ([Nom exact générique])`.
+
+---
+
+## 5. Règle de Précédence Temporelle de l'Apprentissage
 
 - Chaque étape d'apprentissage (`UA-Lab`) doit impérativement précéder sa première utilisation en réalisation dans le sprint.
 - Toutes les notions requises d'un même domaine pour la session sont consolidées dans l'étape d'apprentissage de cette phase UA-Lab.
@@ -47,19 +59,13 @@ Chaque session de formation est obligatoirement découpée en phases typées :
 
 ---
 
-## 5. Règle de Reprise Nominale Stricte
-
-- Toute étape d'application dans une session doit porter l'intitulé exact de l'étape correspondante dans `flux-travail/flux-travail-generique.md`.
-- Cette règle garantit la traçabilité complète entre le processus d'ingénierie universel et les activités de formation.
-
----
-
-## 6. Cadre Tri-Projets et Évaluation
+## 6. Cadre Tri-Projets et Durées Indicatives
 
 Chaque session structure la progression selon le cadre Tri-Projets :
-- **Projet d'Imitation (*Blog des Lauréats*) :** Réalisé du Jour 1 au Jour 7 (conception, développement guidé et rituels).
-- **Projet Technique (Portfolio personnel) :** Réalisé au Jour 8 en autonomie totale (codage pur sans conception, sanctionné par une épreuve de Live Coding de 40 minutes).
-- **Projet Fil Rouge (Projet professionnel) :** Réalisé aux Jours 9 et 10 avec création de Skills agentiques réutilisables.
+- **Projet d'Imitation (*Blog des Lauréats*) :** Réalisation pas-à-pas en classe active (conception, développement guidé et rituels). Le projet d'imitation est exclusivement le Blog (la TodoList ne servant que d'exemple didactique en tutoriel).
+- **Projet Technique (Portfolio personnel) :** Réalisé en fin d'itération en autonomie totale (codage technique pur sans conception lors des sprints de delivery).
+- **Projet Fil Rouge (Projet professionnel) :** Réalisé en clôture d'itération avec création de Skills agentiques réutilisables dans `.agent/skills/`.
+- **Durées indicatives :** Les mentions de 80 heures et 10 jours sont fournies à titre indicatif pour les formateurs et le concepteur ; l'agent IA ne doit pas les contraindre de manière rigide.
 
 ---
 
@@ -67,5 +73,4 @@ Chaque session structure la progression selon le cadre Tri-Projets :
 
 - **Zéro tableau Markdown (`| ... |` formellement interdit) :** Utiliser exclusivement des listes à puces directes (`- `).
 - **Zéro code numérique `UA.*` :** Utiliser des désignations descriptives claires (`UA-Lab : [Titre] (Domaine D.xxx.x)` ou `UA-Tâche : [Titre]`).
-- **Un seul livrable principal unique par étape :** Identifié sous la mention `Sortie (1 seul livrable) : [chemin relatif]`.
 - **Stack technique obligatoire :** Laravel 13, MySQL, Tailwind CSS avec Preline UI, Alpine.js, Antigravity Agent et GitHub Copilot.

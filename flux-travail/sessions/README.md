@@ -37,12 +37,12 @@ Chaque session articule rigoureusement trois piliers complémentaires :
 
 ## 2. Table d'Orientation des 9 Sessions N3
 
-- **[Session S0 : Cadrage, Design Macro & Socle Technique](./flux-travail-s0.md)**
-  - Durée : 80 heures (10 jours).
-  - Organisation : 7 phases typées (5 phases `UA-Lab` avec alternance immédiate Apprentissage $\to$ Application sur le Blog, et 2 phases `UA-Tâche` d'application opérationnelle pure).
-  - Domaines mobilisés : Scrum (`D.351.1-scrum`), Design Thinking (`D.311.1-design`), UML Mermaid (`D.311.2-uml`), Architecture MVC (`D.312.1-architecture`), Laravel 13 & MySQL (`D.321.1-laravel`).
-  - Objectif : Cadrer le projet, initialiser le dépôt Git, concevoir la charte graphique avec Preline UI, modéliser le User Flow, initialiser Laravel 13 et valider la persistance MySQL par un composant TodoList fonctionnel (Jalon Go/No-Go).
-  - Correspondance flux générique : Étapes génériques 1 à 14 (19 étapes réparties en 7 phases).
+- **[Session S0 : Cadrage, Design Macro & Product Backlog Initial](./flux-travail-s0.md)**
+  - Durée indicative : 80 heures (10 jours).
+  - Organisation : 5 phases équilibrées (2 phases `UA-Lab` produisant guide explicatif et présentation Marp, et 3 phases `UA-Tâche` d'application opérationnelle : Début, Milieu, Fin).
+  - Domaines mobilisés : Scrum (`D.351.1-scrum`), Design Thinking (`D.311.1-design`), UML Mermaid (`D.311.2-uml`).
+  - Objectif : Cadrer le projet, initialiser le dépôt Git, organiser l'équipe avec le Groupe 1 (Product Owner), conduire l'immersion usagers et formaliser les Personas, définir la Vision Produit, concevoir la charte graphique avec Preline UI, modéliser le User Flow et les maquettes du Sprint 1 en syntaxe Mermaid, et valider le cadrage lors de la Sprint Review 0 (Jalon Go/No-Go).
+  - Correspondance flux générique : Étapes génériques 1 à 11 (14 étapes réparties en 5 phases).
 
 - **[Session S01 : Consultation Publique d'un Article](./flux-travail-s1.md)**
   - Durée : 80 heures (10 jours).

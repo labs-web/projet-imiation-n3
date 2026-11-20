@@ -12,7 +12,7 @@ Le cycle de vie du projet se compose de 3 macro-phases et 25 étapes séquentiel
 
 ```mermaid
 flowchart TD
-    subgraph P1 ["Phase 1 : Sprint 0 — Cadrage, Design Macro et Socle Technique"]
+    subgraph P1 ["Phase 1 : Sprint 0 — Cadrage, Design Macro et Backlog Initial"]
         direction TB
         E1["1. Planifier le Sprint 0"] --> E2["2. Initialiser le dépôt Git et l'espace projet"]
         E2 --> E3["3. Cadrer le projet"]
@@ -22,11 +22,8 @@ flowchart TD
         E6 --> E7["7. Construire le Product Backlog initial"]
         E7 --> E8["8. Concevoir la Charte Graphique (Preline UI)"]
         E8 --> E9["9. Modéliser le User Flow et les maquettes du Sprint 1"]
-        E9 --> E10["10. Concevoir l'architecture logicielle"]
-        E10 --> E11["11. Préparer le socle technique"]
-        E11 --> E12["12. Valider le socle technique par un composant persistant (TodoList MySQL)"]
-        E12 --> E13["13. Valider le socle, la charte et les maquettes (Review 0 - Go/No-Go)"]
-        E13 --> E14["14. Clôturer le Sprint 0 (Sprint Retrospective 0)"]
+        E9 --> E10["10. Valider le cadrage, la charte et les maquettes (Review 0 - Go/No-Go)"]
+        E10 --> E11["11. Clôturer le Sprint 0 (Sprint Retrospective 0)"]
     end
 
     subgraph P2 ["Phase 2 : Cycle Itératif Dual-Track — Sprint N (N >= 1)"]
@@ -162,47 +159,18 @@ Le Sprint 0 construit le socle technique et méthodologique du projet. Il valide
   - Prototyper les maquettes interactives ciblées pour les fonctionnalités du Sprint 1 avec Preline UI.
 - **Sortie principale :** Document intégrant le User Flow Mermaid et les maquettes interactives (`docs/design/maquettes-sprint-1.md`).
 
-### Étape 10 : Concevoir l'architecture logicielle
-- **Phases de référence :** Dev OO (Architecture & Conception générale).
-- **Entrées :** Maquettes du Sprint 1, User Flow et stack technique validée.
-- **Activités d'ingénierie :**
-  - Modéliser le schéma de données conceptuel en syntaxe déclarative Mermaid (`erDiagram`).
-  - Définir l'architecture applicative : patron **MVC avec couche Service** (contrôleur mince HTTP vers service métier).
-  - Rédiger la décision d'architecture sous format standard ADR (Architectural Decision Record).
-- **Sortie principale :** Dossier d'architecture initiale incluant le modèle relationnel et l'ADR (`docs/architecture/architecture-initiale.md`).
-
-### Étape 11 : Préparer le socle technique
-- **Phases de référence :** Dev OO (Implémentation du socle technique).
-- **Entrées :** Dossier d'architecture et stack technique validée.
-- **Activités d'ingénierie :**
-  - Déployer le squelette applicatif **Laravel 13**.
-  - Configurer l'environnement dans le fichier `.env` (connexion MySQL, variables d'application).
-  - Installer Tailwind CSS et la bibliothèque de composants **Preline UI**.
-  - Créer la route racine `/` et la vue d'accueil Blade responsive.
-- **Sortie principale :** Vue d'accueil Blade responsive opérationnelle (`resources/views/welcome.blade.php`).
-
-### Étape 12 : Valider le socle technique par un composant persistant (TodoList MySQL)
-- **Phases de référence :** Dev OO (Vérification de la persistance des données).
-- **Entrées :** Squelette Laravel 13 et base de données MySQL opérationnelle.
-- **Activités d'ingénierie :**
-  - Créer la migration de schéma de base de données pour une entité simple (ex: `todos`).
-  - Exécuter la migration avec `php artisan migrate` sur la base MySQL.
-  - Créer un seeder pour insérer des données de test réalistes.
-  - Implémenter le contrôleur et la vue Blade avec Preline UI affichant les données depuis MySQL pour prouver la persistance réelle.
-- **Sortie principale :** Contrôleur validant la persistance MySQL et l'affichage de données réelles (`app/Http/Controllers/TodoController.php`).
-
-### Étape 13 : Valider le socle, la charte graphique et les maquettes (Sprint Review 0 — Jalon Go/No-Go)
+### Étape 10 : Valider le cadrage, la charte graphique et les maquettes (Sprint Review 0 — Jalon Go/No-Go)
 - **Phases de référence :** Scrum (Sprint Review 0) et Gestion de Projet (Jalon de validation).
-- **Entrées :** Socle technique connecté à MySQL (TodoList fonctionnelle), charte graphique Preline UI, User Flow et maquettes du Sprint 1.
+- **Entrées :** Note de cadrage, dossier de stack, Product Backlog initial, charte graphique Preline UI, User Flow et maquettes du Sprint 1.
 - **Activités d'ingénierie :**
-  - Animer la séance de revue devant le Product Owner.
-  - Démontrer le fonctionnement effectif de la pile technique sur la base de données MySQL.
+  - Animer la séance de revue devant le Product Owner (Groupe 1).
+  - Présenter le périmètre In/Out et les choix techniques validés.
   - Faire tester les maquettes interactives du Sprint 1 par des utilisateurs réels pour recueillir leurs retours ergonomiques.
   - Valider formellement la charte graphique.
   - Prononcer la décision collégiale Go/No-Go pour autoriser le lancement des sprints de delivery.
 - **Sortie principale :** Procès-verbal de la Review 0 actant la décision Go/No-Go et les retours utilisateurs (`sprints/pv-review-0.md`).
 
-### Étape 14 : Clôturer le Sprint 0 (Sprint Retrospective 0)
+### Étape 11 : Clôturer le Sprint 0 (Sprint Retrospective 0)
 - **Phases de référence :** Scrum (Sprint Retrospective 0) et Gestion de Projet (Clôture de phase).
 - **Entrées :** Déroulement et retours de la Sprint Review 0.
 - **Activités d'ingénierie :**
