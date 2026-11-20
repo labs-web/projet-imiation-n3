@@ -1,198 +1,229 @@
-# Flux de Travail — Session S03 (Sprint 3 - 80h)
+# Flux de Travail Opérationnel — Session S03 : Idéation, Définition de Problème, Sécurité (Policies/Gates) & Relations Eloquent
 
-Ce document détaille le flux de travail opérationnel de la **Session S03 : Idéation, Définition de Problème, Sécurité (Policies/Gates) & Relations Eloquent** pour le projet de formation N3.
-
-Il applique directement les étapes de la Phase 2 du [Flux de Travail Générique](../flux-travail-generique.md) en alternant l'acquisition des compétences dans les UA-labs et leur application immédiate sur le projet d'imitation.
+Ce document définit le flux de travail de la **Session S03** (Sprint 3 - 80 heures / 10 jours ouvrés).
+Il est structuré en **7 phases typées** alternant les unités d'apprentissage (**UA-Lab**) avec leurs applications immédiates sur le projet d'imitation, et les phases opérationnelles d'ingénierie (**UA-Tâche**).
 
 ---
 
-## 1. Fiche d'Identification de la Session
+## 1. Fiche d'Identification de la Session S03
 
-- **Code de Session :** S03
-- **Intitulé du Sprint :** Idéation, Définition de Problème, Sécurité (Policies/Gates) & Relations Eloquent
-- **Durée Ferme (Timebox) :** 80 heures (10 jours ouvrés)
+- **Identifiant :** Session S03 (Sprint 3)
+- **Titre :** Idéation, Définition de Problème, Sécurité (Policies/Gates) & Relations Eloquent
+- **Durée totale ferme :** 80 heures (10 jours ouvrés)
 - **Positionnement :** Troisième sprint de delivery applicatif Dual-Track
+- **Domaines de compétences mobilisés :**
+  - Pipelines de prompting et automatisation dans l'IDE (`D.325.1-ia`)
+  - Idéation, formulation de problème POV/HMW (`D.311.1-design`)
+  - Modélisation des relations Many-to-Many et tables pivots en Mermaid (`D.311.2-uml`)
+  - Sécurité applicative, validation FormRequest, CSRF et Policies/Gates (`D.312.1-architecture`)
+  - Développement Laravel 13, relations riches Eloquent & Preline UI (`D.321.1-laravel`)
+- **Objectif global d'apprentissage :**
+  - Préparer la branche Git `sprint-3` et actualiser la documentation projet.
+  - Orchestrer ses compétences IA en pipelines de travail automatisés dans l'IDE.
+  - Formuler le problème métier selon la méthode POV/HMW et animer un atelier d'idéation structuré.
+  - Modéliser les relations Many-to-Many et les tables pivots associées en syntaxe déclarative Mermaid.
+  - Sécuriser les formulaires web par des classes `FormRequest`, protection CSRF et autorisations déclaratives **Policies/Gates**.
+  - Implémenter sous **Laravel 13** avec **MySQL** les relations riches Eloquent (`belongsTo`, `hasMany`, `belongsToMany`) pour la création d'articles avec tags et catégories.
+  - Préparer la piste Discovery du Sprint 4 et clôturer le sprint par la démonstration et la rétrospective agile.
 
 ---
 
-## 2. Objectif d'Apprentissage Global
-
-Préparer la branche Git et actualiser la documentation projet ; orchestrer ses compétences IA en pipelines de travail automatisés dans l'IDE avec **Agent Antigravity & GitHub Copilot** ; formuler le problème métier selon la méthode POV/HMW du Design Thinking et animer une idéation cadrée ; modéliser les relations Many-to-Many et les tables pivots en syntaxe Mermaid ; sécuriser les formulaires web par des classes `FormRequest`, protection CSRF et autorisations déclaratives **Policies/Gates** ; et modéliser et implémenter sous **Laravel 13** avec **MySQL** les relations riches Eloquent (`belongsTo`, `hasMany`, `belongsToMany`).
-
----
-
-## 3. Prérequis Bloquants de Lancement
-
-Pour démarrer la session :
-- **Validation du Sprint 2 :** Page d'accueil dynamique et CRUD Catégories validés par le Product Owner (Groupe 1), rétrospective S2 actant le besoin de formaliser l'étape *Define*, et maquettes de S3 testées.
-- **Rôles Opérationnels :** Product Owner porté par le Groupe 1, Scrum Master et Développeurs en alternance.
-
----
-
-## 4. Cadre Tri-Projets et Organisation Temporelle (80h / 10 jours)
+## 2. Organisation dans le Cadre Tri-Projets (80h / 10 jours)
 
 - **Jours 1 à 7 : Projet d'Imitation (*Blog des Lauréats*)**
-  - Réalisation guidée pas-à-pas en classe active.
-  - Alternance directe entre l'assimilation d'un UA-lab et l'exécution de l'étape de réalisation correspondante.
+  - Réalisation guidée pas-à-pas de la création sécurisée d'articles avec sélection de catégories et tags multiples.
+  - Alternance immédiate : chaque atelier théorique est mis en œuvre sur le Blog.
 - **Jour 8 : Projet Technique (*Portfolio Développeur*)**
-  - **Codage technique pur en totale autonomie**.
-  - L'apprenant réalise uniquement le développement technique : validation `ProjectRequest`, Policies de sécurité et relations Eloquent Projets $\leftrightarrow$ Technologies sous Laravel 13 et MySQL.
-  - Aucune étape de planification ni de conception n'est demandée sur cette journée.
-  - Épreuve sommative de **Live Coding (40 min chrono sans assistance — 65% de la note)**.
-- **Jours 9 et 10 : Projet Fil Rouge (*Application Métier*, ex : Cinéma)**
-  - **Création et enrichissement systématique de Skills agentiques** dans `.agent/skills/`.
-  - L'apprenant conçoit des Skills réutilisables permettant à l'Agent IA d'automatiser la validation FormRequest et les relations Eloquent complexes.
-  - Clôture de session et bilan réflexif.
+  - **Codage technique pur en totale autonomie (sans conception ni planification)**.
+  - L'apprenant implémente la validation `ProjectRequest`, les Policies de sécurité et les relations Eloquent Projets $\leftrightarrow$ Technologies sous Laravel 13 et MySQL.
+  - **Épreuve sommative de Live Coding (40 min chrono sans assistance — 65% de la note finale du module)**.
+- **Jours 9 et 10 : Projet Fil Rouge (*Application Métier*, ex : Gestion de Cinéma)**
+  - Création du Skill agentique `.agent/skills/eloquent-relations-generator/` pour automatiser la génération des relations complexes et validations.
+  - Bilan réflexif et consolidation des acquis.
 
 ---
 
-## 5. Épreuve de Live Coding (40 min chrono sans assistance — 65% de la note)
+## 3. Épreuve de Live Coding (40 min chrono sans assistance — 65% de la note)
 
-- **Contexte :** À partir du projet starter fourni (`dossier-depart/`), coder en 40 minutes la validation sécurisée et l'enregistrement persistant d'un article lié à sa catégorie en base MySQL.
+- **Contexte :** À partir du projet starter fourni (`dossier-depart/`), implémenter en 40 minutes le formulaire d'ajout d'une réalisation avec validation stricte via `ProjectRequest`, contrôle d'autorisation par Gate, et association Many-to-Many aux technologies sélectionnées.
 - **Consignes opérationnelles :**
-  - Coder la classe de validation `app/Http/Requests/ArticleRequest.php` (titre requis >= 5 caractères, contenu requis, `category_id` valide en base MySQL).
-  - Implémenter le contrôleur d'enregistrement `ArticleController@store` persistant l'article avec sa catégorie Eloquent sous MySQL.
-  - Afficher le message flash de confirmation dans Blade avec les styles Preline UI.
-- **Critères d'évaluation :** Découplage FormRequest, respect des autorisations, persistance MySQL intègre, conformité visuelle Preline UI.
+  - Déclarer la route POST `/realisations` protégée par le middleware d'authentification.
+  - Créer la classe `ProjectRequest` avec règles de validation typées.
+  - Définir la Gate d'autorisation `manage-projects` dans `AppServiceProvider`.
+  - Implémenter la méthode `store` synchronisant les IDs de technologies via la méthode `sync()` d'Eloquent.
+- **Critères d'évaluation :** Sécurité FormRequest, conformité Gate, persistance relationnelle MySQL, messages d'erreurs clairs en français.
 
 ---
 
-## 6. Déroulement Chronologique Intercalé du Sprint 3
+## 4. Déroulement des 7 Phases de la Session S03
 
 ```mermaid
 flowchart TD
-    subgraph S3_Prep ["Planification & Environnement"]
-        R1["Étape 1 : Planifier le Sprint N (Sprint Planning)"] --> R2["Étape 2 : Préparer l'environnement (Branche Git)"]
+    subgraph P1 ["Phase 1 : UA-Tâche — Planification & Git"]
+        E1["Étape 1 (Application) : Planifier le Sprint N (Sprint Planning S3)"]
+        E2["Étape 2 (Application) : Préparer l'environnement de sprint (Branche Git)"]
+        E1 --> E2
     end
 
-    subgraph S3_Labs ["UA-Labs d'Apprentissage"]
-        R2 --> U1["Étape 3 : UA-lab Workflows IA (D.325.1-ia)"]
-        U1 --> U2["Étape 4 : UA-lab Define POV/HMW & Idéation (D.311.1-design)"]
-        U2 --> U3["Étape 5 : UA-lab Relations Many-to-Many Mermaid (D.311.2-uml)"]
-        U3 --> U4["Étape 6 : UA-lab Protection CSRF & Policies (D.324.1-securite)"]
-        U4 --> U5["Étape 7 : UA-lab FormRequest & Eloquent MySQL (D.321.1-laravel)"]
+    subgraph P2 ["Phase 2 : UA-Lab — Pipelines IA dans l'IDE (D.325.1-ia)"]
+        E3["Étape 3 (Apprentissage) : Pipelines de prompting et automatisation dans l'IDE"]
+        E4["Étape 4 (Application Blog) : Outiller l'IDE pour les flux de validation"]
+        E3 --> E4
     end
 
-    subgraph S3_Real ["Réalisation Dual-Track"]
-        U5 --> R3["Étape 8 : Concevoir en détail et développer (Delivery)"]
-        R3 --> R4["Étape 9 : Affiner le Backlog pour le Sprint suivant (Discovery)"]
-        R4 --> R5["Étape 10 : Modéliser le User Flow et maquetter S4 (Discovery)"]
-        R5 --> R6["Étape 11 : Suivre l'avancement quotidien (Daily Scrum)"]
-        R6 --> R7["Étape 12 : Tester et valider l'Incrément (DoD)"]
-        R7 --> R8["Étape 13 : Présenter et inspecter (Review 3)"]
-        R8 --> R9["Étape 14 : Améliorer le processus (Retrospective 3)"]
+    subgraph P3 ["Phase 3 : UA-Lab — Idéation & Définition POV/HMW (D.311.1-design)"]
+        E5["Étape 5 (Apprentissage) : Formulation de problème POV/HMW et idéation"]
+        E6["Étape 6 (Application Blog) : Formuler les POV/HMW et animer l'idéation"]
+        E5 --> E6
     end
+
+    subgraph P4 ["Phase 4 : UA-Lab — Relations N-N Mermaid (D.311.2-uml)"]
+        E7["Étape 7 (Apprentissage) : Relations Many-to-Many et tables pivots en Mermaid"]
+        E8["Étape 8 (Application Blog) : Modéliser le schéma relationnel Articles-Tags"]
+        E7 --> E8
+    end
+
+    subgraph P5 ["Phase 5 : UA-Lab — FormRequest, Policies & Eloquent (D.312.1 & D.321.1)"]
+        E9["Étape 9 (Apprentissage) : FormRequest, Policies/Gates et relations Eloquent"]
+        E10["Étape 10 (Application Blog) : Concevoir en détail et développer la tranche"]
+        E9 --> E10
+    end
+
+    subgraph P6 ["Phase 6 : UA-Tâche — Piste Discovery (Sprint 4)"]
+        E11["Étape 11 (Application) : Affiner le Backlog pour le Sprint suivant"]
+        E12["Étape 12 (Application) : Modéliser le User Flow et maquetter S4"]
+        E11 --> E12
+    end
+
+    subgraph P7 ["Phase 7 : UA-Tâche — Qualité, Démonstration & Rétrospective"]
+        E13["Étape 13 (Application) : Suivre l'avancement quotidien (Daily Scrum)"]
+        E14["Étape 14 (Application) : Tester et valider l'Incrément (DoD)"]
+        E15["Étape 15 (Application) : Présenter et inspecter (Sprint Review 3)"]
+        E16["Étape 16 (Application) : Améliorer le processus (Sprint Retrospective 3)"]
+        E13 --> E14 --> E15 --> E16
+    end
+
+    P1 --> P2 --> P3 --> P4 --> P5 --> P6 --> P7
 ```
 
 ---
 
-### Étape 1 : Planifier le Sprint N (Sprint Planning — Piste Delivery) (Étape Générique 15)
-- **Entrées :** Product Backlog actualisé et retours de la Review 2.
-- **Activités de réalisation :**
-  - Définir le Sprint Goal S3 : "Permettre la création et la publication sécurisées d'articles enrichis de catégories et d'étiquettes multiples sous validation stricte FormRequest et Policies".
-  - Sélectionner les User Stories : "Création sécurisée d'un article" et "Association d'étiquettes multiples".
-  - Décomposer les User Stories en tâches techniques élémentaires (1 à 4 heures).
-  - Valider l'engagement d'équipe sur le Sprint Backlog S3.
-- **Sortie principale :** Document du Sprint Backlog S3 ordonné (`scrum/sprint-backlog-s3.md`).
+### Phase 1 : UA-Tâche — Planification du Sprint 3 et Préparation de l'Environnement Git
+*Cette phase ne requiert aucun nouvel apport théorique. Elle regroupe les tâches opérationnelles d'initialisation de l'itération.*
 
-### Étape 2 : Préparer l'environnement de sprint (Branche Git et README.md) (Étape Générique 16)
-- **Entrées :** Sprint Backlog S3 validé et branche `main`.
-- **Activités de réalisation :**
-  - Créer et basculer sur la branche Git du sprint : `git checkout -b sprint-3`.
-  - Actualiser le fichier `README.md` avec le Sprint Goal S3, la composition d'équipe et les dates jalons.
-- **Sortie principale :** Fichier `README.md` actualisé sur la branche `sprint-3`.
+- **Étape 1 (Application) : Planifier le Sprint N (Sprint Planning — Piste Delivery)**
+  - Entrées : Product Backlog actualisé, retours de la Review 2 et actions de la Rétrospective S2.
+  - Travail d'application sur le Blog : Définir le Sprint Goal S3 ("Permettre aux lauréats d'ajouter et d'éditer des articles enrichis avec catégories, tags multiples et sécurité granulaire par Policies/Gates"), décomposer les tâches et valider le Sprint Backlog S3.
+  - Sortie (1 seul livrable) : `scrum/sprint-backlog-s3.md`.
+- **Étape 2 (Application) : Préparer l'environnement de sprint (Branche Git et README.md)**
+  - Entrées : Sprint Backlog S3 validé et branche `main`.
+  - Travail d'application sur le Blog : Créer la branche Git `sprint-3` et actualiser le fichier `README.md` avec les objectifs et jalons du sprint.
+  - Sortie (1 seul livrable) : `README.md`.
 
-### Étape 3 : UA-lab : Orchestration des skills en flux de travail automatisés (Domaine D.325.1-ia)
-- **Objectif d'apprentissage :** Chaîner des compétences agentiques spécialisées en pipelines d'ingénierie dans l'IDE avec Antigravity et Copilot.
-- **Notions de base à apprendre :**
-  - Concept de pipeline agentique : enchaînement ordonné analyse $\to$ génération $\to$ audit.
-  - Coordination et délégation inter-agents.
-  - Création de méta-skills orchestrateurs.
-- **Sortie :** Guide des workflows agentiques automatisés (`tutoriels/ia/guide-workflows-agentiques.md`).
+---
 
-### Étape 4 : UA-lab : Définition de problème (*Define* / POV / HMW) et Idéation (Domaine D.311.1-design)
-- **Objectif d'apprentissage :** Formuler avec rigueur le problème usager selon la méthode POV/HMW et animer une séance d'idéation pour lever la dette méthodologique de S2.
-- **Notions de base à apprendre :**
-  - Méthode Point of View (Utilisateur + Besoin + Découverte surprenante).
-  - Déclinaison en questions stimulantes *How Might We* (HMW).
-  - Techniques d'idéation divergente puis convergente.
-- **Sortie :** Dossier de cadrage du problème et d'idéation (`tutoriels/design/guide-define-ideation.md`).
+### Phase 2 : UA-Lab — Pipelines de Prompting et Automatisation dans l'IDE (Domaine D.325.1-ia)
+*Cette phase introduit l'enchaînement automatisé d'instructions IA. Elle comprend l'étape d'apprentissage conceptuel suivie de son outillage direct sur le Blog.*
 
-### Étape 5 : UA-lab : Modélisation des relations Many-to-Many & tables pivots Mermaid (Domaine D.311.2-uml)
-- **Objectif d'apprentissage :** Modéliser les associations relationnelles complexes et les tables de liaison en syntaxe déclarative Mermaid (un seul lab consolidant tout le domaine UML du sprint).
-- **Notions de base à apprendre :**
-  - Associations n-n et identification des clés étrangères MySQL.
-  - Concept de table de liaison / table pivot et attributs portés par la relation.
-  - Modélisation déclarative des relations en Mermaid (`erDiagram`).
-- **Sortie :** Guide de modélisation des relations complexes en Mermaid (`tutoriels/uml/guide-relations-complexes.md`).
+- **Étape 3 (Apprentissage) : Pipelines de prompting et automatisation dans l'IDE**
+  - Entrées : Outils Antigravity et GitHub Copilot.
+  - Notions de base à apprendre :
+    - Enchaînement séquentiel d'instructions IA : prompt de cadrage $\to$ prompt de validation $\to$ prompt de génération de code.
+    - Utilisation de contextes enrichis avec schémas Mermaid et règles d'architecture.
+    - Évaluation systématique de la fidélité du code généré par rapport aux contraintes applicatives.
+  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/ia/guide-pipelines-ia.md`.
+- **Étape 4 (Application sur le Blog) : Outiller l'IDE pour les flux de validation**
+  - Entrées : Guide des pipelines IA et spécifications fonctionnelles du Blog.
+  - Travail d'application sur le Blog : Configurer les modèles de prompts de validation pour les formulaires du Blog et les règles de conformité Eloquent.
+  - Sortie (1 seul livrable) : `docs/ia/prompts-validation-blog.md`.
 
-### Étape 6 : UA-lab : Protection CSRF et autorisations par Policies/Gates (Domaine D.324.1-securite)
-- **Objectif d'apprentissage :** Verrouiller les points d'entrée applicatifs contre les failles CSRF et implémenter le contrôle d'accès déclaratif par Policies/Gates.
-- **Notions de base à apprendre :**
-  - Vulnérabilité Cross-Site Request Forgery (CSRF) et jeton de protection `@csrf`.
-  - Définition de règles d'autorisation déclaratives avec les Policies Laravel (`Gate::define`, méthode `authorize()`, classe `Policy`).
-- **Sortie :** Guide de sécurisation CSRF et Policies déclaratives (`tutoriels/securite/guide-csrf-policies.md`).
+---
 
-### Étape 7 : UA-lab : Validation déclarative FormRequest et relations Eloquent MySQL (Domaine D.321.1-laravel)
-- **Objectif d'apprentissage :** Découpler la validation des requêtes dans des classes dédiées et manipuler les associations relationnelles en base MySQL (un seul lab consolidant tout le domaine Laravel du sprint).
-- **Notions de base à apprendre :**
-  - Classe FormRequest (`php artisan make:request`), méthodes `rules()`, messages personnalisés en français, méthode `authorize()`.
-  - Définition des méthodes de relation Eloquent (`belongsTo`, `hasMany`, `belongsToMany`).
-  - Clés étrangères et contraintes d'intégrité en base MySQL.
-  - Synchronisation de tables pivots avec Eloquent (`attach()`, `sync()`, `detach()`).
-- **Sortie :** Guide technique FormRequest et relations Eloquent MySQL (`tutoriels/laravel/guide-formrequest-eloquent.md`).
+### Phase 3 : UA-Lab — Idéation et Définition de Problème POV/HMW (Domaine D.311.1-design)
+*Cette phase approfondit la démarche de cadrage fonctionnel. Elle s'organise en une étape d'apprentissage théorique suivie de la formalisation concrète sur le Blog.*
 
-### Étape 8 : Concevoir en détail et développer (Piste Delivery) (Étape Générique 17)
-- **Entrées :** Spécifications fonctionnelles, modèle relationnel Mermaid et règles de validation FormRequest.
-- **Activités de réalisation :**
-  - *Projet d'Imitation :* Coder la classe de validation `ArticleRequest`, la politique d'accès `ArticlePolicy`, les relations Eloquent dans le modèle `Article`, et le contrôleur `ArticleController` avec synchronisation des étiquettes.
-  - *Projet Technique (Codage pur - Jour 8) :* Coder `ProjectRequest` et les relations Projets $\leftrightarrow$ Technologies sur son portfolio (Live Coding 40 min).
-  - *Projet Fil Rouge (Jours 9-10) :* Créer le Skill `.agent/skills/eloquent-crud-builder/` pour automatiser la génération de formulaires validés par FormRequest et persistés en relations Eloquent.
-- **Sortie principale :** Contrôleur d'articles sécurisé opérationnel (`app/Http/Controllers/ArticleController.php`).
+- **Étape 5 (Apprentissage) : Formulation de problème POV/HMW et idéation**
+  - Entrées : Cadre de Design Thinking.
+  - Notions de base à apprendre :
+    - Formulation de la déclaration de point de vue : POV = Utilisateur + Besoin + Constat surprenant (*Insight*).
+    - Déclinaison en questions stimulantes "How Might We" (HMW - Comment pourrions-nous).
+    - Animation d'un atelier d'idéation : brainstorming structuré, matrice faisabilité/impact.
+  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/design/guide-ideation-hmw.md`.
+- **Étape 6 (Application sur le Blog) : Formuler les POV/HMW et animer l'idéation pour la publication**
+  - Entrées : Personas du Blog et retours d'utilisation.
+  - Travail d'application sur le Blog : Rédiger le POV de l'auteur lauréat, formuler les axes HMW pour simplifier la saisie d'articles, et sélectionner les fonctionnalités d'édition prioritaires.
+  - Sortie (1 seul livrable) : `docs/analyse/pov-hmw-publication.md`.
 
-### Étape 9 : Affiner le Backlog pour le Sprint suivant (Piste Discovery — ~10% temps) (Étape Générique 18)
-- **Entrées :** Product Backlog et retours d'utilisation.
-- **Activités de réalisation :**
-  - Collaborer avec le Groupe 1 (Product Owner) pour clarifier les User Stories du Sprint 4 (Prototypage d'écrans complexes, middlewares de route et tests unitaires PHPUnit).
-  - Rédiger les critères d'acceptation et estimer la complexité en Story Points.
-- **Sortie principale :** Fiche de raffinement du backlog pour le Sprint 4 (`scrum/backlog-refinement-s4.md`).
+---
 
-### Étape 10 : Modéliser le User Flow et maquetter pour le Sprint suivant (Piste Discovery — ~10% temps) (Étape Générique 19)
-- **Entrées :** User Stories raffinées pour le Sprint 4 et UI Kit Preline UI.
-- **Activités de réalisation :**
-  - Modéliser le parcours utilisateur des écrans d'administration et de modération en syntaxe Mermaid.
-  - Concevoir les maquettes interactives correspondantes avec les composants Preline UI.
-- **Sortie principale :** Document regroupant le User Flow et les maquettes interactives du Sprint 4 (`docs/design/maquettes-sprint-4.md`).
+### Phase 4 : UA-Lab — Modélisation des Relations Many-to-Many en Syntaxe Mermaid (Domaine D.311.2-uml)
+*Cette phase introduit la modélisation relationnelle riche. Elle s'organise en une étape d'apprentissage théorique suivie de la modélisation du schéma de données du Blog.*
 
-### Étape 11 : Suivre l'avancement quotidien (Daily Scrum — Delivery & Discovery) (Étape Générique 20)
-- **Entrées :** Tableau Kanban et tâches du Sprint 3.
-- **Activités de réalisation :**
-  - Animer la réunion quotidienne debout de 15 minutes.
-  - Partager le travail réalisé sur la validation, les relations Eloquent et le discovery.
-  - Lever immédiatement les blocages techniques.
-- **Sortie principale :** Journal de suivi journalier des tâches (`issues/issues-sprint-3.md`).
+- **Étape 7 (Apprentissage) : Relations Many-to-Many et tables pivots en Mermaid**
+  - Entrées : Syntaxe Mermaid `erDiagram`.
+  - Notions de base à apprendre :
+    - Cardinalités complexes : Many-to-Many (`}o--o{`) et dissociation par table de jonction pivot.
+    - Clés primaires composites et clés étrangères avec contraintes d'intégrité référentielle en cascade (`onDelete('cascade')`).
+    - Syntaxe déclarative Mermaid pour représenter les entités `Article`, `Tag` et la table pivot `article_tag`.
+  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/uml/guide-relations-manytomany.md`.
+- **Étape 8 (Application sur le Blog) : Modéliser le schéma relationnel Articles-Tags**
+  - Entrées : Spécifications du Blog et guide Mermaid.
+  - Travail d'application sur le Blog : Modéliser le schéma entité-association complet du Blog intégrant les articles, catégories, auteurs et tags avec la table pivot `article_tag`.
+  - Sortie (1 seul livrable) : `docs/analyse/modele-relations-tags.mmd`.
 
-### Étape 12 : Tester et valider l'Incrément (Piste Delivery — DoD) (Étape Générique 21)
-- **Entrées :** Code source complet du Sprint 3 et critères formels de la Definition of Done.
-- **Activités de réalisation :**
-  - Vérifier la conformité aux 7 critères formels de la DoD :
-    - Formulaires protégés par jeton CSRF et messages d'erreurs en français.
-    - Relations Eloquent intègres sans orphelins en base MySQL.
-    - Règles d'autorisation par Policies opérationnelles.
-- **Sortie principale :** Rapport formel de validation de la Definition of Done (`docs/qualite/rapport-dod-sprint-3.md`).
+---
 
-### Étape 13 : Présenter et inspecter (Sprint Review N — Double Validation Delivery & Discovery) (Étape Générique 22)
-- **Entrées :** Incrément logiciel S3 opérationnel et maquettes interactives du Sprint 4.
-- **Activités de réalisation :**
-  - Démontrer la création sécurisée d'articles et la persistance relationnelle MySQL devant le Product Owner (Groupe 1).
-  - Valider formellement la fin des User Stories de S3.
-  - Faire tester les maquettes d'administration du Sprint 4 aux utilisateurs cibles.
-- **Sortie principale :** Procès-verbal de la Review 3 (`sprints/pv-review-3.md`).
+### Phase 5 : UA-Lab — FormRequest, Policies/Gates et Relations Eloquent (Domaines D.312.1-architecture & D.321.1-laravel)
+*Cette phase introduit le développement sécurisé et relationnel sous Laravel 13. Elle s'organise en une étape d'apprentissage technique suivie de la réalisation complète sur le Blog, le portfolio et le projet fil rouge.*
 
-### Étape 14 : Améliorer le processus (Sprint Retrospective N — Amélioration continue) (Étape Générique 23)
-- **Entrées :** Déroulement et retours de la Review 3.
-- **Activités de réalisation :**
-  - Analyser le déroulement du Sprint 3 en équipe.
-  - Constater le choc réflexif d'avoir codé sans maquettes validées au préalable pour certains écrans et sans tests unitaires automatisés (besoin de suites PHPUnit vers S04).
-  - Définir 2 actions d'amélioration concrètes pour le Sprint 4.
-- **Sortie principale :** Bilan rétrospectif du Sprint 3 constatant la nécessité d'automatiser les tests unitaires (`scrum/retrospective-s3.md`).
+- **Étape 9 (Apprentissage) : FormRequest, Policies/Gates et relations Eloquent**
+  - Entrées : Documentation Laravel 13 et Preline UI.
+  - Notions de base à apprendre :
+    - Validation découplée par classes `FormRequest` avec règles sémantiques et messages localisés en français.
+    - Autorisations d'accès par Gates et Policies associées au modèle (`ArticlePolicy@update`, `@delete`).
+    - Déclaration des relations Eloquent : `belongsTo(Category::class)`, `belongsToMany(Tag::class)`.
+    - Méthodes de synchronisation de relations N-N : `attach()`, `detach()`, `sync()`.
+  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/laravel/guide-eloquent-policies.md`.
+- **Étape 10 (Application sur le Blog) : Concevoir en détail et développer (Piste Delivery)**
+  - Entrées : Notions acquises, modèle relationnel et maquettes validées.
+  - Travail d'application sur le Blog :
+    - *Projet d'Imitation :* Coder la migration `article_tag`, les relations Eloquent dans `Article` et `Tag`, la classe `StoreArticleRequest`, la politique de sécurité `ArticlePolicy`, et le formulaire Blade sous Preline UI avec sélection multiple de tags.
+    - *Projet Technique (Codage pur - Jour 8) :* Coder la validation `ProjectRequest`, la Gate `manage-projects` et les relations Many-to-Many Technologies sur son portfolio (Épreuve de Live Coding de 40 min).
+    - *Projet Fil Rouge (Jours 9-10) :* Créer le Skill `.agent/skills/eloquent-relations-generator/` pour automatiser la mise en place de relations Eloquent riches.
+  - Sortie (1 seul livrable) : `app/Http/Requests/StoreArticleRequest.php`.
+
+---
+
+### Phase 6 : UA-Tâche — Piste Discovery : Affinement du Backlog et Maquettage du Sprint 4
+*Cette phase ne requiert aucun nouvel apport conceptuel. Il s'agit d'une UA-Tâche d'ingénierie opérationnelle pour préparer le sprint suivant.*
+
+- **Étape 11 (Application) : Affiner le Backlog pour le Sprint suivant (Piste Discovery)**
+  - Entrées : Product Backlog et retours d'utilisation.
+  - Travail d'application : Collaborer avec le Product Owner pour clarifier les User Stories du Sprint 4 (Automatisation des tests PHPUnit et prototypage interactif).
+  - Sortie (1 seul livrable) : `scrum/backlog-refinement-s4.md`.
+- **Étape 12 (Application) : Modéliser le User Flow et maquetter pour le Sprint suivant (Piste Discovery)**
+  - Entrées : User Stories raffinées pour S4 et UI Kit Preline UI.
+  - Travail d'application : Modéliser en syntaxe Mermaid les parcours de modération et prototyper les maquettes interactives S4.
+  - Sortie (1 seul livrable) : `docs/design/maquettes-sprint-4.md`.
+
+---
+
+### Phase 7 : UA-Tâche — Clôture du Sprint 3, Démonstration, Tests DoD et Rétrospective
+*Cette phase opérationnelle rassemble les rituels de clôture et l'amélioration continue du sprint.*
+
+- **Étape 13 (Application) : Suivre l'avancement quotidien (Daily Scrum — Delivery & Discovery)**
+  - Entrées : Tableau Kanban du Sprint 3.
+  - Travail d'application : Animer la réunion quotidienne debout de 15 minutes et lever les blocages techniques.
+  - Sortie (1 seul livrable) : `issues/issues-sprint-3.md`.
+- **Étape 14 (Application) : Tester et valider l'Incrément (Piste Delivery — DoD)**
+  - Entrées : Code source complet et critères de la Definition of Done.
+  - Travail d'application : Exécuter la checklist de validation (formulaire sécurisé, validation FormRequest effective, protection CSRF active, relations N-N intègres dans MySQL).
+  - Sortie (1 seul livrable) : `docs/qualite/rapport-dod-sprint-3.md`.
+- **Étape 15 (Application) : Présenter et inspecter (Sprint Review N — Double Validation Delivery & Discovery)**
+  - Entrées : Incrément logiciel S3 et maquettes du Sprint 4.
+  - Travail d'application : Démontrer l'ajout et l'édition sécurisés d'un article devant le Product Owner (Groupe 1), valider la DoD et faire tester les maquettes de S4.
+  - Sortie (1 seul livrable) : `sprints/pv-review-3.md`.
+- **Étape 16 (Application) : Améliorer le processus (Sprint Retrospective N — Amélioration continue)**
+  - Entrées : Déroulement de la Review 3 et vécu d'équipe.
+  - Travail d'application : Conduire l'analyse réflexive d'équipe, acter la nécessité d'automatiser des tests de régression, et planifier l'introduction de PHPUnit au Sprint 4.
+  - Sortie (1 seul livrable) : `scrum/retrospective-s3.md`.

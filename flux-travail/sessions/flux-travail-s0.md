@@ -1,253 +1,237 @@
-# Flux de Travail — Session S0 (Sprint 0 - 80h)
+# Flux de Travail Opérationnel — Session S0 : Cadrage, Design Macro et Socle Technique
 
-Ce document détaille le flux de travail opérationnel du **Sprint 0 : Cadrage, Design Macro et Socle Technique** pour le projet de formation N3.
-
-Il applique directement les étapes de la Phase 1 du [Flux de Travail Générique](../flux-travail-generique.md) en alternant de manière synchrone l'acquisition de compétences théoriques dans les UA-labs et leur application immédiate sur le projet d'imitation.
-
----
-
-## 1. Fiche d'Identification de la Session
-
-- **Code de Session :** S0
-- **Intitulé du Sprint :** Cadrage, Design Macro et Socle Technique
-- **Durée Ferme (Timebox) :** 80 heures (10 jours ouvrés)
-- **Positionnement :** Sprint initial d'alignement et d'outillage avant le premier cycle de delivery
+Ce document définit le flux de travail opérationnel du **Sprint 0** (80 heures / 10 jours ouvrés).
+Il est structuré en **7 phases typées** alternant les unités d'apprentissage (**UA-Lab**) avec leurs applications immédiates sur le projet d'imitation, et les phases opérationnelles d'ingénierie (**UA-Tâche**).
 
 ---
 
-## 2. Objectif d'Apprentissage Global
+## 1. Fiche d'Identification de la Session S0
 
-Acquérir et appliquer de manière synchrone les fondamentaux du cadre Scrum, de la démarche Design Thinking (immersion empathique et Personas), de la modélisation déclarative Mermaid, de l'architecture MVC avec couche Service et du framework Laravel 13 ; initialiser le dépôt Git et l'espace projet ; cadrer le projet en équipe, formaliser la vision produit et le Product Backlog initial selon les critères INVEST ; concevoir la charte graphique sous forme d'UI Kit Tailwind CSS avec **Preline UI**, modéliser le **User Flow** écran par écran et les maquettes interactives du Sprint 1 ; initialiser le socle technique sous **Laravel 13** et **MySQL**, valider le fonctionnement de la base de données via un composant TodoList fonctionnel, et valider le jalon Go/No-Go lors de la Sprint Review 0.
+- **Identifiant :** Session S0 (Sprint 0)
+- **Titre :** Cadrage, Design Macro et Socle Technique
+- **Durée totale ferme :** 80 heures (10 jours ouvrés)
+- **Positionnement :** Sprint initial d'alignement méthodologique et technique avant les cycles de delivery
+- **Domaines de compétences mobilisés :**
+  - Initiation Scrum & Gouvernance Agile (`D.351.1-scrum`)
+  - Design Thinking, Empathie, Personas et UI Kit Preline UI (`D.311.1-design`)
+  - Modélisation déclarative en syntaxe Mermaid (`D.311.2-uml`)
+  - Architecture Logicielle MVC, Couche Service et ADR (`D.312.1-architecture`)
+  - Socle technique Laravel 13, Blade, Preline UI et persistance MySQL (`D.321.1-laravel`)
+- **Objectif global d'apprentissage :**
+  - Assimiler les principes Scrum et planifier le Sprint 0 avec la charte d'équipe.
+  - Initialiser le dépôt Git et la structure documentaire du projet.
+  - Cadrer le projet, justifier la stack technique et conduire la démarche d'empathie (Personas et Vision Produit).
+  - Découper les exigences en User Stories INVEST pour bâtir le Product Backlog initial.
+  - Concevoir l'UI Kit Tailwind CSS avec les composants Preline UI, modéliser le User Flow en syntaxe Mermaid et prototyper les maquettes interactives du Sprint 1.
+  - Définir l'architecture logicielle découplée en 2 couches officialisée par l'ADR-01.
+  - Installer le socle Laravel 13 sous MySQL et valider la persistance effective via un composant TodoList fonctionnel pour prononcer la décision formelle Go/No-Go lors de la Review 0.
 
 ---
 
-## 3. Prérequis Bloquants de Lancement
-
-Pour démarrer la session et lancer le projet :
-- **Prérequis Bloquant Product Owner :** Validation du lab `lab-product-owner` par le **Groupe 1** (groupe pilote d'apprenants ayant déjà mené un projet collectif en amont et validé le lab `lab-design-thinking`). Le Groupe 1 porte le besoin métier, la vision produit et valide formellement les livrables lors des Sprint Reviews.
-- **Prérequis Bloquant Scrum Master :** Validation du lab `lab-scrum-master` par l'ensemble des apprenants de la promotion pour maîtriser l'animation des rituels et les artéfacts agiles.
-- **Rôles Opérationnels :** Les apprenants occupent les rôles de **Développeurs** et de **Scrum Master** (en alternance).
-
----
-
-## 4. Cadre Tri-Projets et Organisation Temporelle (80h / 10 jours)
+## 2. Organisation dans le Cadre Tri-Projets (80h / 10 jours)
 
 - **Jours 1 à 7 : Projet d'Imitation (*Blog des Lauréats*)**
-  - Réalisation guidée pas-à-pas en classe active.
-  - Alternance directe entre l'assimilation d'un UA-lab et l'exécution de l'étape de réalisation correspondante.
+  - Réalisation pas-à-pas en classe active des étapes de cadrage, de design et de socle technique.
+  - Alternance immédiate : chaque atelier théorique est mis en œuvre sur le Blog.
 - **Jour 8 : Projet Technique (*Portfolio Développeur*)**
-  - **Codage technique pur en totale autonomie**.
-  - L'apprenant réalise uniquement le développement technique : initialisation de son propre dépôt Git, configuration de son squelette Laravel 13 connecté à MySQL, et mise en place de sa page d'accueil minimale.
-  - Aucune étape de planification ni de conception n'est demandée sur cette journée.
-- **Jours 9 et 10 : Projet Fil Rouge (*Application Métier*, ex : Cinéma)**
-  - **Création et enrichissement systématique de Skills agentiques** dans `.agent/skills/`.
-  - L'apprenant conçoit des Skills réutilisables permettant à l'Agent IA d'exécuter sur le domaine métier le travail appris dans le projet d'imitation (Skill de cadrage, de personas, de modélisation et de socle).
-  - Clôture de session et bilan réflexif.
+  - **Codage technique pur en totale autonomie (sans cadrage ni planification)**.
+  - L'apprenant initialise son propre dépôt Git, configure son squelette applicatif Laravel 13 connecté à MySQL, et déploie sa page d'accueil minimale.
+  - Épreuve sommative d'évaluation technique du socle.
+- **Jours 9 et 10 : Projet Fil Rouge (*Application Métier*, ex : Gestion de Cinéma)**
+  - Création des premiers Skills agentiques dans `.agent/skills/` (cadrage, personas, initialisation de socle).
+  - Rétrospective et clôture de session.
 
 ---
 
-## 5. Déroulement Chronologique Intercalé du Sprint 0
-
-Chaque étape théorique (**UA-lab**) est positionnée immédiatement avant sa mise en œuvre pratique dans une **Étape de Réalisation** (reprenant le nom exact du flux générique et produisant un livrable unique).
+## 3. Déroulement des 7 Phases du Sprint 0
 
 ```mermaid
 flowchart TD
-    subgraph S01_Gouv ["Gouvernance & Dépôt Git"]
-        U1["Étape 1 : UA-lab Scrum (D.351.1-scrum)"] --> R1["Étape 2 : Planifier le Sprint 0"]
-        R1 --> R2["Étape 3 : Initialiser le dépôt Git et l'espace projet"]
+    subgraph P1 ["Phase 1 : UA-Lab — Scrum & Gouvernance (D.351.1-scrum)"]
+        E1["Étape 1 (Apprentissage) : Assimiler les rôles, événements et artéfacts Scrum"]
+        E2["Étape 2 (Application Blog) : Planifier le Sprint 0"]
+        E1 --> E2
     end
 
-    subgraph S02_Design ["Design Thinking & Backlog"]
-        R2 --> U2["Étape 4 : UA-lab Design Thinking (D.311.1-design)"]
-        U2 --> R3["Étape 5 : Cadrer le projet"]
-        R3 --> R4["Étape 6 : Choisir et valider la stack technique"]
-        R4 --> R5["Étape 7 : Comprendre l'utilisateur (Personas)"]
-        R5 --> R6["Étape 8 : Définir la Vision Produit"]
-        R6 --> R7["Étape 9 : Construire le Product Backlog initial"]
-        R7 --> R8["Étape 10 : Concevoir la Charte Graphique (Preline UI)"]
+    subgraph P2 ["Phase 2 : UA-Tâche — Dépôt Git & Espace Projet"]
+        E3["Étape 3 (Application Blog) : Initialiser le dépôt Git et l'espace projet"]
     end
 
-    subgraph S03_Proto ["Modélisation & Architecture"]
-        R8 --> U3["Étape 11 : UA-lab Mermaid (D.311.2-uml)"]
-        U3 --> R9["Étape 12 : Modéliser le User Flow et les maquettes S1"]
-        R9 --> U4["Étape 13 : UA-lab Architecture MVC (D.312.1-architecture)"]
-        U4 --> R10["Étape 14 : Concevoir l'architecture logicielle"]
+    subgraph P3 ["Phase 3 : UA-Lab — Design Thinking, Empathie & Backlog (D.311.1-design)"]
+        E4["Étape 4 (Apprentissage) : Démarche d'empathie, Personas et UI Kit"]
+        E5["Étape 5 (Application Blog) : Cadrer le projet"]
+        E6["Étape 6 (Application Blog) : Choisir et valider la stack technique"]
+        E7["Étape 7 (Application Blog) : Comprendre l'utilisateur (Personas)"]
+        E8["Étape 8 (Application Blog) : Définir la Vision Produit"]
+        E9["Étape 9 (Application Blog) : Construire le Product Backlog initial"]
+        E10["Étape 10 (Application Blog) : Concevoir la Charte Graphique (Preline UI)"]
+        E4 --> E5 --> E6 --> E7 --> E8 --> E9 --> E10
     end
 
-    subgraph S04_Socle ["Socle Technique & Validation Go/No-Go"]
-        R10 --> U5["Étape 15 : UA-lab Laravel 13 & MySQL (D.321.1-laravel)"]
-        U5 --> R11["Étape 16 : Préparer le socle technique"]
-        R11 --> R12["Étape 17 : Valider le socle (TodoList MySQL)"]
-        R12 --> R13["Étape 18 : Valider le socle, la charte et les maquettes (Review 0)"]
-        R13 --> R14["Étape 19 : Clôturer le Sprint 0 (Retrospective 0)"]
+    subgraph P4 ["Phase 4 : UA-Lab — Modélisation Mermaid (D.311.2-uml)"]
+        E11["Étape 11 (Apprentissage) : Modélisation déclarative en syntaxe Mermaid"]
+        E12["Étape 12 (Application Blog) : Modéliser le User Flow et les maquettes S1"]
+        E11 --> E12
     end
+
+    subgraph P5 ["Phase 5 : UA-Lab — Architecture MVC + Service (D.312.1-architecture)"]
+        E13["Étape 13 (Apprentissage) : Architecture découplée en deux couches et ADR"]
+        E14["Étape 14 (Application Blog) : Concevoir l'architecture logicielle"]
+        E13 --> E14
+    end
+
+    subgraph P6 ["Phase 6 : UA-Lab — Socle Laravel 13 & MySQL (D.321.1-laravel)"]
+        E15["Étape 15 (Apprentissage) : Socle Laravel 13, Blade, Preline UI et persistance MySQL"]
+        E16["Étape 16 (Application Blog) : Préparer le socle technique"]
+        E17["Étape 17 (Application Blog) : Valider le socle (TodoList MySQL)"]
+        E15 --> E16 --> E17
+    end
+
+    subgraph P7 ["Phase 7 : UA-Tâche — Revue, Jalon Go/No-Go & Clôture S0"]
+        E18["Étape 18 (Application Blog) : Valider le socle, la charte et les maquettes (Review 0)"]
+        E19["Étape 19 (Application Blog) : Clôturer le Sprint 0 (Retrospective 0)"]
+        E18 --> E19
+    end
+
+    P1 --> P2 --> P3 --> P4 --> P5 --> P6 --> P7
 ```
 
 ---
 
-### Étape 1 : UA-lab : Initiation à Scrum et gouvernance agile (Domaine D.351.1-scrum)
-- **Objectif d'apprentissage :** Assimiler les principes agiles, les 3 rôles, les 5 événements et les 3 artéfacts Scrum pour organiser le projet dès le cadrage.
-- **Notions de base à apprendre :**
-  - Différence entre cycle en V et démarche agile itérative, les 4 valeurs du manifeste agile.
-  - Les 3 rôles Scrum : Product Owner (porté par le Groupe 1), Scrum Master (lab prérequis), Développeurs.
-  - Les 5 événements Scrum : Sprint (timebox ferme de 80h), Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective.
-  - Les 3 artéfacts et leurs engagements : Product Backlog (Objectif de Produit), Sprint Backlog (Objectif de Sprint), Incrément (Definition of Done).
-  - Découpage des exigences en User Stories INVEST, critères d'acceptation et méthode de priorisation MoSCoW.
-- **Sortie :** Charte d'équipe Scrum et règles d'engagement (`scrum/charte-equipe.md`).
+### Phase 1 : UA-Lab — Initiation à Scrum et Gouvernance Agile (Domaine D.351.1-scrum)
+*Cette phase introduit le cadre méthodologique de gestion de projet. Elle comprend l'étape d'apprentissage théorique suivie immédiatement de la planification concrète du Sprint 0.*
 
-### Étape 2 : Planifier le Sprint 0 (Étape Générique 1)
-- **Entrées :** Charte d'équipe `scrum/charte-equipe.md` et lettre de mission du projet.
-- **Activités de réalisation :**
-  - Fixer la timebox ferme du Sprint 0 (80 heures / 10 jours).
-  - Formaliser la répartition des rôles en accord avec le Product Owner (Groupe 1).
-  - Définir les 7 critères de la Definition of Done (DoD) pour la phase de cadrage.
-  - Recenser les risques initiaux et signer la feuille d'engagement d'équipe.
-- **Sortie principale :** Fiche d'engagement d'équipe du Sprint 0 (`sprints/sprint-0.md`).
+- **Étape 1 (Apprentissage) : Assimiler les rôles, événements et artéfacts Scrum**
+  - Entrées : Guide méthodologique Scrum et valeurs du manifeste agile.
+  - Notions de base à apprendre :
+    - Différence entre cycle en V et itération agile, les 4 valeurs et 12 principes.
+    - Les 3 rôles Scrum : Product Owner (Groupe 1), Scrum Master (lab prérequis), Développeurs.
+    - Les 5 événements Scrum : Sprint (timebox de 80h), Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective.
+    - Les 3 artéfacts et engagements : Product Backlog, Sprint Backlog, Incrément (Definition of Done).
+    - Découpage en User Stories INVEST et méthode MoSCoW.
+  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/scrum/guide-scrum.md`.
+- **Étape 2 (Application sur le Blog) : Planifier le Sprint 0**
+  - Entrées : Charte d'équipe et lettre de mission du Blog des Lauréats.
+  - Travail d'application sur le Blog : Fixer la timebox ferme (80h), formaliser la répartition des rôles avec le Product Owner (Groupe 1), définir les critères de la DoD de cadrage et signer la feuille d'engagement.
+  - Sortie (1 seul livrable) : `sprints/sprint-0.md`.
 
-### Étape 3 : Initialiser le dépôt Git et l'espace projet (Étape Générique 2)
-- **Entrées :** Fiche d'engagement `sprints/sprint-0.md`.
-- **Activités de réalisation :**
-  - Initialiser le dépôt Git local et configurer le remote GitHub du projet d'imitation.
-  - Créer le fichier `.gitignore` adapté à l'environnement de développement.
-  - Créer l'arborescence des dossiers de livrables (`docs/`, `sprints/`, `scrum/`, `tutoriels/`).
-  - Rédiger la documentation d'accueil initiale du dépôt avec la description du projet et les conventions de travail.
-- **Sortie principale :** Fichier de présentation et d'orientation du dépôt (`README.md`).
+---
 
-### Étape 4 : UA-lab : Design Thinking, démarche d'empathie, Personas et UI Kit (Domaine D.311.1-design)
-- **Objectif d'apprentissage :** Maîtriser la démarche de conception centrée utilisateur pour cadrer le besoin, formaliser les usagers types et concevoir la charte graphique sous Preline UI.
-- **Notions de base à apprendre :**
-  - Les 5 étapes du Design Thinking : Empathie, Définition, Idéation, Prototypage, Test.
-  - Démarche d'empathie : techniques d'immersion, observation terrain, carte d'empathie (Say, Do, Think, Feel).
-  - Fiches Personas : structure modulaire (profil, motivations, points de douleur *pain points*, scénarios).
-  - Formulation de la Vision Produit partagée et promesse de valeur.
-  - Principes d'UI Design et création d'un UI Kit avec Tailwind CSS et composants Preline UI (boutons, formulaires, cartes, badges, navigation).
-- **Sortie :** Dossier méthodologique Design Thinking, Empathie et UI Kit (`tutoriels/design/guide-design-thinking-s0.md`).
+### Phase 2 : UA-Tâche — Initialisation du Dépôt Git et Espace Projet
+*Cette phase ne contient pas de nouvel apport théorique. Elle regroupe les tâches opérationnelles d'initialisation du versioning et de la documentation d'accueil.*
 
-### Étape 5 : Cadrer le projet (Étape Générique 3)
-- **Entrées :** Fiche d'engagement et guide méthodologique Design Thinking.
-- **Activités de réalisation :**
-  - Définir les objectifs métiers et les indicateurs clés de succès du Blog des Lauréats.
-  - Construire la matrice de périmètre stricte : fonctionnalités In-Scope vs Out-of-Scope.
-  - Identifier les contraintes de délai, de conformité et d'architecture.
-- **Sortie principale :** Note de cadrage du projet (`docs/cadrage/note-cadrage.md`).
+- **Étape 3 (Application sur le Blog) : Initialiser le dépôt Git et l'espace projet**
+  - Entrées : Fiche d'engagement `sprints/sprint-0.md`.
+  - Travail d'application sur le Blog : Initialiser le dépôt Git local, connecter le remote GitHub, créer le fichier `.gitignore` et l'arborescence des dossiers (`docs/`, `sprints/`, `scrum/`, `tutoriels/`), et rédiger la documentation d'accueil du dépôt.
+  - Sortie (1 seul livrable) : `README.md`.
 
-### Étape 6 : Choisir et valider la stack technique (Étape Générique 4)
-- **Entrées :** Note de cadrage `docs/cadrage/note-cadrage.md`.
-- **Activités de réalisation :**
-  - Documenter et justifier formellement chaque brique technique de la solution retenue :
-    - Framework Backend : **Laravel 13**.
-    - Base de données relationnelle : **MySQL exclusivement**.
-    - Solution d'interface : **Tailwind CSS avec la bibliothèque Preline UI**.
-    - Bibliothèque frontend déclarative : **Alpine.js**.
-    - Outillage d'assistance IA : **Agent Antigravity & GitHub Copilot**.
-    - Sécurité applicative : **Policies/Gates et Spatie Laravel-Permission (RBAC)**.
-- **Sortie principale :** Dossier de justification technique de la stack (`docs/cadrage/stack-technique.md`).
+---
 
-### Étape 7 : Comprendre l'utilisateur (Design Thinking — Empathie & Personas) (Étape Générique 5)
-- **Entrées :** Note de cadrage et compétences d'empathie acquises à l'Étape 4.
-- **Activités de réalisation :**
-  - Observer et recueillir les attentes réelles des lecteurs et contributeurs cibles du Blog des Lauréats.
-  - Rédiger les fiches Personas détaillées pour chaque profil type (Lecteur visiteur, Lauréat contributeur, Administrateur).
-- **Sortie principale :** Fiches Personas représentatives des utilisateurs types (`docs/analyse/personas.md`).
+### Phase 3 : UA-Lab — Design Thinking, Empathie, Personas et UI Kit (Domaine D.311.1-design)
+*Cette phase introduit la démarche de conception centrée utilisateur. Elle s'organise en une étape d'apprentissage conceptuel suivie de la réalisation complète du cadrage produit et de la charte visuelle.*
 
-### Étape 8 : Définir la Vision Produit (Étape Générique 6)
-- **Entrées :** Note de cadrage et fiches Personas validées.
-- **Activités de réalisation :**
-  - Synthétiser les besoins et formuler le problème sous format Point of View (POV).
-  - Énoncer la promesse de valeur partagée en concertation étroite avec le Product Owner (Groupe 1).
-- **Sortie principale :** Document formalisant la Vision Produit (`docs/produit/vision-produit.md`).
+- **Étape 4 (Apprentissage) : Démarche d'empathie, Personas et principes UI Kit**
+  - Entrées : Guide de Design Thinking et composants Preline UI.
+  - Notions de base à apprendre :
+    - Les 5 phases du Design Thinking : Empathie, Définition, Idéation, Prototypage, Test.
+    - Techniques d'immersion et carte d'empathie (Say, Do, Think, Feel).
+    - Structure modulaire d'une fiche Persona (motivations, freins, scénarios).
+    - Formulation de la Vision Produit et promesse de valeur.
+    - UI Design avec Tailwind CSS et bibliothèque de composants Preline UI.
+  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/design/guide-design-thinking-s0.md`.
+- **Étape 5 (Application sur le Blog) : Cadrer le projet**
+  - Entrées : Fiche d'engagement et guide Design Thinking.
+  - Travail d'application sur le Blog : Définir les objectifs métiers et indicateurs de succès, construire la matrice In-Scope vs Out-of-Scope, identifier les contraintes de délai et d'architecture.
+  - Sortie (1 seul livrable) : `docs/cadrage/note-cadrage.md`.
+- **Étape 6 (Application sur le Blog) : Choisir et valider la stack technique**
+  - Entrées : Note de cadrage `docs/cadrage/note-cadrage.md`.
+  - Travail d'application sur le Blog : Justifier formellement chaque choix technologique : Laravel 13, MySQL exclusivement, Preline UI avec Tailwind CSS, Alpine.js, Agent Antigravity & Copilot, Policies/Gates et Spatie RBAC.
+  - Sortie (1 seul livrable) : `docs/cadrage/stack-technique.md`.
+- **Étape 7 (Application sur le Blog) : Comprendre l'utilisateur (Design Thinking — Empathie & Personas)**
+  - Entrées : Note de cadrage et compétences d'empathie.
+  - Travail d'application sur le Blog : Observer les besoins réels des lauréats et des apprenants, et rédiger les fiches Personas détaillées pour chaque profil type.
+  - Sortie (1 seul livrable) : `docs/analyse/personas.md`.
+- **Étape 8 (Application sur le Blog) : Définir la Vision Produit**
+  - Entrées : Fiches Personas et note de cadrage.
+  - Travail d'application sur le Blog : Synthétiser les besoins sous format Point of View (POV) et formaliser la promesse de valeur en accord avec le Product Owner (Groupe 1).
+  - Sortie (1 seul livrable) : `docs/produit/vision-produit.md`.
+- **Étape 9 (Application sur le Blog) : Construire le Product Backlog initial**
+  - Entrées : Vision Produit et fiches Personas.
+  - Travail d'application sur le Blog : Découper le projet en exigences fonctionnelles INVEST, rédiger les critères d'acceptation et prioriser selon la méthode MoSCoW.
+  - Sortie (1 seul livrable) : `scrum/product-backlog.md`.
+- **Étape 10 (Application sur le Blog) : Concevoir la Charte Graphique (UI Kit Tailwind CSS)**
+  - Entrées : Personas, identité visuelle et composants Preline UI.
+  - Travail d'application sur le Blog : Définir la palette de couleurs, l'échelle typographique et composer l'UI Kit sous forme de composants Preline UI documentés.
+  - Sortie (1 seul livrable) : `docs/design/ui-kit.md`.
 
-### Étape 9 : Construire le Product Backlog initial (Étape Générique 7)
-- **Entrées :** Vision Produit et fiches Personas.
-- **Activités de réalisation :**
-  - Animer un atelier d'idéation pour découper le projet en exigences fonctionnelles.
-  - Formaliser chaque User Story selon la norme INVEST avec des critères d'acceptation précis.
-  - Prioriser les User Stories selon la méthode MoSCoW en accord avec le Product Owner.
-- **Sortie principale :** Product Backlog initial ordonné (`scrum/product-backlog.md`).
+---
 
-### Étape 10 : Concevoir la Charte Graphique (UI Kit Tailwind CSS) (Étape Générique 8)
-- **Entrées :** Fiches Personas, identité visuelle du produit et composants Preline UI.
-- **Activités de réalisation :**
-  - Définir la palette de couleurs sémantiques sous Tailwind CSS.
-  - Définir l'échelle typographique et les espacements.
-  - Composer l'UI Kit sous forme de composants Preline UI documentés (boutons, formulaires, cartes, badges, barre de navigation).
-- **Sortie principale :** Spécification de l'UI Kit Tailwind CSS et Preline UI (`docs/design/ui-kit.md`).
+### Phase 4 : UA-Lab — Modélisation Déclarative en Syntaxe Mermaid (Domaine D.311.2-uml)
+*Cette phase introduit la modélisation graphique déclarative. Elle s'organise en une étape d'apprentissage théorique suivie de la modélisation du parcours utilisateur et des maquettes du Sprint 1.*
 
-### Étape 11 : UA-lab : Modélisation déclarative en syntaxe Mermaid (Domaine D.311.2-uml)
-- **Objectif d'apprentissage :** Modéliser les parcours utilisateurs, flux et schémas d'entités sous forme de diagrammes déclaratifs Mermaid intégrés au Markdown.
-- **Notions de base à apprendre :**
-  - Syntaxe Mermaid.js pour graphes et flux (`flowchart TD / LR`), sous-graphes et stylisation.
-  - Diagramme de contexte système : boîte noire, frontières applicatives, acteurs et échanges.
-  - Modélisation déclarative de parcours utilisateur (User Flow) et d'entités préliminaires (`erDiagram`).
-- **Sortie :** Guide de modélisation déclarative Mermaid (`tutoriels/uml/guide-mermaid-s0.md`).
+- **Étape 11 (Apprentissage) : Modélisation déclarative en syntaxe Mermaid**
+  - Entrées : Guide de syntaxe Mermaid.js.
+  - Notions de base à apprendre :
+    - Syntaxe Mermaid.js pour graphes et flux (`flowchart TD / LR`), sous-graphes et styles.
+    - Diagramme de contexte système (boîte noire, frontières, acteurs et flux).
+    - Modélisation de parcours utilisateur (User Flow) et d'entités préliminaires (`erDiagram`).
+  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/uml/guide-mermaid-s0.md`.
+- **Étape 12 (Application sur le Blog) : Modéliser le User Flow et les maquettes du Sprint 1**
+  - Entrées : User Stories prioritaires, UI Kit Preline UI et guide Mermaid.
+  - Travail d'application sur le Blog : Modéliser en syntaxe Mermaid le parcours complet de consultation d'un article écran par écran et prototyper les maquettes interactives associées.
+  - Sortie (1 seul livrable) : `docs/design/maquettes-sprint-1.md`.
 
-### Étape 12 : Modéliser le User Flow et les maquettes du Sprint 1 (Étape Générique 9)
-- **Entrées :** User Stories prioritaires du Sprint 1, UI Kit Preline UI et compétences Mermaid acquises à l'Étape 11.
-- **Activités de réalisation :**
-  - Modéliser en syntaxe Mermaid déclarative le parcours complet de consultation d'un article écran par écran.
-  - Prototyper les maquettes interactives ciblées pour les écrans du Sprint 1 en utilisant les composants Preline UI.
-- **Sortie principale :** Document intégrant le User Flow Mermaid et les maquettes interactives associées (`docs/design/maquettes-sprint-1.md`).
+---
 
-### Étape 13 : UA-lab : Architecture logicielle MVC avec couche Service et formalisme ADR (Domaine D.312.1-architecture)
-- **Objectif d'apprentissage :** Structurer une application web selon le patron découplé MVC + Service et documenter les décisions d'architecture.
-- **Notions de base à apprendre :**
-  - Responsabilités respectives du patron Modèle-Vue-Contrôleur (MVC).
-  - Couche Service métier : séparation stricte entre contrôleur HTTP mince et règles de gestion.
-  - Formalisme formel d'un Architectural Decision Record (ADR) : Titre, Statut, Contexte, Décision, Conséquences.
-- **Sortie :** Guide d'architecture MVC + Service Layer et formalisme ADR (`tutoriels/architecture/guide-architecture-s0.md`).
+### Phase 5 : UA-Lab — Architecture Logicielle MVC avec Couche Service et Formalisme ADR (Domaine D.312.1-architecture)
+*Cette phase introduit la conception architecturale découplée. Elle s'organise en une étape d'apprentissage théorique suivie de la conception du patron d'architecture du projet.*
 
-### Étape 14 : Concevoir l'architecture logicielle (Étape Générique 10)
-- **Entrées :** Maquettes du Sprint 1, User Flow, guide d'architecture et stack validée.
-- **Activités de réalisation :**
-  - Modéliser le schéma relationnel initial des données Blog en syntaxe Mermaid (`erDiagram`).
-  - Définir le patron architectural en couches : Contrôleur mince HTTP vers Service métier.
-  - Rédiger la décision d'architecture fondatrice (ADR-01) formalisant ce découpage.
-- **Sortie principale :** Dossier d'architecture initiale incluant le modèle relationnel et l'ADR (`docs/architecture/architecture-initiale.md`).
+- **Étape 13 (Apprentissage) : Architecture logicielle MVC avec couche Service et formalisme ADR**
+  - Entrées : Notions de conception orientée objet.
+  - Notions de base à apprendre :
+    - Responsabilités du patron Modèle-Vue-Contrôleur (MVC).
+    - Couche Service métier : séparation stricte entre contrôleur HTTP mince et logique métier.
+    - Formalisme formel d'un Architectural Decision Record (ADR) : Titre, Statut, Contexte, Décision, Conséquences.
+  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/architecture/guide-architecture-s0.md`.
+- **Étape 14 (Application sur le Blog) : Concevoir l'architecture logicielle**
+  - Entrées : Maquettes S1, User Flow et stack technique validée.
+  - Travail d'application sur le Blog : Modéliser le schéma relationnel initial des données en syntaxe Mermaid, définir le patron contrôleur mince vers Service métier, et rédiger l'ADR-01.
+  - Sortie (1 seul livrable) : `docs/architecture/architecture-initiale.md`.
 
-### Étape 15 : UA-lab : Socle Laravel 13, Blade, Preline UI et persistance MySQL (Domaine D.321.1-laravel)
-- **Objectif d'apprentissage :** Déployer le framework Laravel 13, configurer la base de données MySQL, intégrer Preline UI et créer un premier composant fonctionnel TodoList connecté à MySQL.
-- **Notions de base à apprendre :**
-  - Installation et arborescence de répertoires de **Laravel 13**.
-  - Configuration du fichier `.env` pour la connexion au serveur de base de données **MySQL**.
-  - Routage web (`routes/web.php`) et gabarits Blade (`resources/views/`).
-  - Intégration de Tailwind CSS avec la bibliothèque **Preline UI**.
-  - Schéma relationnel : création de migrations avec le Schema Builder Laravel (`php artisan make:migration`) et exécution (`php artisan migrate`).
-  - Données d'essai : création et exécution de Seeders pour peupler la base MySQL.
-  - Contrôleur et vue Blade affichant une liste de tâches (TodoList) depuis MySQL pour prouver la persistance effective.
-- **Sortie :** Guide technique Laravel 13, Preline UI et persistance MySQL (`tutoriels/laravel/guide-demarrage-laravel13.md`).
+---
 
-### Étape 16 : Préparer le socle technique (Étape Générique 11)
-- **Entrées :** Architecture logicielle, compétences Laravel 13 acquises à l'Étape 15 et stack validée.
-- **Activités de réalisation :**
-  - Installer et initialiser le squelette applicatif Laravel 13.
-  - Configurer les paramètres d'environnement dans le fichier `.env`.
-  - Installer Tailwind CSS et le plugin Preline UI.
-  - Créer la route racine `/` et la vue d'accueil responsive Blade.
-- **Sortie principale :** Vue d'accueil Blade responsive opérationnelle (`resources/views/welcome.blade.php`).
+### Phase 6 : UA-Lab — Socle Laravel 13, Blade, Preline UI et Persistance MySQL (Domaine D.321.1-laravel)
+*Cette phase introduit le développement du socle applicatif sous Laravel 13. Elle s'organise en une étape d'apprentissage technique suivie de l'installation et de la validation par un composant TodoList connecté à MySQL.*
 
-### Étape 17 : Valider le socle technique par un composant persistant (TodoList connectée à MySQL) (Étape Générique 12)
-- **Entrées :** Squelette Laravel 13 opérationnel et serveur MySQL.
-- **Activités de réalisation :**
-  - Coder la migration MySQL de la table `todos`.
-  - Exécuter la migration et insérer des données de test via Seeder.
-  - Implémenter le contrôleur `TodoController` et la vue Blade avec composants Preline UI affichant les données depuis MySQL pour prouver la chaîne complète.
-- **Sortie principale :** Contrôleur opérationnel validant la persistance MySQL et l'affichage de données réelles (`app/Http/Controllers/TodoController.php`).
+- **Étape 15 (Apprentissage) : Socle Laravel 13, Blade, Preline UI et persistance MySQL**
+  - Entrées : Documentation Laravel 13 et Preline UI.
+  - Notions de base à apprendre :
+    - Installation et arborescence de répertoires de **Laravel 13**.
+    - Configuration de l'environnement `.env` pour la connexion au serveur **MySQL**.
+    - Routage web (`routes/web.php`) et gabarits Blade (`resources/views/`).
+    - Intégration de Tailwind CSS avec **Preline UI**.
+    - Schéma relationnel : migrations (`php artisan make:migration`) et seeders sous MySQL.
+    - Contrôleur et vue Blade affichant une liste de tâches (TodoList) depuis MySQL pour prouver la persistance effective.
+  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/laravel/guide-demarrage-laravel13.md`.
+- **Étape 16 (Application sur le Blog) : Préparer le socle technique**
+  - Entrées : Architecture logicielle et compétences Laravel 13 acquises.
+  - Travail d'application sur le Blog : Installer le squelette Laravel 13, configurer le fichier `.env`, intégrer Preline UI avec Tailwind CSS, et créer la vue d'accueil responsive Blade.
+  - Sortie (1 seul livrable) : `resources/views/welcome.blade.php`.
+- **Étape 17 (Application sur le Blog) : Valider le socle technique par un composant persistant (TodoList connectée à MySQL)**
+  - Entrées : Squelette Laravel 13 opérationnel et serveur MySQL.
+  - Travail d'application sur le Blog : Coder la migration MySQL de la table `todos`, insérer les données d'essai via Seeder, et implémenter `TodoController` avec la vue Blade Preline UI pour prouver la chaîne complète.
+  - Sortie (1 seul livrable) : `app/Http/Controllers/TodoController.php`.
 
-### Étape 18 : Valider le socle, la charte graphique et les maquettes (Sprint Review 0 — Jalon Go/No-Go) (Étape Générique 13)
-- **Entrées :** Socle Laravel 13 connecté à MySQL (TodoList fonctionnelle), charte graphique Preline UI, User Flow et maquettes du Sprint 1.
-- **Activités de réalisation :**
-  - Animer la séance de revue devant le Product Owner (Groupe 1).
-  - Démontrer la persistance MySQL et le fonctionnement du composant TodoList.
-  - Faire tester les maquettes interactives du Sprint 1 à des usagers réels pour recueillir leurs retours ergonomiques.
-  - Valider formellement la charte graphique.
-  - Prononcer la décision formelle Go/No-Go pour autoriser le passage au Sprint 1.
-- **Sortie principale :** Procès-verbal de la Review 0 actant la décision Go/No-Go et les retours d'ergonomie (`sprints/pv-review-0.md`).
+---
 
-### Étape 19 : Clôturer le Sprint 0 (Sprint Retrospective 0) (Étape Générique 14)
-- **Entrées :** Déroulement et retours de la Review 0.
-- **Activités de réalisation :**
-  - Analyser le fonctionnement de l'équipe durant les 80 heures de cadrage.
-  - Identifier les réussites et les difficultés d'organisation.
-  - Arrêter 2 actions d'amélioration concrètes pour le premier sprint de delivery.
-  - Consigner les règles de fonctionnement et de vie d'équipe.
-- **Sortie principale :** Bilan rétrospectif du Sprint 0 et plan d'amélioration continue (`sprints/retrospective-0.md`).
+### Phase 7 : UA-Tâche — Revue, Validation Go/No-Go et Rétrospective du Sprint 0
+*Cette phase ne contient aucun nouveau UA-lab. Il s'agit d'une UA-Tâche opérationnelle de validation contradictoire et d'amélioration continue du processus de cadrage.*
+
+- **Étape 18 (Application sur le Blog) : Valider le socle, la charte graphique et les maquettes (Sprint Review 0 — Jalon Go/No-Go)**
+  - Entrées : Socle Laravel 13 connecté à MySQL (TodoList fonctionnelle), charte Preline UI et maquettes interactives S1.
+  - Travail d'application sur le Blog : Animer la démonstration devant le Product Owner (Groupe 1), faire tester les maquettes aux usagers cibles, et prononcer la décision formelle Go/No-Go.
+  - Sortie (1 seul livrable) : `sprints/pv-review-0.md`.
+- **Étape 19 (Application sur le Blog) : Clôturer le Sprint 0 (Sprint Retrospective 0)**
+  - Entrées : Déroulement et retours de la Review 0.
+  - Travail d'application sur le Blog : Analyser le fonctionnement d'équipe, arrêter 2 actions d'amélioration concrètes pour le delivery et consigner les règles de vie du groupe.
+  - Sortie (1 seul livrable) : `sprints/retrospective-0.md`.
