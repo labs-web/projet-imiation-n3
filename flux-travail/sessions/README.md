@@ -15,12 +15,10 @@ Chaque session articule rigoureusement trois piliers complémentaires :
   - Réalisation guidée pas-à-pas en classe active.
   - Alternance directe entre l'acquisition théorique et la réalisation concrète.
 - **Jour 8 : Projet Technique (*Portfolio Développeur*)**
-  - **Développement technique pur en totale autonomie**.
-  - L'apprenant réalise uniquement le codage (Laravel 13, Kotlin ou NativePHP) sans phase de planification ni de conception.
+  - **Développement technique avec phase de conception préalable ciblée (1h)** : diagramme Mermaid et ADR express.
   - Épreuve sommative de **Live Coding (40 min chrono sans assistance — 65% de la note)**.
 - **Jours 9 et 10 : Projet Fil Rouge (*Application Métier*, ex : Cinéma)**
-  - **Création et enrichissement systématique de Skills agentiques** dans `.agent/skills/`.
-  - L'apprenant automatise sur le domaine métier ce qu'il a appris dans le projet d'imitation.
+  - Application du découpage architectural et développement métier sur l'application fil rouge.
   - Clôture de session et bilan réflexif.
 
 ### L'Intercalage Pédagogique des UA-Labs
@@ -46,38 +44,38 @@ Chaque session articule rigoureusement trois piliers complémentaires :
 
 - **[Session S01 : Consultation Publique d'un Article](./flux-travail-s1.md)**
   - Durée indicative : 80 heures (10 jours).
-  - Organisation : 7 phases typées (4 phases `UA-Lab` produisant chacune un guide explicatif et une présentation Marp, et 3 blocs `UA-Tâche` d'application opérationnelle : Début, Milieu, Fin).
-  - Domaines mobilisés : IA & Prompting (`D.325.1-ia`), UML Mermaid (`D.311.2-uml`), Architecture en 2 couches (`D.312.1-architecture`), Laravel 13 (`D.321.1-laravel`).
-  - Objectif : Préparer la branche Git `sprint-1`, outiller l'IDE par la méthode RIO, modéliser les frontières et use cases, et coder sous Laravel 13 une tranche verticale de consultation d'article avec modèle Eloquent, base MySQL, composants Preline UI et gestion robuste de l'erreur 404.
-  - Correspondance flux générique : Étapes génériques 15 à 23 (16 étapes réparties en 7 phases).
+  - Organisation : 6 phases typées (3 phases `UA-Lab` produisant chacune un guide explicatif et une présentation Marp, et 3 blocs `UA-Tâche` d'application opérationnelle : Début, Milieu, Fin).
+  - Domaines mobilisés : UML Mermaid (`D.311.2-uml`), Architecture en 2 couches (`D.312.1-architecture`), Laravel 13 & MySQL (`D.321.1-laravel`).
+  - Objectif : Préparer la branche Git `sprint-1`, modéliser les frontières et use cases, et coder sous Laravel 13 une tranche verticale de consultation d'article avec modèle Eloquent, base MySQL, composants Preline UI et gestion robuste de l'erreur 404.
+  - Correspondance flux générique : Étapes génériques 15 à 23 (14 étapes réparties en 6 phases).
 
 - **[Session S02 : Empathie Personas, Architecture MVC + Services & Page d'Accueil](./flux-travail-s2.md)**
   - Durée indicative : 80 heures (10 jours).
-  - Organisation : 7 phases typées (4 phases `UA-Lab` produisant chacune un guide explicatif et une présentation Marp, et 3 blocs `UA-Tâche` d'application opérationnelle : Début, Milieu, Fin).
-  - Domaines mobilisés : IA Rules & Skills (`D.325.1-ia`), Design Thinking Empathie (`D.311.1-design`), UML Domaine pur (`D.311.2-uml`), Architecture Service Layer multi-entités (`D.312.1-architecture`), Laravel 13 & MySQL (`D.321.1-laravel`).
-  - Objectif : Lever la dette d'empathie, structurer l'IDE en Rules et Skills, modéliser les classes du domaine pur, développer le CRUD Catégories sous MySQL et la page d'accueil Blade dynamique avec Preline UI.
-  - Correspondance flux générique : Étapes génériques 15 à 23 (16 étapes réparties en 7 phases).
+  - Organisation : 6 phases typées (3 phases `UA-Lab` produisant chacune un guide explicatif et une présentation Marp, et 3 blocs `UA-Tâche` d'application opérationnelle : Début, Milieu, Fin).
+  - Domaines mobilisés : Design Thinking Empathie (`D.311.1-design`), UML Domaine pur (`D.311.2-uml`), Architecture Service Layer multi-entités (`D.312.1-architecture`), Laravel 13 & MySQL (`D.321.1-laravel`).
+  - Objectif : Lever la dette d'empathie, modéliser les classes du domaine pur, développer le CRUD Catégories sous MySQL et la page d'accueil Blade dynamique avec Preline UI.
+  - Correspondance flux générique : Étapes génériques 15 à 23 (14 étapes réparties en 6 phases).
 
 - **[Session S03 : Idéation, Définition de Problème, Sécurité (Policies/Gates) & Relations Eloquent](./flux-travail-s3.md)**
   - Durée indicative : 80 heures (10 jours).
-  - Organisation : 7 phases typées (4 phases `UA-Lab` produisant chacune un guide explicatif et une présentation Marp, et 3 blocs `UA-Tâche` d'application opérationnelle : Début, Milieu, Fin).
-  - Domaines mobilisés : Workflows IA (`D.325.1-ia`), Design Thinking POV/HMW (`D.311.1-design`), UML Relations complexes (`D.311.2-uml`), Sécurité Policies/Gates (`D.312.1-architecture`), Laravel 13 FormRequest & Eloquent (`D.321.1-laravel`).
+  - Organisation : 6 phases typées (3 phases `UA-Lab` produisant chacune un guide explicatif et une présentation Marp, et 3 blocs `UA-Tâche` d'application opérationnelle : Début, Milieu, Fin).
+  - Domaines mobilisés : Design Thinking POV/HMW (`D.311.1-design`), UML Relations complexes (`D.311.2-uml`), Sécurité Policies/Gates (`D.312.1-architecture`), Laravel 13 FormRequest & Eloquent (`D.321.1-laravel`).
   - Objectif : Formuler le problème métier, modéliser les relations Many-to-Many, sécuriser les formulaires par FormRequest et Policies déclaratives, et manipuler les associations riches Eloquent sous MySQL.
-  - Correspondance flux générique : Étapes génériques 15 à 23 (16 étapes réparties en 7 phases).
+  - Correspondance flux générique : Étapes génériques 15 à 23 (14 étapes réparties en 6 phases).
 
-- **[Session S04 : Prototypage, Tests PHPUnit & Framework Skills](./flux-travail-s4.md)**
+- **[Session S04 : Prototypage, Tests PHPUnit & Cycle de Vie](./flux-travail-s4.md)**
   - Durée indicative : 80 heures (10 jours).
-  - Organisation : 7 phases typées (4 phases `UA-Lab` produisant chacune un guide explicatif et une présentation Marp, et 3 blocs `UA-Tâche` d'application opérationnelle : Début, Milieu, Fin).
-  - Domaines mobilisés : Framework de Skills IA (`D.325.1-ia`), Prototypage Preline UI (`D.311.1-design`), UML Machines à états (`D.311.2-uml`), Sécurité Middlewares (`D.312.1-architecture`), Tests automatisés PHPUnit (`D.321.1-laravel`).
+  - Organisation : 6 phases typées (3 phases `UA-Lab` produisant chacune un guide explicatif et une présentation Marp, et 3 blocs `UA-Tâche` d'application opérationnelle : Début, Milieu, Fin).
+  - Domaines mobilisés : Prototypage Preline UI (`D.311.1-design`), UML Machines à états (`D.311.2-uml`), Sécurité Middlewares (`D.312.1-architecture`), Tests automatisés PHPUnit (`D.321.1-laravel`).
   - Objectif : Prototyper les écrans complexes sous Preline UI, modéliser les états finis, intercepter les flux HTTP par middlewares, et automatiser les tests unitaires de service sous PHPUnit.
-  - Correspondance flux générique : Étapes génériques 15 à 23 (16 étapes réparties en 7 phases).
+  - Correspondance flux générique : Étapes génériques 15 à 23 (14 étapes réparties en 6 phases).
 
-- **[Session S05 : Tests Utilisateurs, SPA Alpine.js & Agent IA](./flux-travail-s5.md)**
+- **[Session S05 : Tests Utilisateurs, SPA Alpine.js & API REST](./flux-travail-s5.md)**
   - Durée indicative : 80 heures (10 jours).
-  - Organisation : 7 phases typées (4 phases `UA-Lab` produisant chacune un guide explicatif et une présentation Marp, et 3 blocs `UA-Tâche` d'application opérationnelle : Début, Milieu, Fin).
-  - Domaines mobilisés : Agent IA autonome (`D.325.1-ia`), UML DTOs (`D.311.2-uml`), SPA réactive Alpine.js (`D.321.1-laravel`), Tests utilisateurs Peer Testing (`D.311.1-design`).
-  - Objectif : Configurer un agent IA en boucle fermée, développer une SPA réactive avec Alpine.js et requêtes asynchrones fetch(), et conduire un protocole rigoureux de Peer Testing avec calcul du score SUS.
-  - Correspondance flux générique : Étapes génériques 15 à 23 (16 étapes réparties en 7 phases).
+  - Organisation : 6 phases typées (3 phases `UA-Lab` produisant chacune un guide explicatif et une présentation Marp, et 3 blocs `UA-Tâche` d'application opérationnelle : Début, Milieu, Fin).
+  - Domaines mobilisés : Tests utilisateurs Peer Testing & SUS (`D.311.1-design`), UML DTOs (`D.311.2-uml`), SPA réactive Alpine.js & endpoints JSON (`D.321.1-laravel`).
+  - Objectif : Développer une SPA réactive avec Alpine.js et requêtes asynchrones fetch(), modéliser les contrats DTO, et conduire un protocole rigoureux de Peer Testing avec calcul du score SUS.
+  - Correspondance flux générique : Étapes génériques 15 à 23 (14 étapes réparties en 6 phases).
 
 - **[Session S06 : Sécurité Spatie (RBAC) & TDD Complet](./flux-travail-s6.md)**
   - Durée indicative : 80 heures (10 jours).

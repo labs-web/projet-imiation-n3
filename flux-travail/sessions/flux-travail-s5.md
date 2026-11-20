@@ -1,24 +1,22 @@
-# Flux de Travail Opérationnel — Session S05 : Tests Utilisateurs, SPA Alpine.js & Agent IA
+# Flux de Travail Opérationnel — Session S05 : Tests Utilisateurs, SPA Alpine.js & API REST
 
 Ce document définit le flux de travail de la **Session S05** (Sprint 5) pour le niveau N3.
-Il est structuré en **7 phases typées** (4 unités d'apprentissage **UA-Lab** et 3 blocs d'ingénierie opérationnelle **UA-Tâche**), totalisant **16 étapes de travail**.
+Il est structuré en **6 phases typées** (3 unités d'apprentissage **UA-Lab** et 3 blocs d'ingénierie opérationnelle **UA-Tâche**), totalisant **14 étapes de travail**.
 
 ---
 
 ## 1. Fiche d'Identification de la Session S05
 
 - **Identifiant :** Session S05 (Sprint 5)
-- **Titre :** Tests Utilisateurs, SPA Alpine.js & Agent IA
+- **Titre :** Tests Utilisateurs, SPA Alpine.js & API REST
 - **Durée indicative :** 80 heures (10 jours ouvrés) — *fournie à titre indicatif pour le concepteur et les formateurs*
 - **Positionnement :** Cinquième sprint de delivery applicatif Dual-Track
 - **Domaines de compétences mobilisés :**
-  - Configuration d'un Agent IA autonome en boucle fermée (`D.325.1-ia`)
   - Protocoles de tests d'utilisabilité et score SUS (`D.311.1-design`)
   - Modélisation de contrats DTO et sérialisation JSON en Mermaid (`D.311.2-uml`)
   - Single Page Application réactive avec Alpine.js et Preline UI (`D.321.1-laravel`)
 - **Objectif global d'apprentissage :**
   - Préparer la branche Git `sprint-5` et actualiser la documentation projet.
-  - Configurer et encadrer un agent IA opérant en boucle fermée dans l'IDE.
   - Conduire un protocole de tests d'utilisabilité (*Peer Testing*) et calculer le score System Usability Scale (SUS).
   - Modéliser les flux de données asynchrones, structures DTO et contrats JSON en syntaxe Mermaid.
   - Développer sous **Alpine.js** et **Preline UI** une interface réactive Single Page Application (SPA) avec filtrage asynchrone instantané sans aucun rechargement de page.
@@ -32,11 +30,10 @@ Il est structuré en **7 phases typées** (4 unités d'apprentissage **UA-Lab** 
   - Réalisation guidée pas-à-pas de l'expérience Single Page Application sous Alpine.js pour la recherche et le filtrage dynamique d'articles.
   - Alternance immédiate : chaque atelier théorique est mis en œuvre sur le Blog.
 - **Jour 8 : Projet Technique (*Portfolio Développeur*)**
-  - **Codage technique pur en totale autonomie (sans conception ni planification)**.
-  - L'apprenant dynamise sous Alpine.js la galerie de réalisations de son portfolio personnel sans aucun rechargement de page.
-  - **Épreuve sommative de Live Coding (40 min chrono sans assistance — 65% de la note finale du module)**.
+  - **Phase de conception préalable ciblée (1h)** : Élaboration du contrat JSON DTO et du diagramme de séquence Mermaid des échanges asynchrones.
+  - **Épreuve sommative de Live Coding (40 min chrono sans assistance — 65% de la note finale du module)** : Dynamisation sous Alpine.js de la galerie de réalisations de son portfolio personnel sans aucun rechargement de page.
 - **Jours 9 et 10 : Projet Fil Rouge (*Application Métier*, ex : Gestion de Cinéma)**
-  - Création du Skill agentique `.agent/skills/alpine-spa-generator/` pour automatiser la génération de composants réactifs Alpine.js et endpoints JSON.
+  - Développement de l'interface dynamique SPA avec Alpine.js connectée aux endpoints REST JSON sur l'application métier.
   - Bilan réflexif et consolidation des acquis.
 
 ---
@@ -52,7 +49,7 @@ Il est structuré en **7 phases typées** (4 unités d'apprentissage **UA-Lab** 
 
 ---
 
-## 4. Déroulement des 7 Phases de la Session S05
+## 4. Déroulement des 6 Phases de la Session S05
 
 ```mermaid
 flowchart TD
@@ -62,45 +59,39 @@ flowchart TD
         E1 --> E2
     end
 
-    subgraph P2 ["Phase 2 : UA-Lab — Agent IA en Boucle Fermée (D.325.1-ia)"]
-        E3["Étape 3 : Tutoriel-lab : Configuration d'un Agent IA autonome"]
-        E4["Étape 4 : Tutoriel-application : Déployer et brider l'Agent IA sur le Blog"]
+    subgraph P2 ["Phase 2 : UA-Lab — Tests Utilisabilité & SUS (D.311.1-design)"]
+        E3["Étape 3 : Tutoriel-lab : Protocoles de tests d'utilisabilité et SUS"]
+        E4["Étape 4 : Tutoriel-application : Conduire la campagne de tests sur le Blog"]
         E3 --> E4
     end
 
-    subgraph P3 ["Phase 3 : UA-Lab — Tests Utilisabilité & SUS (D.311.1-design)"]
-        E5["Étape 5 : Tutoriel-lab : Protocoles de tests d'utilisabilité et SUS"]
-        E6["Étape 6 : Tutoriel-application : Conduire la campagne de tests sur le Blog"]
+    subgraph P3 ["Phase 3 : UA-Lab — DTO & JSON Mermaid (D.311.2-uml)"]
+        E5["Étape 5 : Tutoriel-lab : Modélisation des contrats DTO et flux JSON"]
+        E6["Étape 6 : Tutoriel-application : Modéliser les contrats API du Blog"]
         E5 --> E6
     end
 
-    subgraph P4 ["Phase 4 : UA-Lab — DTO & JSON Mermaid (D.311.2-uml)"]
-        E7["Étape 7 : Tutoriel-lab : Modélisation des contrats DTO et flux JSON"]
-        E8["Étape 8 : Tutoriel-application : Modéliser les contrats API du Blog"]
+    subgraph P4 ["Phase 4 : UA-Lab — Single Page App Alpine.js (D.321.1-laravel)"]
+        E7["Étape 7 : Tutoriel-lab : Dynamisation SPA avec Alpine.js et Preline UI"]
+        E8["Étape 8 : Tutoriel-application : Concevoir en détail et développer la SPA"]
         E7 --> E8
     end
 
-    subgraph P5 ["Phase 5 : UA-Lab — Single Page App Alpine.js (D.321.1-laravel)"]
-        E9["Étape 9 : Tutoriel-lab : Dynamisation SPA avec Alpine.js et Preline UI"]
-        E10["Étape 10 : Tutoriel-application : Concevoir en détail et développer la SPA"]
+    subgraph P5 ["Phase 5 : UA-Tâche Milieu — Piste Discovery (Sprint 6)"]
+        E9["Étape 9 : Affiner le Backlog pour le Sprint suivant"]
+        E10["Étape 10 : Modéliser le User Flow et les maquettes du Sprint 6"]
         E9 --> E10
     end
 
-    subgraph P6 ["Phase 6 : UA-Tâche Milieu — Piste Discovery (Sprint 6)"]
-        E11["Étape 11 : Affiner le Backlog pour le Sprint suivant"]
-        E12["Étape 12 : Modéliser le User Flow et les maquettes du Sprint 6"]
-        E11 --> E12
+    subgraph P6 ["Phase 6 : UA-Tâche Fin — Suivi Quotidien, Qualité, Démonstration & Rétrospective"]
+        E11["Étape 11 : Suivre l'avancement quotidien (Daily Scrum)"]
+        E12["Étape 12 : Tester et valider l'Incrément (DoD)"]
+        E13["Étape 13 : Présenter et inspecter (Sprint Review 5)"]
+        E14["Étape 14 : Améliorer le processus (Sprint Retrospective 5)"]
+        E11 --> E12 --> E13 --> E14
     end
 
-    subgraph P7 ["Phase 7 : UA-Tâche Fin — Suivi Quotidien, Qualité, Démonstration & Rétrospective"]
-        E13["Étape 13 : Suivre l'avancement quotidien (Daily Scrum)"]
-        E14["Étape 14 : Tester et valider l'Incrément (DoD)"]
-        E15["Étape 15 : Présenter et inspecter (Sprint Review 5)"]
-        E16["Étape 16 : Améliorer le processus (Sprint Retrospective 5)"]
-        E13 --> E14 --> E15 --> E16
-    end
-
-    P1 --> P2 --> P3 --> P4 --> P5 --> P6 --> P7
+    P1 --> P2 --> P3 --> P4 --> P5 --> P6
 ```
 
 ---
@@ -111,7 +102,7 @@ flowchart TD
 - **Étape 1 : Planifier le Sprint 5**
   - Correspondance flux générique : Étape Générique 15 (Planifier le Sprint N).
   - Entrées : Product Backlog actualisé, retours de la Review 4 et actions de la Rétrospective S4.
-  - Travail d'application sur le Blog : Définir le Sprint Goal S5 ("Transformer la consultation et le filtrage d'articles en une expérience Single Page Application fluide sous Alpine.js avec validation ergonomique par score SUS"), décomposer les tâches et valider le Sprint Backlog S5.
+  - Travail d'application sur le Blog : Chaque apprenant endosse le rôle de Product Owner pour son projet, définit le Sprint Goal S5 ("Transformer la consultation et le filtrage d'articles en une expérience Single Page Application fluide sous Alpine.js avec validation ergonomique par score SUS"), décompose les tâches et valide le Sprint Backlog S5.
   - Sortie (1 seul livrable) : `scrum/sprint-backlog-s5.md`.
 - **Étape 2 : Préparer l'environnement de sprint (Branche Git et README.md)**
   - Correspondance flux générique : Étape Générique 16 (Préparer l'environnement de sprint).
@@ -121,29 +112,10 @@ flowchart TD
 
 ---
 
-### Phase 2 : UA-Lab — Configuration d'un Agent IA Autonome en Boucle Fermée (Domaine D.325.1-ia)
-*Cette phase introduit l'exécution autonome encadrée d'un agent IA avec alternance directe apprentissage et application.*
-
-- **Étape 3 : Tutoriel-lab : Configuration d'un Agent IA autonome en boucle fermée**
-  - Entrées : Outils Antigravity et commandes terminales.
-  - Notions de base à apprendre :
-    - Boucle d'action autonome : Observation $\to$ Décision $\to$ Action $\to$ Vérification.
-    - Règles de sécurité et garde-fous : interdiction de commit automatique, validation des commandes shell.
-    - Définition d'objectifs vérifiables et conditions d'arrêt explicites.
-  - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/ia/guide-agent-ia-autonome.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/ia/presentation-agent-ia-autonome.md`.
-- **Étape 4 : Tutoriel-application : Déployer et brider l'Agent IA sur le Blog**
-  - Entrées : Guide de l'agent autonome et spécifications du Blog.
-  - Travail d'application sur le Blog : Configurer les règles d'encadrement de l'agent pour le Blog des Lauréats afin d'exécuter des refactorisations contrôlées.
-  - Sortie (1 seul livrable) : `docs/ia/configuration-agent-blog.md`.
-
----
-
-### Phase 3 : UA-Lab — Protocoles de Tests d'Utilisabilité et Score SUS (Domaine D.311.1-design)
+### Phase 2 : UA-Lab — Protocoles de Tests d'Utilisabilité et Score SUS (Domaine D.311.1-design)
 *Cette phase introduit la mesure quantitative de l'utilisabilité avec alternance directe apprentissage et application.*
 
-- **Étape 5 : Tutoriel-lab : Protocoles de tests d'utilisabilité et mesure du score SUS**
+- **Étape 3 : Tutoriel-lab : Protocoles de tests d'utilisabilité et mesure du score SUS**
   - Entrées : Méthodologie du questionnaire System Usability Scale (SUS).
   - Notions de base à apprendre :
     - Protocole d'évaluation par les pairs (*Peer Testing*) : consignes neutres, tâches scénarisées, chronométrage.
@@ -152,17 +124,17 @@ flowchart TD
   - Sorties de l'atelier d'apprentissage (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/design/guide-tests-utilisabilite-sus.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/design/presentation-tests-utilisabilite-sus.md`.
-- **Étape 6 : Tutoriel-application : Conduire la campagne de tests sur le Blog**
+- **Étape 4 : Tutoriel-application : Conduire la campagne de tests sur le Blog**
   - Entrées : Incrément logiciel disponible et formulaire SUS.
   - Travail d'application sur le Blog : Faire tester le Blog des Lauréats par 5 apprenants pairs, calculer le score SUS moyen et formaliser les recommandations ergonomiques.
   - Sortie (1 seul livrable) : `docs/design/rapport-sus-blog.md`.
 
 ---
 
-### Phase 4 : UA-Lab — Modélisation de Contrats DTO et Sérialisation JSON en Mermaid (Domaine D.311.2-uml)
+### Phase 3 : UA-Lab — Modélisation de Contrats DTO et Sérialisation JSON en Mermaid (Domaine D.311.2-uml)
 *Cette phase introduit la formalisation des échanges API asynchrones avec alternance directe apprentissage et application.*
 
-- **Étape 7 : Tutoriel-lab : Modélisation des contrats DTO et flux JSON en Mermaid**
+- **Étape 5 : Tutoriel-lab : Modélisation des contrats DTO et flux JSON en Mermaid**
   - Entrées : Guide Mermaid `sequenceDiagram` et `classDiagram`.
   - Notions de base à apprendre :
     - Patron Data Transfer Object (DTO) : découplage entre modèle de base de données et charge utile JSON.
@@ -171,17 +143,17 @@ flowchart TD
   - Sorties de l'atelier d'apprentissage (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/uml/guide-dto-json-mermaid.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/uml/presentation-dto-json-mermaid.md`.
-- **Étape 8 : Tutoriel-application : Modéliser les contrats API du Blog**
+- **Étape 6 : Tutoriel-application : Modéliser les contrats API du Blog**
   - Entrées : Guide Mermaid et besoins de recherche dynamique.
   - Travail d'application sur le Blog : Modéliser le contrat de données DTO retourné par l'endpoint `/api/articles` et le diagramme de séquence des échanges asynchrones.
   - Sortie (1 seul livrable) : `docs/analyse/contrat-api-articles.mmd`.
 
 ---
 
-### Phase 5 : UA-Lab — Single Page Application Réactive avec Alpine.js et Preline UI (Domaine D.321.1-laravel)
+### Phase 4 : UA-Lab — Single Page Application Réactive avec Alpine.js et Preline UI (Domaine D.321.1-laravel)
 *Cette phase introduit la dynamisation client réactive avec alternance directe apprentissage et application.*
 
-- **Étape 9 : Tutoriel-lab : Dynamisation SPA avec Alpine.js et Preline UI**
+- **Étape 7 : Tutoriel-lab : Dynamisation SPA avec Alpine.js et Preline UI**
   - Entrées : Bibliothèque Alpine.js et Preline UI.
   - Notions de base à apprendre :
     - Directives réactives essentielles : `x-data`, `x-init`, `x-bind`, `x-on:click`, `x-model`, `x-show`, `x-for`.
@@ -190,26 +162,26 @@ flowchart TD
   - Sorties de l'atelier d'apprentissage (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/laravel/guide-spa-alpine-preline.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/laravel/presentation-spa-alpine-preline.md`.
-- **Étape 10 : Tutoriel-application : Concevoir en détail et développer la SPA de consultation d'articles**
+- **Étape 8 : Tutoriel-application : Concevoir en détail et développer la SPA de consultation d'articles**
   - Correspondance flux générique : Étape Générique 17 (Concevoir en détail et développer).
   - Entrées : Spécifications, contrats DTO et compétences Alpine.js acquises.
   - Travail d'application sur le Blog :
     - *Projet d'Imitation :* Coder l'endpoint JSON `/api/articles` avec filtrage par catégorie et mot-clé, et implémenter la vue SPA sous Alpine.js et Preline UI sans aucun rechargement de page.
-    - *Projet Technique (Codage pur - Jour 8) :* Dynamiser sous Alpine.js la galerie de réalisations de son portfolio personnel (Épreuve de Live Coding de 40 min).
-    - *Projet Fil Rouge (Jours 9-10) :* Créer le Skill `.agent/skills/alpine-spa-generator/` pour automatiser la génération d'interfaces SPA Alpine.js.
+    - *Projet Technique (Jour 8) :* Réaliser la conception préalable (contrat DTO et diagramme de séquence), puis dynamiser sous Alpine.js la galerie de réalisations de son portfolio personnel (Épreuve de Live Coding de 40 min).
+    - *Projet Fil Rouge (Jours 9-10) :* Développer l'interface réactive SPA Alpine.js connectée aux endpoints REST sur l'application métier.
   - Sortie (1 seul livrable) : `resources/views/articles/index-spa.blade.php`.
 
 ---
 
-### Phase 6 : UA-Tâche Milieu — Piste Discovery : Affinement du Backlog et Maquettage du Sprint 6
+### Phase 5 : UA-Tâche Milieu — Piste Discovery : Affinement du Backlog et Maquettage du Sprint 6
 *Cette phase rassemble les activités d'ingénierie opérationnelle menées en temps masqué (~10% du temps) pour préparer le sprint suivant.*
 
-- **Étape 11 : Affiner le Backlog pour le Sprint suivant**
+- **Étape 9 : Affiner le Backlog pour le Sprint suivant**
   - Correspondance flux générique : Étape Générique 18 (Affiner le Backlog pour le Sprint suivant).
   - Entrées : Product Backlog et retours d'utilisation.
-  - Travail d'application : Collaborer avec le Product Owner pour clarifier les User Stories du Sprint 6 (Sécurité Spatie RBAC et démarche TDD complète).
+  - Travail d'application : Chaque apprenant, dans sa posture de Product Owner, clarifie les User Stories du Sprint 6 (Sécurité Spatie RBAC et démarche TDD complète).
   - Sortie (1 seul livrable) : `scrum/backlog-refinement-s6.md`.
-- **Étape 12 : Modéliser le User Flow et les maquettes du Sprint 6**
+- **Étape 10 : Modéliser le User Flow et les maquettes du Sprint 6**
   - Correspondance flux générique : Étape Générique 19 (Modéliser le User Flow et maquetter pour le Sprint suivant).
   - Entrées : User Stories S6 et UI Kit Preline UI.
   - Travail d'application : Modéliser les parcours d'administration RBAC et prototyper les maquettes interactives associées.
@@ -217,25 +189,25 @@ flowchart TD
 
 ---
 
-### Phase 7 : UA-Tâche Fin — Suivi Quotidien, Qualité DoD, Démonstration et Rétrospective
+### Phase 6 : UA-Tâche Fin — Suivi Quotidien, Qualité DoD, Démonstration et Rétrospective
 *Cette phase opérationnelle rassemble les rituels de clôture et l'amélioration continue.*
 
-- **Étape 13 : Suivre l'avancement quotidien (Daily Scrum)**
+- **Étape 11 : Suivre l'avancement quotidien (Daily Scrum)**
   - Correspondance flux générique : Étape Générique 20 (Suivre l'avancement quotidien).
   - Entrées : Tableau Kanban du Sprint 5.
   - Travail d'application : Animer la réunion debout quotidienne de 15 minutes et synchroniser l'équipe.
   - Sortie (1 seul livrable) : `issues/issues-sprint-5.md`.
-- **Étape 14 : Tester et valider l'Incrément (DoD)**
+- **Étape 12 : Tester et valider l'Incrément (DoD)**
   - Correspondance flux générique : Étape Générique 21 (Tester et valider l'Incrément).
   - Entrées : Code source complet et métriques de performance SPA.
   - Travail d'application : Exécuter la checklist de validation (filtrage instantané fluide sans rechargement, absence d'erreurs console, score SUS $\ge 70$).
   - Sortie (1 seul livrable) : `docs/qualite/rapport-dod-sprint-5.md`.
-- **Étape 15 : Présenter et inspecter (Sprint Review 5)**
+- **Étape 13 : Présenter et inspecter (Sprint Review 5)**
   - Correspondance flux générique : Étape Générique 22 (Présenter et inspecter).
   - Entrées : Incrément logiciel S5 et maquettes du Sprint 6.
-  - Travail d'application : Démontrer l'expérience SPA en direct devant le Product Owner, présenter le score SUS et faire tester les maquettes de S6.
+  - Travail d'application : Chaque apprenant anime la démonstration de son Incrément 5 en posture de Product Owner, présente le score SUS et fait tester les maquettes de S6.
   - Sortie (1 seul livrable) : `sprints/pv-review-5.md`.
-- **Étape 16 : Améliorer le processus (Sprint Retrospective 5)**
+- **Étape 14 : Améliorer le processus (Sprint Retrospective 5)**
   - Correspondance flux générique : Étape Générique 23 (Améliorer le processus).
   - Entrées : Déroulement de la Review 5 et vécu d'équipe.
   - Travail d'application : Conduire l'analyse réflexive d'équipe, acter l'excellence du ressenti utilisateur sous Alpine.js, et préparer l'implémentation de Spatie RBAC pour S6.
