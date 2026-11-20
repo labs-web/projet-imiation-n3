@@ -48,7 +48,7 @@ Chaque session articule rigoureusement trois piliers complémentaires :
   - Durée indicative : 80 heures (10 jours).
   - Organisation : 7 phases typées (4 phases `UA-Lab` produisant chacune un guide explicatif et une présentation Marp, et 3 blocs `UA-Tâche` d'application opérationnelle : Début, Milieu, Fin).
   - Domaines mobilisés : IA & Prompting (`D.325.1-ia`), UML Mermaid (`D.311.2-uml`), Architecture en 2 couches (`D.312.1-architecture`), Laravel 13 (`D.321.1-laravel`).
-  - Objectif : Préparer la branche Git `sprint-1`, outiller l'IDE par la méthode RIO, modéliser les frontières et use cases, et coder sous Laravel 13 une tranche verticale de consultation d'article avec service CSV, composants Preline UI et gestion robuste de l'erreur 404.
+  - Objectif : Préparer la branche Git `sprint-1`, outiller l'IDE par la méthode RIO, modéliser les frontières et use cases, et coder sous Laravel 13 une tranche verticale de consultation d'article avec modèle Eloquent, base MySQL, composants Preline UI et gestion robuste de l'erreur 404.
   - Correspondance flux générique : Étapes génériques 15 à 23 (16 étapes réparties en 7 phases).
 
 - **[Session S02 : Empathie Personas, Architecture MVC + Services & Page d'Accueil](./flux-travail-s2.md)**

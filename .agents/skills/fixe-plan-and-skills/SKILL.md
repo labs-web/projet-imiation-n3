@@ -2,7 +2,7 @@
 name: fixe-plan-and-skills
 description: >-
   Analyse les remarques et sélections du concepteur sur les sessions ou plans,
-  produit un artefact interactif de révision (lignes à modifier et skills impactés),
+  produit un artefact interactif de révision (document révisé tel quel et skills impactés),
   puis applique les ajustements validés sur les documents et les compétences.
 ---
 
@@ -10,8 +10,8 @@ description: >-
 
 ## 1. Mission
 Formaliser et automatiser la boucle de co-conception réactive avec le concepteur :
-1. Analyser les remarques, sélections de lignes et consignes méthodologiques du concepteur.
-2. Générer un artéfact interactif de révision (`plan-revision-*.md` avec `RequestFeedback: true`) cartographiant les lignes cibles à modifier et les skills à adapter.
+1. Analyser les remarques, sélections et consignes méthodologiques du concepteur.
+2. Générer un artéfact interactif de révision (`plan-revision-*.md` avec `RequestFeedback: true`) affichant le document révisé **tel quel** (sans pollution de numéros de lignes du type "Lignes 1 à 7") et la matrice des skills à adapter.
 3. Après validation par le concepteur, appliquer les modifications sur le document cible et synchroniser les règles et comportements des skills associés.
 
 ## 2. Déclenchement

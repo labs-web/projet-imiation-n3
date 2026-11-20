@@ -7,15 +7,15 @@ Analyser les remarques, sélections de lignes et consignes méthodologiques four
 
 ## 2. Procédure d'Analyse
 
-1. **Localiser le fichier et les lignes cibles :**
-   - Identifier le fichier source visé (ex : `flux-travail/sessions/flux-travail-s0.md`).
-   - Délimiter la plage de lignes sélectionnée par le concepteur (`L1-L238`).
-   - Lire le contenu actuel de cette plage de lignes.
+1. **Localiser le fichier et les sections cibles :**
+   - Identifier le fichier source visé (ex : `flux-travail/sessions/flux-travail-s1.md`).
+   - Repérer les sections et étapes ciblées par le retour du concepteur.
+   - Lire le contenu actuel des sections concernées.
 
 2. **Qualifier chaque remarque du concepteur :**
    - Décomposer le retour du concepteur en consignes unitaires.
-   - Associer chaque consigne à une sous-section ou à un numéro de ligne précis.
-   - Identifier la nature de la modification : ajout d'un prérequis, division d'une étape, renommage pour alignement générique, clarification d'une évaluation ou de la stack.
+   - Associer chaque consigne à une section ou étape fonctionnelle précise.
+   - Identifier la nature de la modification : stack technique (ex: MySQL direct), rôle agile (ex: chaque apprenant PO), conception préalable, titrage, ou livrable.
 
 3. **Identifier les compétences et skills impactés :**
    - Si la remarque touche à la structure des sessions -> cibler `conception-session`.

@@ -14,13 +14,13 @@ Il est structuré en **7 phases typées** (4 unités d'apprentissage **UA-Lab** 
   - Prompt Engineering & Context Engineering (`D.325.1-ia`)
   - Modélisation UML Mermaid (`D.311.2-uml`)
   - Architecture Logicielle en Deux Couches & ADR (`D.312.1-architecture`)
-  - Développement Backend Laravel 13, Service CSV, Preline UI & 404 (`D.321.1-laravel`)
+  - Développement Backend Laravel 13, Modèle Eloquent & MySQL, Preline UI & 404 (`D.321.1-laravel`)
 - **Objectif global d'apprentissage :**
   - Mettre en place l'environnement de sprint sur Git.
   - Outiller le poste de développement par le Prompt Engineering (méthode RIO).
   - Délimiter les frontières système et modéliser les cas d'utilisation en syntaxe déclarative Mermaid.
   - Concevoir une architecture logicielle découplée en 2 couches (Contrôleur mince et Service Layer) formalisée par un Architectural Decision Record (ADR).
-  - Développer sous Laravel 13 la consultation d'un article avec extraction CSV, composants Preline UI et gestion de l'erreur 404.
+  - Développer sous Laravel 13 la consultation d'un article avec modèle Eloquent, base MySQL, composants Preline UI et gestion de l'erreur 404.
   - Préparer la piste Discovery du Sprint 2 et clôturer l'itération avec la détection de la dette d'empathie.
 
 ---
@@ -31,9 +31,8 @@ Il est structuré en **7 phases typées** (4 unités d'apprentissage **UA-Lab** 
   - Développement guidé pas-à-pas de la tranche verticale de consultation d'un article.
   - Alternance immédiate : chaque atelier d'apprentissage est appliqué directement sur le code du Blog.
 - **Jour 8 : Projet Technique (*Portfolio Développeur*)**
-  - **Codage technique pur en autonomie totale (sans conception ni planification)**.
-  - L'apprenant implémente la consultation d'une réalisation sur son portfolio personnel (`RealisationController`, `RealisationService`).
-  - **Épreuve sommative de Live Coding (40 min chrono sans assistance — 65% de la note finale du module)**.
+  - **Phase de conception préalable ciblée (1h)** : Élaboration du diagramme de séquence Mermaid de consultation d'une réalisation et formalisation de l'ADR d'architecture (modèle, service, contrôleur).
+  - **Épreuve sommative de Live Coding (40 min chrono sans assistance — 65% de la note finale du module)** : Implémentation autonome et fluide de la tranche verticale selon la conception validée (`RealisationController`, `RealisationService`, modèle Eloquent `Realisation` et vue Blade responsive Preline UI).
 - **Jours 9 et 10 : Projet Fil Rouge (*Application Métier*, ex : Gestion de Cinéma)**
   - Création du Skill agentique `.agent/skills/article-show-generator/` pour automatiser la génération d'une tranche de consultation découplée.
   - Bilan réflexif et consolidation des acquis.
@@ -68,8 +67,8 @@ flowchart TD
         E7 --> E8
     end
 
-    subgraph P5 ["Phase 5 : UA-Lab — Contrôleur, Service CSV & 404 (D.321.1-laravel)"]
-        E9["Étape 9 : Tutoriel-lab : Assimiler routage, CSV, Preline UI et gestion 404"]
+    subgraph P5 ["Phase 5 : UA-Lab — Modèle Eloquent, Connexion MySQL & Preline UI (D.321.1-laravel)"]
+        E9["Étape 9 : Tutoriel-lab : Assimiler modèle Eloquent, MySQL, Preline UI et 404"]
         E10["Étape 10 : Tutoriel-application : Concevoir en détail et développer la consultation"]
         E9 --> E10
     end
@@ -99,7 +98,7 @@ flowchart TD
 - **Étape 1 : Planifier le Sprint 1**
   - Correspondance flux générique : Étape Générique 15 (Planifier le Sprint N).
   - Entrées : Product Backlog initial et capacité d'équipe.
-  - Travail d'application sur le Blog : Définir le Sprint Goal S1 ("Permettre aux visiteurs de consulter un article complet"), sélectionner la User Story US-01, décomposer en tâches de 1 à 4 heures et fixer la Definition of Done.
+  - Travail d'application sur le Blog : Chaque apprenant endosse le rôle de Product Owner pour son projet (la formation Scrum ayant été assimilée lors du Sprint 0), définit le Sprint Goal S1 ("Permettre aux visiteurs de consulter un article complet connecté à MySQL"), sélectionne la User Story US-01, décompose en tâches de 1 à 4 heures et fixe la Definition of Done.
   - Sortie (1 seul livrable) : `scrum/sprint-backlog-s1.md`.
 - **Étape 2 : Préparer l'environnement de sprint (Branche Git et README.md)**
   - Correspondance flux générique : Étape Générique 16 (Préparer l'environnement de sprint).
@@ -170,27 +169,29 @@ flowchart TD
 
 ---
 
-### Phase 5 : UA-Lab — Contrôleur Mince, Service CSV, Gabarit Preline UI et Gestion Robuste 404 (Domaine D.321.1-laravel)
-*Cette phase introduit le développement effectif de la tranche verticale sous Laravel 13 avec alternance immédiate entre apprentissage et application.*
+### Phase 5 : UA-Lab — Contrôleur Mince, Modèle Eloquent, Connexion MySQL, Preline UI et Gestion Robuste 404 (Domaine D.321.1-laravel)
+*Cette phase introduit le développement effectif de la tranche verticale sous Laravel 13 connecté à MySQL avec alternance immédiate entre apprentissage et application.*
 
-- **Étape 9 : Tutoriel-lab : Assimiler le routage dynamique, l'extraction de données CSV, les composants Preline UI et la gestion d'erreur 404**
-  - Entrées : Documentation Laravel 13 et bibliothèque Preline UI.
+- **Étape 9 : Tutoriel-lab : Assimiler le modèle Eloquent, la connexion MySQL, les composants Preline UI et la gestion d'erreur 404**
+  - Entrées : Documentation Laravel 13, moteur MySQL et bibliothèque Preline UI.
   - Notions de base à apprendre :
+    - Configuration de l'environnement `.env` et connexion à la base de données MySQL.
+    - Création de la migration (`create_articles_table`), du Modèle Eloquent `Article` et du Seeder d'initialisation.
     - Déclaration de routes paramétrées dynamiques (`Route::get('/articles/{id}', ...)`) avec contraintes d'identifiant.
     - Injection de dépendance de la classe Service dans le constructeur du contrôleur.
-    - Extraction et manipulation de données depuis un fichier CSV en mémoire (`fgetcsv`, collections Laravel).
+    - Requêtage Eloquent dans la couche Service (`Article::findOrFail($id)` ou levée explicite d'`abort(404)`).
     - Gabarit Blade responsive avec Tailwind CSS et composants de carte Preline UI.
-    - Résilience applicative : détection d'article absent et déclenchement propre de `abort(404)`.
+    - Résilience applicative : gestion robuste de l'erreur 404 en cas d'identifiant inexistant.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/laravel/guide-show-csv-preline.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/laravel/presentation-show-csv-preline.md`.
+    - Guide explicatif détaillé : `tutoriels/laravel/guide-show-mysql-preline.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/laravel/presentation-show-mysql-preline.md`.
 - **Étape 10 : Tutoriel-application : Concevoir en détail et développer la consultation d'un article**
   - Correspondance flux générique : Étape Générique 17 (Concevoir en détail et développer).
-  - Entrées : Notions Laravel assimilées, architecture MVC + Service validée et spécifications du Blog.
+  - Entrées : Notions Laravel assimilées, architecture MVC + Service validée, base MySQL configurée et spécifications du Blog.
   - Travail d'application sur le Blog :
-    - *Projet d'Imitation :* Coder la route `/articles/{id}`, le contrôleur mince `ArticleController`, la classe `ArticleService` extrayant les articles depuis la source CSV avec retour typé, la gestion propre de l'erreur 404 (`abort(404)`), et la vue Blade responsive sous Preline UI.
-    - *Projet Technique (Codage pur - Jour 8) :* Coder la route, le contrôleur `RealisationController` et le service `RealisationService` sur son portfolio personnel (Épreuve de Live Coding de 40 min).
-    - *Projet Fil Rouge (Jours 9-10) :* Créer le Skill `.agent/skills/article-show-generator/` pour automatiser la génération d'une tranche de consultation découplée sur l'application métier.
+    - *Projet d'Imitation :* Coder la migration MySQL, le modèle Eloquent `Article`, le seeder de test, la route `/articles/{id}`, le contrôleur mince `ArticleController`, la classe `ArticleService` requêtant MySQL via Eloquent, la gestion propre de l'erreur 404 (`abort(404)`), et la vue Blade responsive sous Preline UI.
+    - *Projet Technique (Jour 8) :* Réaliser la conception préalable (diagramme de séquence Mermaid et ADR express), puis coder la route, le modèle `Realisation`, le contrôleur `RealisationController` et le service `RealisationService` sur son portfolio personnel (Épreuve de Live Coding de 40 min).
+    - *Projet Fil Rouge (Jours 9-10) :* Créer le Skill `.agent/skills/article-show-generator/` pour automatiser la génération d'une tranche de consultation découplée avec modèle Eloquent et MySQL sur l'application métier.
   - Sortie (1 seul livrable) : `app/Services/ArticleService.php`.
 
 ---
@@ -201,7 +202,7 @@ flowchart TD
 - **Étape 11 : Affiner le Backlog pour le Sprint suivant**
   - Correspondance flux générique : Étape Générique 18 (Affiner le Backlog pour le Sprint suivant).
   - Entrées : Product Backlog et retours d'utilisation.
-  - Travail d'application : Collaborer avec le Product Owner pour clarifier les User Stories du Sprint 2 (Page d'accueil dynamique et CRUD Catégories), rédiger les critères d'acceptation et estimer la complexité en Story Points.
+  - Travail d'application : Chaque apprenant, dans sa posture de Product Owner, clarifie les User Stories du Sprint 2 (Page d'accueil dynamique et CRUD Catégories avec tables MySQL associées), rédige les critères d'acceptation et estime la complexité en Story Points.
   - Sortie (1 seul livrable) : `scrum/backlog-refinement-s2.md`.
 - **Étape 12 : Modéliser le User Flow et les maquettes du Sprint 2**
   - Correspondance flux générique : Étape Générique 19 (Modéliser le User Flow et maquetter pour le Sprint suivant).
@@ -227,7 +228,7 @@ flowchart TD
 - **Étape 15 : Présenter et inspecter (Sprint Review 1)**
   - Correspondance flux générique : Étape Générique 22 (Présenter et inspecter).
   - Entrées : Incrément logiciel S1 opérationnel et maquettes interactives du Sprint 2.
-  - Travail d'application : Démontrer l'Incrément 1 en direct devant le Product Owner, valider la User Story "Consultation d'un article", et faire tester les maquettes de S2 aux utilisateurs cibles pour recueillir leurs retours avant le Planning 2.
+  - Travail d'application : Chaque apprenant anime la démonstration de son Incrément 1 en posture de Product Owner, valide la User Story "Consultation d'un article connecté à MySQL", et fait tester les maquettes de S2 aux utilisateurs cibles pour recueillir leurs retours avant le Planning 2.
   - Sortie (1 seul livrable) : `sprints/pv-review-1.md`.
 - **Étape 16 : Améliorer le processus (Sprint Retrospective 1)**
   - Correspondance flux générique : Étape Générique 23 (Améliorer le processus).

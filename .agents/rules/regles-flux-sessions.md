@@ -59,12 +59,13 @@ Chaque session de formation est découpée en phases typées :
 
 ---
 
-## 6. Cadre Tri-Projets et Durées Indicatives
+## 6. Cadre Tri-Projets, Rôles Agiles et Durées Indicatives
 
 Chaque session structure la progression selon le cadre Tri-Projets :
 - **Projet d'Imitation (*Blog des Lauréats*) :** Réalisation pas-à-pas en classe active (conception, développement guidé et rituels). Le projet d'imitation est exclusivement le Blog (la TodoList ne servant que d'exemple didactique en tutoriel).
-- **Projet Technique (Portfolio personnel) :** Réalisé en fin d'itération en autonomie totale (codage technique pur sans conception lors des sprints de delivery).
+- **Projet Technique (Portfolio personnel) :** Réalisé en fin d'itération avec une phase de conception préalable ciblée (User Flow / Diagramme de séquence Mermaid et ADR express) suivie d'une épreuve sommative de Live Coding (40 min chrono sans assistance — 65% de la note finale du module).
 - **Projet Fil Rouge (Projet professionnel) :** Réalisé en clôture d'itération avec création de Skills agentiques réutilisables dans `.agent/skills/`.
+- **Rôles Scrum :** Après l'initiation du Sprint 0, chaque apprenant endosse le rôle de Product Owner pour son propre projet lors des sprints de delivery.
 - **Durées indicatives :** Les mentions de 80 heures et 10 jours sont fournies à titre indicatif pour les formateurs et le concepteur ; l'agent IA ne doit pas les contraindre de manière rigide.
 
 ---
