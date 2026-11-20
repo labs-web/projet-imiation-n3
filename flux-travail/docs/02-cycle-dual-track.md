@@ -60,7 +60,7 @@ Pour une itération type, la répartition de l'effort s'organise ainsi :
 
 - **90% du temps (Delivery)** :
   - Conception technique détaillée (classes, services, routes).
-  - Écriture du code sous Laravel 12, Alpine.js et Tailwind CSS.
+  - Écriture du code sous Laravel 13, Alpine.js et Tailwind CSS avec Preline UI.
   - Tests unitaires et fonctionnels, traitement de la résilience (erreurs 404).
   - Validation de la Definition of Done.
 - **10% du temps (Discovery)** :

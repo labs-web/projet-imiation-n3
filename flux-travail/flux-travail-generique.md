@@ -2,250 +2,363 @@
 
 Ce document formalise le processus complet d'ingénierie logicielle pour concevoir, développer, tester et déployer une application web.
 
-Il est universel et s'applique à tout projet de développement web basé sur la démarche méthodologique unifiée (Design Thinking, Gestion de Projet PMI, Processus Orienté Objet et Scrum Dual-Track) et la stack technique de référence : **Laravel 12, Alpine.js, Tailwind CSS, MySQL et Git/GitHub**.
+Il est universel et s'applique à tout projet de développement web basé sur la démarche méthodologique unifiée (Design Thinking, Gestion de Projet PMI, Processus Orienté Objet et Scrum Dual-Track) et la stack technique de référence : **Laravel 13, MySQL, Tailwind CSS avec Preline UI, Alpine.js, Agent Antigravity & GitHub Copilot, et Spatie Laravel-Permission (RBAC)**.
 
 ---
 
 ## 1. Vue d'Ensemble du Cycle de Développement
 
-Le cycle de vie du projet se compose de 3 macro-phases et 16 étapes séquentielles et itératives :
+Le cycle de vie du projet se compose de 3 macro-phases et 25 étapes séquentielles et itératives :
 
 ```mermaid
 flowchart TD
     subgraph P1 ["Phase 1 : Sprint 0 — Cadrage, Design Macro et Socle Technique"]
-        E1["1. Planifier le Sprint 0"] --> E2["2. Cadrer le projet, choisir la stack & comprendre l'utilisateur"]
-        E2 --> E3["3. Définir la Vision Produit & le Product Backlog initial"]
-        E3 --> E4["4. Concevoir la Charte Graphique, le User Flow et les maquettes du Sprint 1"]
-        E4 --> E5["5. Concevoir l'architecture et préparer le socle technique"]
-        E5 --> E6["6. Valider le socle, la charte graphique & les maquettes (Review 0 - Go/No-Go)"]
-        E6 --> E7["7. Clôturer le Sprint 0 (Sprint Retrospective 0)"]
+        direction TB
+        E1["1. Planifier le Sprint 0"] --> E2["2. Initialiser le dépôt Git et l'espace projet"]
+        E2 --> E3["3. Cadrer le projet"]
+        E3 --> E4["4. Choisir et valider la stack technique"]
+        E4 --> E5["5. Comprendre l'utilisateur (Design Thinking)"]
+        E5 --> E6["6. Définir la Vision Produit"]
+        E6 --> E7["7. Construire le Product Backlog initial"]
+        E7 --> E8["8. Concevoir la Charte Graphique (Preline UI)"]
+        E8 --> E9["9. Modéliser le User Flow et les maquettes du Sprint 1"]
+        E9 --> E10["10. Concevoir l'architecture logicielle"]
+        E10 --> E11["11. Préparer le socle technique"]
+        E11 --> E12["12. Valider le socle technique par un composant persistant (TodoList MySQL)"]
+        E12 --> E13["13. Valider le socle, la charte et les maquettes (Review 0 - Go/No-Go)"]
+        E13 --> E14["14. Clôturer le Sprint 0 (Sprint Retrospective 0)"]
     end
 
     subgraph P2 ["Phase 2 : Cycle Itératif Dual-Track — Sprint N (N >= 1)"]
         direction TB
         subgraph TrackDeliv ["Piste Delivery (Incrément N)"]
-            E8["8. Planifier le Sprint N (Sprint Planning)"] --> E9["9. Concevoir en détail et développer"]
-            E9 --> E12["12. Tester et valider l'Incrément (DoD)"]
-            E12 --> E13["13. Présenter et inspecter (Sprint Review N)"]
-            E13 --> E14["14. Améliorer le processus (Sprint Retrospective N)"]
+            E15["15. Planifier le Sprint N (Sprint Planning)"] --> E16["16. Préparer l'environnement de sprint (Branche Git)"]
+            E16 --> E17["17. Concevoir en détail et développer"]
+            E17 --> E21["21. Tester et valider l'Incrément (DoD)"]
+            E21 --> E22["22. Présenter et inspecter (Sprint Review N)"]
+            E22 --> E23["23. Améliorer le processus (Sprint Retrospective N)"]
         end
         subgraph TrackDisc ["Piste Discovery (Préparation N+1 - ~10% temps)"]
-            E10["10. Affiner le Backlog et maquetter N+1 (Refinement)"]
+            E18["18. Affiner le Backlog pour le Sprint suivant"]
+            E18 --> E19["19. Modéliser le User Flow et maquetter pour le Sprint suivant"]
         end
-        E11["11. Suivre l'avancement quotidien (Daily Scrum)"]
-        TrackDeliv -.->|"Synchronisation quotidienne"| E11
-        TrackDisc -.->|"Synchronisation quotidienne"| E11
-        E10 -->|"Alimente les maquettes à tester en Review"| E13
-        E13 -->|"US Ready pour le Planning N+1"| E8
+        E20["20. Suivre l'avancement quotidien (Daily Scrum)"]
+        TrackDeliv -.->|"Synchronisation quotidienne"| E20
+        TrackDisc -.->|"Synchronisation quotidienne"| E20
+        E19 -->|"Alimente les maquettes à tester en Review"| E22
+        E22 -->|"US Ready pour le Planning N+1"| E15
     end
 
     subgraph P3 ["Phase 3 : Livraison, Déploiement et Clôture du Projet"]
-        E15["15. Déployer en production et valider en conditions réelles"] --> E16["16. Clôturer officiellement le projet (Bilan final)"]
+        E24["24. Déployer en production et valider en conditions réelles"] --> E25["25. Clôturer officiellement le projet (Bilan final)"]
     end
 
-    E7 --> E8
-    E14 -->|"Itération suivante"| E8
-    E14 -->|"Fin des sprints applicatifs"| E15
+    E14 --> E15
+    E23 -->|"Itération suivante"| E15
+    E23 -->|"Fin des sprints applicatifs"| E24
 ```
 
 ---
 
-## 2. Phase 1 : Sprint 0 — Cadrage, Design Macro et Socle Technique
+## 2. Principes Directeurs d'Ingénierie Logicielle
 
-Le Sprint 0 est un sprint d'initialisation court (timebox de 3 à 10 jours). Il construit un socle validé et prépare les conditions optimales pour démarrer les itérations de développement sans maquetter toute l'application.
+- **Règle d'Unicité :** Chaque étape correspond à une action claire et produit **un seul livrable principal unique**.
+- **Gestion de Version Rigoureuse :** Chaque itération commence par la préparation de la branche de sprint et l'actualisation du fichier `README.md`.
+- **Dual-Track Agile :** Les sprints itératifs combinent en continu le Delivery (90% du temps sur l'incrément courant) et le Discovery (10% du temps pour préparer et maquetter le sprint suivant).
+- **Zéro Tableau Markdown :** Toutes les listes et spécifications utilisent exclusivement des listes à puces directes (`- `).
+
+---
+
+## 3. Phase 1 : Sprint 0 — Cadrage, Design Macro et Socle Technique
+
+Le Sprint 0 construit le socle technique et méthodologique du projet. Il valide l'engagement d'équipe, le périmètre, la charte graphique, les maquettes initiales et le fonctionnement réel de la base de données.
 
 ### Étape 1 : Planifier le Sprint 0
-- **Phases de référence** : Scrum (Sprint Planning 0) et Gestion de Projet (Initialisation).
-- **Entrées** : Idée initiale, expression des besoins ou demande client.
-- **Activités d'ingénierie** :
-  - Définir la durée fixe du Sprint 0 (timebox).
-  - Identifier les parties prenantes et composer l'équipe de travail.
-  - Définir les objectifs de cadrage et recenser les livrables attendus pour la Review 0.
-- **Sorties détaillées** :
-  - `sprints/sprint-0.md` : Document d'engagement du Sprint 0 fixant la durée, les objectifs et les rôles.
-  - `issues/issues-sprint-0.md` : Liste des tâches de cadrage initiales à réaliser.
+- **Phases de référence :** Scrum (Sprint Planning 0) et Gestion de Projet (Initialisation).
+- **Entrées :** Expression des besoins, lettre de mission ou demande client.
+- **Activités d'ingénierie :**
+  - Fixer la timebox du Sprint 0 (durée ferme).
+  - Définir l'objectif du sprint et clarifier les rôles (Product Owner, Scrum Master, Développeurs).
+  - Établir la Definition of Done (DoD) du cadrage.
+  - Recenser les risques initiaux et formaliser les règles d'équipe.
+- **Sortie principale :** Fiche d'engagement d'équipe (`sprints/sprint-0.md`).
 
-### Étape 2 : Cadrer le projet, choisir la stack et comprendre l'utilisateur
-- **Phases de référence** : Gestion de Projet (Initialisation) et Design Thinking (Empathie).
-- **Entrées** : Demande client, étude d'opportunité et contexte métier.
-- **Activités d'ingénierie** :
-  - Définir le périmètre du projet : ce qui est strictement inclus (In-Scope) et ce qui est exclu (Out-of-Scope).
-  - Identifier les contraintes de délai, de budget et de conformité.
-  - **Arrêter la stack technique de référence** : Framework Laravel 12 (PHP), Alpine.js, Tailwind CSS et MySQL.
-  - Mener l'immersion terrain : entretiens avec les utilisateurs, observation et élaboration des Personas cibles.
-- **Sorties détaillées** :
-  - `docs/cadrage/note-cadrage.md` : Fiche de cadrage synthétisant objectifs, périmètre in/out, contraintes et justification de la stack technique.
-  - `docs/cadrage/personas.md` : Fiches Personas détaillant profils, attentes et irritants des utilisateurs types.
+### Étape 2 : Initialiser le dépôt Git et l'espace projet
+- **Phases de référence :** Gestion de Projet (Outillage) et Dev OO (Infrastructure logicielle).
+- **Entrées :** Fiche d'engagement `sprints/sprint-0.md`.
+- **Activités d'ingénierie :**
+  - Initialiser le dépôt Git local et configurer le dépôt distant GitHub.
+  - Mettre en place le fichier `.gitignore` adapté à Laravel et aux outils IDE.
+  - Créer l'arborescence standardisée des dossiers du projet (`docs/`, `sprints/`, `scrum/`, `resources/`).
+  - Rédiger la documentation d'accueil initiale du dépôt.
+- **Sortie principale :** Fichier d'accueil et de configuration du dépôt (`README.md`).
 
-### Étape 3 : Définir la Vision Produit et le Product Backlog initial
-- **Phases de référence** : Design Thinking (Définition & Idéation), Scrum (Product Backlog) et Dev OO (Analyse).
-- **Entrées** : Note de cadrage et fiches Personas.
-- **Activités d'ingénierie** :
-  - Formuler la Vision Produit (problème central, promesse et proposition de valeur).
-  - Animer des ateliers d'idéation pour identifier les solutions fonctionnelles et découper le système en Epics.
-  - Rédiger les premières User Stories (format : *En tant que... je veux... afin de...*) avec leurs critères d'acceptation.
-  - Établir l'ordre de priorité initiale du Product Backlog selon la valeur métier.
-- **Sorties détaillées** :
-  - `docs/produit/vision-produit.md` : Document formalisant la vision, le public cible et la valeur du produit.
-  - `docs/produit/product-backlog.md` : Registre ordonné des User Stories initiales avec critères d'acceptation.
+### Étape 3 : Cadrer le projet
+- **Phases de référence :** Gestion de Projet (Cadrage et Périmètre).
+- **Entrées :** Fiche d'engagement `sprints/sprint-0.md`.
+- **Activités d'ingénierie :**
+  - Définir les objectifs métiers et les critères de succès mesurables.
+  - Établir la matrice de périmètre : fonctionnalités In-Scope (dans le périmètre) et Out-of-Scope (hors périmètre).
+  - Identifier les contraintes techniques, réglementaires et temporelles.
+- **Sortie principale :** Note de cadrage du projet (`docs/cadrage/note-cadrage.md`).
 
-### Étape 4 : Concevoir la Charte Graphique, le User Flow et les maquettes du Sprint 1
-- **Phases de référence** : Design Thinking (Prototypage) et Dev OO (Conception UI).
-- **Entrées** : Vision Produit et User Stories hautement prioritaires du Product Backlog (destinées au Sprint 1).
-- **Activités d'ingénierie** :
-  - Construire un mini UI Kit basé sur Tailwind CSS (palette de couleurs, typographie, boutons, cartes d'articles, formulaires).
-  - Modéliser le **User Flow macro** : tracer le cheminement logique complet de l'utilisateur, écran par écran et décision par décision, pour les fonctionnalités du Sprint 1.
-  - Prototyper les maquettes interactives ciblées (wireframes puis mockups) pour chaque écran identifié dans le User Flow.
-- **Sorties détaillées** :
-  - `docs/design/ui-kit.md` : Charte graphique et composants d'interface réutilisables basés sur Tailwind CSS.
-  - `docs/design/user-flow-sprint-1.md` : Diagramme et description du parcours de navigation utilisateur pour le Sprint 1.
-  - `docs/design/maquettes-sprint-1/` : Dossier contenant les maquettes interactives des écrans prioritaires.
+### Étape 4 : Choisir et valider la stack technique
+- **Phases de référence :** Dev OO (Architecture technique) et Gestion de Projet (Faisabilité).
+- **Entrées :** Note de cadrage `docs/cadrage/note-cadrage.md`.
+- **Activités d'ingénierie :**
+  - Justifier le choix du framework backend (**Laravel 13**).
+  - Justifier le choix du système de gestion de base de données (**MySQL exclusivement**).
+  - Valider la solution d'interface utilisateur (**Tailwind CSS avec la bibliothèque de composants Preline UI**).
+  - Valider la bibliothèque de réactivité frontend (**Alpine.js**).
+  - Valider l'environnement d'assistance IA (**Agent Antigravity & GitHub Copilot**).
+  - Valider les composants de sécurité (**Policies/Gates et Spatie Laravel-Permission**).
+- **Sortie principale :** Dossier de justification technique de la stack (`docs/cadrage/stack-technique.md`).
 
-### Étape 5 : Concevoir l'architecture et préparer le socle technique
-- **Phases de référence** : Dev OO (Conception & Implémentation) et Gestion de Projet (Planification technique).
-- **Entrées** : Maquettes du Sprint 1, User Flow et stack technique arrêtée.
-- **Activités d'ingénierie** :
-  - Concevoir l'architecture logicielle en 2 couches : Contrôleur mince HTTP -> Classe Service métier.
-  - Modéliser le schéma de données initial sous forme de diagramme Mermaid (MCD ou diagramme de classes).
-  - Initialiser le dépôt Git et la forge distante avec GitHub CLI (`gh repo create`).
-  - Déployer le skeleton Laravel 12, configurer Tailwind CSS et Alpine.js, et vérifier la page d'accueil.
-- **Sorties détaillées** :
-  - `docs/architecture/architecture-2-couches.md` : Spécification du pattern d'architecture logicielle et règles de découplage.
-  - `docs/architecture/modele-donnees.md` : Modèle conceptuel de données Mermaid et dictionnaire des attributs.
-  - `src/` : Application Laravel 12 opérationnelle, prête pour le développement, avec Tailwind et Alpine intégrés.
-  - `.gitignore` et `README.md` racine : Fichiers de configuration du dépôt et guide de démarrage.
+### Étape 5 : Comprendre l'utilisateur (Design Thinking — Empathie & Personas)
+- **Phases de référence :** Design Thinking (Phase 1 Empathie).
+- **Entrées :** Note de cadrage validée.
+- **Activités d'ingénierie :**
+  - Mener des entretiens ou observer les utilisateurs cibles sur le terrain.
+  - Construire la carte d'empathie (ce que l'utilisateur dit, fait, pense et ressent).
+  - Identifier les besoins profonds, les motivations et les points de douleur (*pain points*).
+  - Rédiger les fiches Personas représentatives des utilisateurs types du système.
+- **Sortie principale :** Recueil des fiches Personas (`docs/analyse/personas.md`).
 
-### Étape 6 : Valider le socle, la charte graphique et les maquettes (Sprint Review 0 — Jalon Go/No-Go)
-- **Phases de référence** : Scrum (Sprint Review 0), Design Thinking (Test UX) et Gestion de Projet (Validation).
-- **Entrées** : Charte graphique, User Flow, maquettes Sprint 1, Product Backlog et socle technique opérationnel.
-- **Activités d'ingénierie** :
-  - Réunir les parties prenantes, le commanditaire et des utilisateurs représentatifs.
-  - Mener la phase de **Test utilisateur (Design Thinking - Test)** : faire manipuler les maquettes interactives et le User Flow pour tester l'ergonomie.
-  - Présenter la Charte Graphique, le Product Backlog et le socle technique pour validation formelle.
-  - Prononcer le jalon Go/No-Go pour autoriser le lancement des développements.
-- **Sorties détaillées** :
-  - `sprints/pv-review-0.md` : Procès-verbal de la Review 0 actant la validation de la charte graphique, les résultats des tests utilisateurs et le feu vert (Go).
-  - `docs/produit/product-backlog.md` : Backlog mis à jour avec les User Stories du Sprint 1 officiellement qualifiées *Ready*.
+### Étape 6 : Définir la Vision Produit
+- **Phases de référence :** Design Thinking (Phase 2 Définition) et Scrum (Vision Produit).
+- **Entrées :** Note de cadrage et fiches Personas.
+- **Activités d'ingénierie :**
+  - Synthétiser les besoins identifiés lors de la phase d'empathie.
+  - Formuler le problème sous la forme Point of View (POV).
+  - Énoncer la promesse de valeur partagée selon le canevas de vision produit standard.
+- **Sortie principale :** Document de Vision Produit (`docs/produit/vision-produit.md`).
 
-### Étape 7 : Clôturer le Sprint 0 (Sprint Retrospective 0)
-- **Phases de référence** : Scrum (Sprint Retrospective) et Gestion de Projet (Amélioration continue).
-- **Entrées** : Déroulement et retours de la Review 0.
-- **Activités d'ingénierie** :
-  - Analyser l'efficacité de la collaboration durant la phase de cadrage.
-  - Identifier les points d'amélioration et arrêter les règles d'équipe pour le premier sprint de delivery.
-- **Sorties détaillées** :
-  - `sprints/retrospective-0.md` : Bilan rétrospectif du Sprint 0 et plan d'organisation pour le Sprint 1.
+### Étape 7 : Construire le Product Backlog initial
+- **Phases de référence :** Design Thinking (Phase 3 Idéation) et Scrum (Product Backlog).
+- **Entrées :** Vision Produit et fiches Personas.
+- **Activités d'ingénierie :**
+  - Animer un atelier d'idéation pour identifier les fonctionnalités nécessaires.
+  - Découper les exigences en User Stories respectant les critères INVEST.
+  - Rédiger les critères d'acceptation opérationnels pour chaque User Story.
+  - Prioriser les User Stories selon la méthode MoSCoW (Must, Should, Could, Won't).
+- **Sortie principale :** Product Backlog initial ordonné (`scrum/product-backlog.md`).
 
----
+### Étape 8 : Concevoir la Charte Graphique (UI Kit Tailwind CSS)
+- **Phases de référence :** Design Thinking (Phase 4 Prototypage — Volet Design System).
+- **Entrées :** Fiches Personas et identité visuelle du produit.
+- **Activités d'ingénierie :**
+  - Définir la palette de couleurs sémantiques sous Tailwind CSS.
+  - Choisir la typographie et l'échelle modulaire.
+  - Sélectionner et personnaliser les composants d'interface **Preline UI** (boutons, formulaires, cartes, badges, navigation).
+  - Documenter les règles d'accessibilité et de contraste visuel.
+- **Sortie principale :** Spécification de l'UI Kit Tailwind CSS et Preline UI (`docs/design/ui-kit.md`).
 
-## 3. Phase 2 : Cycle Itératif Dual-Track — Sprint $N$ ($N \ge 1$, répétable)
+### Étape 9 : Modéliser le User Flow et les maquettes du Sprint 1
+- **Phases de référence :** Design Thinking (Phase 4 Prototypage — Volet Parcours & Écrans).
+- **Entrées :** User Stories prioritaires du Sprint 1 et UI Kit.
+- **Activités d'ingénierie :**
+  - Modéliser le parcours utilisateur écran par écran en syntaxe déclarative Mermaid (`flowchart TD / LR`).
+  - Définir les points d'entrée, les étapes clés, les décisions et les écrans cibles.
+  - Prototyper les maquettes interactives ciblées pour les fonctionnalités du Sprint 1 avec Preline UI.
+- **Sortie principale :** Document intégrant le User Flow Mermaid et les maquettes interactives (`docs/design/maquettes-sprint-1.md`).
 
-Chaque sprint $N$ combine deux pistes synchronisées : la piste **Delivery** (qui développe et livre l'Incrément $N$) et la piste **Discovery** (qui prépare en temps masqué les maquettes du Sprint $N+1$).
+### Étape 10 : Concevoir l'architecture logicielle
+- **Phases de référence :** Dev OO (Architecture & Conception générale).
+- **Entrées :** Maquettes du Sprint 1, User Flow et stack technique validée.
+- **Activités d'ingénierie :**
+  - Modéliser le schéma de données conceptuel en syntaxe déclarative Mermaid (`erDiagram`).
+  - Définir l'architecture applicative : patron **MVC avec couche Service** (contrôleur mince HTTP vers service métier).
+  - Rédiger la décision d'architecture sous format standard ADR (Architectural Decision Record).
+- **Sortie principale :** Dossier d'architecture initiale incluant le modèle relationnel et l'ADR (`docs/architecture/architecture-initiale.md`).
 
-### Étape 8 : Planifier le Sprint $N$ (Sprint Planning — Piste Delivery)
-- **Phases de référence** : Scrum (Sprint Planning) et Gestion de Projet (Planification opérationnelle).
-- **Entrées** : User Stories qualifiées *Ready* (déjà maquettées) en haut du Product Backlog et actions de la Rétrospective précédente.
-- **Activités d'ingénierie** :
-  - Définir le Sprint Goal $N$.
-  - Sélectionner les User Stories à embarquer dans l'itération.
-  - Décomposer chaque User Story en tâches techniques concrètes.
-- **Sorties détaillées** :
-  - `sprints/sprint-[N].md` : Fiche du Sprint $N$ fixant le Sprint Goal, les User Stories engagées et l'équipe.
-  - `issues/issues-sprint-[N].md` : Décomposition des tâches techniques du Sprint Backlog prêtes à être traitées.
+### Étape 11 : Préparer le socle technique
+- **Phases de référence :** Dev OO (Implémentation du socle technique).
+- **Entrées :** Dossier d'architecture et stack technique validée.
+- **Activités d'ingénierie :**
+  - Déployer le squelette applicatif **Laravel 13**.
+  - Configurer l'environnement dans le fichier `.env` (connexion MySQL, variables d'application).
+  - Installer Tailwind CSS et la bibliothèque de composants **Preline UI**.
+  - Créer la route racine `/` et la vue d'accueil Blade responsive.
+- **Sortie principale :** Vue d'accueil Blade responsive opérationnelle (`resources/views/welcome.blade.php`).
 
-### Étape 9 : Concevoir en détail et développer (Piste Delivery)
-- **Phases de référence** : Dev OO (Conception détaillée & Implémentation) et Gestion de Projet (Exécution).
-- **Entrées** : Sprint Backlog $N$, maquettes validées et socle architectural.
-- **Activités d'ingénierie** :
-  - Modéliser les flux locaux (diagrammes de séquence ou d'interaction).
-  - Implémenter les routes HTTP dans `src/routes/web.php`.
-  - Écrire les contrôleurs minces dans `src/app/Http/Controllers/`.
-  - Développer les classes Services métier dans `src/app/Services/`.
-  - Concevoir les vues Blade responsives et composants Alpine.js sous Tailwind CSS dans `src/resources/views/`.
-- **Sorties détaillées** :
-  - `src/app/Http/Controllers/` : Contrôleurs minces HTTP du Sprint $N$.
-  - `src/app/Services/` : Classes Services contenant la logique métier.
-  - `src/resources/views/` : Vues Blade responsives et composants Alpine.js.
-  - `src/routes/web.php` : Déclaration des routes associées.
+### Étape 12 : Valider le socle technique par un composant persistant (TodoList MySQL)
+- **Phases de référence :** Dev OO (Vérification de la persistance des données).
+- **Entrées :** Squelette Laravel 13 et base de données MySQL opérationnelle.
+- **Activités d'ingénierie :**
+  - Créer la migration de schéma de base de données pour une entité simple (ex: `todos`).
+  - Exécuter la migration avec `php artisan migrate` sur la base MySQL.
+  - Créer un seeder pour insérer des données de test réalistes.
+  - Implémenter le contrôleur et la vue Blade avec Preline UI affichant les données depuis MySQL pour prouver la persistance réelle.
+- **Sortie principale :** Contrôleur validant la persistance MySQL et l'affichage de données réelles (`app/Http/Controllers/TodoController.php`).
 
-### Étape 10 : Affiner le Backlog et maquetter pour le Sprint suivant (Piste Discovery — ~10% du temps)
-- **Phases de référence** : Design Thinking (Idéation & Prototypage) et Scrum (Backlog Refinement).
-- **Entrées** : User Stories candidates pour le futur Sprint $N+1$ et UI Kit.
-- **Activités d'ingénierie** :
-  - Clarifier les règles de gestion métier avec le Product Owner.
-  - Concevoir le User Flow local des fonctionnalités de $N+1$.
-  - Réaliser les maquettes détaillées de ces fonctionnalités futures en temps masqué.
-- **Sorties détaillées** :
-  - `docs/design/maquettes-sprint-[N+1]/` : Dossier contenant les maquettes prêtes à être testées à la prochaine Review.
-  - `docs/produit/product-backlog.md` : User Stories pour $N+1$ clarifiées et enrichies de leurs maquettes.
+### Étape 13 : Valider le socle, la charte graphique et les maquettes (Sprint Review 0 — Jalon Go/No-Go)
+- **Phases de référence :** Scrum (Sprint Review 0) et Gestion de Projet (Jalon de validation).
+- **Entrées :** Socle technique connecté à MySQL (TodoList fonctionnelle), charte graphique Preline UI, User Flow et maquettes du Sprint 1.
+- **Activités d'ingénierie :**
+  - Animer la séance de revue devant le Product Owner.
+  - Démontrer le fonctionnement effectif de la pile technique sur la base de données MySQL.
+  - Faire tester les maquettes interactives du Sprint 1 par des utilisateurs réels pour recueillir leurs retours ergonomiques.
+  - Valider formellement la charte graphique.
+  - Prononcer la décision collégiale Go/No-Go pour autoriser le lancement des sprints de delivery.
+- **Sortie principale :** Procès-verbal de la Review 0 actant la décision Go/No-Go et les retours utilisateurs (`sprints/pv-review-0.md`).
 
-### Étape 11 : Suivre l'avancement quotidien (Daily Scrum — Delivery & Discovery)
-- **Phases de référence** : Scrum (Daily Scrum) et Gestion de Projet (Suivi & Maîtrise).
-- **Entrées** : Avancement du Sprint Backlog $N$ et de la piste Discovery.
-- **Activités d'ingénierie** :
-  - Réaliser un point quotidien de 15 minutes debout.
-  - Partager le travail accompli et synchroniser le code et les maquettes.
-  - Identifier et traiter immédiatement les obstacles techniques ou méthodologiques.
-- **Sorties détaillées** :
-  - `issues/issues-sprint-[N].md` : Mise à jour quotidienne du statut des tâches et levée des blocages.
-
-### Étape 12 : Tester et valider l'Incrément (Piste Delivery — DoD)
-- **Phases de référence** : Dev OO (Tests & Validation) et Scrum (Definition of Done).
-- **Entrées** : Code source du Sprint $N$ et critères d'acceptation des User Stories.
-- **Activités d'ingénierie** :
-  - Exécuter les tests unitaires et d'intégration.
-  - Tester la conformité aux critères d'acceptation et l'affichage responsive.
-  - Tester la gestion résiliente des erreurs (code HTTP 404 en cas de ressource introuvable).
-  - Valider l'ensemble des critères de la Definition of Done.
-- **Sorties détaillées** :
-  - `tests/` : Fichiers de tests automatisés validés.
-  - `docs/qualite/rapport-tests-sprint-[N].md` : Rapport de conformité DoD et validation de l'Incrément logiciel $N$.
-
-### Étape 13 : Présenter et inspecter (Sprint Review $N$ — Double Validation Delivery & Discovery)
-- **Phases de référence** : Scrum (Sprint Review), Design Thinking (Test UX) et Gestion de Projet (Recette intermédiaire).
-- **Entrées** : Incrément logiciel $N$ déployé sur environnement de test, et maquettes du Sprint $N+1$.
-- **Activités d'ingénierie** :
-  - **Volet Delivery** : Démontrer l'Incrément logiciel $N$ fonctionnel aux utilisateurs et au commanditaire, et valider les User Stories terminées.
-  - **Volet Discovery (Test UX)** : Présenter et tester avec les utilisateurs les maquettes préparées pour le futur Sprint $N+1$ afin de recueillir leurs retours avant le Planning.
-- **Sorties détaillées** :
-  - `sprints/pv-review-[N].md` : Procès-verbal de la Review $N$ actant la validation de l'Incrément $N$ et les retours sur les maquettes de $N+1$.
-  - `docs/produit/product-backlog.md` : Backlog actualisé (US de $N$ validées closes, US de $N+1$ officiellement qualifiées *Ready*).
-
-### Étape 14 : Améliorer le processus (Sprint Retrospective $N$ — Amélioration continue)
-- **Phases de référence** : Scrum (Sprint Retrospective) et Gestion de Projet (Amélioration continue).
-- **Entrées** : Indicateurs du Sprint $N$ et vécu de l'équipe.
-- **Activités d'ingénierie** :
-  - Analyser ce qui a bien fonctionné et ce qui a ralenti la cadence.
-  - Définir 1 ou 2 actions concrètes d'amélioration pour le sprint suivant.
-- **Sorties détaillées** :
-  - `sprints/retrospective-[N].md` : Bilan rétrospectif du Sprint $N$ et plan d'actions d'amélioration pour le Sprint $N+1$.
+### Étape 14 : Clôturer le Sprint 0 (Sprint Retrospective 0)
+- **Phases de référence :** Scrum (Sprint Retrospective 0) et Gestion de Projet (Clôture de phase).
+- **Entrées :** Déroulement et retours de la Sprint Review 0.
+- **Activités d'ingénierie :**
+  - Analyser le fonctionnement de l'équipe durant la phase de cadrage.
+  - Identifier ce qui a bien fonctionné et les points de friction.
+  - Définir 2 à 3 actions d'amélioration concrètes pour le premier sprint de delivery.
+  - Consigner les règles de fonctionnement d'équipe.
+- **Sortie principale :** Bilan rétrospectif du Sprint 0 et plan d'amélioration continue (`sprints/retrospective-0.md`).
 
 ---
 
-## 4. Phase 3 : Livraison, Déploiement et Clôture du Projet
+## 4. Phase 2 : Cycle Itératif Dual-Track — Sprint N (N >= 1)
 
-Cette phase intervient à l'issue de l'ensemble des sprints de développement pour mettre en service l'application complète et clôturer formellement le projet.
+Chaque sprint applicatif applique le modèle **Scrum Dual-Track**. L'équipe mène en parallèle la piste Delivery (production de l'incrément courant) et la piste Discovery (préparation et maquettage du sprint suivant).
 
-### Étape 15 : Déployer en production et valider en conditions réelles
-- **Phases de référence** : Dev OO (Déploiement & Maintenance) et Gestion de Projet (Exécution finale).
-- **Entrées** : Dernier Incrément validé et configuration du serveur de production.
-- **Activités d'ingénierie** :
-  - Déployer l'application sur le serveur cible définitif (Internet).
-  - Exécuter les migrations de base de données en production et configurer les variables d'environnement.
-  - Réaliser les tests de bon fonctionnement en conditions réelles (smoke tests).
-  - Rédiger la documentation technique d'exploitation.
-- **Sorties détaillées** :
-  - Application en ligne opérationnelle et accessible publiquement.
-  - `docs/deploiement/guide-deploiement.md` : Guide technique de déploiement et d'exploitation.
-  - `docs/qualite/pv-recette-production.md` : Fiche de recette technique en environnement de production.
+```mermaid
+sequenceDiagram
+    participant PO as Product Owner
+    participant Team as Équipe de Développement
+    participant Users as Utilisateurs Finaux
 
-### Étape 16 : Clôturer officiellement le projet
-- **Phases de référence** : Gestion de Projet (Clôture).
-- **Entrées** : Application en production, retours d'utilisation et bilans des Sprints.
-- **Activités d'ingénierie** :
-  - Réaliser la séance de recette définitive avec le client/commanditaire et signer le procès-verbal.
-  - Archiver l'ensemble des livrables et du code source sur le dépôt GitHub.
-  - Rédiger le bilan final de projet et capitaliser sur les leçons apprises.
-- **Sorties détaillées** :
-  - `docs/cloture/pv-recette-definitive.md` : Procès-verbal officiel de réception définitive signé par les parties prenantes.
-  - `docs/cloture/bilan-final-projet.md` : Bilan de clôture de projet (analyse des écarts et capitalisation des acquis).
+    Note over PO, Team: Début de Sprint N
+    Team->>PO: 15. Planifier le Sprint N (Sprint Planning)
+    Team->>Team: 16. Préparer l'environnement (Branche Git & README.md)
+
+    par Piste Delivery (~90% du temps)
+        Team->>Team: 17. Concevoir en détail et développer (MVC + Service)
+        Team->>Team: 21. Tester et valider l'Incrément (DoD)
+    and Piste Discovery (~10% du temps en temps masqué)
+        Team->>PO: 18. Affiner le Backlog pour N+1 (Refinement)
+        Team->>Team: 19. Modéliser User Flow et maquettes N+1 (Preline UI)
+    end
+
+    loop Quotidien
+        Team->>Team: 20. Suivre l'avancement (Daily Scrum)
+    end
+
+    Note over PO, Users: Fin de Sprint N
+    Team->>PO: 22. Démonstration de l'Incrément N (Review N)
+    Team->>Users: 22. Test d'utilisabilité sur les Maquettes N+1 (Review N)
+    PO-->>Team: Validation de l'Incrément N & Ajustements Maquettes N+1
+    Team->>Team: 23. Améliorer le processus (Retrospective N)
+```
+
+### Étape 15 : Planifier le Sprint N (Sprint Planning — Piste Delivery)
+- **Phases de référence :** Scrum (Sprint Planning) et Gestion de Projet (Planification d'itération).
+- **Entrées :** Product Backlog priorisé, User Stories prêtes (*Ready*), vélocité et capacité d'équipe.
+- **Activités d'ingénierie :**
+  - Définir l'Objectif de Sprint partagé (*Sprint Goal*).
+  - Sélectionner les User Stories répondant à cet objectif.
+  - Décomposer chaque User Story en tâches techniques de 1 à 4 heures.
+  - Valider l'engagement d'équipe sur le Sprint Backlog.
+- **Sortie principale :** Document du Sprint Backlog ordonné avec les critères DoD (`scrum/sprint-backlog-sN.md`).
+
+### Étape 16 : Préparer l'environnement de sprint (Branche Git et README.md)
+- **Phases de référence :** Gestion de Projet (Suivi d'itération) et Dev OO (Gestion de configuration Git).
+- **Entrées :** Sprint Backlog validé et branche principale du projet.
+- **Activités d'ingénierie :**
+  - Créer et basculer sur la branche Git du sprint (ex: `sprint-N`).
+  - Actualiser le fichier `README.md` avec le Sprint Goal, les jalons temporels et la composition de l'équipe.
+  - Vérifier l'état de l'environnement de développement et les dépendances logicielles.
+- **Sortie principale :** Fichier `README.md` actualisé avec les informations du sprint actif.
+
+### Étape 17 : Concevoir en détail et développer (Piste Delivery)
+- **Phases de référence :** Dev OO (Conception détaillée & Implémentation).
+- **Entrées :** Spécifications de la User Story, maquettes validées et architecture logicielle.
+- **Activités d'ingénierie :**
+  - Concevoir en détail la tranche verticale : contrôleur mince HTTP, classe de service métier, modèle Eloquent et migration MySQL.
+  - Développer la logique métier dans la couche Service pour garantir l'indépendance du code.
+  - Intégrer l'interface responsive Blade avec les composants **Preline UI**.
+  - Implémenter les autorisations déclaratives avec **Policies/Gates** ou les rôles **Spatie**.
+  - Respecter les normes de codage professionnelles (PSR-12).
+- **Sortie principale :** Composant de code source opérationnel (ex: classe Service métier dans `app/Services/`).
+
+### Étape 18 : Affiner le Backlog pour le Sprint suivant (Piste Discovery — ~10% temps)
+- **Phases de référence :** Scrum (Backlog Refinement) et Design Thinking (Définition N+1).
+- **Entrées :** Product Backlog et retours d'usage de l'incrément en cours.
+- **Activités d'ingénierie :**
+  - Clarifier le besoin fonctionnel des User Stories candidates pour le Sprint N+1 avec le Product Owner.
+  - Établir les critères d'acceptation précis et vérifiables.
+  - Estimer la complexité relative des User Stories.
+  - Vérifier la conformité à la Definition of Ready (DoR).
+- **Sortie principale :** Fiche d'affinement du backlog pour le sprint suivant (`scrum/backlog-refinement-s{N+1}.md`).
+
+### Étape 19 : Modéliser le User Flow et maquetter pour le Sprint suivant (Piste Discovery — ~10% temps)
+- **Phases de référence :** Design Thinking (Phase 4 Prototypage N+1).
+- **Entrées :** User Stories raffinées pour le Sprint N+1 et UI Kit Preline UI.
+- **Activités d'ingénierie :**
+  - Modéliser le parcours utilisateur en syntaxe Mermaid (`flowchart TD / LR`) pour les fonctionnalités du Sprint N+1.
+  - Concevoir les maquettes interactives correspondantes avec les composants Preline UI.
+  - Préparer le protocole de test utilisateur pour la future Sprint Review.
+- **Sortie principale :** Document intégrant le User Flow et les maquettes interactives N+1 (`docs/design/maquettes-sprint-{N+1}.md`).
+
+### Étape 20 : Suivre l'avancement quotidien (Daily Scrum — Delivery & Discovery)
+- **Phases de référence :** Scrum (Daily Scrum) et Gestion de Projet (Suivi d'avancement).
+- **Entrées :** Tableau Kanban et tâches en cours.
+- **Activités d'ingénierie :**
+  - Animer la réunion quotidienne debout de 15 minutes.
+  - Partager le travail réalisé la veille et le travail prévu le jour même.
+  - Identifier et lever immédiatement les points de blocage techniques ou méthodologiques.
+  - Mettre à jour l'état d'avancement des tâches sur le tableau visuel.
+- **Sortie principale :** Journal de suivi des tâches et des résolutions d'incidents (`issues/issues-sprint-N.md`).
+
+### Étape 21 : Tester et valider l'Incrément (Piste Delivery — DoD & Tests automatisés)
+- **Phases de référence :** Dev OO (Tests & Qualité) et Scrum (Definition of Done).
+- **Entrées :** Code source développé et critères de la Definition of Done.
+- **Activités d'ingénierie :**
+  - Exécuter la suite de tests automatisés (tests unitaires et fonctionnels avec PHPUnit).
+  - Contrôler le respect des 7 critères formels de la Definition of Done.
+  - Vérifier l'absence de régressions sur les fonctionnalités existantes.
+  - Valider l'affichage responsive sur mobile, tablette et poste de travail.
+- **Sortie principale :** Rapport formel de conformité à la Definition of Done (`docs/qualite/rapport-dod-sprint-N.md`).
+
+### Étape 22 : Présenter et inspecter (Sprint Review N — Double Validation Delivery & Discovery)
+- **Phases de référence :** Scrum (Sprint Review) et Design Thinking (Phase 5 Test).
+- **Entrées :** Incrément logiciel opérationnel (Delivery) et maquettes interactives N+1 (Discovery).
+- **Activités d'ingénierie :**
+  - Démontrer l'incrément déployable en conditions réelles devant le Product Owner et les parties prenantes.
+  - Obtenir la validation formelle des User Stories terminées par le Product Owner.
+  - Faire tester les maquettes interactives du Sprint N+1 aux utilisateurs cibles pour recueillir leurs retours avant le prochain Sprint Planning.
+  - Ajuster le Product Backlog en fonction des retours recueillis.
+- **Sortie principale :** Procès-verbal de la Sprint Review actant la validation de l'incrément et les retours sur les maquettes (`sprints/pv-review-N.md`).
+
+### Étape 23 : Améliorer le processus (Sprint Retrospective N — Amélioration continue)
+- **Phases de référence :** Scrum (Sprint Retrospective) et Gestion de Projet (Leçons apprises).
+- **Entrées :** Retours de la Sprint Review et vécu de l'équipe durant l'itération.
+- **Activités d'ingénierie :**
+  - Analyser les pratiques de travail, la communication et les outils de l'équipe.
+  - Identifier les réussites et les axes de progrès.
+  - Définir 1 à 2 actions correctives immédiatement applicables au sprint suivant.
+  - Mettre à jour les règles d'équipe et la Definition of Done si nécessaire.
+- **Sortie principale :** Bilan rétrospectif du sprint et plan d'action d'amélioration continue (`scrum/retrospective-sN.md`).
+
+---
+
+## 5. Phase 3 : Livraison, Déploiement et Clôture du Projet
+
+La phase finale valide l'ensemble de la solution en conditions réelles de production, transfère l'application aux exploitants et clôture officiellement le projet.
+
+### Étape 24 : Déployer en production et valider en conditions réelles
+- **Phases de référence :** Dev OO (Déploiement & Maintenance) et Gestion de Projet (Exécution finale).
+- **Entrées :** Dernier incrément validé et configuration du serveur de production.
+- **Activités d'ingénierie :**
+  - Préparer les variables d'environnement de production sécurisées (`.env`).
+  - Optimiser les caches du framework (routes, vues, configurations) avec les commandes Artisan.
+  - Exécuter les migrations de base de données sur le serveur MySQL distant.
+  - Configurer les certificats SSL et sécuriser les accès HTTP/HTTPS.
+  - Réaliser la recette finale de bout en bout et les tests de bon fonctionnement en ligne (*smoke tests*).
+- **Sortie principale :** Procès-verbal de recette et de validation du déploiement en production (`docs/deploiement/pv-recette-production.md`).
+
+### Étape 25 : Clôturer officiellement le projet
+- **Phases de référence :** Gestion de Projet (Clôture) et Scrum (Rétrospective globale).
+- **Entrées :** Application déployée en production et ensemble des livrables du projet.
+- **Activités d'ingénierie :**
+  - Rédiger le bilan global du projet (respect des objectifs, délais et qualité logicielle).
+  - Capitaliser sur les retours d'expérience et documenter les bonnes pratiques pour les futurs projets.
+  - Archiver le référentiel de code et documenter les procédures de maintenance corrective et évolutive.
+  - Présenter le bilan officiel devant les commanditaires ou le jury.
+- **Sortie principale :** Rapport de bilan final et procès-verbal de clôture du projet (`docs/certification/pv-deliberation-n3.md`).

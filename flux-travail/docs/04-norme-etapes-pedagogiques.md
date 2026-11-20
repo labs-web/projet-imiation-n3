@@ -45,7 +45,7 @@ Toute étape pédagogique doit obligatoirement respecter l'ordre et le contenu d
 Le flux distingue deux catégories d'activités pédagogiques :
 
 - **UA-Lab (Atelier guidé avec assimilation conceptuelle)** :
-  - Concerne les nouvelles notions techniques ou architecturales (ex: Architecture 2 couches, Prompt Engineering RIO, Laravel 12).
+  - Concerne les nouvelles notions techniques ou architecturales (ex: Architecture MVC avec couche Service, Prompt Engineering RIO, Laravel 13).
   - Comporte une synthèse personnelle théorique (20/80) et un atelier pratique guidé.
   - Livrable obligatoire : Fiche technique `.md`, diaporama Marp `.md` et code source.
 - **UA-Tâche (Action opérationnelle pure)** :

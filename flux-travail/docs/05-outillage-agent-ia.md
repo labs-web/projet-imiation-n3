@@ -22,7 +22,7 @@ L'Agent IA n'est pas un simple générateur de code. Il intervient comme un ment
 
 ### Dans la Phase de Cadrage (Sprint 0) :
 - **Aide à la modélisation** : Génération de diagrammes Mermaid (User Flow, cas d'utilisation, classes).
-- **Initialisation du socle** : Configuration du dépôt Git, scaffolding Laravel 12 et intégration de Tailwind CSS.
+- **Initialisation du socle** : Configuration du dépôt Git, scaffolding Laravel 13 et intégration de Tailwind CSS avec Preline UI.
 - **Génération documentaire** : Préparation des fiches de cadrage et des fiches Personas.
 
 ### Dans les Cycles de Développement (Sprint $N$) :

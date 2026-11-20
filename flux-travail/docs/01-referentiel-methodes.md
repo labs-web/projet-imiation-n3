@@ -31,7 +31,7 @@ Le développement logiciel moderne s'appuie sur quatre démarches complémentair
 - **Phases de référence** :
   - **1. Analyse** : Traduire les besoins utilisateurs en règles de gestion et cas d'utilisation précis.
   - **2. Conception** : Concevoir l'architecture logicielle (modèle 2 couches), les diagrammes de classes et la base de données.
-  - **3. Implémentation** : Développer le code source (Laravel 12, Alpine.js, Tailwind CSS) en appliquant les bonnes pratiques.
+  - **3. Implémentation** : Développer le code source (Laravel 13, Alpine.js, Tailwind CSS avec Preline UI) en appliquant les bonnes pratiques.
   - **4. Tests et Validation** : Vérifier le fonctionnement par des tests unitaires, des tests d'intégration et la validation des critères d'acceptation.
   - **5. Déploiement et Maintenance** : Installer l'application sur le serveur de production et corriger les anomalies.
 

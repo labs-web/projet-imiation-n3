@@ -33,7 +33,7 @@ flowchart TD
 
 ### Étape 2 : Cadrage, Choix de la Stack et Empathie Utilisateur
 - Formaliser la note de cadrage avec les limites strictes du périmètre (In-Scope et Out-of-Scope).
-- **Choisir la stack technique officielle** : Laravel 12, Alpine.js, Tailwind CSS et MySQL.
+- **Choisir la stack technique officielle** : Laravel 13, Alpine.js, Tailwind CSS avec Preline UI et MySQL.
 - Réaliser les fiches Personas à partir de l'observation des utilisateurs cibles.
 - Livrables créés : `docs/cadrage/note-cadrage.md` et `docs/cadrage/personas.md`.
 
@@ -44,7 +44,7 @@ flowchart TD
 - Livrables créés : `docs/produit/vision-produit.md` et `docs/produit/product-backlog.md`.
 
 ### Étape 4 : Charte Graphique, User Flow et Maquettes du Sprint 1
-- Construire le mini UI Kit (couleurs primaires et secondaires, typographies, boutons et composants Tailwind).
+- Construire le mini UI Kit (couleurs primaires et secondaires, typographies, boutons et composants Tailwind et Preline UI).
 - Modéliser le **User Flow macro** : dessiner l'enchaînement logique des écrans pour accomplir les fonctionnalités prioritaires.
 - Dessiner les maquettes détaillées des seuls écrans requis pour le Sprint 1.
 - Livrables créés : `docs/design/ui-kit.md`, `docs/design/user-flow-sprint-1.md` et `docs/design/maquettes-sprint-1/`.
@@ -53,7 +53,7 @@ flowchart TD
 - Concevoir l'architecture logicielle en 2 couches (Contrôleur mince -> Classe Service).
 - Modéliser le schéma de données initial sous forme de diagramme Mermaid.
 - Initialiser le dépôt Git distant via GitHub CLI (`gh repo create`).
-- Installer le skeleton Laravel 12, intégrer Tailwind CSS et vérifier le bon affichage de la page d'accueil.
+- Installer le skeleton Laravel 13, intégrer Tailwind CSS avec Preline UI et vérifier le bon affichage de la page d'accueil.
 - Livrables créés : `docs/architecture/architecture-2-couches.md`, `docs/architecture/modele-donnees.md`, dossier `src/` opérationnel et `README.md` racine.
 
 ### Étape 6 : Sprint Review 0 et Jalon Go/No-Go
