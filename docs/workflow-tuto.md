@@ -1,88 +1,57 @@
 # Guide du Workflow des Tutoriels
 
-Ce document définit le workflow standard pour concevoir, réaliser, vérifier, adapter et synchroniser les tutoriels d'apprentissage avec le projet.
+Ce document définit le workflow standard pour concevoir, réaliser, versionner et synchroniser les tutoriels d'apprentissage avec le projet.
 
 ---
 
-## 1. Vue d'ensemble du Cycle de Vie
+## 1. Cycle Compact en 3 Étapes
 
-Chaque tutoriel suit un cycle rigoureux en 6 étapes :
+Le cycle de réalisation d'un tutoriel est synthétisé en 3 étapes directes :
 
 ```mermaid
 flowchart LR
-    E1["1. Cadrage\n(_tutos & Sprint)"] --> E2["2. Conception\n(Plan & Structure)"]
-    E2 --> E3["3. Réalisation\n(Doc, Marp, Code)"]
-    E3 --> E4["4. Vérification\n(Audit Qualité DoD)"]
-    E4 --> E5["5. Synchronisation\n(.sync & Front-matter)"]
-    E5 --> E6["6. Clôture\n(README UA & Commit)"]
+    E1["1. Réalisation\n(Fiche, Marp, Code)"] --> E2["2. Versioning\n(.sync/.../version.yml)"]
+    E2 --> E3["3. Synchronisation\n(Front-matter source)"]
 ```
 
-- **Étape 1 : Cadrage & Veille** : Localisation du tutoriel source dans `_tutos/` et vérification de la planification dans le sprint actif (`sprints/sprints.md`).
-- **Étape 2 : Conception** : Planification de la fiche technique, structure des diapositives Marp et spécification des artefacts techniques avant toute rédaction.
-- **Étape 3 : Réalisation** : Production effective dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tutoriel]/` de la fiche technique, du diaporama Marp et du code source.
-- **Étape 4 : Vérification** : Audit binaire de la Definition of Done (zéro tableau, liens relatifs, page de garde Marp normalisée).
-- **Étape 5 : Synchronisation & Versioning** : Mise à jour du fichier `version.yml` sous l'espace `.sync/`, mise à jour du front-matter du tutoriel source et adaptation mutuelle en cas d'écart.
-- **Étape 6 : Clôture & Indexation** : Indexation du livrable dans le fichier `README.md` parent de l'unité d'apprentissage et invitation du concepteur au commit.
+- **Étape 1 : Réalisation** : Production effective des livrables dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tutoriel]/` selon le contexte du tutoriel (fiche Markdown, diaporama Marp, scripts ou code source).
+- **Étape 2 : Versioning (`.sync/`)** : Déclaration ou incrémentation systématique de la version de chaque fichier dans son fichier miroir `.sync/.../version.yml`. Les fichiers `version.yml` sont stockés **exclusivement dans `.sync/`**.
+- **Étape 3 : Synchronisation** : Notification dans le front-matter du tutoriel source (`_tutos/...`) avec le sprint, le statut et la liste des livrables associant chemin et version.
 
 ---
 
-## 2. Le Dossier Miroir `.sync/` et la Gestion des Versions
+## 2. Format de `version.yml` dans `.sync/`
 
-Le dossier racine `.sync/` centralise la gestion des versions et les règles de synchronisation entre l'Agent Projet et l'Agent Autoformation.
-
-### Structure du dossier `.sync/`
-- `.sync/rules.md` : Contrat des règles partagées entre les deux agents.
-- Arborescence miroir des sous-dossiers modifiés :
-  - Un fichier `version.yml` est créé uniquement pour les sous-dossiers contenant des fichiers modifiés pendant la réalisation du sprint.
-  - Les sous-dossiers non modifiés ne possèdent pas de fichier `version.yml`.
-
-### Format minimaliste de `version.yml`
-Chaque fichier `version.yml` contient exclusivement la correspondance entre le nom du fichier et son numéro de version :
+Chaque sous-dossier de livrable ou de code possède obligatoirement son fichier `version.yml` miroir sous `.sync/` :
 
 ```yaml
-modelisation-systeme.md: "1.0.0"
-presentation-modelisation-systeme.md: "1.0.0"
-diagramme-contexte.mmd: "1.0.0"
+comprendre-scrum.md: "1.0.0"
+presentation-comprendre-scrum.md: "1.0.0"
 ```
 
-### Règle d'incrémentation
-- À chaque modification apportée à un fichier par l'Agent IA, la version de ce fichier est automatiquement incrémentée (`1.0.0` -> `1.0.1` pour un correctif, ou `1.1.0` pour un enrichissement).
+À chaque modification d'un fichier par l'Agent IA, la version sémantique correspondante est incrémentée.
 
 ---
 
-## 3. Traçabilité dans le Front-Matter du Tutoriel Source
+## 3. Format de Synchronisation dans le Front-Matter Source
 
-Chaque tutoriel source situé dans `_tutos/` dispose d'un bloc front-matter YAML. Lors de la synchronisation, l'état de réalisation dans le sprint y est consigné :
+Le front-matter du tutoriel source dans `_tutos/` est mis à jour avec un bloc compact :
 
 ```yaml
-realise_dans_sprint: true
 sprint: "sprint1"
 statut_realisation: "realise"
-etape_workflow: "valide"
-date_realisation: "2026-11-19"
+livrables:
+  - chemin: "tutoriels/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md"
+    version: "1.0.0"
+  - chemin: "tutoriels/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md"
+    version: "1.0.0"
 ```
 
-- `realise_dans_sprint` : Booléen (`true` ou `false`).
-- `sprint` : Identifiant du sprint cible (ex: `sprint1`).
-- `statut_realisation` : Statut courant (`non_debute`, `en_conception`, `realise`, `a_adapter`, `synchronise`).
-- `etape_workflow` : Étape actuelle (`cadrage`, `conception`, `realisation`, `verification`, `synchronisation`, `valide`).
-- `date_realisation` : Date de réalisation effective.
+### Valeurs du champ `statut_realisation` :
+- `non_debute` : Le tutoriel est planifié dans le sprint, mais aucun livrable n'a encore été produit.
+- `en_cours` : La réalisation des livrables (fiche technique, diaporama Marp, code) est en cours de développement.
+- `realise` : Tous les livrables attendus ont été créés, validés et enregistrés avec leur version initiale dans `.sync/.../version.yml`.
+- `a_adapter` : Une modification technique du projet réel ou une incrémentation de version dans `.sync/` nécessite une mise à jour du tutoriel de référence ou du support Jekyll.
+- `synchronise` : L'Agent Autoformation a consommé les livrables à jour, extrait le code et les diagrammes réels dans le site Jekyll, et aligné les numéros de version dans le front-matter.
 
----
-
-## 4. Utilisation du Skill `/realisation-tuto`
-
-Le concepteur pilote le cycle de vie d'un tutoriel via le skill agentique :
-
-- **Conception préalable :**
-  Demander à l'agent de concevoir un tutoriel à partir de son slug ou identifiant :
-  `Concevoir le tutoriel T.311.211 (modelisation-systeme)`
-- **Réalisation complète :**
-  Lancer la production des livrables :
-  `Réaliser le tutoriel T.311.211`
-- **Vérification qualité :**
-  Auditer les livrables d'un tutoriel :
-  `Vérifier la réalisation du tutoriel modelisation-systeme`
-- **Synchronisation et adaptation :**
-  Synchroniser le tutoriel source et les livrables, incrémenter les versions et adapter si nécessaire :
-  `Synchroniser le tutoriel modelisation-systeme avec les tutoriels d'autoformation`
+- **Détection des mises à jour** : L'Agent Autoformation compare le champ `version` de chaque livrable avec le fichier `version.yml` correspondant dans `.sync/`. Tout écart déclenche la synchronisation dans Jekyll et le passage du statut à `synchronise`.
