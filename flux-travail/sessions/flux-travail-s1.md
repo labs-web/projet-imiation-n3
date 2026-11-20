@@ -1,203 +1,219 @@
-# Flux de Travail — Session S01 (Sprint 1 - 80h)
+# Flux de Travail Opérationnel — Session S01 : Consultation Publique d'un Article
 
-Ce document détaille le flux de travail opérationnel de la **Session S01 : Consultation Publique d'un Article** pour le projet de formation N3.
-
-Il applique directement les étapes de la Phase 2 du [Flux de Travail Générique](../flux-travail-generique.md) en alternant l'acquisition des compétences dans les UA-labs et leur application immédiate sur le projet d'imitation.
-
----
-
-## 1. Fiche d'Identification de la Session
-
-- **Code de Session :** S01
-- **Intitulé du Sprint :** Consultation Publique d'un Article
-- **Durée Ferme (Timebox) :** 80 heures (10 jours ouvrés)
-- **Positionnement :** Premier sprint de delivery applicatif Dual-Track
+Ce document définit le flux de travail de la **Session S01** (Sprint 1) pour le niveau N3.
+Il est structuré en **7 phases typées** alternant les unités d'apprentissage (**UA-Lab**) avec leurs applications immédiates sur le projet d'imitation, et les phases opérationnelles d'ingénierie (**UA-Tâche**).
 
 ---
 
-## 2. Objectif d'Apprentissage Global
+## 1. Fiche d'Identification de la Session S01
 
-Créer la branche du sprint et actualiser la documentation projet ; outiller son poste de travail par le Prompt Engineering (méthode RIO et Context Engineering) avec **Agent Antigravity & GitHub Copilot** ; modéliser les frontières système (diagramme de contexte) et l'ensemble des cas d'utilisation macro en syntaxe Mermaid déclarative ; et développer sous **Laravel 13** un premier incrément déployable de consultation détaillée d'un article selon une **Architecture MVC avec couche Service** (Contrôleur mince IoC -> Classe `ArticleService` sur persistance CSV transitoire en mémoire) avec gabarit Blade responsive sous **Tailwind CSS & Preline UI** et gestion robuste de l'erreur 404 (`abort(404)`).
+- **Identifiant :** Session S01 (Sprint 1)
+- **Titre :** Consultation Publique d'un Article (Tranche Verticale découplée MVC + Service)
+- **Durée totale ferme :** 80 heures (10 jours ouvrés)
+- **Domaines de compétences mobilisés :**
+  - Prompt Engineering & Context Engineering (`D.325.1-ia`)
+  - Modélisation UML Mermaid (`D.311.2-uml`)
+  - Architecture Logicielle en Deux Couches & ADR (`D.312.1-architecture`)
+  - Développement Backend Laravel 13, Service CSV, Preline UI & 404 (`D.321.1-laravel`)
+- **Objectif global d'apprentissage :**
+  - Mettre en place l'environnement de sprint sur Git.
+  - Outiller le poste de développement par le Prompt Engineering (méthode RIO).
+  - Délimiter les frontières système et modéliser les cas d'utilisation en syntaxe déclarative Mermaid.
+  - Concevoir une architecture logicielle découplée en 2 couches (Contrôleur mince et Service Layer) formalisée par un Architectural Decision Record (ADR).
+  - Développer sous Laravel 13 la consultation d'un article avec extraction CSV, composants Preline UI et gestion de l'erreur 404.
+  - Préparer la piste Discovery du Sprint 2 et clôturer l'itération avec la détection de la dette d'empathie.
 
 ---
 
-## 3. Prérequis Bloquants de Lancement
-
-Pour démarrer la session :
-- **Validation du Sprint 0 :** Note de cadrage validée, dépôt Git initialisé, UI Kit Preline UI documenté, maquettes interactives de S1 testées et décision Go prononcée lors de la Review 0.
-- **Rôles Opérationnels :** Product Owner incarné par le Groupe 1, Scrum Master et Développeurs en alternance.
-
----
-
-## 4. Cadre Tri-Projets et Organisation Temporelle (80h / 10 jours)
+## 2. Organisation dans le Cadre Tri-Projets (80h / 10 jours)
 
 - **Jours 1 à 7 : Projet d'Imitation (*Blog des Lauréats*)**
-  - Réalisation guidée pas-à-pas en classe active.
-  - Alternance directe entre l'assimilation d'un UA-lab et l'exécution de l'étape de réalisation correspondante.
+  - Développement guidé pas-à-pas de la tranche verticale de consultation d'un article.
+  - Alternance immédiate : chaque atelier d'apprentissage est appliqué directement sur le code du Blog.
 - **Jour 8 : Projet Technique (*Portfolio Développeur*)**
-  - **Codage technique pur en totale autonomie**.
-  - L'apprenant réalise uniquement le développement technique : implémentation sous Laravel 13 de la route, du contrôleur, du service et de la vue de consultation d'une réalisation avec gestion 404.
-  - Aucune étape de planification ni de conception n'est demandée sur cette journée.
-  - Épreuve sommative de **Live Coding (40 min chrono sans assistance — 65% de la note)**.
-- **Jours 9 et 10 : Projet Fil Rouge (*Application Métier*, ex : Cinéma)**
-  - **Création et enrichissement systématique de Skills agentiques** dans `.agent/skills/`.
-  - L'apprenant conçoit des Skills réutilisables permettant à l'Agent IA d'exécuter sur l'application métier le travail appris dans le projet d'imitation (Skill de génération de tranche de consultation, d'affinement de backlog, d'audit DoD).
-  - Clôture de session et bilan réflexif.
+  - **Codage technique pur en autonomie totale (sans conception ni planification)**.
+  - L'apprenant implémente la consultation d'une réalisation sur son portfolio personnel (`RealisationController`, `RealisationService`).
+  - **Épreuve sommative de Live Coding (40 min chrono sans assistance — 65% de la note finale du module)**.
+- **Jours 9 et 10 : Projet Fil Rouge (*Application Métier*, ex : Gestion de Cinéma)**
+  - Création du Skill agentique `.agent/skills/article-show-generator/` pour automatiser la génération d'une tranche de consultation découplée.
+  - Bilan réflexif et consolidation des acquis.
 
 ---
 
-## 5. Épreuve de Live Coding (40 min chrono sans assistance — 65% de la note)
-
-- **Contexte :** À partir du dossier de départ fourni (`dossier-depart/`), coder en autonomie complète une fonctionnalité de consultation d'une réalisation du portfolio.
-- **Consignes opérationnelles :**
-  - Déclarer la route paramétrée dynamique `/realisations/{id}` dans `routes/web.php`.
-  - Implémenter le contrôleur mince `RealisationController` avec injection de dépendance.
-  - Implémenter la méthode `RealisationService::find($id)` effectuant la lecture et l'extraction depuis le fichier source CSV en mémoire.
-  - Coder la vue Blade responsive avec Tailwind CSS et composants de carte Preline UI.
-  - Intercepter proprement les identifiants introuvables et déclencher l'erreur HTTP 404 via `abort(404)`.
-- **Critères d'évaluation :** Respect strict de l'architecture MVC + Service (zéro logique métier dans le contrôleur), conformité visuelle Preline UI, code propre PSR-12, gestion robuste du cas 404.
-
----
-
-## 6. Déroulement Chronologique Intercalé du Sprint 1
+## 3. Déroulement des 7 Phases de la Session S01
 
 ```mermaid
 flowchart TD
-    subgraph S1_Prep ["Planification & Environnement"]
-        R1["Étape 1 : Planifier le Sprint N (Sprint Planning)"] --> R2["Étape 2 : Préparer l'environnement (Branche Git)"]
+    subgraph P1 ["Phase 1 : UA-Tâche — Planification & Git"]
+        E1["Étape 1 (Application) : Planifier le Sprint N (Sprint Planning S1)"]
+        E2["Étape 2 (Application) : Préparer l'environnement de sprint (Branche Git)"]
+        E1 --> E2
     end
 
-    subgraph S1_Labs ["UA-Labs d'Apprentissage"]
-        R2 --> U1["Étape 3 : UA-lab Prompt Engineering (D.325.1-ia)"]
-        U1 --> U2["Étape 4 : UA-lab Diagramme de Contexte & Use Cases (D.311.2-uml)"]
-        U2 --> U3["Étape 5 : UA-lab Architecture MVC + Service Layer (D.312.1-architecture)"]
-        U3 --> U4["Étape 6 : UA-lab Contrôleur, Service CSV & 404 (D.321.1-laravel)"]
+    subgraph P2 ["Phase 2 : UA-Lab — Prompt Engineering (D.325.1-ia)"]
+        E3["Étape 3 (Apprentissage) : Assimiler la méthode RIO et l'ingénierie de contexte"]
+        E4["Étape 4 (Application Blog) : Outiller le développement du Blog par l'assistance IA"]
+        E3 --> E4
     end
 
-    subgraph S1_Real ["Réalisation Dual-Track"]
-        U4 --> R3["Étape 7 : Concevoir en détail et développer (Delivery)"]
-        R3 --> R4["Étape 8 : Affiner le Backlog pour le Sprint suivant (Discovery)"]
-        R4 --> R5["Étape 9 : Modéliser le User Flow et maquetter S2 (Discovery)"]
-        R5 --> R6["Étape 10 : Suivre l'avancement quotidien (Daily Scrum)"]
-        R6 --> R7["Étape 11 : Tester et valider l'Incrément (DoD)"]
-        R7 --> R8["Étape 12 : Présenter et inspecter (Review 1)"]
-        R8 --> R9["Étape 13 : Améliorer le processus (Retrospective 1)"]
+    subgraph P3 ["Phase 3 : UA-Lab — Modélisation UML Mermaid (D.311.2-uml)"]
+        E5["Étape 5 (Apprentissage) : Frontières système et cas d'utilisation macro Mermaid"]
+        E6["Étape 6 (Application Blog) : Modéliser le contexte et les Use Cases du Blog"]
+        E5 --> E6
     end
+
+    subgraph P4 ["Phase 4 : UA-Lab — Architecture MVC + Service (D.312.1-architecture)"]
+        E7["Étape 7 (Apprentissage) : Architecture découplée en deux couches et formalisme ADR"]
+        E8["Étape 8 (Application Blog) : Concevoir l'architecture et rédiger l'ADR-01 du Blog"]
+        E7 --> E8
+    end
+
+    subgraph P5 ["Phase 5 : UA-Lab — Contrôleur, Service CSV & 404 (D.321.1-laravel)"]
+        E9["Étape 9 (Apprentissage) : Contrôleur mince, Service CSV, Preline UI et gestion 404"]
+        E10["Étape 10 (Application Blog) : Concevoir en détail et développer la tranche"]
+        E9 --> E10
+    end
+
+    subgraph P6 ["Phase 6 : UA-Tâche — Piste Discovery (Sprint 2)"]
+        E11["Étape 11 (Application) : Affiner le Backlog pour le Sprint suivant"]
+        E12["Étape 12 (Application) : Modéliser le User Flow et maquetter S2"]
+        E11 --> E12
+    end
+
+    subgraph P7 ["Phase 7 : UA-Tâche — Qualité, Démonstration & Rétrospective"]
+        E13["Étape 13 (Application) : Suivre l'avancement quotidien (Daily Scrum)"]
+        E14["Étape 14 (Application) : Tester et valider l'Incrément (DoD)"]
+        E15["Étape 15 (Application) : Présenter et inspecter (Sprint Review 1)"]
+        E16["Étape 16 (Application) : Améliorer le processus (Sprint Retrospective 1)"]
+        E13 --> E14 --> E15 --> E16
+    end
+
+    P1 --> P2 --> P3 --> P4 --> P5 --> P6 --> P7
 ```
 
 ---
 
-### Étape 1 : Planifier le Sprint N (Sprint Planning — Piste Delivery) (Étape Générique 15)
-- **Entrées :** Product Backlog initial et capacité d'équipe (80h).
-- **Activités de réalisation :**
-  - Définir le Sprint Goal S1 : "Permettre à tout visiteur de consulter le détail d'un article publié avec un affichage responsive et une gestion propre des articles inexistants".
-  - Sélectionner la User Story prioritaire : "En tant que visiteur, je veux consulter le détail d'un article afin de lire son contenu complet".
-  - Décomposer la User Story en tâches techniques élémentaires (1 à 4 heures).
-  - Formaliser la Definition of Done (DoD) du sprint selon les 7 critères de référence.
-- **Sortie principale :** Document du Sprint Backlog S1 ordonné (`scrum/sprint-backlog-s1.md`).
+### Phase 1 : UA-Tâche — Planification du Sprint 1 et Préparation de l'Environnement Git
+*Cette phase ne requiert aucun nouvel apport conceptuel. Elle rassemble les tâches opérationnelles d'initialisation de l'itération.*
 
-### Étape 2 : Préparer l'environnement de sprint (Branche Git et README.md) (Étape Générique 16)
-- **Entrées :** Sprint Backlog S1 validé et branche `main`.
-- **Activités de réalisation :**
-  - Créer et basculer sur la branche Git du sprint : `git checkout -b sprint-1`.
-  - Actualiser le fichier `README.md` avec le Sprint Goal S1, la composition de l'équipe et les dates jalons.
-  - Vérifier le fonctionnement de l'environnement Laravel 13 et des dépendances Preline UI.
-- **Sortie principale :** Fichier `README.md` actualisé sur la branche active.
+- **Étape 1 (Application) : Planifier le Sprint N (Sprint Planning — Piste Delivery)**
+  - Entrées : Product Backlog initial et capacité d'équipe (80h).
+  - Travail d'application sur le Blog : Définir le Sprint Goal S1 ("Permettre aux visiteurs de consulter un article complet"), sélectionner la User Story US-01, décomposer en tâches de 1 à 4 heures et fixer la Definition of Done.
+  - Sortie (1 seul livrable) : `scrum/sprint-backlog-s1.md`.
+- **Étape 2 (Application) : Préparer l'environnement de sprint (Branche Git et README.md)**
+  - Entrées : Sprint Backlog S1 validé et branche `main`.
+  - Travail d'application sur le Blog : Créer la branche Git `sprint-1`, actualiser le fichier `README.md` avec le Sprint Goal S1, les jalons temporels et la composition d'équipe.
+  - Sortie (1 seul livrable) : `README.md`.
 
-### Étape 3 : UA-lab : Prompt Engineering & Context Engineering dans l'IDE (Domaine D.325.1-ia)
-- **Objectif d'apprentissage :** Maîtriser les techniques avancées d'instruction des LLMs de code dans l'IDE avec Agent Antigravity et GitHub Copilot avant d'entamer le développement assisté.
-- **Notions de base à apprendre :**
-  - Principes des modèles de langage pour le code : fenêtres de contexte, tokens, hallucinations et déterminisme.
-  - Méthode RIO : Rôle (persona expert développeur web), Instructions (tâche précise et étapes ordonnées), Objectif (livrable attendu et format).
-  - Contraintes négatives : formulation explicite de ce que l'agent ne doit jamais faire.
-  - Context Engineering : injection de code existant, schémas Mermaid et règles d'architecture dans l'environnement IDE.
-- **Sortie :** Guide opérationnel de prompting RIO pour l'équipe (`tutoriels/ia/guide-rio.md`).
+---
 
-### Étape 4 : UA-lab : Diagramme de contexte et cas d'utilisation macro en syntaxe Mermaid (Domaine D.311.2-uml)
-- **Objectif d'apprentissage :** Délimiter les frontières du système et modéliser l'ensemble des cas d'utilisation en syntaxe déclarative Mermaid avant la conception détaillée (un seul lab consolidant tout le domaine UML du sprint).
-- **Notions de base à apprendre :**
-  - Notion de boîte noire système et identification des frontières applicatives.
-  - Acteurs externes : primaires et secondaires (Lecteur visiteur, Auteur contributeur, Administrateur).
-  - Flux d'informations entrants et sortants.
-  - Cas d'utilisation élémentaires, granularité fonctionnelle, relations d'inclusion (`<<include>>`), extension (`<<extend>>`) et généralisation.
-  - Représentation déclarative Mermaid.js (`flowchart` pour le contexte et diagramme des cas d'utilisation macro).
-- **Sortie :** Guide et diagrammes déclaratifs Mermaid du contexte et des cas d'utilisation (`tutoriels/uml/guide-contexte-usecases.md`).
+### Phase 2 : UA-Lab — Prompt Engineering & Context Engineering dans l'IDE (Domaine D.325.1-ia)
+*Cette phase introduit une nouvelle compétence outillée. Elle s'organise en une étape d'apprentissage conceptuel suivie de son étape d'application immédiate sur le Blog des Lauréats.*
 
-### Étape 5 : UA-lab : Architecture logicielle en deux couches MVC + Service Layer et formalisation ADR (Domaine D.312.1-architecture)
-- **Objectif d'apprentissage :** Structurer le code applicatif selon le patron découplé MVC + Service Layer et documenter les choix d'architecture par ADR.
-- **Notions de base à apprendre :**
-  - Responsabilités d'un contrôleur mince HTTP (réception, validation de surface, délégation au service, retour de réponse).
-  - Responsabilités de la couche Service métier (règles de gestion, manipulation des données, indépendance du protocole HTTP).
-  - Principe d'Inversion de Contrôle (IoC) et injection de dépendance automatique par le conteneur de services de Laravel.
-  - Structure formelle d'un Architectural Decision Record (ADR-01) : Titre, Statut, Contexte, Décision, Conséquences.
-- **Sortie :** Fiche d'architecture S1 incluant la décision fondatrice ADR-01 (`tutoriels/architecture/guide-mvc-service.md`).
+- **Étape 3 (Apprentissage) : Assimiler la méthode RIO et l'ingénierie de contexte dans l'IDE**
+  - Entrées : Documentation LLM et environnement IDE (Antigravity & GitHub Copilot).
+  - Notions de base à apprendre :
+    - Principes des modèles de langage pour le code : fenêtres de contexte, tokens, hallucinations et déterminisme.
+    - Méthode RIO : Rôle (persona expert développeur web), Instructions (tâche précise, étapes ordonnées), Objectif (format attendu).
+    - Contraintes négatives : formulation stricte des interdictions applicatives.
+    - Context Engineering : injection de snippets de code, schémas Mermaid et règles d'architecture.
+  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/ia/guide-rio.md`.
+- **Étape 4 (Application sur le Blog) : Outiller le développement du Blog par l'assistance IA**
+  - Entrées : Guide RIO validé et spécifications du Blog des Lauréats.
+  - Travail d'application sur le Blog : Configurer le contexte d'assistance IA pour le Blog des Lauréats (règles de prompting spécifiques au projet, contraintes de style et règles d'architecture à respecter par l'agent et Copilot).
+  - Sortie (1 seul livrable) : `docs/ia/guide-rio-blog.md`.
 
-### Étape 6 : UA-lab : Contrôleur mince, Service CSV, gabarit Preline UI et gestion robuste 404 (Domaine D.321.1-laravel)
-- **Objectif d'apprentissage :** Assimiler l'implémentation sous Laravel 13 d'une tranche verticale de consultation détaillée avec persistance transitoire CSV et gestion d'erreur 404 (un seul lab consolidant tout le domaine Laravel du sprint).
-- **Notions de base à apprendre :**
-  - Déclaration de routes dynamiques paramétrées (`Route::get('/articles/{id}', ...)`) avec contraintes d'identifiant.
-  - Injection de dépendance de la classe Service dans le constructeur du contrôleur.
-  - Extraction et manipulation de données depuis un fichier CSV en mémoire (`fgetcsv`, collections Laravel).
-  - Gabarit Blade responsive avec Tailwind CSS et composants de carte **Preline UI**.
-  - Résilience applicative : détection de ressource inexistante et déclenchement propre de `abort(404)`.
-- **Sortie :** Guide technique de la consultation d'article sous Laravel 13 (`tutoriels/laravel/guide-article-show.md`).
+---
 
-### Étape 7 : Concevoir en détail et développer (Piste Delivery) (Étape Générique 17)
-- **Entrées :** Spécifications de la User Story, notions assimilées dans les 4 UA-labs, architecture MVC + Service et gabarit validé.
-- **Activités de réalisation :**
-  - *Projet d'Imitation :* Coder la route dynamique, le contrôleur mince `ArticleController`, et la classe `ArticleService` extrayant les articles depuis la source CSV avec retour typé et déclenchement propre de `abort(404)`.
-  - *Projet Technique (Codage pur - Jour 8) :* Coder la route, le contrôleur `RealisationController` et le service `RealisationService` sur son portfolio (Live Coding 40 min).
-  - *Projet Fil Rouge (Jours 9-10) :* Créer le Skill `.agent/skills/article-show-generator/` pour automatiser la génération d'une tranche verticale de consultation découplée sur le domaine métier.
-- **Sortie principale :** Classe Service métier opérationnelle (`app/Services/ArticleService.php`).
+### Phase 3 : UA-Lab — Modélisation du Contexte et des Cas d'Utilisation en Syntaxe Mermaid (Domaine D.311.2-uml)
+*Cette phase introduit la modélisation fonctionnelle déclarative. Elle s'organise en une étape d'apprentissage conceptuel suivie de son étape d'application immédiate sur le Blog des Lauréats.*
 
-### Étape 8 : Affiner le Backlog pour le Sprint suivant (Piste Discovery — ~10% temps) (Étape Générique 18)
-- **Entrées :** Product Backlog et retours d'utilisation initiaux.
-- **Activités de réalisation :**
-  - Collaborer avec le Groupe 1 (Product Owner) pour clarifier le besoin fonctionnel des User Stories du Sprint 2 (Page d'accueil et CRUD Catégories).
-  - Rédiger les critères d'acceptation précis pour chaque User Story candidate.
-  - Estimer la complexité relative des tâches en Story Points.
-- **Sortie principale :** Fiche de raffinement du backlog pour le Sprint 2 (`scrum/backlog-refinement-s2.md`).
+- **Étape 5 (Apprentissage) : Délimiter les frontières système et modéliser les cas d'utilisation macro en syntaxe Mermaid**
+  - Entrées : Guide de syntaxe déclarative Mermaid.
+  - Notions de base à apprendre :
+    - Notion de boîte noire système et identification des frontières applicatives.
+    - Acteurs externes : primaires et secondaires (Lecteur visiteur, Auteur lauréat, Administrateur).
+    - Flux d'échanges entrants et sortants.
+    - Cas d'utilisation élémentaires, granularité fonctionnelle, relations d'inclusion (`<<include>>`), extension (`<<extend>>`) et généralisation.
+    - Représentation déclarative Mermaid.js (`flowchart` pour le contexte et diagramme des Use Cases macro).
+  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/uml/guide-contexte-usecases.md`.
+- **Étape 6 (Application sur le Blog) : Modéliser le contexte et les cas d'utilisation du Blog des Lauréats**
+  - Entrées : Guide Mermaid et vision produit du Blog des Lauréats.
+  - Travail d'application sur le Blog : Modéliser en syntaxe déclarative Mermaid le diagramme de contexte complet du Blog des Lauréats et formaliser l'ensemble des 15 cas d'utilisation macro du système.
+  - Sortie (1 seul livrable) : `docs/analyse/contexte-et-usecases-blog.mmd`.
 
-### Étape 9 : Modéliser le User Flow et maquetter pour le Sprint suivant (Piste Discovery — ~10% temps) (Étape Générique 19)
-- **Entrées :** User Stories raffinées pour le Sprint 2 et UI Kit Preline UI.
-- **Activités de réalisation :**
-  - Modéliser en syntaxe déclarative Mermaid (`flowchart TD / LR`) le parcours utilisateur de la future page d'accueil.
-  - Prototyper les maquettes interactives du Sprint 2 basées sur les composants Preline UI.
-  - Préparer le protocole de test utilisateur pour la prochaine Sprint Review.
-- **Sortie principale :** Document regroupant le User Flow et les maquettes interactives du Sprint 2 (`docs/design/maquettes-sprint-2.md`).
+---
 
-### Étape 10 : Suivre l'avancement quotidien (Daily Scrum — Delivery & Discovery) (Étape Générique 20)
-- **Entrées :** Tableau Kanban et tâches en cours.
-- **Activités de réalisation :**
-  - Animer la réunion quotidienne debout de 15 minutes.
-  - Partager le travail réalisé la veille sur le delivery et le discovery.
-  - Identifier et lever immédiatement les points de blocage techniques.
-  - Mettre à jour l'état d'avancement des tâches sur le tableau visuel.
-- **Sortie principale :** Journal de suivi journalier des tâches et résolution des blocages (`issues/issues-sprint-1.md`).
+### Phase 4 : UA-Lab — Architecture Logicielle en Deux Couches MVC + Service Layer et Formalisation ADR (Domaine D.312.1-architecture)
+*Cette phase introduit le découpage architectural découplé. Elle s'organise en une étape d'apprentissage conceptuel suivie de son étape d'application immédiate sur le Blog des Lauréats.*
 
-### Étape 11 : Tester et valider l'Incrément (Piste Delivery — DoD) (Étape Générique 21)
-- **Entrées :** Code source complet du Sprint 1 et critères formels de la Definition of Done.
-- **Activités de réalisation :**
-  - Contrôler le respect strict des 7 critères de la DoD :
-    - Affichage responsive vérifié sur mobile, tablette et poste de travail.
-    - Gestion de l'erreur 404 testée et validée sans régression.
-    - Code source conforme aux standards PSR-12.
-    - Documentation à jour sur la branche active.
-- **Sortie principale :** Rapport formel de conformité à la Definition of Done (`docs/qualite/rapport-dod-sprint-1.md`).
+- **Étape 7 (Apprentissage) : Structurer le code en architecture découplée MVC + Service et formaliser un ADR**
+  - Entrées : Notions de conception logicielle orientée objet.
+  - Notions de base à apprendre :
+    - Responsabilités respectives du contrôleur mince HTTP (réception, validation de surface, délégation, réponse).
+    - Responsabilités de la classe Service métier (règles de gestion, manipulation des données, indépendance du transport HTTP).
+    - Principe d'Inversion de Contrôle (IoC) et injection de dépendance automatique par le conteneur Laravel.
+    - Structure formelle d'un Architectural Decision Record (ADR) : Titre, Statut, Contexte, Décision, Conséquences.
+  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/architecture/guide-mvc-service.md`.
+- **Étape 8 (Application sur le Blog) : Concevoir l'architecture en deux couches de la consultation d'article**
+  - Entrées : Cas d'utilisation du Blog et guide d'architecture.
+  - Travail d'application sur le Blog : Modéliser le découpage en 2 couches de la tranche de consultation d'un article du Blog et rédiger la décision fondatrice ADR-01 officialisant l'injection de `ArticleService` dans `ArticleController`.
+  - Sortie (1 seul livrable) : `docs/architecture/architecture-sprint1.md`.
 
-### Étape 12 : Présenter et inspecter (Sprint Review N — Double Validation Delivery & Discovery) (Étape Générique 22)
-- **Entrées :** Incrément logiciel S1 opérationnel et maquettes interactives du Sprint 2.
-- **Activités de réalisation :**
-  - Démontrer l'Incrément 1 en direct devant le Groupe 1 (Product Owner).
-  - Obtenir la validation formelle de la User Story "Consultation d'un article".
-  - Faire tester les maquettes interactives du Sprint 2 aux utilisateurs cibles pour recueillir leurs retours avant le Sprint Planning 2.
-- **Sortie principale :** Procès-verbal de la Review 1 actant la validation de l'incrément et les retours sur les maquettes (`sprints/pv-review-1.md`).
+---
 
-### Étape 13 : Améliorer le processus (Sprint Retrospective N — Amélioration continue) (Étape Générique 23)
-- **Entrées :** Retours de la Sprint Review 1 et vécu de l'équipe durant l'itération.
-- **Activités de réalisation :**
-  - Conduire l'analyse réflexive d'équipe sur l'organisation du travail.
-  - Constater le choc méthodologique de la **dette d'empathie** (avoir développé sans immersion usagers préalable).
-  - Décider de prioriser l'immersion terrain et la formalisation des Personas dès le Sprint 2.
-  - Définir 2 actions d'amélioration concrètes pour le prochain sprint.
-- **Sortie principale :** Bilan rétrospectif du Sprint 1 consignant la dette d'empathie vers S2 (`scrum/retrospective-s1.md`).
+### Phase 5 : UA-Lab — Contrôleur Mince, Service CSV, Gabarit Preline UI et Gestion Robuste 404 (Domaine D.321.1-laravel)
+*Cette phase introduit le développement effectif de la tranche verticale sous Laravel 13. Elle s'organise en une étape d'apprentissage technique suivie de son étape d'application immédiate sur le Blog des Lauréats.*
+
+- **Étape 9 (Apprentissage) : Assimiler le routage dynamique, l'extraction de données CSV, les composants Preline UI et la gestion d'erreur 404**
+  - Entrées : Documentation Laravel 13 et bibliothèque Preline UI.
+  - Notions de base à apprendre :
+    - Déclaration de routes paramétrées dynamiques (`Route::get('/articles/{id}', ...)`) avec contraintes d'identifiant.
+    - Injection de dépendance de la classe Service dans le constructeur du contrôleur.
+    - Extraction et manipulation de données depuis un fichier CSV en mémoire (`fgetcsv`, collections Laravel).
+    - Gabarit Blade responsive avec Tailwind CSS et composants de carte Preline UI.
+    - Résilience applicative : détection d'article absent et déclenchement propre de `abort(404)`.
+  - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/laravel/guide-article-show.md`.
+- **Étape 10 (Application sur le Blog) : Concevoir en détail et développer (Piste Delivery)**
+  - Entrées : Notions Laravel assimilées, architecture MVC + Service validée et spécifications du Blog.
+  - Travail d'application sur le Blog :
+    - *Projet d'Imitation :* Coder la route `/articles/{id}`, le contrôleur mince `ArticleController`, la classe `ArticleService` extrayant les articles depuis la source CSV avec retour typé, la gestion propre de l'erreur 404 (`abort(404)`), et la vue Blade responsive sous Preline UI.
+    - *Projet Technique (Codage pur - Jour 8) :* Coder la route, le contrôleur `RealisationController` et le service `RealisationService` sur son portfolio personnel (Épreuve de Live Coding de 40 min).
+    - *Projet Fil Rouge (Jours 9-10) :* Créer le Skill `.agent/skills/article-show-generator/` pour automatiser la génération d'une tranche de consultation découplée sur l'application métier.
+  - Sortie (1 seul livrable) : `app/Services/ArticleService.php`.
+
+---
+
+### Phase 6 : UA-Tâche — Piste Discovery : Affinement du Backlog et Maquettage du Sprint 2
+*Cette phase ne requiert aucun nouvel apport conceptuel. Il s'agit d'une UA-Tâche d'ingénierie opérationnelle menée en temps masqué (~10% du temps) pour préparer le sprint suivant.*
+
+- **Étape 11 (Application) : Affiner le Backlog pour le Sprint suivant (Piste Discovery)**
+  - Entrées : Product Backlog et retours d'utilisation.
+  - Travail d'application : Collaborer avec le Product Owner pour clarifier les User Stories du Sprint 2 (Page d'accueil dynamique et CRUD Catégories), rédiger les critères d'acceptation et estimer la complexité en Story Points.
+  - Sortie (1 seul livrable) : `scrum/backlog-refinement-s2.md`.
+- **Étape 12 (Application) : Modéliser le User Flow et maquetter pour le Sprint suivant (Piste Discovery)**
+  - Entrées : User Stories raffinées pour le Sprint 2 et UI Kit Preline UI.
+  - Travail d'application : Modéliser en syntaxe Mermaid le parcours utilisateur de la future page d'accueil et prototyper les maquettes interactives S2 avec les composants Preline UI.
+  - Sortie (1 seul livrable) : `docs/design/maquettes-sprint-2.md`.
+
+---
+
+### Phase 7 : UA-Tâche — Clôture du Sprint 1, Démonstration, Tests DoD et Rétrospective
+*Cette phase ne contient aucun nouveau UA-lab. Il s'agit d'une UA-Tâche opérationnelle regroupant les rituels agiles et la validation de conformité finale du sprint.*
+
+- **Étape 13 (Application) : Suivre l'avancement quotidien (Daily Scrum — Delivery & Discovery)**
+  - Entrées : Tableau Kanban et tâches du Sprint 1.
+  - Travail d'application : Animer la réunion quotidienne debout de 15 minutes, synchroniser les travaux sur le delivery et le discovery, lever immédiatement les points de blocage.
+  - Sortie (1 seul livrable) : `issues/issues-sprint-1.md`.
+- **Étape 14 (Application) : Tester et valider l'Incrément (Piste Delivery — DoD)**
+  - Entrées : Code source complet du Blog des Lauréats et critères formels de la Definition of Done.
+  - Travail d'application : Exécuter la checklist des 7 critères formels de la DoD (responsive mobile/desktop avec Preline UI, résilience 404 sans régression, respect des standards PSR-12).
+  - Sortie (1 seul livrable) : `docs/qualite/rapport-dod-sprint-1.md`.
+- **Étape 15 (Application) : Présenter et inspecter (Sprint Review N — Double Validation Delivery & Discovery)**
+  - Entrées : Incrément logiciel S1 opérationnel et maquettes interactives du Sprint 2.
+  - Travail d'application : Démontrer l'Incrément 1 en direct devant le Product Owner, valider la User Story "Consultation d'un article", et faire tester les maquettes de S2 aux utilisateurs cibles pour recueillir leurs retours avant le Planning 2.
+  - Sortie (1 seul livrable) : `sprints/pv-review-1.md`.
+- **Étape 16 (Application) : Améliorer le processus (Sprint Retrospective N — Amélioration continue)**
+  - Entrées : Retours de la Review 1 et vécu de l'équipe durant l'itération.
+  - Travail d'application : Conduire l'analyse réflexive d'équipe, constater le choc méthodologique de la **dette d'empathie** (avoir développé sans immersion usagers préalable), et décider de prioriser l'immersion Personas dès le début du Sprint 2.
+  - Sortie (1 seul livrable) : `scrum/retrospective-s1.md`.

@@ -1,39 +1,34 @@
 ---
 name: flux-travail
 description: >-
-  Gère, insère et audite les étapes de réalisation dans flux-travail/ (flux générique
-  d'ingénierie logicielle et flux opérationnels par session dans sessions/) selon la structure normalisée.
+  Gouverne le flux générique d'ingénierie logicielle (25 étapes universelles)
+  et la structure d'ensemble du répertoire flux-travail/.
 ---
 
 # Skill Flux de Travail : /flux-travail
 
 ## 1. Mission
-Piloter la structure, l'insertion et l'audit des étapes dans l'espace `flux-travail/` selon la démarche d'ingénierie logicielle unifiée (Design Thinking, Gestion de Projet PMI, Processus OO et Scrum Dual-Track).
-
-Le skill maintient le découpage rigoureux entre :
-1. **Le flux générique d'ingénierie logicielle** (`flux-travail/flux-travail-generique.md`) : Processus universel en 25 étapes réparties en 3 phases (Sprint 0 Cadrage & Socle, Cycle Dual-Track Sprint $N$ avec pistes Discovery et Delivery, Livraison et Clôture).
-2. **Les flux opérationnels par session** (`flux-travail/sessions/`) : Découpage par session de formation N3 (S0 à S8) alternant directement les unités d'apprentissage (**UA-labs**) avec les étapes de réalisation concrètes.
+Gouverner, faire évoluer et auditer le **flux générique d'ingénierie logicielle** (`flux-travail/flux-travail-generique.md` - 25 étapes universelles) et l'intégrité de l'espace documentaire `flux-travail/`.
+Le skill garantit la cohérence du processus unifié : Design Thinking, Gestion de Projet PMI, Processus OO et Scrum Dual-Track.
 
 ## 2. Déclenchement
 - **Quand l'activer** :
-  - Ajout, reformulation ou audit d'une étape d'ingénierie logicielle dans `flux-travail/flux-travail-generique.md`.
-  - Insertion, mise à jour ou audit d'un flux de session dans `flux-travail/sessions/` (`flux-travail-s0.md` à `flux-travail-s8.md`).
-  - Évolution des guides méthodologiques dans `flux-travail/docs/`.
+  - Ajout, reformulation ou audit d'une étape universelle dans `flux-travail/flux-travail-generique.md`.
+  - Évolution des guides méthodologiques transversaux dans `flux-travail/docs/`.
+  - Contrôle d'alignement architectural global du projet.
 - **Quand NE PAS l'activer** :
-  - Réalisation technique d'une fonctionnalité de code (utiliser le skill métier dédié).
-  - Cérémonies de fin de sprint (utiliser `cloture-sprint`).
-  - Production autonome de tutoriels d'autoformation (utiliser `realisation-ua-lab`).
+  - Conception, découpage ou mise à jour des flux de sessions de formation (`flux-travail/sessions/`) -> déléguer au skill `conception-session`.
+  - Réalisation technique d'une fonctionnalité de code -> utiliser le skill métier dédié.
+  - Cérémonies de fin de sprint -> utiliser `cloture-sprint`.
+  - Production des tutoriels d'autoformation -> utiliser `realisation-ua-lab`.
 
-## 3. Structure d'une Session de Formation (`flux-travail/sessions/`)
-Chaque session de formation respecte les principes suivants :
-- **Identification & Objectif :** Fiche d'identification, durée ferme (80h) et objectif d'apprentissage global.
-- **Cadre Tri-Projets :** Projet d'Imitation (J1-7), Projet Technique en codage pur sans conception (J8), Projet Fil Rouge avec création de Skills agentiques (J9-10).
-- **Intercalage Synchrone :** Chaque UA-lab est positionné immédiatement avant son utilisation pratique en réalisation.
-- **Un seul UA-lab par domaine mobilisé :** Unité consolidée désignée par `UA-lab : [Titre] (Domaine D.xxx.x)` sans code numérique `UA.*`.
-- **Noms Génériques Stricts :** Les étapes de réalisation reprennent les intitulés exacts du flux générique et livrent un seul livrable principal unique.
+## 3. Gouvernance et Interface avec `conception-session`
+- Le skill `flux-travail` détient l'autorité exclusive sur les 25 étapes du flux universel.
+- Les flux de sessions de formation (`flux-travail/sessions/`) sont conçus et gouvernés par le skill `conception-session` selon le document [regles-flux-sessions.md](../../rules/regles-flux-sessions.md).
+- Toute demande d'évolution d'un intitulé générique émise lors de la conception d'une session doit être instruite et arbitrée par `flux-travail`.
 
 ## 4. Règles Obligatoires
 - Français niveau A1 direct et vocabulaire professionnel de développeur.
-- **Interdiction formelle de tout tableau Markdown** (`| ... |`) : utiliser exclusivement des listes à puces directes (`- `).
-- Liens relatifs exclusifs (`./`, `../`).
-- Respect strict de la stack technique : **Laravel 13**, **MySQL exclusivement**, **Tailwind CSS avec Preline UI**, **Alpine.js**, **Agent Antigravity & GitHub Copilot**, et **Policies/Gates + Spatie (RBAC)**.
+- Interdiction formelle de tout tableau Markdown (`| ... |`) : listes à puces directes (`- `) exclusives.
+- Liens relatifs obligatoires (`./`, `../`).
+- Stack technique de référence : Laravel 13, MySQL, Tailwind CSS avec Preline UI, Alpine.js.

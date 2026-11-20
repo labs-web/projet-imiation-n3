@@ -56,3 +56,12 @@ Ces règles s'appliquent de manière générique à tous les fichiers et toutes 
   - L'Agent IA consulte `sprints/sprints.md` pour identifier le sprint ayant le statut **Actif**.
   - L'Agent IA ne doit jamais inventer de futurs sprints : seuls les sprints validés par le concepteur sont pris en compte.
   - L'Agent IA vérifie sa branche Git (`git branch --show-current`) et bascule sur la branche correspondante (`git checkout -b sprint[N]`).
+
+---
+
+## 6. Gouvernance des Flux de Travail et des Sessions
+
+- **Référentiel universel vs Déclinaisons pédagogiques** :
+  - Le flux générique d'ingénierie logicielle (`flux-travail/flux-travail-generique.md` - 25 étapes) est gouverné par le skill `flux-travail`.
+  - La conception, le découpage et l'audit des flux opérationnels de formation (`flux-travail/sessions/`) sont gouvernés par le skill `conception-session`.
+  - Consulter obligatoirement le document de gouvernance : [regles-flux-sessions.md](./regles-flux-sessions.md).
