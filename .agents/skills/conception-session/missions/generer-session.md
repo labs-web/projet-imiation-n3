@@ -38,6 +38,13 @@ Produire un fichier de flux opérationnel de session (`flux-travail/sessions/flu
      - *Projet Technique (Jour 8) :* Codage pur en autonomie sur le portfolio personnel, sanctionné par le Live Coding de 40 min chrono sans assistance.
      - *Projet Fil Rouge (Jours 9 et 10) :* Création d'un Skill agentique automatisant la tâche sur une application métier.
 
+5. **Spécificités du Sprint 0 (Cadrage et Socle Initial) :**
+   - *Prérequis bloquants :* Intégrer les validations du `lab-product-owner` pour le Groupe 1 et du `lab-scrum-master` pour l'ensemble des apprenants.
+   - *Initialisation Git :* Création du dépôt Git local et distant (`README.md`) au lieu de la création d'une branche `sprint-N`.
+   - *Double unité Laravel 13 :* Découper l'acquisition du socle en deux temps :
+     1. Installation de stack, Tailwind CSS, Preline UI et route Hello World Blade.
+     2. Démarrage rapide avec le composant TodoList connecté à MySQL pour prononcer le jalon Go/No-Go lors de la Review 0.
+
 ---
 
 ## 4. Règles de Rédaction Impératives

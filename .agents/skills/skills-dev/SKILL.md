@@ -38,3 +38,4 @@ Tout fichier `SKILL.md` doit respecter strictement ce modèle compact (<= 75 lig
 ## 4. Procédure d'intervention
 - **Parcours A (Sans consigne)** : Extraire les remarques du concepteur -> Diagnostiquer les écarts -> Émettre un plan d'action sous artefact interactif -> Attendre validation -> Appliquer.
 - **Parcours B (Avec consigne / étape)** : Analyser le besoin -> Choisir entre nouvelle mission (`<skill>/missions/<nom>.md`) ou nouveau skill (`.agents/skills/<skill>/SKILL.md`) -> Rédiger selon la structure canonique (<= 75 lignes).
+- **Parcours C (Révision réactive d'artéfacts)** : Pour toute révision interactive couplant modification de fichiers de flux et adaptation de skills selon les remarques du concepteur, déléguer au skill `/fixe-plan-and-skills`.

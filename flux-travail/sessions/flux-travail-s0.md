@@ -28,7 +28,16 @@ Il est structuré en **7 phases typées** alternant les unités d'apprentissage 
 
 ---
 
-## 2. Organisation dans le Cadre Tri-Projets (80h / 10 jours)
+## 2. Prérequis Bloquants de Lancement
+
+Pour démarrer la session et lancer le projet :
+- **Prérequis Bloquant Product Owner :** Validation du lab `lab-product-owner` par le **Groupe 1** (groupe pilote d'apprenants ayant déjà mené un projet collectif en amont et validé le lab `lab-design-thinking`). Le Groupe 1 porte le besoin métier, la vision produit et valide formellement les livrables lors des Sprint Reviews.
+- **Prérequis Bloquant Scrum Master :** Validation du lab `lab-scrum-master` par l'ensemble des apprenants de la promotion pour maîtriser l'animation des cérémonies et les artéfacts agiles.
+- **Rôles Opérationnels :** Les apprenants occupent les rôles de **Développeurs** et de **Scrum Master** (en alternance).
+
+---
+
+## 3. Cadre Tri-Projets et Organisation Temporelle (80h / 10 jours)
 
 - **Jours 1 à 7 : Projet d'Imitation (*Blog des Lauréats*)**
   - Réalisation pas-à-pas en classe active des étapes de cadrage, de design et de socle technique.
@@ -43,7 +52,7 @@ Il est structuré en **7 phases typées** alternant les unités d'apprentissage 
 
 ---
 
-## 3. Déroulement des 7 Phases du Sprint 0
+## 4. Déroulement des 7 Phases du Sprint 0
 
 ```mermaid
 flowchart TD
@@ -102,7 +111,7 @@ flowchart TD
 *Cette phase introduit le cadre méthodologique de gestion de projet. Elle comprend l'étape d'apprentissage théorique suivie immédiatement de la planification concrète du Sprint 0.*
 
 - **Étape 1 (Apprentissage) : Assimiler les rôles, événements et artéfacts Scrum**
-  - Entrées : Guide méthodologique Scrum et valeurs du manifeste agile.
+  - Entrées : Guide méthodologique Scrum, valeurs du manifeste agile et validations préalables des labs `lab-product-owner` et `lab-scrum-master`.
   - Notions de base à apprendre :
     - Différence entre cycle en V et itération agile, les 4 valeurs et 12 principes.
     - Les 3 rôles Scrum : Product Owner (Groupe 1), Scrum Master (lab prérequis), Développeurs.
@@ -201,17 +210,13 @@ flowchart TD
 ---
 
 ### Phase 6 : UA-Lab — Socle Laravel 13, Blade, Preline UI et Persistance MySQL (Domaine D.321.1-laravel)
-*Cette phase introduit le développement du socle applicatif sous Laravel 13. Elle s'organise en une étape d'apprentissage technique suivie de l'installation et de la validation par un composant TodoList connecté à MySQL.*
+*Cette phase introduit le développement du socle applicatif sous Laravel 13. Elle s'organise en une étape d'apprentissage technique en deux temps suivie de l'installation et de la validation par un composant TodoList connecté à MySQL.*
 
 - **Étape 15 (Apprentissage) : Socle Laravel 13, Blade, Preline UI et persistance MySQL**
-  - Entrées : Documentation Laravel 13 et Preline UI.
-  - Notions de base à apprendre :
-    - Installation et arborescence de répertoires de **Laravel 13**.
-    - Configuration de l'environnement `.env` pour la connexion au serveur **MySQL**.
-    - Routage web (`routes/web.php`) et gabarits Blade (`resources/views/`).
-    - Intégration de Tailwind CSS avec **Preline UI**.
-    - Schéma relationnel : migrations (`php artisan make:migration`) et seeders sous MySQL.
-    - Contrôleur et vue Blade affichant une liste de tâches (TodoList) depuis MySQL pour prouver la persistance effective.
+  - Entrées : Documentation Laravel 13, Preline UI et serveur MySQL.
+  - Notions de base à apprendre (Découpage en deux temps) :
+    - *Temps 1 : Initialisation de stack et Hello World Blade :* Installation et arborescence Laravel 13, configuration `.env` MySQL, intégration Tailwind CSS et bibliothèque Preline UI, routage web et gabarit Blade d'accueil responsive.
+    - *Temps 2 : Démarrage rapide avec composant persistant :* Création de migrations avec le Schema Builder (`php artisan make:migration`), exécution (`php artisan migrate`), seeders de données d'essai, et contrôleur affichant une liste de tâches (TodoList) depuis MySQL pour prouver la persistance effective.
   - Sortie de l'atelier d'apprentissage (1 seul livrable) : `tutoriels/laravel/guide-demarrage-laravel13.md`.
 - **Étape 16 (Application sur le Blog) : Préparer le socle technique**
   - Entrées : Architecture logicielle et compétences Laravel 13 acquises.
@@ -229,7 +234,7 @@ flowchart TD
 
 - **Étape 18 (Application sur le Blog) : Valider le socle, la charte graphique et les maquettes (Sprint Review 0 — Jalon Go/No-Go)**
   - Entrées : Socle Laravel 13 connecté à MySQL (TodoList fonctionnelle), charte Preline UI et maquettes interactives S1.
-  - Travail d'application sur le Blog : Animer la démonstration devant le Product Owner (Groupe 1), faire tester les maquettes aux usagers cibles, et prononcer la décision formelle Go/No-Go.
+  - Travail d'application sur le Blog : Animer la démonstration devant le Product Owner (Groupe 1), faire tester les maquettes aux usagers cibles, et prononcer la décision formelle Go/No-Go conditionnant le passage au Sprint 1.
   - Sortie (1 seul livrable) : `sprints/pv-review-0.md`.
 - **Étape 19 (Application sur le Blog) : Clôturer le Sprint 0 (Sprint Retrospective 0)**
   - Entrées : Déroulement et retours de la Review 0.

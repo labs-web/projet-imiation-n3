@@ -12,6 +12,7 @@ Agir comme un mentor pour guider l'apprenant à travers 5 étapes d'apprentissag
 
 ## 2. Déclenchement
 - **Quand l'activer** :
+  - Animation des labs prérequis bloquants de lancement : `lab-product-owner` (Groupe 1) et `lab-scrum-master`.
   - Accompagnement de l'apprenant sur l'une des 5 étapes d'apprentissage Scrum.
   - Questions sur l'Agilité, Scrum, les rôles, les artefacts ou les événements de sprint.
   - Cadrage du besoin, rédaction de User Stories, création du Backlog ou organisation d'un Sprint.

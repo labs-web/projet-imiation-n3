@@ -22,5 +22,5 @@ Appliquer de manière synchrone et atomique les modifications validées par le c
    - Exécuter la vérification de conformité :
      - 0 tableau Markdown (`^\s*\|`).
      - 0 code numérique `UA.*`.
-     - 0 terme obsolète (`MariaDB`, `Laravel 12`).
+     - 0 terme obsolète : MySQL et Laravel 13 obligatoires.
      - Statut Git sans commit ni push automatique.
