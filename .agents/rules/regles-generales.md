@@ -36,26 +36,34 @@ Ces règles s'appliquent de manière générique à tous les fichiers et toutes 
 
 ## 4. Structure du dépôt
 
-- **Un fichier `README.md` par dossier** :
-  - Tout dossier et sous-dossier du dépôt doit obligatoirement contenir un fichier `README.md`.
-  - Ce `README.md` doit expliquer clairement à l'apprenant :
-    - Le rôle et l'objectif du dossier dans le projet.
-    - Ce qu'il doit y mettre et comment l'utiliser.
+- **Un fichier `README.md` par dossier structurel racine** :
+  - Les dossiers structurels du dépôt (`docs/`, `sprints/`, `scrum/`, `rapport/`, `presentations/`, `tutoriels/`) contiennent un fichier `README.md` expliquant le rôle du dossier.
+  - **Exception stricte pour `tutoriels/` :** Uniquement `tutoriels/README.md`. Interdiction formelle d'ajouter des fichiers `README.md` dans les sous-dossiers de domaines, d'UAs ou de tutoriels unitaires (se référer à `.agents/references/organisation-livrables.md`).
 
 ---
 
 ## 5. Gestion des Sprints et branches Git
 
-- **Interdiction formelle de commit et push par l'Agent IA** :
-  - L'Agent IA ne doit jamais exécuter les commandes `git commit` ou `git push`.
-  - Seul le concepteur (l'utilisateur) réalise les commits et les pushs sur le dépôt.
-  - L'Agent IA modifie et crée les fichiers demandés, vérifie leur conformité (`git status`), et invite le concepteur à valider, committer et pousser.
+- **Conformité GitFlow et Souveraineté de l'Apprenant** :
+  - Se référer impérativement à `.agents/references/gitflow.md`.
+  - **Interdiction formelle de commit et push par l'Agent IA** : L'Agent IA ne doit jamais exécuter les commandes `git commit` ou `git push`.
+  - Seul l'apprenant réalise les commits et les pushs sur son dépôt.
+  - L'Agent IA modifie et crée les fichiers demandés, vérifie leur conformité (`git status`), et invite l'apprenant à valider et committer.
 - **Interdiction de travailler directement sur `main`** :
   - Tout travail de développement, de documentation ou de sprint doit s'effectuer sur la branche dédiée au sprint actif (`sprint[N]`).
 - **Détection du sprint actif** :
   - L'Agent IA consulte `sprints/sprints.md` pour identifier le sprint ayant le statut **Actif**.
-  - L'Agent IA ne doit jamais inventer de futurs sprints : seuls les sprints validés par le concepteur sont pris en compte.
   - L'Agent IA vérifie sa branche Git (`git branch --show-current`) et bascule sur la branche correspondante (`git checkout -b sprint[N]`).
+
+---
+
+## 6. Références Normatives Centralisées
+
+Tout agent opérant dans ce dépôt (notamment l'**Agent Réalisation de Sprint**) applique obligatoirement le socle normatif :
+- Identité et posture : `.agents/rules/persona.md`
+- Cartographie physique des livrables : `.agents/references/organisation-livrables.md`
+- Typologie et slugs des tutoriels : `.agents/references/typologie-uas-tutoriels.md`
+- Stratégie des branches et conventions de commits : `.agents/references/gitflow.md`
 
 ---
 

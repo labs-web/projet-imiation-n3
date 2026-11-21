@@ -8,18 +8,24 @@ Ce document définit les règles normatives de synchronisation et de versioning 
 
 > [!IMPORTANT]
 > **Souveraineté Normative de l'Agent Autoformation :**  
-> L'Agent Autoformation est l'autorité normative qui définit de façon stricte la structure, le formatage et l'arborescence de tous les livrables du cursus.  
-> - **Livrables d'apprentissage (fiches, présentations, commandes) :** Logés impérativement sous `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md`, `presentation-[slug-tuto].md`, `[slug-tuto].command.md` (aucun `README.md` unitaire).  
-> - **Livrables opérationnels de projet (UA-Tâche) :** Logés sous les répertoires officiels (`README.md`, `sprints/`, `scrum/`, `docs/cadrage/`, `docs/analyse/`, `docs/produit/`, `docs/design/`).  
-> **L'Agent Projet s'adapte obligatoirement à cette nomenclature canonique et ne peut inventer d'arborescences divergentes.**
+> L'Agent Autoformation est l'autorité normative qui définit de façon stricte la structure, le formatage et l'arborescence de tous les livrables du cursus à travers les documents de référence normatifs colocalisés :  
+> - `.agents/rules/persona.md` (identité officielle de l'**Agent Réalisation de Sprint**)  
+> - `.agents/references/organisation-livrables.md` (arborescence universelle du poste apprenant)  
+> - `.agents/references/typologie-uas-tutoriels.md` (catégories d'UAs et slugs des tutoriels)  
+> - `.agents/references/gitflow.md` (stratégie des branches et conventions de commits)  
+> - **Livrables d'apprentissage (`tuto-lab`, `tuto-notion`, `tuto-code`) :** Logés impérativement sous `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` (seul `tutoriels/README.md` existe, aucun `README.md` unitaire).  
+> - **Livrables opérationnels de projet (`tuto-tache`) :** Logés sous les répertoires officiels (`README.md`, `sprints/`, `scrum/`, `docs/cadrage/`, `docs/analyse/`, `docs/produit/`, `docs/conception/`). Aucun journal CLI `.command.md` requis.  
+> **L'Agent Réalisation de Sprint s'adapte obligatoirement à cette nomenclature canonique et ne peut inventer d'arborescences divergentes.**
 
 ---
 
 ## 2. Rôles et Responsabilités
 
-- **Agent Projet (`projet-imiation-n3`)** :
-  - Développe le code applicatif, produit les artéfacts opérationnels et les livrables attendus sous `docs/`, `sprints/`, `scrum/` et `tutoriels/` selon la nomenclature imposée par l'Agent Autoformation.
+- **Agent Réalisation de Sprint (`realisation-sprint`, projet cible)** :
+  - Incarne l'apprenant type de Solicode qui suit la formation (tous niveaux N1, N2, N3).
+  - Développe le code applicatif (`src/`), produit les artéfacts opérationnels et les livrables attendus selon la nomenclature imposée par l'Agent Autoformation.
   - Maintient l'arborescence miroir des versions exclusivement dans le dossier `.sync/`.
+  - Ne committe ni ne pousse jamais de façon autonome (souveraineté de l'apprenant).
   - Notifie la réalisation d'un tutoriel dans le front-matter du tutoriel source (`_tutos/`) avec le statut `realise` et la liste des livrables et versions.
 - **Agent Autoformation (`autoformations-professionaliser`)** :
   - Conçoit le cadre didactique (`_sessions/`, `_uas/`, `_tutos/`).
