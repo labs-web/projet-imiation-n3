@@ -16,8 +16,7 @@ Le dossier `.agents/` repose sur une séparation claire entre règles transversa
 - **Références Normatives (`.agents/references/`) :**
   - [domaines-competences.md](./references/domaines-competences.md) : Référentiel officiel et SSOT des 8 domaines, slugs canoniques et exclusion formelle de l'IA apprenant.
   - [organisation-livrables.md](./references/organisation-livrables.md) : Norme universelle d'arborescence et de nommage des livrables multi-niveaux.
-  - [maturation-ua-labs.md](./references/maturation-ua-labs.md) : Échelle de maturité didactique EFP (veille, lab, ua-lab, tutoriel, projet).
-  - [typologie-uas-tutoriels.md](./references/typologie-uas-tutoriels.md) : Typologie des tutoriels et règles de restitution Marp et CLI.
+  - [maturation-et-typologie-ua-tuto.md](./references/maturation-et-typologie-ua-tuto.md) : Référentiel normatif de maturation des UAs (ua-lab vs projet) et typologie des tutoriels (tuto-atelier, tuto-atelier-notions, tuto-tache).
   - [gitflow.md](./references/gitflow.md) : Conventions de branches par sprint et commits atomiques.
 - **Compétences Spécialisées (`.agents/skills/`) :**
   - Modules autonomes encapsulant une expertise ciblée.
@@ -25,9 +24,9 @@ Le dossier `.agents/` repose sur une séparation claire entre règles transversa
 
 ---
 
-## 2. Catalogue des 10 Skills de l'Écosystème
+## 2. Catalogue des 11 Skills de l'Écosystème
 
-L'écosystème comprend **10 skills complémentaires**, organisés en 4 familles d'activités :
+L'écosystème comprend **11 skills complémentaires**, organisés en 5 familles d'activités :
 
 ### A. Gouvernance & Ingénierie des Sessions
 
@@ -91,6 +90,12 @@ L'écosystème comprend **10 skills complémentaires**, organisés en 4 familles
   - Rôle : Gère les opérations d'infrastructure Git/GitHub et le cycle de vie documentaire du projet.
   - Déclenchement : Initialisation du dépôt local et distant, bascule sur la branche active du sprint (`sprintN`), actualisation de la documentation d'accueil racine (`README.md`).
   - Missions associées : `missions/init-depot.md`, `missions/init-projet.md`.
+
+### E. Communication Inter-Agents
+
+- **[agent-communication](./skills/agent-communication/SKILL.md) (`/agent-communication`) :**
+  - Rôle : Pilote la communication formelle inter-agents (`redacteur-autoformation` et `realisation-sprint`) via des canaux physiques d'échange symlinkés et des gabarits standardisés.
+  - Déclenchement : Réception et émission de directives de cadrage didactique, transmission de flux opérationnels, accusés de réception et synchronisation bidirectionnelle.
 
 ---
 

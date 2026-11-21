@@ -3,7 +3,7 @@
 Ce document définit le flux de travail opérationnel du **Sprint 0**.
 Il est centré sur la production de son incrément majeur : la **Maquette de la Page d'Accueil** du Blog des Lauréats.
 
-Le flux sépare de manière étanche les phases d'assimilation théorique (**UA-Lab**) et les phases d'application opérationnelle sur le projet (**UA-Tâche**), totalisant **18 étapes de travail**.
+Le flux sépare de manière étanche les Unités d'Apprentissage d'ateliers pratiques (**UA-Lab**) et les Unités d'Apprentissage d'application opérationnelle sur le projet (**UA-Tâche**), totalisant **5 UAs** et **18 étapes de travail**.
 
 Les durées temporelles (80 heures / 10 jours) sont fournies à titre purement indicatif pour les formateurs et le concepteur.
 
@@ -18,15 +18,13 @@ Les durées temporelles (80 heures / 10 jours) sont fournies à titre purement i
 - **Référentiel des compétences :** Conforme au document de référence [.agents/references/domaines-competences.md](../../.agents/references/domaines-competences.md)
 - **Domaines de compétences et Unités d'Apprentissage mobilisés :**
   - Domaine Scrum & Gouvernance Agile (`D.351.1-scrum`) :
-    - Unité d'apprentissage (UA-Lab) : *Initiation à la Démarche Agile et Cadre Scrum* (Statut : **Réalisée** — Code officiel attribué : `UA.351.11`)
+    - Unité d'apprentissage `UA.351.11` (UA-Lab) : *Initiation à la Démarche Agile et Cadre Scrum* (Statut : **Réalisée**)
   - Domaine Conception & Design Thinking (`D.311.1-design`) :
-    - Unité d'apprentissage 1 (UA-Lab) : *Démarche de Design Thinking* (Statut : **À réaliser**)
-    - Unité d'apprentissage 2 (UA-Lab) : *Empathie* (Statut : **À réaliser**)
-    - Unité d'apprentissage 3 (UA-Lab) : *Modélisation de parcours utilisateur* (Statut : **À réaliser**)
-    - Unité d'apprentissage 4 (UA-Lab) : *Prototypage d'interface* (Statut : **À réaliser**)
+    - Unité d'apprentissage `UA.311.11` (UA-Lab) : *Design Thinking : Démarche Globale et Immersion Empathique* (Statut : **À réaliser**)
+    - Unité d'apprentissage `UA.311.12` (UA-Lab) : *Design Thinking : Parcours Utilisateur et Prototypage d'Interface* (Statut : **À réaliser**)
   - Domaine Réalisation et Conduite de Projet (`D.351.2-realisation-projet`) :
-    - Unité d'apprentissage 1 (UA-Tâche) : *Application Projet : Dépôt, Cadrage, Stack et Backlog Initial* (Statut : **À réaliser**)
-    - Unité d'apprentissage 2 (UA-Tâche) : *Incrément Maquette de la Page d'Accueil et Clôture Agile* (Statut : **À réaliser**)
+    - Unité d'apprentissage `UA.351.01` (UA-Tâche) : *Application Projet : Dépôt, Cadrage, Stack et Backlog Initial* (Statut : **À réaliser**)
+    - Unité d'apprentissage `UA.351.02` (UA-Tâche) : *Incrément Maquette de la Page d'Accueil et Clôture Agile* (Statut : **À réaliser**)
 - **Objectif global d'apprentissage :**
   - Découvrir la méthode agile Scrum et organiser la gouvernance de promotion avec le Groupe 1 en Product Owner.
   - Maîtriser les étapes amont du Design Thinking (Empathie, Définition) grâce à un lab guidé sur l'application Todo List, puis les appliquer aux usagers du Blog.
@@ -74,11 +72,11 @@ Pour lancer la dynamique collective du Sprint 0, l'organisation de la promotion 
 
 ---
 
-## 4. Déroulement Pédagogique des 5 Phases du Sprint 0
+## 4. Déroulement Opérationnel des 5 Unités d'Apprentissage du Sprint 0
 
 ```mermaid
 flowchart TD
-    subgraph P1 ["Phase 1 : UA-Lab — Démarche Agile Scrum (D.351.1-scrum / UA.351.11)"]
+    subgraph UA1 ["UA.351.11 (UA-Lab) : Initiation à la Démarche Agile et au Cadre Scrum"]
         E1["Étape 1 : Tuto-lab : Comprendre l'approche Agile et le cadre Scrum (Réalisé)"]
         E2["Étape 2 : Tuto-lab : Définir la vision produit et exprimer les besoins en User Stories (Réalisé)"]
         E3["Étape 3 : Tuto-lab : Créer, estimer et ordonner le Product Backlog (Réalisé)"]
@@ -87,20 +85,20 @@ flowchart TD
         E1 --> E2 --> E3 --> E4 --> E5
     end
 
-    subgraph P2 ["Phase 2 : UA-Lab — Design Thinking : Démarche & Empathie sur Todo List (D.311.1-design)"]
+    subgraph UA2 ["UA.311.11 (UA-Lab) : Design Thinking : Démarche Globale et Immersion Empathique"]
         E6["Étape 6 : Tuto-lab : Introduction au Design Thinking (Double Diamant) & Justification (À réaliser)"]
-        E7["Étape 7 : Tuto-lab : La Phase Empathie et ses outils d'immersion (À réaliser)"]
+        E7["Étape 7 : Tuto-lab : Démarche d'Empathie et ses outils d'immersion (À réaliser)"]
         E8["Étape 8 : Tuto-lab : L'Outil Persona et exemple appliqué (À réaliser)"]
         E6 --> E7 --> E8
     end
 
-    subgraph P3 ["Phase 3 : UA-Lab — Design Thinking : Parcours & Prototypage (D.311.1-design)"]
+    subgraph UA3 ["UA.311.12 (UA-Lab) : Design Thinking : Parcours Utilisateur et Prototypage d'Interface"]
         E9["Étape 9 : Tuto-lab : Modélisation déclarative de parcours utilisateur (À réaliser)"]
         E10["Étape 10 : Tuto-lab : Prototypage d'interface et conception de l'UI Kit (À réaliser)"]
         E9 --> E10
     end
 
-    subgraph P4 ["Phase 4 : UA-Tâche — Application Projet : Cadrage & Backlog (D.351.2-realisation-projet)"]
+    subgraph UA4 ["UA.351.01 (UA-Tâche) : Application Projet : Cadrage & Backlog Initial (D.351.2-realisation-projet)"]
         E11["Étape 11 : Planifier le Sprint 0 et formaliser la feuille d'engagement (À réaliser)"]
         E12["Étape 12 : Initialiser le dépôt Git et l'espace projet (À réaliser)"]
         E13["Étape 13 : Cadrer le projet et définir le périmètre In/Out (À réaliser)"]
@@ -110,19 +108,19 @@ flowchart TD
         E11 --> E12 --> E13 --> E14 --> E15 --> E16
     end
 
-    subgraph P5 ["Phase 5 : UA-Tâche — Incrément Maquette & Clôture S0 (D.351.2-realisation-projet)"]
+    subgraph UA5 ["UA.351.02 (UA-Tâche) : Incrément Maquette de la Page d'Accueil & Clôture Agile (D.351.2-realisation-projet)"]
         E17["Étape 17 : Modéliser le User Flow et concevoir la Maquette de la Page d'Accueil (À réaliser)"]
         E18["Étape 18 : Valider l'Incrément Maquette (Review 0 Go/No-Go) et Rétrospective 0 (À réaliser)"]
         E17 --> E18
     end
 
-    P1 --> P2 --> P3 --> P4 --> P5
+    UA1 --> UA2 --> UA3 --> UA4 --> UA5
 ```
 
 ---
 
-### Phase 1 : UA-Lab — Démarche Agile et Cadre Scrum (Domaine D.351.1-scrum / UA.351.11)
-*Phase d'apprentissage collective guidée par le formateur.*
+### Unité d'Apprentissage UA.351.11 (UA-Lab) : Initiation à la Démarche Agile et au Cadre Scrum (Domaine D.351.1-scrum)
+*Atelier d'apprentissage pratique guidé par le formateur.*
 
 - **Étape 1 : Tutoriel-lab : Comprendre l'approche Agile et le cadre Scrum**
   - Statut : **Réalisé** (`UA.351.11`)
@@ -181,8 +179,8 @@ flowchart TD
 
 ---
 
-### Phase 2 : UA-Lab — Design Thinking : Démarche et Empathie sur l'Application Todo List (Domaine D.311.1-design)
-*Phase d'apprentissage pratique de la démarche centrée utilisateur articulée en deux unités : 1. Démarche de Design Thinking, 2. Empathie.*
+### Unité d'Apprentissage UA.311.11 (UA-Lab) : Design Thinking : Démarche Globale et Immersion Empathique (Domaine D.311.1-design)
+*Atelier d'apprentissage pratique de la démarche centrée utilisateur et des méthodes d'immersion.*
 
 > [!NOTE]
 > **Justification Pédagogique du Choix de l'Application Todo List :**  
@@ -190,7 +188,7 @@ flowchart TD
 > *Pourquoi la Todo List plutôt que le Blog des Lauréats ?*  
 > 1. **Absence de barrière métier :** Les cas d'usage de gestion de tâches sont universellement connus de tous les apprenants, évitant tout débat fonctionnel superflu.  
 > 2. **Focalisation exclusive sur la méthode :** Les apprenants peuvent concentrer 100% de leur attention cognitive sur l'écoute active, l'empathie, l'identification des frustrations réelles et la formulation des personas, sans être distraits par l'architecture technique ou les règles de gestion du blog.  
-> 3. **Transférabilité immédiate :** Une fois la méthode maîtrisée sur ce cas épuré, son application sur le *Blog des Lauréats* (en Phase 4) s'effectue avec rigueur et fluidité.
+> 3. **Transférabilité immédiate :** Une fois la méthode maîtrisée sur ce cas épuré, son application sur le *Blog des Lauréats* (dans l'UA.351.01) s'effectue avec rigueur et fluidité.
 
 - **Étape 6 : Tutoriel-lab : Introduction au Design Thinking (Double Diamant) et justification de l'application support**
   - Statut : **À réaliser**
@@ -198,13 +196,13 @@ flowchart TD
   - Entrées : Principes fondamentaux du Design Thinking et justification de l'exercice Todo List.
   - Notions de base à apprendre :
     - Philosophie de la conception centrée utilisateur (User-Centered Design).
-    - Les 5 phases itératives : Empathie, Définition, Idéation, Prototypage, Test.
+    - Les 5 étapes itératives du Design Thinking : Empathie, Définition, Idéation, Prototypage, Test.
     - Modèle du Double Diamant : divergence (explorer largement) et convergence (cibler et synthétiser).
     - Justification du choix de la Todo List comme cas d'étude d'apprentissage méthodologique.
   - Sorties attendues de l'atelier d'apprentissage (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/design/design-thinking/demarche-design-thinking/demarche-design-thinking.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/design/design-thinking/demarche-design-thinking/presentation-demarche-design-thinking.md`.
-- **Étape 7 : Tutoriel-lab : La Phase Empathie et ses outils d'immersion**
+- **Étape 7 : Tutoriel-lab : Démarche d'Empathie et ses outils d'immersion**
   - Statut : **À réaliser**
   - Unité d'apprentissage : *Empathie*.
   - Entrées : Méthodes qualitatives d'immersion appliquées aux usagers d'une Todo List.
@@ -230,13 +228,13 @@ flowchart TD
 
 ---
 
-### Phase 3 : UA-Lab — Design Thinking : Parcours Utilisateur et Prototypage d'Interface (Domaine D.311.1-design)
-*Phase d'apprentissage des étapes aval du Design Thinking (Idéation et Prototypage).*
+### Unité d'Apprentissage UA.311.12 (UA-Lab) : Design Thinking : Parcours Utilisateur et Prototypage d'Interface (Domaine D.311.1-design)
+*Atelier d'apprentissage pratique des étapes aval du Design Thinking (Idéation et Prototypage).*
 
 - **Étape 9 : Tutoriel-lab : Modélisation déclarative de parcours utilisateur**
   - Statut : **À réaliser**
   - Unité d'apprentissage : *Modélisation de parcours utilisateur*.
-  - Entrées : Principes de cartographie visuelle de parcours d'écran (User Flow) issus de la phase d'Idéation.
+  - Entrées : Principes de cartographie visuelle de parcours d'écran (User Flow) issus de l'étape d'Idéation.
   - Notions de base à apprendre :
     - Cartographie visuelle d'un parcours utilisateur écran par écran (User Flow).
     - Syntaxe déclarative textuelle (au moyen de l'outil Mermaid `flowchart`) : nœuds rectangulaires, décisions en losange, sous-graphes et connecteurs annotés.
@@ -258,7 +256,7 @@ flowchart TD
 
 ---
 
-### Phase 4 : UA-Tâche — Application Projet : Dépôt, Cadrage, Stack et Backlog Initial (Domaine D.351.2-realisation-projet)
+### Unité d'Apprentissage UA.351.01 (UA-Tâche) : Application Projet : Dépôt, Cadrage, Stack et Backlog Initial (Domaine D.351.2-realisation-projet)
 *Bloc d'ingénierie opérationnelle mené sur le Blog des Lauréats, débloqué et accompagné par les groupes opérationnels selon leur ordre de priorité.*
 
 - **Étape 11 : Planifier le Sprint 0 et formaliser la feuille d'engagement d'équipe**
@@ -312,7 +310,7 @@ flowchart TD
 
 ---
 
-### Phase 5 : UA-Tâche — Incrément du Sprint 0 : Maquette de la Page d'Accueil et Clôture Agile (Domaine D.351.2-realisation-projet)
+### Unité d'Apprentissage UA.351.02 (UA-Tâche) : Incrément Maquette de la Page d'Accueil et Clôture Agile (Domaine D.351.2-realisation-projet)
 *Bloc de réalisation concrète de l'incrément visuel et de validation formelle Go/No-Go.*
 
 - **Étape 17 : Modéliser le User Flow et concevoir la Maquette de la Page d'Accueil**
