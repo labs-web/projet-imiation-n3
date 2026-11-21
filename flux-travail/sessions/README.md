@@ -102,6 +102,7 @@ Chaque session articule rigoureusement trois piliers complémentaires :
 
 ## 3. Règles Qualité Communes
 
+- **Norme universelle des livrables :** Tous les livrables, arborescences et nommages respectent impérativement la spécification [gestion-livrables.md](../../.agents/references/gestion-livrables.md) (code sous `src/`, exclusion formelle du dossier issues, maquettes sous `docs/conception/`, cérémonies sous `sprints/`).
 - **Zéro tableau Markdown :** Tous les documents utilisent exclusivement des listes à puces directes (`- `).
 - **Liens 100% relatifs :** Tous les liens vers le flux générique ou les documents annexes sont portables.
 - **Français niveau A1 :** Phrases courtes, actives et directes adaptées aux développeurs en formation.

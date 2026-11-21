@@ -105,7 +105,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 15 (Planifier le Sprint N).
   - Entrées : Product Backlog actualisé, retours de la Review 6 et actions de la Rétrospective S6.
   - Travail d'application sur le Blog : Définir le Sprint Goal S7 ("Développer et déployer l'application mobile Android native sous Jetpack Compose connectée à l'API du Blog pour la consultation nomade"), décomposer les tâches et valider le Sprint Backlog S7.
-  - Sortie (1 seul livrable) : `scrum/sprint-backlog-s7.md`.
+  - Sortie (1 seul livrable) : `sprints/sprint-7.md`.
 - **Étape 2 : Préparer l'environnement de sprint (Branche Git et README.md)**
   - Correspondance flux générique : Étape Générique 16 (Préparer l'environnement de sprint).
   - Entrées : Sprint Backlog S7 validé et branche `main`.
@@ -124,12 +124,12 @@ flowchart TD
     - Programmation fonctionnelle en Kotlin : lambdas, fonctions d'extension et collections d'ordre supérieur.
     - Concurrence moderne avec les Coroutines : `Dispatchers.IO`, `Dispatchers.Main`, suspend functions et `viewModelScope`.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/mobile/guide-kotlin-coroutines.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/mobile/presentation-kotlin-coroutines.md`.
+    - Guide explicatif détaillé : `tutoriels/mobile/kotlin-coroutines/kotlin-coroutines-basics/kotlin-coroutines-basics.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/mobile/kotlin-coroutines/kotlin-coroutines-basics/presentation-kotlin-coroutines-basics.md`.
 - **Étape 4 : Tutoriel-application : Initialiser le projet Android Studio du Blog**
   - Entrées : Guide Kotlin et spécifications du client mobile.
-  - Travail d'application sur le Blog : Initialiser le projet Android Studio dans le sous-dossier `mobile/`, configurer Gradle Kotlin DSL et déclarer les dépendances Compose et Retrofit.
-  - Sortie (1 seul livrable) : `mobile/app/build.gradle.kts`.
+  - Travail d'application sur le Blog : Initialiser le projet Android Studio dans le sous-dossier `src/mobile/`, configurer Gradle Kotlin DSL et déclarer les dépendances Compose et Retrofit.
+  - Sortie (1 seul livrable) : `src/mobile/app/build.gradle.kts`.
 
 ---
 
@@ -143,12 +143,12 @@ flowchart TD
     - Dispositions fondamentales : `Column`, `Row`, `Box`, `Scaffold` et listes recyclées `LazyColumn`.
     - Navigation multi-écrans avec `NavHost`, contrôleur `rememberNavController` et passage d'arguments d'articles.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/mobile/guide-jetpack-compose-navigation.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/mobile/presentation-jetpack-compose-navigation.md`.
+    - Guide explicatif détaillé : `tutoriels/mobile/jetpack-compose/jetpack-compose-navigation/jetpack-compose-navigation.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/mobile/jetpack-compose/jetpack-compose-navigation/presentation-jetpack-compose-navigation.md`.
 - **Étape 6 : Tutoriel-application : Concevoir les écrans Compose du Blog**
   - Entrées : Maquettes mobiles S7 et bibliothèque Compose.
   - Travail d'application sur le Blog : Implémenter les composants Compose pour la liste d'articles (`ArticleListScreen`) et la vue de détail (`ArticleDetailScreen`).
-  - Sortie (1 seul livrable) : `mobile/app/src/main/java/com/solicode/blog/ui/ArticleScreens.kt`.
+  - Sortie (1 seul livrable) : `src/mobile/app/src/main/java/com/solicode/blog/ui/ArticleScreens.kt`.
 
 ---
 
@@ -162,8 +162,8 @@ flowchart TD
     - Sérialisation et désérialisation automatique des modèles DTO Kotlin avec Moshi.
     - Architecture MVVM : séparation stricte entre le modèle de données, le `ArticleViewModel` et les vues Compose.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/mobile/guide-retrofit-mvvm-api.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/mobile/presentation-retrofit-mvvm-api.md`.
+    - Guide explicatif détaillé : `tutoriels/mobile/retrofit-mvvm/retrofit-mvvm-api/retrofit-mvvm-api.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/mobile/retrofit-mvvm/retrofit-mvvm-api/presentation-retrofit-mvvm-api.md`.
 - **Étape 8 : Tutoriel-application : Concevoir en détail et développer le client mobile Android**
   - Correspondance flux générique : Étape Générique 17 (Concevoir en détail et développer).
   - Entrées : Endpoints API Laravel 13 validés et composants Compose.
@@ -171,7 +171,7 @@ flowchart TD
     - *Projet d'Imitation :* Coder le client Retrofit, le repository de données, le `ArticleViewModel` et connecter l'affichage Compose aux données réelles servies par l'API Laravel 13 du Blog des Lauréats.
     - *Projet Technique (Codage pur - Jour 8) :* Coder l'application mobile Android vitrine de son portfolio sous Jetpack Compose (Épreuve de Live Coding de 40 min).
     - *Projet Fil Rouge (Jours 9-10) :* Créer le Skill `.agent/skills/jetpack-compose-generator/` pour automatiser la génération d'écrans Compose et services Retrofit.
-  - Sortie (1 seul livrable) : `mobile/app/src/main/java/com/solicode/blog/network/BlogApiService.kt`.
+  - Sortie (1 seul livrable) : `src/mobile/app/src/main/java/com/solicode/blog/network/BlogApiService.kt`.
 
 ---
 
@@ -187,7 +187,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 19 (Modéliser le User Flow et maquetter pour le Sprint suivant).
   - Entrées : Spécifications de déploiement et packaging.
   - Travail d'application : Modéliser le pipeline de déploiement continu et prototyper l'expérience installable NativePHP.
-  - Sortie (1 seul livrable) : `docs/design/maquettes-sprint-8.md`.
+  - Sortie (1 seul livrable) : `docs/conception/maquettes-sprint-8.md`.
 
 ---
 
@@ -198,7 +198,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 20 (Suivre l'avancement quotidien).
   - Entrées : Tableau Kanban du Sprint 7.
   - Travail d'application : Animer la réunion quotidienne debout de 15 minutes et synchroniser l'équipe.
-  - Sortie (1 seul livrable) : `issues/issues-sprint-7.md`.
+  - Sortie (1 seul livrable) : Mise à jour du suivi des tâches dans `sprints/sprint-7.md`.
 - **Étape 12 : Tester et valider l'Incrément (DoD)**
   - Correspondance flux générique : Étape Générique 21 (Tester et valider l'Incrément).
   - Entrées : Application mobile compilée (APK) et suite de tests instrumentés.
@@ -213,4 +213,4 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 23 (Améliorer le processus).
   - Entrées : Déroulement de la Review 7 et vécu d'équipe.
   - Travail d'application : Conduire l'analyse réflexive d'équipe, acter la réussite de l'extension mobile et préparer le sprint final de certification.
-  - Sortie (1 seul livrable) : `scrum/retrospective-s7.md`.
+  - Sortie (1 seul livrable) : `sprints/retrospective-7.md`.

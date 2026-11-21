@@ -103,7 +103,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 15 (Planifier le Sprint N).
   - Entrées : Product Backlog actualisé, retours de la Review 4 et actions de la Rétrospective S4.
   - Travail d'application sur le Blog : Chaque apprenant endosse le rôle de Product Owner pour son projet, définit le Sprint Goal S5 ("Transformer la consultation et le filtrage d'articles en une expérience Single Page Application fluide sous Alpine.js avec validation ergonomique par score SUS"), décompose les tâches et valide le Sprint Backlog S5.
-  - Sortie (1 seul livrable) : `scrum/sprint-backlog-s5.md`.
+  - Sortie (1 seul livrable) : `sprints/sprint-5.md`.
 - **Étape 2 : Préparer l'environnement de sprint (Branche Git et README.md)**
   - Correspondance flux générique : Étape Générique 16 (Préparer l'environnement de sprint).
   - Entrées : Sprint Backlog S5 validé et branche `main`.
@@ -122,12 +122,12 @@ flowchart TD
     - Grille standardisée des 10 questions du test SUS (alternance items positifs et négatifs).
     - Méthode de calcul du score normalisé sur 100 et interprétation ergonomique.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/design/guide-tests-utilisabilite-sus.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/design/presentation-tests-utilisabilite-sus.md`.
+    - Guide explicatif détaillé : `tutoriels/design/tests-utilisabilite/tests-utilisabilite-sus/tests-utilisabilite-sus.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/design/tests-utilisabilite/tests-utilisabilite-sus/presentation-tests-utilisabilite-sus.md`.
 - **Étape 4 : Tutoriel-application : Conduire la campagne de tests sur le Blog**
   - Entrées : Incrément logiciel disponible et formulaire SUS.
   - Travail d'application sur le Blog : Faire tester le Blog des Lauréats par 5 apprenants pairs, calculer le score SUS moyen et formaliser les recommandations ergonomiques.
-  - Sortie (1 seul livrable) : `docs/design/rapport-sus-blog.md`.
+  - Sortie (1 seul livrable) : `docs/conception/rapport-sus-blog.md`.
 
 ---
 
@@ -141,8 +141,8 @@ flowchart TD
     - Diagramme de séquence Mermaid représentant les requêtes AJAX `fetch()`, le statut HTTP 200 et les structures de réponse.
     - Formatage normalisé des erreurs asynchrones (status 422, payload JSON d'erreurs).
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/uml/guide-dto-json-mermaid.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/uml/presentation-dto-json-mermaid.md`.
+    - Guide explicatif détaillé : `tutoriels/uml/dto-json/dto-json-mermaid/dto-json-mermaid.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/uml/dto-json/dto-json-mermaid/presentation-dto-json-mermaid.md`.
 - **Étape 6 : Tutoriel-application : Modéliser les contrats API du Blog**
   - Entrées : Guide Mermaid et besoins de recherche dynamique.
   - Travail d'application sur le Blog : Modéliser le contrat de données DTO retourné par l'endpoint `/api/articles` et le diagramme de séquence des échanges asynchrones.
@@ -160,8 +160,8 @@ flowchart TD
     - Appels asynchrones avec `fetch()` vers les endpoints JSON Laravel avec gestion du statut de chargement (*loading state*).
     - Manipulation fluide du DOM et transition d'affichage avec les classes utilitaires Preline UI.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/laravel/guide-spa-alpine-preline.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/laravel/presentation-spa-alpine-preline.md`.
+    - Guide explicatif détaillé : `tutoriels/laravel/spa-alpine/spa-alpine-preline/spa-alpine-preline.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/laravel/spa-alpine/spa-alpine-preline/presentation-spa-alpine-preline.md`.
 - **Étape 8 : Tutoriel-application : Concevoir en détail et développer la SPA de consultation d'articles**
   - Correspondance flux générique : Étape Générique 17 (Concevoir en détail et développer).
   - Entrées : Spécifications, contrats DTO et compétences Alpine.js acquises.
@@ -169,7 +169,7 @@ flowchart TD
     - *Projet d'Imitation :* Coder l'endpoint JSON `/api/articles` avec filtrage par catégorie et mot-clé, et implémenter la vue SPA sous Alpine.js et Preline UI sans aucun rechargement de page.
     - *Projet Technique (Jour 8) :* Réaliser la conception préalable (contrat DTO et diagramme de séquence), puis dynamiser sous Alpine.js la galerie de réalisations de son portfolio personnel (Épreuve de Live Coding de 40 min).
     - *Projet Fil Rouge (Jours 9-10) :* Développer l'interface réactive SPA Alpine.js connectée aux endpoints REST sur l'application métier.
-  - Sortie (1 seul livrable) : `resources/views/articles/index-spa.blade.php`.
+  - Sortie (1 seul livrable) : `src/resources/views/articles/index-spa.blade.php`.
 
 ---
 
@@ -185,7 +185,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 19 (Modéliser le User Flow et maquetter pour le Sprint suivant).
   - Entrées : User Stories S6 et UI Kit Preline UI.
   - Travail d'application : Modéliser les parcours d'administration RBAC et prototyper les maquettes interactives associées.
-  - Sortie (1 seul livrable) : `docs/design/maquettes-sprint-6.md`.
+  - Sortie (1 seul livrable) : `docs/conception/maquettes-sprint-6.md`.
 
 ---
 
@@ -196,7 +196,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 20 (Suivre l'avancement quotidien).
   - Entrées : Tableau Kanban du Sprint 5.
   - Travail d'application : Animer la réunion debout quotidienne de 15 minutes et synchroniser l'équipe.
-  - Sortie (1 seul livrable) : `issues/issues-sprint-5.md`.
+  - Sortie (1 seul livrable) : Mise à jour du suivi des tâches dans `sprints/sprint-5.md`.
 - **Étape 12 : Tester et valider l'Incrément (DoD)**
   - Correspondance flux générique : Étape Générique 21 (Tester et valider l'Incrément).
   - Entrées : Code source complet et métriques de performance SPA.
@@ -211,4 +211,4 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 23 (Améliorer le processus).
   - Entrées : Déroulement de la Review 5 et vécu d'équipe.
   - Travail d'application : Conduire l'analyse réflexive d'équipe, acter l'excellence du ressenti utilisateur sous Alpine.js, et préparer l'implémentation de Spatie RBAC pour S6.
-  - Sortie (1 seul livrable) : `scrum/retrospective-s5.md`.
+  - Sortie (1 seul livrable) : `sprints/retrospective-5.md`.

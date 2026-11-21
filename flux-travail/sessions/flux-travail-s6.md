@@ -43,7 +43,7 @@ Il est structuré en **6 phases typées** (3 unités d'apprentissage **UA-Lab** 
 
 - **Contexte :** À partir du projet starter fourni (`dossier-depart/`), implémenter en 40 minutes selon le cycle strict TDD (test rouge d'abord, puis code de passage au vert) l'attribution d'un rôle d'administration et la protection d'une route sensible avec assertion de statut HTTP 403.
 - **Consignes opérationnelles :**
-  - Écrire le test d'autorisation dans `tests/Feature/AuthorizationTest.php` simulant un accès refusé sans permission et vérifiant le code HTTP 403.
+  - Écrire le test d'autorisation dans `src/tests/Feature/AuthorizationTest.php` simulant un accès refusé sans permission et vérifiant le code HTTP 403.
   - Exécuter le test pour constater l'échec (Red).
   - Installer ou configurer le middleware de permission Spatie sur la route.
   - Réexécuter le test jusqu'au passage complet au vert (Green), puis refactoriser.
@@ -105,7 +105,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 15 (Planifier le Sprint N).
   - Entrées : Product Backlog actualisé, retours de la Review 5 et actions de la Rétrospective S5.
   - Travail d'application sur le Blog : Définir le Sprint Goal S6 ("Sécuriser l'ensemble des fonctionnalités du Blog par la mise en place du contrôle d'accès Spatie RBAC sous une démarche TDD rigoureuse"), décomposer les tâches et valider le Sprint Backlog S6.
-  - Sortie (1 seul livrable) : `scrum/sprint-backlog-s6.md`.
+  - Sortie (1 seul livrable) : `sprints/sprint-6.md`.
 - **Étape 2 : Préparer l'environnement de sprint (Branche Git et README.md)**
   - Correspondance flux générique : Étape Générique 16 (Préparer l'environnement de sprint).
   - Entrées : Sprint Backlog S6 validé et branche `main`.
@@ -124,8 +124,8 @@ flowchart TD
     - Relations N-N entre rôles et permissions, et attribution de rôles aux utilisateurs.
     - Représentation Mermaid déclarative du métamodèle Spatie (`roles`, `permissions`, `model_has_roles`, `role_has_permissions`).
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/uml/guide-matrice-rbac-mermaid.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/uml/presentation-matrice-rbac-mermaid.md`.
+    - Guide explicatif détaillé : `tutoriels/uml/matrice-rbac/matrice-rbac-mermaid/matrice-rbac-mermaid.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/uml/matrice-rbac/matrice-rbac-mermaid/presentation-matrice-rbac-mermaid.md`.
 - **Étape 4 : Tutoriel-application : Modéliser les rôles et permissions du Blog**
   - Entrées : Spécifications des profils (Lecteur, Lauréat contributeur, Modérateur, Administrateur).
   - Travail d'application sur le Blog : Établir la matrice complète des droits et modéliser le schéma d'habilitation du Blog des Lauréats en syntaxe Mermaid.
@@ -144,12 +144,12 @@ flowchart TD
     - Middlewares de route : `role:admin`, `permission:publish articles`.
     - Directives Blade conditionnelles `@can`, `@cannot`, `@hasrole`.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/architecture/guide-spatie-permission.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/architecture/presentation-spatie-permission.md`.
+    - Guide explicatif détaillé : `tutoriels/architecture/spatie-permission/spatie-permission-seeder/spatie-permission-seeder.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/architecture/spatie-permission/spatie-permission-seeder/presentation-spatie-permission-seeder.md`.
 - **Étape 6 : Tutoriel-application : Déployer et configurer Spatie RBAC**
   - Entrées : Guide Spatie et matrice RBAC du Blog.
   - Travail d'application sur le Blog : Installer le package, exécuter les migrations MySQL, implémenter les seeders de rôles et rattacher le trait `HasRoles` au modèle `User`.
-  - Sortie (1 seul livrable) : `database/seeders/RoleAndPermissionSeeder.php`.
+  - Sortie (1 seul livrable) : `src/database/seeders/RoleAndPermissionSeeder.php`.
 
 ---
 
@@ -163,8 +163,8 @@ flowchart TD
     - Tests de fonctionnalités (*Feature Tests*) simulant des requêtes authentifiées avec différents rôles (`actingAs($user)`).
     - Assertions de sécurité : `assertForbidden()`, `assertUnauthorized()`, `assertSuccessful()`.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/laravel/guide-tdd-phpunit-red-green.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/laravel/presentation-tdd-phpunit-red-green.md`.
+    - Guide explicatif détaillé : `tutoriels/laravel/tdd-phpunit/tdd-phpunit-red-green/tdd-phpunit-red-green.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/laravel/tdd-phpunit/tdd-phpunit-red-green/presentation-tdd-phpunit-red-green.md`.
 - **Étape 8 : Tutoriel-application : Concevoir en détail et développer la sécurité en TDD**
   - Correspondance flux générique : Étape Générique 17 (Concevoir en détail et développer).
   - Entrées : Spécifications, package Spatie configuré et guide TDD.
@@ -172,7 +172,7 @@ flowchart TD
     - *Projet d'Imitation :* Coder en démarche TDD stricte l'ensemble des protections de routes et des actions d'administration du Blog des Lauréats avec 100% de tests au vert.
     - *Projet Technique (Codage pur - Jour 8) :* Implémenter en TDD sous PHPUnit les règles de sécurité de son portfolio personnel (Épreuve de Live Coding de 40 min).
     - *Projet Fil Rouge (Jours 9-10) :* Créer le Skill `.agent/skills/spatie-rbac-generator/` pour automatiser la génération de tests TDD et configurations RBAC.
-  - Sortie (1 seul livrable) : `tests/Feature/ArticleSecurityTest.php`.
+  - Sortie (1 seul livrable) : `src/tests/Feature/ArticleSecurityTest.php`.
 
 ---
 
@@ -188,7 +188,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 19 (Modéliser le User Flow et maquetter pour le Sprint suivant).
   - Entrées : User Stories S7 et contraintes ergonomiques mobiles.
   - Travail d'application : Modéliser le parcours mobile de consultation et prototyper les maquettes d'écrans pour smartphone.
-  - Sortie (1 seul livrable) : `docs/design/maquettes-sprint-7.md`.
+  - Sortie (1 seul livrable) : `docs/conception/maquettes-sprint-7.md`.
 
 ---
 
@@ -199,7 +199,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 20 (Suivre l'avancement quotidien).
   - Entrées : Tableau Kanban du Sprint 6.
   - Travail d'application : Animer la réunion debout quotidienne de 15 minutes et lever les blocages.
-  - Sortie (1 seul livrable) : `issues/issues-sprint-6.md`.
+  - Sortie (1 seul livrable) : Mise à jour du suivi des tâches dans `sprints/sprint-6.md`.
 - **Étape 12 : Tester et valider l'Incrément (DoD)**
   - Correspondance flux générique : Étape Générique 21 (Tester et valider l'Incrément).
   - Entrées : Code source complet et rapport d'exécution des tests TDD.
@@ -214,4 +214,4 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 23 (Améliorer le processus).
   - Entrées : Déroulement de la Review 6 et vécu d'équipe.
   - Travail d'application : Conduire l'analyse réflexive d'équipe, acter la maturité acquise en sécurité et préparer l'ouverture au développement mobile sous Kotlin.
-  - Sortie (1 seul livrable) : `scrum/retrospective-s6.md`.
+  - Sortie (1 seul livrable) : `sprints/retrospective-6.md`.

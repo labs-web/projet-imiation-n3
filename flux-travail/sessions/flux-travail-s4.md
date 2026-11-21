@@ -44,7 +44,7 @@ Il est structuré en **6 phases typées** (3 unités d'apprentissage **UA-Lab** 
 
 - **Contexte :** À partir du projet starter fourni (`dossier-depart/`), écrire en 40 minutes la classe de tests unitaire `ProjectServiceTest` validant l'ensemble des méthodes métier avec isolation des données.
 - **Consignes opérationnelles :**
-  - Créer le fichier de test unitaire dans `tests/Unit/Services/ProjectServiceTest.php`.
+  - Créer le fichier de test unitaire dans `src/tests/Unit/Services/ProjectServiceTest.php`.
   - Écrire 3 cas de test indépendants : cas nominal, cas de filtrage sans résultat, et cas d'erreur attendue avec assertion d'exception.
   - Exécuter la suite avec `php artisan test --filter ProjectServiceTest` et obtenir 100% de passage au vert.
 - **Critères d'évaluation :** Utilisation propre des assertions PHPUnit, isolation par transactions ou mocks, couverture des cas limites, code de test lisible.
@@ -105,7 +105,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 15 (Planifier le Sprint N).
   - Entrées : Product Backlog actualisé, retours de la Review 3 et actions de la Rétrospective S3.
   - Travail d'application sur le Blog : Chaque apprenant endosse le rôle de Product Owner pour son projet, définit le Sprint Goal S4 ("Sécuriser le cycle de vie des articles par middlewares et automatiser la suite de tests unitaires PHPUnit garantissant la non-régression"), décompose les tâches et valide le Sprint Backlog S4.
-  - Sortie (1 seul livrable) : `scrum/sprint-backlog-s4.md`.
+  - Sortie (1 seul livrable) : `sprints/sprint-4.md`.
 - **Étape 2 : Préparer l'environnement de sprint (Branche Git et README.md)**
   - Correspondance flux générique : Étape Générique 16 (Préparer l'environnement de sprint).
   - Entrées : Sprint Backlog S4 validé et branche `main`.
@@ -124,12 +124,12 @@ flowchart TD
     - Prototypage interactif : modales de confirmation, tiroirs coulissants (*drawers*) et alertes contextuelles.
     - Évaluation heuristique d'interface selon les critères de Bastien et Scapin.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/design/guide-prototypage-preline.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/design/presentation-prototypage-preline.md`.
+    - Guide explicatif détaillé : `tutoriels/design/prototypage/prototypage-preline/prototypage-preline.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/design/prototypage/prototypage-preline/presentation-prototypage-preline.md`.
 - **Étape 4 : Tutoriel-application : Prototyper les flux d'administration du Blog**
   - Entrées : User Stories d'administration et UI Kit Preline UI.
   - Travail d'application sur le Blog : Prototyper les flux de modération et de publication d'articles avec les composants interactifs Preline UI.
-  - Sortie (1 seul livrable) : `docs/design/prototypes-administration.md`.
+  - Sortie (1 seul livrable) : `docs/conception/prototypes-administration.md`.
 
 ---
 
@@ -143,8 +143,8 @@ flowchart TD
     - Gardes de transition et conditions logiques d'invalidation.
     - Syntaxe Mermaid `stateDiagram-v2` pour formaliser les changements de statuts.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/uml/guide-machines-etats-mermaid.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/uml/presentation-machines-etats-mermaid.md`.
+    - Guide explicatif détaillé : `tutoriels/uml/machines-etats/machines-etats-mermaid/machines-etats-mermaid.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/uml/machines-etats/machines-etats-mermaid/presentation-machines-etats-mermaid.md`.
 - **Étape 6 : Tutoriel-application : Modéliser le cycle de vie de publication d'un article**
   - Entrées : Règles métiers du Blog et guide Mermaid.
   - Travail d'application sur le Blog : Modéliser le diagramme d'états complet d'un article : `Brouillon` $\to$ `EnRelecture` $\to$ `Publie` $\to$ `Archive`.
@@ -163,8 +163,8 @@ flowchart TD
     - Assertions PHPUnit indispensables : `assertEquals`, `assertTrue`, `assertCount`, `expectException`.
     - Création et rattachement de middlewares HTTP personnalisés pour contrôler les statuts d'articles.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/laravel/guide-middlewares-tests-phpunit.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/laravel/presentation-middlewares-tests-phpunit.md`.
+    - Guide explicatif détaillé : `tutoriels/laravel/middlewares-tests/middlewares-tests-phpunit/middlewares-tests-phpunit.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/laravel/middlewares-tests/middlewares-tests-phpunit/presentation-middlewares-tests-phpunit.md`.
 - **Étape 8 : Tutoriel-application : Concevoir en détail et développer les tests unitaires et le middleware**
   - Correspondance flux générique : Étape Générique 17 (Concevoir en détail et développer).
   - Entrées : Spécifications, diagramme d'états et compétences PHPUnit acquises.
@@ -172,7 +172,7 @@ flowchart TD
     - *Projet d'Imitation :* Coder la suite de tests unitaires `ArticleServiceTest` couvrant 100% des méthodes de consultation, filtrage et transition d'états, et implémenter le middleware de contrôle des articles publiés.
     - *Projet Technique (Jour 8) :* Réaliser la conception préalable (diagramme d'états et plan de tests), puis coder et exécuter la suite de tests unitaires `ProjectServiceTest` sur son portfolio (Épreuve de Live Coding de 40 min).
     - *Projet Fil Rouge (Jours 9-10) :* Développer la suite de tests unitaires automatisés et middlewares sur l'application métier.
-  - Sortie (1 seul livrable) : `tests/Unit/Services/ArticleServiceTest.php`.
+  - Sortie (1 seul livrable) : `src/tests/Unit/Services/ArticleServiceTest.php`.
 
 ---
 
@@ -188,7 +188,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 19 (Modéliser le User Flow et maquetter pour le Sprint suivant).
   - Entrées : User Stories S5 et UI Kit Preline UI.
   - Travail d'application : Modéliser le parcours SPA sans rechargement et prototyper les maquettes interactives associées.
-  - Sortie (1 seul livrable) : `docs/design/maquettes-sprint-5.md`.
+  - Sortie (1 seul livrable) : `docs/conception/maquettes-sprint-5.md`.
 
 ---
 
@@ -199,7 +199,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 20 (Suivre l'avancement quotidien).
   - Entrées : Tableau Kanban du Sprint 4.
   - Travail d'application : Animer la réunion quotidienne debout de 15 minutes et synchroniser l'équipe.
-  - Sortie (1 seul livrable) : `issues/issues-sprint-4.md`.
+  - Sortie (1 seul livrable) : Mise à jour du suivi des tâches dans `sprints/sprint-4.md`.
 - **Étape 12 : Tester et valider l'Incrément (DoD)**
   - Correspondance flux générique : Étape Générique 21 (Tester et valider l'Incrément).
   - Entrées : Code source complet et rapport d'exécution des tests PHPUnit.
@@ -214,4 +214,4 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 23 (Améliorer le processus).
   - Entrées : Déroulement de la Review 4 et vécu d'équipe.
   - Travail d'application : Conduire l'analyse réflexive d'équipe, acter l'apport déterminant des tests automatisés, et planifier l'intégration d'Alpine.js pour S5.
-  - Sortie (1 seul livrable) : `scrum/retrospective-s4.md`.
+  - Sortie (1 seul livrable) : `sprints/retrospective-4.md`.

@@ -105,7 +105,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 15 (Planifier le Sprint N).
   - Entrées : Product Backlog actualisé, retours de la Review 1 et actions de la Rétrospective S1.
   - Travail d'application sur le Blog : Chaque apprenant endosse le rôle de Product Owner pour son projet, définit le Sprint Goal S2 ("Déployer la page d'accueil dynamique avec mise en avant des 6 derniers articles et gestion administrable des catégories sous MySQL"), décompose les User Stories en tâches techniques et valide le Sprint Backlog S2.
-  - Sortie (1 seul livrable) : `scrum/sprint-backlog-s2.md`.
+  - Sortie (1 seul livrable) : `sprints/sprint-2.md`.
 - **Étape 2 : Préparer l'environnement de sprint (Branche Git et README.md)**
   - Correspondance flux générique : Étape Générique 16 (Préparer l'environnement de sprint).
   - Entrées : Sprint Backlog S2 validé et branche `main`.
@@ -124,8 +124,8 @@ flowchart TD
     - Carte d'empathie à 4 quadrants (Ce qu'il Dit, Fait, Pense, Ressent).
     - Identification des frustrations critiques et des leviers de satisfaction.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/design/guide-empathie-approfondie.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/design/presentation-empathie-approfondie.md`.
+    - Guide explicatif détaillé : `tutoriels/design/empathie/empathie-approfondie/empathie-approfondie.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/design/empathie/empathie-approfondie/presentation-empathie-approfondie.md`.
 - **Étape 4 : Tutoriel-application : Établir la carte d'empathie et affiner les Personas du Blog**
   - Entrées : Retours utilisateurs de la Review 1 et guide d'empathie.
   - Travail d'application sur le Blog : Réaliser les cartes d'empathie des profils Lauréat et Lecteur, et actualiser les fiches Personas avec des scénarios d'usage sur la page d'accueil.
@@ -143,8 +143,8 @@ flowchart TD
     - Associations simples, multiplicités (`1..*`, `0..1`), agrégations et compositions.
     - Syntaxe Mermaid `classDiagram` : attributs typés, visibilité (`+`, `-`, `#`) et relations.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/uml/guide-classes-domaine-pur.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/uml/presentation-classes-domaine-pur.md`.
+    - Guide explicatif détaillé : `tutoriels/uml/classes-domaine/classes-domaine-pur/classes-domaine-pur.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/uml/classes-domaine/classes-domaine-pur/presentation-classes-domaine-pur.md`.
 - **Étape 6 : Tutoriel-application : Modéliser les classes du domaine et les Use Cases de filtrage**
   - Entrées : Guide Mermaid et vision produit actualisée.
   - Travail d'application sur le Blog : Modéliser le diagramme de classes du domaine pour les entités `Article`, `Category`, `User`, et formaliser les Use Cases de recherche et de filtrage.
@@ -162,8 +162,8 @@ flowchart TD
     - Requêtes Eloquent avec contraintes de sélection, tri (`orderByDesc`), limitations (`take(6)`) et pagination.
     - Élaboration d'un CRUD complet (Create, Read, Update, Delete) avec contrôleur dédié, FormRequest de validation et composants Preline UI.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/laravel/guide-crud-categories-mysql.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/laravel/presentation-crud-categories-mysql.md`.
+    - Guide explicatif détaillé : `tutoriels/laravel/crud-categories/crud-categories-mysql/crud-categories-mysql.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/laravel/crud-categories/crud-categories-mysql/presentation-crud-categories-mysql.md`.
 - **Étape 8 : Tutoriel-application : Concevoir en détail et développer la page d'accueil dynamique**
   - Correspondance flux générique : Étape Générique 17 (Concevoir en détail et développer).
   - Entrées : Compétences acquises, classes du domaine et maquettes S2.
@@ -171,7 +171,7 @@ flowchart TD
     - *Projet d'Imitation :* Coder le contrôleur `HomeController`, le contrôleur `CategoryController`, le service métier étendu, les migrations MySQL des catégories, et la vue d'accueil responsive sous Preline UI avec affichage dynamique des 6 derniers articles.
     - *Projet Technique (Jour 8) :* Réaliser la conception préalable (diagramme de classes et ADR express), puis coder le CRUD compétences et la page d'accueil de son portfolio personnel (Épreuve de Live Coding de 40 min).
     - *Projet Fil Rouge (Jours 9-10) :* Développer le CRUD de classification d'entités avec modèle Eloquent et MySQL sur l'application métier.
-  - Sortie (1 seul livrable) : `app/Http/Controllers/HomeController.php`.
+  - Sortie (1 seul livrable) : `src/app/Http/Controllers/HomeController.php`.
 
 ---
 
@@ -187,7 +187,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 19 (Modéliser le User Flow et maquetter pour le Sprint suivant).
   - Entrées : User Stories raffinées pour S3 et UI Kit Preline UI.
   - Travail d'application : Modéliser le flux utilisateur de publication d'article et prototyper les maquettes interactives S3.
-  - Sortie (1 seul livrable) : `docs/design/maquettes-sprint-3.md`.
+  - Sortie (1 seul livrable) : `docs/conception/maquettes-sprint-3.md`.
 
 ---
 
@@ -198,7 +198,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 20 (Suivre l'avancement quotidien).
   - Entrées : Tableau Kanban du Sprint 2.
   - Travail d'application : Animer la réunion debout quotidienne de 15 minutes et lever les blocages.
-  - Sortie (1 seul livrable) : `issues/issues-sprint-2.md`.
+  - Sortie (1 seul livrable) : Mise à jour du suivi des tâches dans `sprints/sprint-2.md`.
 - **Étape 12 : Tester et valider l'Incrément (DoD)**
   - Correspondance flux générique : Étape Générique 21 (Tester et valider l'Incrément).
   - Entrées : Code source du Blog et checklist des 7 critères de la DoD.
@@ -213,4 +213,4 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 23 (Améliorer le processus).
   - Entrées : Déroulement de la Review 2 et vécu d'équipe.
   - Travail d'application : Conduire l'analyse réflexive, constater l'efficacité de la levée de la dette d'empathie, et formaliser 2 axes d'amélioration pour S3.
-  - Sortie (1 seul livrable) : `scrum/retrospective-s2.md`.
+  - Sortie (1 seul livrable) : `sprints/retrospective-2.md`.

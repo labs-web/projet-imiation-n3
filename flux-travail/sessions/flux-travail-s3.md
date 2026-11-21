@@ -106,7 +106,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 15 (Planifier le Sprint N).
   - Entrées : Product Backlog actualisé, retours de la Review 2 et actions de la Rétrospective S2.
   - Travail d'application sur le Blog : Chaque apprenant endosse le rôle de Product Owner pour son projet, définit le Sprint Goal S3 ("Permettre aux lauréats d'ajouter et d'éditer des articles enrichis avec catégories, tags multiples et sécurité granulaire par Policies/Gates"), décompose les tâches et valide le Sprint Backlog S3.
-  - Sortie (1 seul livrable) : `scrum/sprint-backlog-s3.md`.
+  - Sortie (1 seul livrable) : `sprints/sprint-3.md`.
 - **Étape 2 : Préparer l'environnement de sprint (Branche Git et README.md)**
   - Correspondance flux générique : Étape Générique 16 (Préparer l'environnement de sprint).
   - Entrées : Sprint Backlog S3 validé et branche `main`.
@@ -125,8 +125,8 @@ flowchart TD
     - Déclinaison en questions stimulantes "How Might We" (HMW - Comment pourrions-nous).
     - Animation d'un atelier d'idéation : brainstorming structuré, matrice faisabilité/impact.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/design/guide-ideation-pov-hmw.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/design/presentation-ideation-pov-hmw.md`.
+    - Guide explicatif détaillé : `tutoriels/design/ideation/ideation-pov-hmw/ideation-pov-hmw.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/design/ideation/ideation-pov-hmw/presentation-ideation-pov-hmw.md`.
 - **Étape 4 : Tutoriel-application : Formuler les POV/HMW et animer l'idéation pour la publication**
   - Entrées : Personas du Blog et retours d'utilisation.
   - Travail d'application sur le Blog : Rédiger le POV de l'auteur lauréat, formuler les axes HMW pour simplifier la saisie d'articles, et sélectionner les fonctionnalités d'édition prioritaires.
@@ -144,8 +144,8 @@ flowchart TD
     - Clés primaires composites et clés étrangères avec contraintes d'intégrité référentielle en cascade (`onDelete('cascade')`).
     - Syntaxe déclarative Mermaid pour représenter les entités `Article`, `Tag` et la table pivot `article_tag`.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/uml/guide-many-to-many-mermaid.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/uml/presentation-many-to-many-mermaid.md`.
+    - Guide explicatif détaillé : `tutoriels/uml/relations-many-to-many/many-to-many-mermaid/many-to-many-mermaid.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/uml/relations-many-to-many/many-to-many-mermaid/presentation-many-to-many-mermaid.md`.
 - **Étape 6 : Tutoriel-application : Modéliser le schéma relationnel Articles-Tags**
   - Entrées : Spécifications du Blog et guide Mermaid.
   - Travail d'application sur le Blog : Modéliser le schéma entité-association complet du Blog intégrant les articles, catégories, auteurs et tags avec la table pivot `article_tag`.
@@ -164,8 +164,8 @@ flowchart TD
     - Déclaration des relations Eloquent : `belongsTo(Category::class)`, `belongsToMany(Tag::class)`.
     - Méthodes de synchronisation de relations N-N : `attach()`, `detach()`, `sync()`.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/laravel/guide-formrequest-policies-eloquent.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/laravel/presentation-formrequest-policies-eloquent.md`.
+    - Guide explicatif détaillé : `tutoriels/laravel/formrequest-policies/formrequest-policies-eloquent/formrequest-policies-eloquent.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/laravel/formrequest-policies/formrequest-policies-eloquent/presentation-formrequest-policies-eloquent.md`.
 - **Étape 8 : Tutoriel-application : Concevoir en détail et développer la création sécurisée d'articles**
   - Correspondance flux générique : Étape Générique 17 (Concevoir en détail et développer).
   - Entrées : Notions acquises, modèle relationnel et maquettes validées.
@@ -173,7 +173,7 @@ flowchart TD
     - *Projet d'Imitation :* Coder la migration `article_tag`, les relations Eloquent dans `Article` et `Tag`, la classe `StoreArticleRequest`, la politique de sécurité `ArticlePolicy`, et le formulaire Blade sous Preline UI avec sélection multiple de tags.
     - *Projet Technique (Jour 8) :* Réaliser la conception préalable (schéma Many-to-Many et ADR), puis coder la validation `ProjectRequest`, la Gate `manage-projects` et les relations Many-to-Many Technologies sur son portfolio (Épreuve de Live Coding de 40 min).
     - *Projet Fil Rouge (Jours 9-10) :* Développer les relations complexes et contrôles de sécurité avec persistance MySQL sur l'application métier.
-  - Sortie (1 seul livrable) : `app/Http/Requests/StoreArticleRequest.php`.
+  - Sortie (1 seul livrable) : `src/app/Http/Requests/StoreArticleRequest.php`.
 
 ---
 
@@ -189,7 +189,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 19 (Modéliser le User Flow et maquetter pour le Sprint suivant).
   - Entrées : User Stories raffinées pour S4 et UI Kit Preline UI.
   - Travail d'application : Modéliser en syntaxe Mermaid les parcours de modération et prototyper les maquettes interactives S4.
-  - Sortie (1 seul livrable) : `docs/design/maquettes-sprint-4.md`.
+  - Sortie (1 seul livrable) : `docs/conception/maquettes-sprint-4.md`.
 
 ---
 
@@ -200,7 +200,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 20 (Suivre l'avancement quotidien).
   - Entrées : Tableau Kanban du Sprint 3.
   - Travail d'application : Animer la réunion quotidienne debout de 15 minutes et lever les blocages techniques.
-  - Sortie (1 seul livrable) : `issues/issues-sprint-3.md`.
+  - Sortie (1 seul livrable) : Mise à jour du suivi des tâches dans `sprints/sprint-3.md`.
 - **Étape 12 : Tester et valider l'Incrément (DoD)**
   - Correspondance flux générique : Étape Générique 21 (Tester et valider l'Incrément).
   - Entrées : Code source complet et critères de la Definition of Done.
@@ -215,4 +215,4 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 23 (Améliorer le processus).
   - Entrées : Déroulement de la Review 3 et vécu d'équipe.
   - Travail d'application : Conduire l'analyse réflexive d'équipe, acter la nécessité d'automatiser des tests de régression, et planifier l'introduction de PHPUnit au Sprint 4.
-  - Sortie (1 seul livrable) : `scrum/retrospective-s3.md`.
+  - Sortie (1 seul livrable) : `sprints/retrospective-3.md`.

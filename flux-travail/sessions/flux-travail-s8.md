@@ -90,7 +90,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 15 (Planifier le Sprint N).
   - Entrées : Product Backlog actualisé, retours de la Review 7 et jalons de certification.
   - Travail d'application sur le Blog : Définir le Sprint Goal S8 ("Assurer la portabilité multiplateforme du Blog sous NativePHP, valider la recette globale, déployer en production sur serveur distant et réussir la soutenance professionnelle N3"), décomposer les tâches et valider le Sprint Backlog S8.
-  - Sortie (1 seul livrable) : `scrum/sprint-backlog-s8.md`.
+  - Sortie (1 seul livrable) : `sprints/sprint-8.md`.
 - **Étape 2 : Préparer l'environnement de sprint (Branche Git et README.md)**
   - Correspondance flux générique : Étape Générique 16 (Préparer l'environnement de sprint).
   - Entrées : Sprint Backlog S8 validé et branche `main`.
@@ -110,8 +110,8 @@ flowchart TD
     - APIs natives : notifications système, gestion des fenêtres et barres de menus.
     - Compilation de binaires installables avec `php artisan native:build`.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/laravel/guide-nativephp-packaging.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/laravel/presentation-nativephp-packaging.md`.
+    - Guide explicatif détaillé : `tutoriels/laravel/nativephp/nativephp-packaging/nativephp-packaging.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/laravel/nativephp/nativephp-packaging/presentation-nativephp-packaging.md`.
 - **Étape 4 : Tutoriel-application : Packager et compiler le Blog sous NativePHP**
   - Correspondance flux générique : Étape Générique 17 (Concevoir en détail et développer).
   - Entrées : Code source complet du Blog des Lauréats et guide NativePHP.
@@ -119,7 +119,7 @@ flowchart TD
     - *Projet d'Imitation :* Packager le Blog des Lauréats sous NativePHP, implémenter les notifications natives lors de nouveaux articles et compiler le binaire autonome.
     - *Projet Technique (Codage pur - Jour 8) :* Packager son portfolio personnel sous NativePHP avec notifications natives et stockage SQLite (Épreuve de Live Coding de 40 min).
     - *Projet Fil Rouge (Jours 9-10) :* Créer le Skill `.agent/skills/nativephp-packager/` pour automatiser la configuration et la compilation multiplateforme.
-  - Sortie (1 seul livrable) : `config/nativephp.php`.
+  - Sortie (1 seul livrable) : `src/config/nativephp.php`.
 
 ---
 
@@ -134,8 +134,8 @@ flowchart TD
     - Procédures de migration de base de données en production avec zéro interruption de service (*Zero-Downtime Deployment*).
     - Configuration HTTPS, certificats SSL et surveillance des logs applicatifs.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/devops/guide-recette-deploiement-prod.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/devops/presentation-recette-deploiement-prod.md`.
+    - Guide explicatif détaillé : `tutoriels/devops/recette-deploiement/recette-deploiement-prod/recette-deploiement-prod.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/devops/recette-deploiement/recette-deploiement-prod/presentation-recette-deploiement-prod.md`.
 - **Étape 6 : Tutoriel-application : Déployer et valider la solution en production**
   - Correspondance flux générique : Étape Générique 24 (Déployer en production et valider en conditions réelles).
   - Entrées : Application packagée, cahier de recette et serveur de production.
