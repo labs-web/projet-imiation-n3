@@ -1,6 +1,6 @@
 # Règles Partagées de Synchronisation Inter-Agents (rules-sync.md)
 
-Ce document définit les règles normatives de synchronisation et de versioning entre l'Agent Projet (`projet-imiation-n3`) et l'Agent Autoformation (`autoformations-professionaliser`).
+Ce document définit les règles normatives de synchronisation et de versioning entre l'Agent Projet (`projet-imiation-n3`) et l'Agent Autoformation (`autoformations-professionaliser`) pour l'**EFP (Établissement de Formation Professionnelle)**.
 
 ---
 
@@ -11,10 +11,11 @@ Ce document définit les règles normatives de synchronisation et de versioning 
 > L'Agent Autoformation est l'autorité normative qui définit de façon stricte la structure, le formatage et l'arborescence de tous les livrables du cursus à travers les documents de référence normatifs colocalisés :  
 > - `.agents/rules/persona.md` (identité officielle de l'**Agent Réalisation de Sprint**)  
 > - `.agents/references/organisation-livrables.md` (arborescence universelle du poste apprenant)  
-> - `.agents/references/typologie-uas-tutoriels.md` (catégories d'UAs et slugs des tutoriels)  
+> - `.agents/references/typologie-uas-tutoriels.md` (échelle de maturité et typologie des tutoriels)  
+> - `.agents/references/maturation-ua-labs.md` (cycle de maturation des ateliers de `lab` à `ua-lab`)  
 > - `.agents/references/gitflow.md` (stratégie des branches et conventions de commits)  
-> - **Livrables d'apprentissage (`tuto-lab`, `tuto-notion`, `tuto-code`) :** Logés impérativement sous `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` (seul `tutoriels/README.md` existe, aucun `README.md` unitaire).  
-> - **Livrables opérationnels de projet (`tuto-tache`) :** Logés sous les répertoires officiels (`README.md`, `sprints/`, `scrum/`, `docs/cadrage/`, `docs/analyse/`, `docs/produit/`, `docs/conception/`). Aucun journal CLI `.command.md` requis.  
+> - **Livrables d'apprentissage (`tuto-atelier`, `tuto-notion`, `tuto-code`) :** Logés impérativement sous `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` (seul `tutoriels/README.md` existe, aucun `README.md` unitaire).  
+> - **Livrables opérationnels de projet (`tuto-tache`) :** Logés sous les répertoires officiels (`README.md`, `sprints/`, `scrum/`, `docs/cadrage/`, `docs/conception/`, `docs/produit/`). Aucun journal CLI `.command.md` requis.  
 > **L'Agent Réalisation de Sprint s'adapte obligatoirement à cette nomenclature canonique et ne peut inventer d'arborescences divergentes.**
 
 ---
@@ -22,14 +23,16 @@ Ce document définit les règles normatives de synchronisation et de versioning 
 ## 2. Rôles et Responsabilités
 
 - **Agent Réalisation de Sprint (`realisation-sprint`, projet cible)** :
-  - Incarne l'apprenant type de Solicode qui suit la formation (tous niveaux N1, N2, N3).
+  - Incarne l'apprenant type de l'EFP qui suit la formation (tous niveaux N1, N2, N3).
   - Développe le code applicatif (`src/`), produit les artéfacts opérationnels et les livrables attendus selon la nomenclature imposée par l'Agent Autoformation.
+  - Pour les tutoriels de type `tuto-atelier`, intervient sur la fiche publiée en maturité `lab` (**sans notions détaillées**) pour mener la recherche active, concevoir le diaporama Marp et consigner les commandes exécutées.
   - Maintient l'arborescence miroir des versions exclusivement dans le dossier `.sync/`.
   - Ne committe ni ne pousse jamais de façon autonome (souveraineté de l'apprenant).
   - Notifie la réalisation d'un tutoriel dans le front-matter du tutoriel source (`_tutos/`) avec le statut `realise` et la liste des livrables et versions.
 - **Agent Autoformation (`autoformations-professionaliser`)** :
   - Conçoit le cadre didactique (`_sessions/`, `_uas/`, `_tutos/`).
-  - Audite le dossier `.sync/` du projet d'imitation, compare les numéros de version déclarés et synchronise le contenu réel vers Jekyll en basculant le statut à `synchronise`.
+  - Audite le dossier `.sync/` du projet d'imitation, compare les numéros de version déclarés.
+  - Pour un `tuto-atelier`, audite la qualité des livrables réels : bascule la fiche de `maturite: "lab"` à `maturite: "ua-lab"`, injecte les notions fondamentales en détail, spécifie le plan d'UA-Lab dans le référentiel EFP et passe le statut à `synchronise`.
 
 ---
 
@@ -54,17 +57,12 @@ Ce document définit les règles normatives de synchronisation et de versioning 
 
 ```yaml
 sprint: "sprint0"
-statut_realisation: "realise"
+maturite: "ua-lab"
+type: "tuto-atelier"
+statut_realisation: "synchronise"
 livrables:
   - chemin: "tutoriels/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md"
     version: "1.0.0"
   - chemin: "tutoriels/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md"
     version: "1.0.0"
 ```
-
----
-
-## 5. Principe d'Adaptation Mutuelle
-
-- Si un livrable est incomplet ou décalé, l'Agent Projet adapte son fichier pour respecter les standards édictés par l'Agent Autoformation.
-- Si le projet réel valide une amélioration technique pertinente, l'Agent Autoformation met à jour le tutoriel de référence dans `_tutos/`.
