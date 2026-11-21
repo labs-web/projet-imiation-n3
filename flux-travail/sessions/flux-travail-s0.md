@@ -130,7 +130,7 @@ flowchart TD
     - Les piliers de Scrum : Transparence, Inspection, Adaptation.
     - Les 3 rôles Scrum : Product Owner, Scrum Master, Développeurs.
     - Les 5 événements et 3 artéfacts avec leurs engagements respectifs.
-  - Livrables disponibles (2 livrables) :
+  - Livrables à donner par l'apprenant (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md`.
 - **Étape 2 : Tutoriel-lab : Définir la vision produit et exprimer les besoins en User Stories**
@@ -141,7 +141,7 @@ flowchart TD
     - Structure sémantique d'une User Story : « En tant que... je veux... afin de... ».
     - Les critères de qualité INVEST (Indépendante, Négociable, Valeur, Estimable, Suffisamment petite, Testable).
     - Définition des critères d'acceptation opérationnels.
-  - Livrables disponibles (2 livrables) :
+  - Livrables à donner par l'apprenant (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/scrum/initiation-scrum/vision-besoins/vision-besoins.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/scrum/initiation-scrum/vision-besoins/presentation-vision-besoins.md`.
 - **Étape 3 : Tutoriel-lab : Créer, estimer et ordonner le Product Backlog**
@@ -152,7 +152,7 @@ flowchart TD
     - Techniques d'estimation agile relative (Story Points, suite de Fibonacci, Planning Poker).
     - Méthodes d'ordonnancement et priorisation : méthode MoSCoW (Must, Should, Could, Won't) et valeur métier.
     - Notions d'affinement du backlog (Backlog Refinement / Grooming).
-  - Livrables disponibles (2 livrables) :
+  - Livrables à donner par l'apprenant (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/scrum/initiation-scrum/product-backlog/product-backlog.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/scrum/initiation-scrum/product-backlog/presentation-product-backlog.md`.
 - **Étape 4 : Tutoriel-lab : Planifier, découper et piloter un Sprint de développement**
@@ -163,7 +163,7 @@ flowchart TD
     - Formulation de l'objectif de sprint (Sprint Goal) et engagement sur le Sprint Backlog.
     - Découpage des User Stories en tâches techniques d'ingénierie logicielle (timebox $\le$ 8h).
     - Animation du Daily Scrum (15 min chrono, 3 questions) et suivi d'avancement par Burndown chart.
-  - Livrables disponibles (2 livrables) :
+  - Livrables à donner par l'apprenant (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/scrum/initiation-scrum/sprint-planning-execution/sprint-planning-execution.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/scrum/initiation-scrum/sprint-planning-execution/presentation-sprint-planning-execution.md`.
 - **Étape 5 : Tutoriel-lab : Valider l'incrément, animer la Sprint Review et la Rétrospective**
@@ -173,7 +173,7 @@ flowchart TD
     - Rôle et animation de la Sprint Review : démonstration concrète devant le Product Owner et recueil de feedback.
     - Audit strict des critères de la Definition of Done (DoD) et arbitrage formel Go/No-Go.
     - Cérémonie de Rétrospective de Sprint : analyse réflexive (Ce qui a fonctionné, axes d'amélioration) et plan d'action immédiat.
-  - Livrables disponibles (2 livrables) :
+  - Livrables à donner par l'apprenant (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/scrum/initiation-scrum/revue-retrospective/revue-retrospective.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/scrum/initiation-scrum/revue-retrospective/presentation-revue-retrospective.md`.
 
@@ -199,7 +199,7 @@ flowchart TD
     - Les 5 étapes itératives du Design Thinking : Empathie, Définition, Idéation, Prototypage, Test.
     - Modèle du Double Diamant : divergence (explorer largement) et convergence (cibler et synthétiser).
     - Justification du choix de la Todo List comme cas d'étude d'apprentissage méthodologique.
-  - Sorties attendues de l'atelier d'apprentissage (2 livrables) :
+  - Livrables à donner par l'apprenant (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/design/design-thinking/demarche-design-thinking/demarche-design-thinking.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/design/design-thinking/demarche-design-thinking/presentation-demarche-design-thinking.md`.
 - **Étape 7 : Tutoriel-lab : Démarche d'Empathie et ses outils d'immersion**
@@ -211,7 +211,7 @@ flowchart TD
     - Outils d'immersion : observation directe du comportement, entretiens semi-directifs et grille de questionnement.
     - Élaboration de la Carte d'Empathie à 4 quadrants (Ce qu'il Dit, Fait, Pense, Ressent) appliquée à un utilisateur surchargé de tâches.
     - Identification des points de douleur (*pains*) et bénéfices recherchés (*gains*).
-  - Sorties attendues de l'atelier d'apprentissage (2 livrables) :
+  - Livrables à donner par l'apprenant (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/design/design-thinking/immersion-empathie/immersion-empathie.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/design/design-thinking/immersion-empathie/presentation-immersion-empathie.md`.
 - **Étape 8 : Tutoriel-lab : L'Outil Persona et exemple appliqué**
@@ -222,7 +222,7 @@ flowchart TD
     - Définition et utilité d'un Persona comme archétype cible pour aligner les décisions produit.
     - Structure modulaire d'une fiche Persona : identité, portrait psychologique, objectifs, freins majeurs, citation représentative.
     - Exemple complet et détaillé appliqué au cas de la Todo List (*ex : Julien, 24 ans, apprenant submergé par la dispersion des priorités*).
-  - Sorties attendues de l'atelier d'apprentissage (2 livrables) :
+  - Livrables à donner par l'apprenant (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/design/design-thinking/empathie-personas/empathie-personas.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/design/design-thinking/empathie-personas/presentation-empathie-personas.md`.
 
@@ -239,7 +239,7 @@ flowchart TD
     - Cartographie visuelle d'un parcours utilisateur écran par écran (User Flow).
     - Syntaxe déclarative textuelle (au moyen de l'outil Mermaid `flowchart`) : nœuds rectangulaires, décisions en losange, sous-graphes et connecteurs annotés.
     - Traçabilité et versioning du design sous Git grâce aux fichiers textes `.mmd`.
-  - Sorties attendues de l'atelier d'apprentissage (2 livrables) :
+  - Livrables à donner par l'apprenant (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/design/parcours-utilisateur/user-flow/user-flow.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/design/parcours-utilisateur/user-flow/presentation-user-flow.md`.
 - **Étape 10 : Tutoriel-lab : Prototypage d'interface et conception de l'UI Kit**
@@ -250,7 +250,7 @@ flowchart TD
     - Définition d'un système de conception modulaire (Design System et UI Kit).
     - Palette de couleurs sémantiques, hiérarchie typographique et espacements standardisés sous Tailwind CSS.
     - Sélection et intégration de composants d'accueil Preline UI : Navbar, Hero section, Card article, Footer, Badges.
-  - Sorties attendues de l'atelier d'apprentissage (2 livrables) :
+  - Livrables à donner par l'apprenant (2 livrables) :
     - Guide explicatif détaillé : `tutoriels/design/prototypage-ui-kit/prototypage-ui-kit.md`.
     - Support de présentation au format Marp Markdown : `tutoriels/design/prototypage-ui-kit/presentation-prototypage-ui-kit.md`.
 
