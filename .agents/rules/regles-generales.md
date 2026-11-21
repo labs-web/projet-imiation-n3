@@ -19,7 +19,7 @@ Ces règles s'appliquent de manière générique à tous les fichiers et toutes 
 ## 2. Formatage Markdown
 
 - **Format sans tableau (Facilité d'édition par l'apprenant)** :
-  - Interdiction formelle d'utiliser des tableaux Markdown (`| ... | ... |`).
+  - Interdiction formelle d'utiliser des tableaux Markdown (syntaxe avec barres verticales).
   - Utiliser exclusivement des listes à puces (`- `) à la place des tableaux.
   - Raison : Les listes sont faciles à lire et rapides à modifier pour un apprenant sur tout support.
 
