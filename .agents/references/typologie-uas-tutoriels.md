@@ -1,3 +1,8 @@
+---
+version: "1.0.0"
+description: "Typologie des tutoriels didactiques (tuto-atelier, tuto-notion, tuto-code, tuto-tache), livrables attendus, exigences Marp et journaux CLI."
+---
+
 # Typologie des Tutoriels et Échelle de Maturité de l'EFP
 
 ## 1. Principes Directeurs
@@ -15,28 +20,26 @@ Ce document définit les normes fondamentales d'ingénierie pédagogique de l'**
 
 $$\text{veille} \longrightarrow \text{lab} \longrightarrow \text{ua-lab} \longrightarrow \text{tutoriel} \quad (+\; \text{projet})$$
 
-| Slug Maturité | Intitulé Didactique | Définition & Rôle dans le Cursus EFP |
-| :--- | :--- | :--- |
-| **`veille`** | Veille Technologique | Recherche exploratoire, prospective et état de l'art sans formalisation d'atelier. |
-| **`lab`** | Atelier d'Expérimentation Pratique | Atelier actif guidé où l'apprenant mène l'investigation. **On ne donne PAS les notions de base en détail**, mais uniquement le travail à faire, les compétences à acquérir et les pistes de recherche. |
-| **`ua-lab`** | Unité d'Atelier Validée & Intégrée | **Lab réalisé, validé sur le terrain et officiellement intégré au référentiel de compétences de l'EFP**. Le plan d'UA-Lab est spécifié et **les notions de base sont données en détail** (« Notions fondamentales » consolidées). |
-| **`tutoriel`** | Standardisation Industrielle | Apprentissage guidé pas-à-pas, déterministe ($E_{n-1} \to E_n$) de code applicatif ou de syntaxe isolée. |
-| **`projet`** | Ingénierie Opérationnelle | Réalisation de sprint Scrum, cadrage, backlog et cérémonies agiles (**0% théorie**). |
+- **`veille` (Veille Technologique) :** Recherche exploratoire, prospective et état de l'art sans formalisation d'atelier.
+- **`lab` (Atelier d'Expérimentation Pratique) :** Atelier actif guidé où l'apprenant mène l'investigation. **On ne donne PAS les notions de base en détail**, mais uniquement le travail à faire, les compétences à acquérir et les pistes de recherche.
+- **`ua-lab` (Unité d'Atelier Validée & Intégrée) :** **Lab réalisé, validé sur le terrain et officiellement intégré au référentiel de compétences de l'EFP**. Le plan d'UA-Lab est spécifié et **les notions de base sont données en détail** (« Notions fondamentales » consolidées).
+- **`tutoriel` (Standardisation Industrielle) :** Apprentissage guidé pas-à-pas, déterministe ($E_{n-1} \to E_n$) de code applicatif ou de syntaxe isolée.
+- **`projet` (Ingénierie Opérationnelle) :** Réalisation de sprint Scrum, cadrage, backlog et cérémonies agiles (**0% théorie**).
 
 ---
 
 ## 3. Typologie des Tutoriels (Préfixe Canonique `tuto-*`)
 
 ### A. `tuto-atelier` — Atelier Pratique Guidé (Maturités `lab` et `ua-lab`)
-- **Finalité :** Assimilation collective et guidée d'un domaine ou d'une compétence nouvelle (Design Thinking, Scrum méthodologique, Modélisation UML, Architecture, Outillage IA).
+- **Finalité :** Assimilation collective et guidée d'un domaine ou d'une compétence nouvelle (Design Thinking, Scrum méthodologique, Modélisation UML, Architecture).
 - **Cycle de maturation :**
   - En `maturite: "lab"` : Travail à faire + Ce que l'apprenant doit apprendre, **SANS notions de base en détail**.
   - En `maturite: "ua-lab"` : Lab validé et intégré au référentiel EFP, **AVEC notions de base données en détail**.
 - **Livrables attendus (dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`) :**
-  1. Fiche technique d'atelier : `[slug-tuto].md`.
-  2. Diaporama Marp de restitution : `presentation-[slug-tuto].md` (**exclusif au format atelier**).
-  3. Journal des commandes CLI : `[slug-tuto].command.md` (si des commandes terminal ont été exécutées).
-  4. Fichiers de code ou manifestes d'atelier exploratoire (dans le même dossier unitaire).
+  - Fiche technique d'atelier : `[slug-tuto].md`.
+  - Diaporama Marp de restitution : `presentation-[slug-tuto].md` (**exclusif au format atelier**).
+  - Journal des commandes CLI : `[slug-tuto].command.md` (si des commandes terminal ont été exécutées).
+  - Fichiers de code ou manifestes d'atelier exploratoire (dans le même dossier unitaire).
 
 ### B. `tuto-tache` — Tâche Opérationnelle de Projet (Maturité `projet`)
 - **Finalité :** Production concrète de livrables de projet ou réalisation d'un rituel de sprint (note de cadrage, Product Backlog, UI Kit, User Flow, Sprint Planning, Sprint Review, Rétrospective).
@@ -53,28 +56,38 @@ $$\text{veille} \longrightarrow \text{lab} \longrightarrow \text{ua-lab} \longri
 ### C. `tuto-notion` — Tutoriel de Notion Hors Projet d'Imitation (Maturité `tutoriel`)
 - **Finalité :** Enseignement d'un concept théorique et pratique isolée en bac à sable, sans impact direct sur l'incrément déployable du projet d'imitation (ex : kata d'algorithmique, manipulation d'expressions régulières, découverte de la syntaxe Blade).
 - **Livrables attendus (dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`) :**
-  1. Fiche technique d'apprentissage : `[slug-tuto].md`.
-  2. Fichiers de code d'exercices ou tests isolés (dans le même sous-dossier).
-  3. Journal des commandes CLI : `[slug-tuto].command.md` (si manipulation CLI).
+  - Fiche technique d'apprentissage : `[slug-tuto].md`.
+  - Fichiers de code d'exercices ou tests isolés (dans le même sous-dossier).
+  - Journal des commandes CLI : `[slug-tuto].command.md` (si manipulation CLI).
 - **Règle :** **SANS présentation Marp** (ce n'est pas un atelier collectif).
 
 ### D. `tuto-code` — Tutoriel de Code sur Projet d'Imitation (Maturité `tutoriel`)
 - **Finalité :** Développement incrémental de code contribuant directement à l'incrément déployable du sprint sur le projet d'imitation (*Blog de l'EFP* en N1/N2, *Blog des Lauréats* en N3).
 - **Livrables attendus :**
-  1. **Code source applicatif :** Déposé directement sous **`src/`** (ou l'arborescence officielle de la stack active : contrôleurs, services, modèles, vues Blade, tests TDD).
-  2. **Journal des commandes CLI :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md` (consigne les commandes d'environnement, Artisan, Composer, migrations, tests).
+  - **Code source applicatif :** Déposé directement sous **`src/`** (ou l'arborescence officielle de la stack active : contrôleurs, services, modèles, vues Blade, tests TDD).
+  - **Journal des commandes CLI :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md` (consigne les commandes d'environnement, Artisan, Composer, migrations, tests).
 - **Règle :** **SANS présentation Marp**.
 
 ---
 
 ## 4. Matrice de Synthèse & Règles de Restitution
 
-| Type de Tutoriel (`type:`) | Maturité Typique (`maturite:`) | Destination du Livrable | Diaporama Marp ? | Journal CLI (`.command.md`) ? |
-| :--- | :--- | :--- | :---: | :---: |
-| **`tuto-atelier`** | `lab` ➔ `ua-lab` | `tutoriels/.../[slug-tuto]/` | **OUI** (`presentation-[slug-tuto].md`) | **OUI** (si CLI exécuté) |
-| **`tuto-tache`** | `projet` | Emplacements racine (`docs/`, `sprints/`, `scrum/`, etc.) | **NON** | **NON** (proscrit) |
-| **`tuto-notion`** | `tutoriel` | `tutoriels/.../[slug-tuto]/` | **NON** | **OUI** (si CLI exécuté) |
-| **`tuto-code`** | `tutoriel` | **`src/`** (arborescence applicative) | **NON** | **OUI** (`tutoriels/.../[slug-tuto].command.md`) |
+- **`tuto-atelier` (Maturité `lab` ➔ `ua-lab`) :**
+  - Destination : `tutoriels/.../[slug-tuto]/`
+  - Diaporama Marp : **OUI** (`presentation-[slug-tuto].md`)
+  - Journal CLI : **OUI** (si CLI exécuté)
+- **`tuto-tache` (Maturité `projet`) :**
+  - Destination : Emplacements racine (`docs/`, `sprints/`, `scrum/`, etc.)
+  - Diaporama Marp : **NON**
+  - Journal CLI : **NON** (proscrit)
+- **`tuto-notion` (Maturité `tutoriel`) :**
+  - Destination : `tutoriels/.../[slug-tuto]/`
+  - Diaporama Marp : **NON**
+  - Journal CLI : **OUI** (si CLI exécuté)
+- **`tuto-code` (Maturité `tutoriel`) :**
+  - Destination : **`src/`** (arborescence applicative)
+  - Diaporama Marp : **NON**
+  - Journal CLI : **OUI** (`tutoriels/.../[slug-tuto].command.md`)
 
 ---
 

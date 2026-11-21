@@ -1,13 +1,22 @@
+---
+version: "1.0.0"
+description: "Échelle de maturité didactique EFP (veille, lab, ua-lab, tutoriel, projet) et cycle de maturation pour l'intégration de labs au référentiel."
+---
+
 # Référentiel Normatif : Échelle de Maturité EFP & Cycle de Maturation Lab ➔ UA-Lab
 
 ## 1. Principes & Séparation Hermétique : Maturité vs Typologie
 
 L'ingénierie didactique de l'**EFP (Établissement de Formation Professionnelle)** repose sur une dissociation absolue entre la **Maturité** et la **Typologie** :
 
-| Dimension | Question Clé | Rôle Pédagogique | Slugs Officiels EFP |
-| :--- | :--- | :--- | :--- |
-| **`maturite`** | *À quel stade d'évolution et de validation dans le cursus EFP se trouve ce contenu ?* | Niveau d'ancrage institutionnel et de validation sur le terrain | **`veille`**, **`lab`**, **`ua-lab`**, **`tutoriel`**, **`projet`** |
-| **`type`** | *Quelle est la structure physique et la nature de ce document didactique ?* | Gabarit, livrables attendus, exigences Marp et CLI | **`tuto-atelier`**, **`tuto-notion`**, **`tuto-code`**, **`tuto-tache`** |
+- **Dimension `maturite` :**
+  - Question clé : *À quel stade d'évolution et de validation dans le cursus EFP se trouve ce contenu ?*
+  - Rôle pédagogique : Niveau d'ancrage institutionnel et de validation sur le terrain.
+  - Slugs officiels EFP : `veille`, `lab`, `ua-lab`, `tutoriel`, `projet`.
+- **Dimension `type` :**
+  - Question clé : *Quelle est la structure physique et la nature de ce document didactique ?*
+  - Rôle pédagogique : Gabarit, livrables attendus, exigences Marp et CLI.
+  - Slugs officiels EFP : `tuto-atelier`, `tuto-notion`, `tuto-code`, `tuto-tache`.
 
 > [!IMPORTANT]
 > **Règle Inviolable de Dissociation des Slugs :**
@@ -29,15 +38,20 @@ $$\text{veille} \longrightarrow \text{lab} \longrightarrow \text{ua-lab} \longri
 
 ---
 
-## 3. Matrice de Correspondance Maturité $\times$ Type
+## 3. Matrice de Correspondance Maturité et Typologie
 
-| Maturité (`maturite:`) | Typologie (`type:`) | Livrables Attendus & Spécificités EFP |
-| :--- | :--- | :--- |
-| **`lab`** | **`tuto-atelier`** | Atelier pratique guidé en recherche active : **SANS notions de base en détail**. Diaporama Marp (`presentation-[slug].md`) + Fiche de restitution (`[slug].md`) + Journal CLI (`[slug].command.md` si CLI) sous `tutoriels/`. |
-| **`ua-lab`** | **`tuto-atelier`** | Lab **validé et intégré au référentiel EFP** : Plan d'UA spécifié + **Notions de base DONNÉES EN DÉTAIL** (« Notions fondamentales » consolidées). Même structure de livrables. |
-| **`tutoriel`** | **`tuto-notion`** | Concepts théoriques et notions isolées hors projet d'imitation (sous `tutoriels/`, sans Marp, rapport CLI si manipulation). |
-| **`tutoriel`** | **`tuto-code`** | Progression incrémentale $E_{n-1} \to E_n$ sur le projet d'imitation (code sous `src/`, sans Marp, rapport CLI sous `tutoriels/`). |
-| **`projet`** | **`tuto-tache`** | Tâches de projet opérationnelles et rituels Scrum (0% théorie, fichiers racine `docs/`, `sprints/`, `scrum/`, sans Marp, sans CLI). |
+- **Maturité `lab` $\times$ Typologie `tuto-atelier` :**
+  - Atelier pratique guidé en recherche active : **SANS notions de base en détail**.
+  - Livrables attendus : Diaporama Marp (`presentation-[slug].md`) + Fiche de restitution (`[slug].md`) + Journal CLI (`[slug].command.md` si CLI) sous `tutoriels/`.
+- **Maturité `ua-lab` $\times$ Typologie `tuto-atelier` :**
+  - Lab **validé et intégré au référentiel EFP** : Plan d'UA spécifié + **Notions de base DONNÉES EN DÉTAIL** (« Notions fondamentales » consolidées).
+  - Même structure de livrables sous `tutoriels/`.
+- **Maturité `tutoriel` $\times$ Typologie `tuto-notion` :**
+  - Concepts théoriques et notions isolées hors projet d'imitation (sous `tutoriels/`, sans Marp, rapport CLI si manipulation).
+- **Maturité `tutoriel` $\times$ Typologie `tuto-code` :**
+  - Progression incrémentale $E_{n-1} \to E_n$ sur le projet d'imitation (code sous `src/`, sans Marp, rapport CLI sous `tutoriels/`).
+- **Maturité `projet` $\times$ Typologie `tuto-tache` :**
+  - Tâches de projet opérationnelles et rituels Scrum (0% théorie, fichiers racine `docs/`, `sprints/`, `scrum/`, sans Marp, sans CLI).
 
 ---
 
@@ -77,14 +91,14 @@ L'Agent Rédacteur conçoit le cadre de l'atelier sans prémâcher le travail :
   statut_realisation: "a_realiser"
   ```
 - **Structure Markdown :**
-  1. **Contexte & Enjeux :** Pourquoi cette compétence est requise dans le sprint.
-  2. **Ce que vous devez apprendre :** Objectifs pédagogiques clairs, problématiques à explorer.
-  3. **Travail à faire :** Consignes directives sur les livrables à concevoir et tester.
-  4. **Pistes de recherche active :** Questions directrices guidant l'investigation sans donner la solution.
-  5. **Livrables attendus :**
-     - Fiche d'atelier : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md`
-     - Diaporama Marp : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/presentation-[slug-tuto].md`
-     - Journal CLI : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md` (si CLI)
+  - Contexte & Enjeux : Pourquoi cette compétence est requise dans le sprint.
+  - Ce que vous devez apprendre : Objectifs pédagogiques clairs, problématiques à explorer.
+  - Travail à faire : Consignes directives sur les livrables à concevoir et tester.
+  - Pistes de recherche active : Questions directrices guidant l'investigation sans donner la solution.
+  - Livrables attendus :
+    - Fiche d'atelier : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md`
+    - Diaporama Marp : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/presentation-[slug-tuto].md`
+    - Journal CLI : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md` (si CLI)
   - ⚠️ **ZÉRO section « Notions fondamentales » détaillée à cette étape.**
 
 ---
@@ -105,7 +119,7 @@ L'Agent Rédacteur conçoit le cadre de l'atelier sans prémâcher le travail :
   statut_realisation: "synchronise"
   ```
 - **Enrichissements apportés par l'Agent Rédacteur :**
-  1. **Audit des livrables :** Vérification de la véracité technique et de la qualité du support Marp.
-  2. **Spécification du Plan de l'UA-Lab :** Structuration formelle de la fiche UA dans `_uas/` (articulation des tâches, alignement sur les compétences certifiantes `C.xxx`).
-  3. **Notions de base données en détail :** Rédaction de la section **« Notions fondamentales »** : cours théorique rigoureux et synthétique (les 20% discriminants vérifiés sur le terrain).
-  4. Conservation des pistes d'approfondissement dans « Recherches à effectuer ».
+  - Audit des livrables : Vérification de la véracité technique et de la qualité du support Marp.
+  - Spécification du Plan de l'UA-Lab : Structuration formelle de la fiche UA dans `_uas/` (articulation des tâches, alignement sur les compétences certifiantes `C.xxx`).
+  - Notions de base données en détail : Rédaction de la section **« Notions fondamentales »** : cours théorique rigoureux et synthétique (les 20% discriminants vérifiés sur le terrain).
+  - Conservation des pistes d'approfondissement dans « Recherches à effectuer ».

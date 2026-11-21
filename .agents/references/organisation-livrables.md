@@ -1,3 +1,8 @@
+---
+version: "1.1.0"
+description: "Norme universelle d'organisation, nommage et arborescence des livrables sur le poste apprenant et le dépôt Git multi-niveaux N1, N2, N3."
+---
+
 # Organisation Universelle des Livrables sur le Poste Apprenant
 
 ## 1. Portée Normative & Contexte Multi-Niveaux
@@ -70,7 +75,7 @@ Le cadre s'applique aux trois niveaux de formation de l'**EFP (Établissement de
 - **Définition :**  
   Le journal des commandes constitue le **rapport de réalisation d'un tutoriel du point de vue ligne de commande**. Il consigne fidèlement les commandes terminal exécutées durant l'apprentissage (PowerShell, Composer, Artisan, Node.js, etc.).
 - **Règles d'application selon la typologie du tutoriel :**
-  - **Demandé UNIQUEMENT pour les tutoriels d'apprentissage et les labs (`tuto-lab`, `tuto-notion`, `tuto-code`)** dès lors que des commandes CLI sont requises.
+  - **Demandé UNIQUEMENT pour les tutoriels d'apprentissage et les labs (`tuto-atelier`, `tuto-notion`, `tuto-code`)** dès lors que des commandes CLI sont requises.
   - **Formellement NON demandé pour les tâches opérationnelles (`tuto-tache`) :** Les livrables d'ingénierie de projet aux emplacements racine suffisent.
   - **S'il n'y a aucune commande terminal à exécuter (travail purement rédactionnel ou d'édition), le journal `.command.md` ne doit pas être créé.**
 - **Format de rédaction :**  

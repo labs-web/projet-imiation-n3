@@ -38,4 +38,5 @@ Tout fichier `SKILL.md` doit respecter strictement ce modèle compact (<= 75 lig
 ## 4. Procédure d'intervention
 - **Parcours A (Sans consigne)** : Extraire les remarques du concepteur -> Diagnostiquer les écarts -> Émettre un plan d'action sous artefact interactif -> Attendre validation -> Appliquer.
 - **Parcours B (Avec consigne / étape)** : Analyser le besoin -> Choisir entre nouvelle mission (`<skill>/missions/<nom>.md`) ou nouveau skill (`.agents/skills/<skill>/SKILL.md`) -> Rédiger selon la structure canonique (<= 75 lignes).
-- **Parcours C (Révision réactive d'artéfacts)** : Pour toute révision interactive couplant modification de fichiers de flux et adaptation de skills selon les remarques du concepteur, déléguer au skill `/fixe-plan-and-skills`.
+- **Arbitrage didactique UA-Lab** : Ne jamais confier le découpage pédagogique d'un UA-Lab à `realisation-ua-lab` (dédié exclusivement à la production des livrables) ; confier le découpage en tutoriels progressifs et le choix des cas d'étude au skill `conception-ua-lab`.
+- **Parcours C (Révision réactive d'artéfacts)** : Pour toute révision interactive couplant modification de fichiers de flux et adaptation de skills selon les remarques du concepteur, déléguer au skill `/revision-et-change-skills`.
