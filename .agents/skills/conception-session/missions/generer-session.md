@@ -15,7 +15,7 @@ Produire un fichier de flux opérationnel de session (`flux-travail/sessions/flu
 ## 3. Démarche de Conception et Découpage
 
 1. **Identifier les domaines de compétences mobilisés :**
-   - Extraire les domaines techniques et méthodologiques introduits dans la session (ex : `D.325.1-ia`, `D.311.2-uml`, `D.312.1-architecture`, `D.321.1-laravel`).
+   - Extraire les domaines techniques et méthodologiques introduits dans la session (ex : `D.311.1-design`, `D.311.2-uml`, `D.312.1-architecture`, `D.321.1-laravel`).
    - Consolider toutes les notions d'un même domaine dans un **unique UA-Lab** par session.
 
 2. **Déterminer la typologie de chaque phase :**

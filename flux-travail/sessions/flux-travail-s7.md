@@ -34,7 +34,7 @@ Il est structuré en **6 phases typées** (3 unités d'apprentissage **UA-Lab** 
   - L'apprenant implémente l'application mobile native vitrine de son portfolio sous Android Studio et Jetpack Compose.
   - **Épreuve sommative de Live Coding (40 min chrono sans assistance — 65% de la note finale du module)**.
 - **Jours 9 et 10 : Projet Fil Rouge (*Application Métier*, ex : Gestion de Cinéma)**
-  - Création du Skill agentique `.agent/skills/jetpack-compose-generator/` pour automatiser la génération d'écrans déclaratifs Compose et modèles de données Retrofit.
+  - Développement des interfaces mobiles déclaratives sous Jetpack Compose et connexion aux endpoints REST sur l'application fil rouge.
   - Bilan réflexif et consolidation des acquis.
 
 ---
@@ -170,7 +170,7 @@ flowchart TD
   - Travail d'application sur le Blog :
     - *Projet d'Imitation :* Coder le client Retrofit, le repository de données, le `ArticleViewModel` et connecter l'affichage Compose aux données réelles servies par l'API Laravel 13 du Blog des Lauréats.
     - *Projet Technique (Codage pur - Jour 8) :* Coder l'application mobile Android vitrine de son portfolio sous Jetpack Compose (Épreuve de Live Coding de 40 min).
-    - *Projet Fil Rouge (Jours 9-10) :* Créer le Skill `.agent/skills/jetpack-compose-generator/` pour automatiser la génération d'écrans Compose et services Retrofit.
+    - *Projet Fil Rouge (Jours 9-10) :* Développer les composants Compose et connecter les endpoints REST sur l'application métier fil rouge.
   - Sortie (1 seul livrable) : `src/mobile/app/src/main/java/com/solicode/blog/network/BlogApiService.kt`.
 
 ---

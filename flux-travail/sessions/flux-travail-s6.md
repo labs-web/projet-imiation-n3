@@ -34,7 +34,7 @@ Il est structuré en **6 phases typées** (3 unités d'apprentissage **UA-Lab** 
   - L'apprenant implémente en démarche TDD sous PHPUnit les règles d'accès sécurisées de son portfolio personnel.
   - **Épreuve sommative de Live Coding (40 min chrono sans assistance — 65% de la note finale du module)**.
 - **Jours 9 et 10 : Projet Fil Rouge (*Application Métier*, ex : Gestion de Cinéma)**
-  - Création du Skill agentique `.agent/skills/spatie-rbac-generator/` pour automatiser l'installation et le paramétrage des rôles et permissions.
+  - Implémentation du contrôle d'accès RBAC (rôles et permissions Spatie) et des tests d'habilitation sur l'application fil rouge.
   - Bilan réflexif et consolidation des acquis.
 
 ---
@@ -171,7 +171,7 @@ flowchart TD
   - Travail d'application sur le Blog :
     - *Projet d'Imitation :* Coder en démarche TDD stricte l'ensemble des protections de routes et des actions d'administration du Blog des Lauréats avec 100% de tests au vert.
     - *Projet Technique (Codage pur - Jour 8) :* Implémenter en TDD sous PHPUnit les règles de sécurité de son portfolio personnel (Épreuve de Live Coding de 40 min).
-    - *Projet Fil Rouge (Jours 9-10) :* Créer le Skill `.agent/skills/spatie-rbac-generator/` pour automatiser la génération de tests TDD et configurations RBAC.
+    - *Projet Fil Rouge (Jours 9-10) :* Implémenter et tester la matrice d'habilitation RBAC sur l'application métier fil rouge.
   - Sortie (1 seul livrable) : `src/tests/Feature/ArticleSecurityTest.php`.
 
 ---

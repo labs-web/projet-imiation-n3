@@ -34,7 +34,7 @@ Il est structuré en **4 phases typées** (2 unités d'apprentissage **UA-Lab** 
   - L'apprenant package de manière autonome son portfolio sous NativePHP et compile le binaire installable avec notifications locales.
   - **Épreuve sommative de Live Coding (40 min chrono sans assistance — 65% de la note finale du module)**.
 - **Jours 9 et 10 : Projet Fil Rouge & Soutenance Officielle**
-  - **Démonstration de l'ensemble des Skills agentiques** créés tout au long des 800h de formation dans `.agent/skills/`.
+  - **Démonstration de l'ensemble de la solution logicielle** et des incréments déployables développés tout au long des 800h de formation.
   - Soutenance officielle devant le jury professionnel et délibération de certification N3.
 
 ---
@@ -118,7 +118,7 @@ flowchart TD
   - Travail d'application sur le Blog :
     - *Projet d'Imitation :* Packager le Blog des Lauréats sous NativePHP, implémenter les notifications natives lors de nouveaux articles et compiler le binaire autonome.
     - *Projet Technique (Codage pur - Jour 8) :* Packager son portfolio personnel sous NativePHP avec notifications natives et stockage SQLite (Épreuve de Live Coding de 40 min).
-    - *Projet Fil Rouge (Jours 9-10) :* Créer le Skill `.agent/skills/nativephp-packager/` pour automatiser la configuration et la compilation multiplateforme.
+    - *Projet Fil Rouge (Jours 9-10) :* Packager et compiler l'application métier fil rouge sous NativePHP en binaire autonome.
   - Sortie (1 seul livrable) : `src/config/nativephp.php`.
 
 ---
@@ -153,6 +153,6 @@ flowchart TD
   - Travail d'application sur le Blog : Rédiger le bilan global d'ingénierie logicielle capitalisant sur les 800h de travail, mesurer la vélocité acquise, archiver les artéfacts et finaliser la documentation finale du dépôt.
   - Sortie (1 seul livrable) : `scrum/bilan-projet-global.md`.
 - **Étape 8 : Soutenir la qualification professionnelle N3**
-  - Entrées : Bilan projet global, portfolio technique, application déployée et Skills agentiques créés dans `.agent/skills/`.
-  - Travail d'application sur le Blog : Présenter la démarche d'ingénierie, démontrer les applications (Web, Mobile et NativePHP) et les Skills d'assistance IA devant le jury officiel, et valider l'examen professionnel N3.
+  - Entrées : Bilan projet global, portfolio technique, application déployée en production et cahier de recette validé.
+  - Travail d'application sur le Blog : Présenter la démarche d'ingénierie, démontrer les applications (Web, Mobile et NativePHP) devant le jury officiel, et valider l'examen professionnel N3.
   - Sortie (1 seul livrable) : `docs/certification/pv-soutenance-n3.md`.

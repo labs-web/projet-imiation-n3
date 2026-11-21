@@ -14,7 +14,6 @@ Guider l'apprenant dans son auto-évaluation réflexive de fin de session sur le
   - `C.311` : Modélisation UML (diagramme de contexte et cas d'utilisation macro).
   - `C.312` : Architecture logicielle en deux couches et arbitrage ADR.
   - `C.321` : Développement d'applications web avec Laravel et Blade.
-  - `C.325` : Ingénierie des Agents IA et architecture modulaire des Skills.
   - `C.351` : Conduite de projet agile Scrum et gouvernance des rituels.
 
 ## 4. Tâches Opérationnelles

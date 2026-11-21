@@ -21,7 +21,6 @@ Analyser les remarques, sélections de lignes et consignes méthodologiques four
    - Si la remarque touche à la structure des sessions -> cibler `conception-session`.
    - Si la remarque touche aux 25 étapes universelles -> cibler `flux-travail`.
    - Si la remarque touche aux rôles Scrum ou prérequis de gouvernance -> cibler `domaine-scrum`.
-   - Si la remarque touche à l'outillage ou aux règles IA -> cibler `domaine-ia`.
    - Si la remarque définit une nouvelle règle transverse -> cibler `.agents/rules/`.
 
 4. **Transmettre les éléments qualifiés à la mission `generer-artefact-revision.md`.**

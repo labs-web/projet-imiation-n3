@@ -1,24 +1,24 @@
 ---
-name: fixe-plan-and-skills
+name: revision-et-change-skills
 description: >-
   Analyse les remarques et sélections du concepteur sur les sessions ou plans,
   produit un artefact interactif de révision (document révisé tel quel et skills impactés),
   puis applique les ajustements validés sur les documents et les compétences.
 ---
 
-# Skill Révision Réactive : /fixe-plan-and-skills
+# Skill Révision et Changement de Skills : /revision-et-change-skills
 
 ## 1. Mission
 Formaliser et automatiser la boucle de co-conception réactive avec le concepteur :
 1. Analyser les remarques, sélections et consignes méthodologiques du concepteur.
-2. Générer un artéfact interactif de révision (`plan-revision-*.md` avec `RequestFeedback: true`) affichant le document révisé **tel quel** (sans pollution de numéros de lignes du type "Lignes 1 à 7") et la matrice des skills à adapter.
+2. Générer un artéfact interactif de révision (`plan-revision-*.md` avec `RequestFeedback: true`) affichant le document révisé **tel quel** (sans pollution de numéros de lignes du type "Lignes 1 à 7") et la matrice des skills à adapter (avec rappel du rôle de chaque skill en 2 phrases max).
 3. Après validation par le concepteur, appliquer les modifications sur le document cible et synchroniser les règles et comportements des skills associés.
 
 ## 2. Déclenchement
 - **Quand l'activer** :
   - Sélection de lignes ou remarques critiques formulées par le concepteur sur un fichier de session (`flux-travail-s{N}.md`) ou un document d'ingénierie.
   - Demande explicite de modification de session combinée avec l'adaptation de l'écosystème de skills.
-  - Commande `/fixe-plan-and-skills` ou consigne "fixe le plan et les skills".
+  - Commande `/revision-et-change-skills` ou consigne "fixe le plan et les skills".
 - **Quand NE PAS l'activer** :
   - Création initiale d'une session à partir de zéro -> utiliser `conception-session`.
   - Évolution du référentiel universel d'ingénierie -> utiliser `flux-travail`.
@@ -33,5 +33,5 @@ L'agent identifie le travail demandé par le concepteur et exécute la mission c
 ## 4. Règles Obligatoires
 - Format d'artéfact interactif systématique : `RequestFeedback: true` et `UserFacing: true`.
 - Zéro tableau Markdown (`| ... |` interdit) : listes à puces directes (`- `) exclusives.
-- Aucun code numérique `UA.*` : désignations descriptives claires.
+- Attribution des codes officiels `UA.*` uniquement lorsque l'unité d'apprentissage ou le tutoriel passe à l'état réalisé.
 - Préservation rigoureuse de la stack : Laravel 13, MySQL, Preline UI, Tailwind CSS.
