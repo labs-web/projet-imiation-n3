@@ -91,7 +91,7 @@ Le Sprint 0 construit le socle technique et méthodologique du projet. Il valide
 - **Activités d'ingénierie :**
   - Initialiser le dépôt Git local et configurer le dépôt distant GitHub.
   - Mettre en place le fichier `.gitignore` adapté à Laravel et aux outils IDE.
-  - Créer l'arborescence standardisée des dossiers du projet (`docs/`, `sprints/`, `scrum/`, `resources/`).
+  - Créer l'arborescence standardisée des dossiers du projet (`docs/`, `sprints/`, `scrum/`, `src/`, `tutoriels/`).
   - Rédiger la documentation d'accueil initiale du dépôt.
 - **Sortie principale :** Fichier d'accueil et de configuration du dépôt (`README.md`).
 
@@ -153,7 +153,7 @@ Le Sprint 0 construit le socle technique et méthodologique du projet. Il valide
   - Choisir la typographie et l'échelle modulaire.
   - Sélectionner et personnaliser les composants d'interface **Preline UI** (boutons, formulaires, cartes, badges, navigation).
   - Documenter les règles d'accessibilité et de contraste visuel.
-- **Sortie principale :** Spécification de l'UI Kit Tailwind CSS et Preline UI (`docs/design/ui-kit.md`).
+- **Sortie principale :** Spécification de l'UI Kit Tailwind CSS et Preline UI (`docs/conception/ui-kit.md`).
 
 ### Étape 9 : Modéliser le User Flow et les maquettes du Sprint 1
 - **Phases de référence :** Design Thinking (Phase 4 Prototypage — Volet Parcours & Écrans).
@@ -162,7 +162,7 @@ Le Sprint 0 construit le socle technique et méthodologique du projet. Il valide
   - Modéliser le parcours utilisateur écran par écran en syntaxe déclarative Mermaid (`flowchart TD / LR`).
   - Définir les points d'entrée, les étapes clés, les décisions et les écrans cibles.
   - Prototyper les maquettes interactives ciblées pour les fonctionnalités du Sprint 1 avec Preline UI.
-- **Sortie principale :** Document intégrant le User Flow Mermaid et les maquettes interactives (`docs/design/maquettes-sprint-1.md`).
+- **Sortie principale :** Document intégrant le User Flow Mermaid et les maquettes interactives (`docs/conception/maquettes-sprint-1.md`).
 
 ### Étape 10 : Valider le cadrage, la charte graphique et les maquettes (Sprint Review 0 — Jalon Go/No-Go)
 - **Phases de référence :** Scrum (Sprint Review 0) et Gestion de Projet (Jalon de validation).
@@ -258,7 +258,7 @@ sequenceDiagram
   - Sélectionner les User Stories répondant à cet objectif.
   - Décomposer chaque User Story en tâches techniques de 1 à 4 heures.
   - Valider l'engagement d'équipe sur le Sprint Backlog.
-- **Sortie principale :** Document du Sprint Backlog ordonné avec les critères DoD (`scrum/sprint-backlog-sN.md`).
+- **Sortie principale :** Document de l'engagement et du découpage des tâches du sprint (`sprints/sprint-N.md`).
 
 ### Étape 16 : Préparer l'environnement de sprint (Branche Git et README.md)
 - **Phases de référence :** Gestion de Projet (Suivi d'itération) et Dev OO (Gestion de configuration Git).
@@ -278,7 +278,7 @@ sequenceDiagram
   - Intégrer l'interface responsive Blade avec les composants **Preline UI**.
   - Implémenter les autorisations déclaratives avec **Policies/Gates** ou les rôles **Spatie**.
   - Respecter les normes de codage professionnelles (PSR-12).
-- **Sortie principale :** Composant de code source opérationnel (ex: classe Service métier dans `app/Services/`).
+- **Sortie principale :** Composant de code source opérationnel (ex: classe Service métier dans `src/app/Services/`).
 
 ### Étape 18 : Affiner le Backlog pour le Sprint suivant (Piste Discovery — ~10% temps)
 - **Phases de référence :** Scrum (Backlog Refinement) et Design Thinking (Définition N+1).
@@ -297,7 +297,7 @@ sequenceDiagram
   - Modéliser le parcours utilisateur en syntaxe Mermaid (`flowchart TD / LR`) pour les fonctionnalités du Sprint N+1.
   - Concevoir les maquettes interactives correspondantes avec les composants Preline UI.
   - Préparer le protocole de test utilisateur pour la future Sprint Review.
-- **Sortie principale :** Document intégrant le User Flow et les maquettes interactives N+1 (`docs/design/maquettes-sprint-{N+1}.md`).
+- **Sortie principale :** Document intégrant le User Flow et les maquettes interactives N+1 (`docs/conception/maquettes-sprint-{N+1}.md`).
 
 ### Étape 20 : Suivre l'avancement quotidien (Daily Scrum — Delivery & Discovery)
 - **Phases de référence :** Scrum (Daily Scrum) et Gestion de Projet (Suivi d'avancement).
@@ -307,7 +307,7 @@ sequenceDiagram
   - Partager le travail réalisé la veille et le travail prévu le jour même.
   - Identifier et lever immédiatement les points de blocage techniques ou méthodologiques.
   - Mettre à jour l'état d'avancement des tâches sur le tableau visuel.
-- **Sortie principale :** Journal de suivi des tâches et des résolutions d'incidents (`issues/issues-sprint-N.md`).
+- **Sortie principale :** Mise à jour du suivi des tâches et des blocages dans `sprints/sprint-N.md`.
 
 ### Étape 21 : Tester et valider l'Incrément (Piste Delivery — DoD & Tests automatisés)
 - **Phases de référence :** Dev OO (Tests & Qualité) et Scrum (Definition of Done).
@@ -337,7 +337,7 @@ sequenceDiagram
   - Identifier les réussites et les axes de progrès.
   - Définir 1 à 2 actions correctives immédiatement applicables au sprint suivant.
   - Mettre à jour les règles d'équipe et la Definition of Done si nécessaire.
-- **Sortie principale :** Bilan rétrospectif du sprint et plan d'action d'amélioration continue (`scrum/retrospective-sN.md`).
+- **Sortie principale :** Bilan rétrospectif du sprint et plan d'action d'amélioration continue (`sprints/retrospective-N.md`).
 
 ---
 

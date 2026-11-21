@@ -91,7 +91,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 15 (Planifier le Sprint N).
   - Entrées : Product Backlog initial et capacité d'équipe.
   - Travail d'application sur le Blog : Chaque apprenant endosse le rôle de Product Owner pour son projet (la formation Scrum ayant été assimilée lors du Sprint 0), définit le Sprint Goal S1 ("Permettre aux visiteurs de consulter un article complet connecté à MySQL"), sélectionne la User Story US-01, décompose en tâches de 1 à 4 heures et fixe la Definition of Done.
-  - Sortie (1 seul livrable) : `scrum/sprint-backlog-s1.md`.
+  - Sortie (1 seul livrable) : `sprints/sprint-1.md`.
 - **Étape 2 : Préparer l'environnement de sprint (Branche Git et README.md)**
   - Correspondance flux générique : Étape Générique 16 (Préparer l'environnement de sprint).
   - Entrées : Sprint Backlog S1 validé et branche `main`.
@@ -112,8 +112,8 @@ flowchart TD
     - Cas d'utilisation élémentaires, granularité fonctionnelle, relations d'inclusion (`<<include>>`), extension (`<<extend>>`) et généralisation.
     - Représentation déclarative Mermaid.js (`flowchart` pour le contexte et diagramme des Use Cases macro).
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/uml/guide-use-cases-mermaid.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/uml/presentation-use-cases-mermaid.md`.
+    - Guide explicatif détaillé : `tutoriels/uml/cas-utilisation/use-cases-mermaid/use-cases-mermaid.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/uml/cas-utilisation/use-cases-mermaid/presentation-use-cases-mermaid.md`.
 - **Étape 4 : Tutoriel-application : Modéliser le contexte et les cas d'utilisation du Blog des Lauréats**
   - Entrées : Guide Mermaid et vision produit du Blog des Lauréats.
   - Travail d'application sur le Blog : Modéliser en syntaxe déclarative Mermaid le diagramme de contexte complet du Blog des Lauréats et formaliser l'ensemble des 15 cas d'utilisation macro du système.
@@ -132,8 +132,8 @@ flowchart TD
     - Principe d'Inversion de Contrôle (IoC) et injection de dépendance automatique par le conteneur Laravel.
     - Structure formelle d'un Architectural Decision Record (ADR) : Titre, Statut, Contexte, Décision, Conséquences.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/architecture/guide-mvc-service.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/architecture/presentation-mvc-service.md`.
+    - Guide explicatif détaillé : `tutoriels/architecture/deux-couches/mvc-service/mvc-service.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/architecture/deux-couches/mvc-service/presentation-mvc-service.md`.
 - **Étape 6 : Tutoriel-application : Concevoir l'architecture en deux couches de la consultation d'article**
   - Entrées : Cas d'utilisation du Blog et guide d'architecture.
   - Travail d'application sur le Blog : Modéliser le découpage en 2 couches de la tranche de consultation d'un article du Blog et rédiger la décision fondatrice ADR-01 officialisant l'injection de `ArticleService` dans `ArticleController`.
@@ -155,8 +155,8 @@ flowchart TD
     - Gabarit Blade responsive avec Tailwind CSS et composants de carte Preline UI.
     - Résilience applicative : gestion robuste de l'erreur 404 en cas d'identifiant inexistant.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/laravel/guide-show-mysql-preline.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/laravel/presentation-show-mysql-preline.md`.
+    - Guide explicatif détaillé : `tutoriels/laravel/tranche-verticale/show-mysql-preline/show-mysql-preline.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/laravel/tranche-verticale/show-mysql-preline/presentation-show-mysql-preline.md`.
 - **Étape 8 : Tutoriel-application : Concevoir en détail et développer la consultation d'un article**
   - Correspondance flux générique : Étape Générique 17 (Concevoir en détail et développer).
   - Entrées : Notions Laravel assimilées, architecture MVC + Service validée, base MySQL configurée et spécifications du Blog.
@@ -164,7 +164,7 @@ flowchart TD
     - *Projet d'Imitation :* Coder la migration MySQL, le modèle Eloquent `Article`, le seeder de test, la route `/articles/{id}`, le contrôleur mince `ArticleController`, la classe `ArticleService` requêtant MySQL via Eloquent, la gestion propre de l'erreur 404 (`abort(404)`), et la vue Blade responsive sous Preline UI.
     - *Projet Technique (Jour 8) :* Réaliser la conception préalable (diagramme de séquence Mermaid et ADR express), puis coder la route, le modèle `Realisation`, le contrôleur `RealisationController` et le service `RealisationService` sur son portfolio personnel (Épreuve de Live Coding de 40 min).
     - *Projet Fil Rouge (Jours 9-10) :* Développer la tranche de consultation d'entité métier avec modèle Eloquent et MySQL sur l'application métier.
-  - Sortie (1 seul livrable) : `app/Services/ArticleService.php`.
+  - Sortie (1 seul livrable) : `src/app/Services/ArticleService.php`.
 
 ---
 
@@ -180,7 +180,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 19 (Modéliser le User Flow et maquetter pour le Sprint suivant).
   - Entrées : User Stories raffinées pour le Sprint 2 et UI Kit Preline UI.
   - Travail d'application : Modéliser en syntaxe Mermaid le parcours utilisateur de la future page d'accueil et prototyper les maquettes interactives S2 avec les composants Preline UI.
-  - Sortie (1 seul livrable) : `docs/design/maquettes-sprint-2.md`.
+  - Sortie (1 seul livrable) : `docs/conception/maquettes-sprint-2.md`.
 
 ---
 
@@ -191,7 +191,7 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 20 (Suivre l'avancement quotidien).
   - Entrées : Tableau Kanban et tâches du Sprint 1.
   - Travail d'application : Animer la réunion quotidienne debout de 15 minutes, synchroniser les travaux sur le delivery et le discovery, lever immédiatement les points de blocage.
-  - Sortie (1 seul livrable) : `issues/issues-sprint-1.md`.
+  - Sortie (1 seul livrable) : Mise à jour du suivi des tâches dans `sprints/sprint-1.md`.
 - **Étape 12 : Tester et valider l'Incrément (DoD)**
   - Correspondance flux générique : Étape Générique 21 (Tester et valider l'Incrément).
   - Entrées : Code source complet du Blog des Lauréats et critères formels de la Definition of Done.
@@ -206,4 +206,4 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 23 (Améliorer le processus).
   - Entrées : Retours de la Review 1 et vécu de l'équipe durant l'itération.
   - Travail d'application : Conduire l'analyse réflexive d'équipe, constater le choc méthodologique de la **dette d'empathie** (avoir développé sans immersion usagers préalable), et décider de prioriser l'immersion Personas dès le début du Sprint 2.
-  - Sortie (1 seul livrable) : `scrum/retrospective-s1.md`.
+  - Sortie (1 seul livrable) : `sprints/retrospective-1.md`.

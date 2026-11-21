@@ -99,8 +99,8 @@ flowchart TD
     - Les 5 événements Scrum : Sprint, Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective.
     - Les 3 artéfacts et leurs engagements : Product Backlog, Sprint Backlog, Incrément (Definition of Done).
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/scrum/guide-scrum.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/scrum/presentation-scrum.md`.
+    - Guide explicatif détaillé : `tutoriels/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md`.
 - **Étape 2 : Tutoriel-application : Planifier le Sprint 0 et organiser l'équipe**
   - Correspondance flux générique : Étape Générique 1 (Planifier le Sprint 0).
   - Entrées : Guide Scrum et présentation formelle du **Groupe 1** assurant le rôle de Product Owner.
@@ -141,8 +141,8 @@ flowchart TD
     - Modèle du Double Diamant : pensée divergente (explorer) et convergente (décider).
     - Posture d'écoute active, bienveillance et remise en question des postulats de départ.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/design/guide-demarche-design-thinking.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/design/presentation-demarche-design-thinking.md`.
+    - Guide explicatif détaillé : `tutoriels/design/design-thinking/demarche-design-thinking/demarche-design-thinking.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/design/design-thinking/demarche-design-thinking/presentation-demarche-design-thinking.md`.
 - **Étape 7 : Tutoriel-lab : Démarche d'empathie, immersion terrain et conception de Personas**
   - Entrées : Guide général de Design Thinking.
   - Notions de base à apprendre :
@@ -150,8 +150,8 @@ flowchart TD
     - Élaboration d'une carte d'empathie à 4 quadrants (Ce qu'il Dit, Fait, Pense, Ressent).
     - Structure modulaire d'une fiche Persona : identité, motivations, points de douleur (*pain points*), freins et scénarios d'usage.
   - Sorties de l'atelier d'apprentissage (2 livrables) :
-    - Guide explicatif détaillé : `tutoriels/design/guide-empathie-personas.md`.
-    - Support de présentation au format Marp Markdown : `tutoriels/design/presentation-empathie-personas.md`.
+    - Guide explicatif détaillé : `tutoriels/design/design-thinking/empathie-personas/empathie-personas.md`.
+    - Support de présentation au format Marp Markdown : `tutoriels/design/design-thinking/empathie-personas/presentation-empathie-personas.md`.
 - **Étape 8 : Tutoriel-application : Comprendre l'utilisateur (Design Thinking — Empathie & Personas)**
   - Correspondance flux générique : Étape Générique 5 (Comprendre l'utilisateur).
   - Entrées : Guides méthodologiques de Design Thinking et public cible du Blog des Lauréats.
@@ -177,12 +177,12 @@ flowchart TD
   - Correspondance flux générique : Étape Générique 8 (Concevoir la Charte Graphique).
   - Entrées : Personas, identité visuelle du produit et bibliothèque Preline UI.
   - Travail d'application sur le Blog : Définir la palette de couleurs sémantiques, l'échelle typographique et documenter l'UI Kit sous forme de composants Preline UI réutilisables.
-  - Sortie (1 seul livrable) : `docs/design/ui-kit.md`.
+  - Sortie (1 seul livrable) : `docs/conception/ui-kit.md`.
 - **Étape 12 : Modéliser le User Flow et les maquettes du Sprint 1**
   - Correspondance flux générique : Étape Générique 9 (Modéliser le User Flow et les maquettes du Sprint 1).
   - Entrées : User Stories prioritaires du Sprint 1, UI Kit Preline UI et maîtrise préalable de la syntaxe déclarative Mermaid.
   - Travail d'application sur le Blog : Modéliser en syntaxe déclarative Mermaid le parcours complet de consultation d'un article écran par écran et prototyper les maquettes interactives ciblées pour les écrans du Sprint 1.
-  - Sortie (1 seul livrable) : `docs/design/maquettes-sprint-1.md`.
+  - Sortie (1 seul livrable) : `docs/conception/maquettes-sprint-1.md`.
 
 ---
 

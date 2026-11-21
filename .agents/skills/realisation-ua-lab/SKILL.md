@@ -19,22 +19,25 @@ Prendre en charge la réalisation complète d'un **UA-Lab** en collaboration ave
   - Évolution du référentiel méthodologique (utiliser `flux-travail`).
 
 ## 3. Structure modulaire obligatoire d'un UA-Lab
-Tous les livrables sont déposés dans `tutoriels/[slug-domaine]/[slug-ua-lab]/` :
-- **Fiche racine de l'UA-Lab (`README.md`)** : Cadrage pédagogique, objectifs, compétence et index des tutoriels.
+Tous les livrables sont déposés dans `tutoriels/[slug-domaine]/[slug-ua-lab]/[slug-tutoriel]/` :
+- **Règle Unique du fichier `README.md`** : Le fichier `README.md` est requis **exclusivement à la racine du dossier `tutoriels/`** (`tutoriels/README.md`) pour en présenter la structure globale.
+- **Interdiction absolue** de créer des fichiers `README.md` intermédiaires dans les sous-dossiers de domaines (`[slug-domaine]/`), d'UA-Labs (`[slug-ua-lab]/`) ou de tutoriels (`[slug-tutoriel]/`).
 - **Organisation en sous-dossiers de tutoriels (`[slug-tutoriel]/`)** :
   Chaque tutoriel possède son sous-dossier dédié contenant exclusivement :
-  - `[slug-tutoriel].md` : Document technique complet (synthèse théorique ou compte-rendu d'atelier).
+  - `[slug-tutoriel].md` : Document technique complet portant directement le nom du slug (synthèse théorique ou compte-rendu d'atelier).
   - `presentation-[slug-tutoriel].md` : Diaporama au format Marp Markdown pour la soutenance orale.
+  - `[slug-tutoriel].command.md` : Journal des commandes terminal exécutées (obligatoire pour tuto-lab, tuto-notion, tuto-code s'il y a des commandes ; formellement exclu pour tuto-tache).
   - Livrables pratiques éventuels (code, scripts, fichiers de configuration).
-  *(Interdiction : Ne jamais créer de fichier `README.md` à l'intérieur des sous-dossiers de tutoriels).*
 
 ## 4. Procédure de réalisation pas-à-pas
-- **Étape 1 : Cadrage avec le skill de domaine** : Consulter `domaine-[slug]` pour identifier la compétence, les étapes d'apprentissage et les notions de base.
-- **Étape 2 : Initialisation de l'arborescence** : Créer le dossier racine de l'UA-Lab avec son `README.md` d'indexation.
+- **Étape 1 : Cadrage avec le skill de domaine** : Consulter `domaine-[slug]` et `.agents/references/gestion-livrables.md` pour identifier la compétence, les étapes d'apprentissage, l'emplacement et les notions de base.
+- **Étape 2 : Initialisation de l'arborescence** : Créer l'arborescence `tutoriels/[slug-domaine]/[slug-ua-lab]/[slug-tutoriel]/` sans aucun fichier `README.md` intermédiaire.
 - **Étape 3 : Production par sous-dossier de tutoriel** :
   - Créer le dossier du tutoriel `[slug-tutoriel]/`.
   - Rédiger la fiche de contenu `[slug-tutoriel].md` (zéro tableau, liens relatifs, français A1).
   - Concevoir le diaporama Marp `presentation-[slug-tutoriel].md` avec page de garde Solicode (Encadrant ESSARRAJ Fouad).
-  - Ne pas créer de fichier `README.md` dans ce sous-dossier.
-- **Étape 4 : Indexation parent** : Mettre à jour le fichier `README.md` à la racine de l'UA-Lab avec les liens relatifs vers chaque livrable de tutoriel.
-- **Étape 5 : Contrôle qualité** : Vérifier l'absence totale de tableaux Markdown, la validité des liens relatifs, et laisser les fichiers prêts pour commit par le concepteur.
+  - Rédiger le journal de commandes CLI `[slug-tutoriel].command.md` si des commandes sont exécutées (sans commandes git).
+  - Déclarer la traçabilité de version dans `.sync/tutoriels/[slug-domaine]/[slug-ua-lab]/[slug-tutoriel]/version.yml`.
+  - Ne créer aucun fichier `README.md` dans ce sous-dossier ou ses parents.
+- **Étape 4 : Indexation centrale** : Référencer le tutoriel dans le fichier d'accueil unique `tutoriels/README.md` avec ses liens relatifs.
+- **Étape 5 : Contrôle qualité** : Vérifier l'absence totale de tableaux Markdown, l'absence de `README.md` parasites, la validité des liens relatifs, et laisser les fichiers prêts pour commit par le concepteur.

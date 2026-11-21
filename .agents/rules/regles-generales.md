@@ -38,7 +38,7 @@ Ces règles s'appliquent de manière générique à tous les fichiers et toutes 
 
 - **Un fichier `README.md` par dossier structurel racine** :
   - Les dossiers structurels du dépôt (`docs/`, `sprints/`, `scrum/`, `rapport/`, `presentations/`, `tutoriels/`) contiennent un fichier `README.md` expliquant le rôle du dossier.
-  - **Exception stricte pour `tutoriels/` :** Uniquement `tutoriels/README.md`. Interdiction formelle d'ajouter des fichiers `README.md` dans les sous-dossiers de domaines, d'UAs ou de tutoriels unitaires (se référer à `.agents/references/organisation-livrables.md`).
+  - **Exception stricte pour `tutoriels/` :** Uniquement `tutoriels/README.md`. Interdiction formelle d'ajouter des fichiers `README.md` dans les sous-dossiers de domaines, d'UAs ou de tutoriels unitaires (se référer à `.agents/references/gestion-livrables.md`).
 
 ---
 
@@ -61,7 +61,7 @@ Ces règles s'appliquent de manière générique à tous les fichiers et toutes 
 
 Tout agent opérant dans ce dépôt (notamment l'**Agent Réalisation de Sprint**) applique obligatoirement le socle normatif :
 - Identité et posture : `.agents/rules/persona.md`
-- Cartographie physique des livrables : `.agents/references/organisation-livrables.md`
+- Cartographie physique des livrables : `.agents/references/gestion-livrables.md`
 - Typologie et slugs des tutoriels : `.agents/references/typologie-uas-tutoriels.md`
 - Stratégie des branches et conventions de commits : `.agents/references/gitflow.md`
 

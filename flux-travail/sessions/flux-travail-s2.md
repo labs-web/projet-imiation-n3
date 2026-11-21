@@ -43,10 +43,10 @@ Il est structuré en **6 phases typées** (3 unités d'apprentissage **UA-Lab** 
 
 - **Contexte :** À partir du projet starter fourni (`dossier-depart/`), implémenter en 40 minutes la page d'accueil du portfolio affichant les 6 réalisations récentes avec leurs étiquettes de catégories sous Preline UI.
 - **Consignes opérationnelles :**
-  - Déclarer la route d'accueil `/` dans `routes/web.php`.
+  - Déclarer la route d'accueil `/` dans `src/routes/web.php`.
   - Implémenter le contrôleur mince `HomeController` avec injection de `ArticleService`.
   - Coder la méthode `ArticleService::latestArticles(6)` effectuant la sélection limitée avec tri décroissant.
-  - Développer la vue Blade responsive `resources/views/home.blade.php` avec boucle d'affichage et badges de catégories dynamiques Preline UI.
+  - Développer la vue Blade responsive `src/resources/views/home.blade.php` avec boucle d'affichage et badges de catégories dynamiques Preline UI.
 - **Critères d'évaluation :** Séparation stricte MVC + Service, conformité visuelle Preline UI, code propre PSR-12, gestion du cas de liste vide.
 
 ---
