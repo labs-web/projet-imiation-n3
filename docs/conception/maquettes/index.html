@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog des Lauréats — Maquette Interactive</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Alpine.js CDN -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col"
+      x-data="{
+        activeCategory: 'all',
+        searchQuery: '',
+        mobileMenuOpen: false,
+        modalOpen: false,
+        selectedArticle: null,
+        articles: [
+          {
+            id: 1,
+            title: 'Comment réussir son premier test technique Laravel en ESN',
+            category: 'carriere',
+            categoryLabel: 'Conseils Carrière',
+            categoryBadge: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+            excerpt: 'Retour d\'expérience concret sur les épreuves techniques rencontrées lors de mes recrutements : tests en direct, refactorisation et questions d\'architecture.',
+            author: 'Sara Benjelloun',
+            authorRole: 'Lauréate Promo 2025 • Développeuse Full-Stack',
+            authorAvatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
+            readTime: '6 min de lecture',
+            date: '18 Novembre 2026',
+            content: 'Lors de mes premiers entretiens techniques, les recruteurs ont particulièrement évalué ma capacité à expliquer mes choix d\'architecture. Ne vous contentez pas de coder : justifiez pourquoi vous utilisez une classe de Service, comment vous protégez vos routes avec des Policies, et pourquoi vous évitez les contrôleurs obèses. La rigueur conceptuelle fait toute la différence.'
+          },
+          {
+            id: 2,
+            title: 'Architecture 2 Couches (Contrôleur -> Service) : Pourquoi et comment l\'appliquer',
+            category: 'laravel',
+            categoryLabel: 'Tutoriels Laravel',
+            categoryBadge: 'bg-amber-50 text-amber-700 border-amber-200',
+            excerpt: 'Guide pratique pour découpler vos règles métier des contrôleurs HTTP, faciliter les tests unitaires et garder une base de code maintenable.',
+            author: 'Yassine Chami',
+            authorRole: 'Lauréat Promo 2024 • Lead Developer',
+            authorAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+            readTime: '8 min de lecture',
+            date: '15 Novembre 2026',
+            content: 'Dans un projet Laravel en production, injecter les règles de gestion directement dans les méthodes de contrôleur conduit inévitablement à de la dette technique. En déléguant les traitements lourds à des classes dédiées (Services), vos contrôleurs se réduisent à 5 lignes claires : validation, appel du service, et retour de vue ou de réponse JSON.'
+          },
+          {
+            id: 3,
+            title: 'De l\'école au premier emploi : Mes 90 premiers jours comme développeur junior',
+            category: 'insertion',
+            categoryLabel: 'Insertion Professionnelle',
+            categoryBadge: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+            excerpt: 'Mes premiers pas dans une équipe agile : gestion du stress, montée en compétences sur le legacy code et rituels quotidiens de sprint.',
+            author: 'Mehdi Idrissi',
+            authorRole: 'Lauréat Promo 2025 • Développeur Backend',
+            authorAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+            readTime: '5 min de lecture',
+            date: '12 Novembre 2026',
+            content: 'Le premier mois en entreprise peut impressionner par la taille du repository Git et la complexité des dépendances. Ma recommandation essentielle pour les nouveaux diplômés : poser des questions ciblées, documenter tout ce que vous apprenez lors des revues de code, et maîtriser parfaitement les flux de branches Git.'
+          },
+          {
+            id: 4,
+            title: 'Sécuriser une application avec Spatie Permission et les Policies Laravel',
+            category: 'architecture',
+            categoryLabel: 'Architecture & Bonnes Pratiques',
+            categoryBadge: 'bg-sky-50 text-sky-700 border-sky-200',
+            excerpt: 'Mise en place d\'une gestion granulaire des rôles et autorisations (RBAC) pour isoler les fonctionnalités d\'administration et de modération.',
+            author: 'Salma El Fassi',
+            authorRole: 'Lauréate Promo 2024 • Consultante Sécurité Web',
+            authorAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+            readTime: '7 min de lecture',
+            date: '08 Novembre 2026',
+            content: 'La sécurité déclarative par Policies est une force majeure de Laravel. Plutôt que de disperser des vérifications conditionnelles if(auth()->user()->is_admin) dans vos vues Blade, encapsulez vos règles dans des Policies claires vérifiables nativement via la directive @can.'
+          },
+          {
+            id: 5,
+            title: '5 erreurs courantes lors de la soutenance technique et comment les éviter',
+            category: 'carriere',
+            categoryLabel: 'Conseils Carrière',
+            categoryBadge: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+            excerpt: 'Conseils méthodologiques pour structurer sa présentation orale, démontrer la valeur de son incrément et captiver l\'attention du jury.',
+            author: 'Sara Benjelloun',
+            authorRole: 'Lauréate Promo 2025 • Développeuse Full-Stack',
+            authorAvatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
+            readTime: '4 min de lecture',
+            date: '02 Novembre 2026',
+            content: 'Une soutenance réussie n\'est pas une lecture de code ligne par ligne. Commencez toujours par le problème utilisateur, montrez la maquette en direct, expliquez 2 choix techniques majeurs avec leurs compromis, et terminez par les perspectives d\'évolution.'
+          },
+          {
+            id: 6,
+            title: 'Maîtriser Alpine.js et Preline UI pour créer des interfaces dynamiques sans SPA lourde',
+            category: 'laravel',
+            categoryLabel: 'Tutoriels Laravel',
+            categoryBadge: 'bg-amber-50 text-amber-700 border-amber-200',
+            excerpt: 'Comment dynamiser vos gabarits Blade avec Alpine.js en conservant la simplicité et le référencement du rendu serveur.',
+            author: 'Omar Tazi',
+            authorRole: 'Lauréat Promo 2025 • Développeur Frontend',
+            authorAvatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80',
+            readTime: '6 min de lecture',
+            date: '28 Octobre 2026',
+            content: 'Injecter une SPA complète en React ou Vue pour un blog ou une application métier ajoute souvent une complexité inutile. Alpine.js permet d\'obtenir 95% des bénéfices d\'interactivité avec 15 Ko et zéro tooling lourd, directement dans le HTML.'
+          }
+        ],
+        filteredArticles() {
+          return this.articles.filter(article => {
+            const matchesCat = (this.activeCategory === 'all' || article.category === this.activeCategory);
+            const matchesQuery = this.searchQuery === '' || 
+              article.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+              article.excerpt.toLowerCase().includes(this.searchQuery.toLowerCase());
+            return matchesCat && matchesQuery;
+          });
+        },
+        openArticle(article) {
+          this.selectedArticle = article;
+          this.modalOpen = true;
+        }
+      }">
+
+  <!-- ==================== 1. EN-TÊTE DE NAVIGATION (NAVBAR) ==================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo & Titre -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white font-bold text-xl shadow-sm">
+            BL
+          </div>
+          <div>
+            <a href="#" class="text-lg font-bold text-slate-900 hover:text-indigo-600 transition">Blog des Lauréats</a>
+            <p class="text-xs text-slate-500 hidden sm:block">Communauté Solicode Tanger</p>
+          </div>
+        </div>
+
+        <!-- Liens Desktop -->
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+          <a href="#" class="text-indigo-600 font-semibold">Accueil</a>
+          <a href="#articles-section" class="hover:text-indigo-600 transition">Articles</a>
+          <a href="#apropos" class="hover:text-indigo-600 transition">À propos</a>
+          <a href="#communaute" class="hover:text-indigo-600 transition">Lauréats</a>
+        </nav>
+
+        <!-- Barre de recherche & Bouton Action -->
+        <div class="hidden sm:flex items-center gap-4">
+          <div class="relative w-48 lg:w-64">
+            <input type="text" 
+                   x-model="searchQuery" 
+                   placeholder="Rechercher un article..." 
+                   class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-100 border border-slate-200 rounded-lg focus:outline-none focus:bg-white focus:ring-2 focus:ring-indigo-500 transition">
+            <svg class="w-4 h-4 absolute left-2.5 top-2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+
+          <a href="#" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-xs font-semibold rounded-lg hover:bg-indigo-700 transition shadow-sm">
+            Espace Lauréat
+          </a>
+        </div>
+
+        <!-- Bouton Menu Mobile (Hamburger) -->
+        <div class="flex md:hidden items-center">
+          <button @click="mobileMenuOpen = !mobileMenuOpen" 
+                  type="button" 
+                  class="p-2 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" 
+                  aria-label="Menu principal">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Tiroir Mobile -->
+    <div x-show="mobileMenuOpen" 
+         x-transition 
+         class="md:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-4 space-y-3">
+      <div class="relative w-full">
+        <input type="text" 
+               x-model="searchQuery" 
+               placeholder="Rechercher..." 
+               class="w-full pl-9 pr-3 py-2 text-xs bg-slate-100 border border-slate-200 rounded-lg">
+        <svg class="w-4 h-4 absolute left-2.5 top-2.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50">Accueil</a>
+      <a href="#articles-section" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100">Articles</a>
+      <a href="#apropos" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100">À propos</a>
+      <a href="#" class="block w-full text-center px-4 py-2 bg-indigo-600 text-white font-semibold rounded-lg text-sm">Espace Lauréat</a>
+    </div>
+  </header>
+
+  <!-- ==================== 2. HERO SECTION ==================== -->
+  <section class="relative bg-gradient-to-b from-white to-slate-100/60 pt-12 pb-16 border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Badge de présentation -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-semibold mb-6">
+        <span class="w-2 h-2 rounded-full bg-indigo-600 animate-pulse"></span>
+        Plateforme Officielle • Solicode Tanger
+      </div>
+
+      <!-- Titre & Sous-titre -->
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight max-w-4xl mx-auto leading-tight">
+        L'Expérience du Terrain Partagée par <span class="text-indigo-600">Nos Lauréats</span>
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+        Découvrez les retours d'expérience authentiques, les conseils de recrutement et les architectures réelles partagés par les diplômés pour accélérer votre insertion professionnelle.
+      </p>
+
+      <!-- Boutons d'Action Principaux -->
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="#articles-section" class="px-6 py-3 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition shadow-md hover:shadow-lg">
+          Explorer les articles
+        </a>
+        <a href="#apropos" class="px-6 py-3 border border-slate-300 bg-white text-slate-700 text-sm font-semibold rounded-lg hover:bg-slate-50 transition">
+          Découvrir la démarche
+        </a>
+      </div>
+
+      <!-- Statistiques Clés (Indicateurs d'impact) -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-center">
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-2xl font-bold text-indigo-600">30+</p>
+          <p class="text-xs text-slate-500 font-medium mt-1">Lauréats Contributeurs</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-2xl font-bold text-slate-900">50+</p>
+          <p class="text-xs text-slate-500 font-medium mt-1">Articles & Tutoriels</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-2xl font-bold text-slate-900">100%</p>
+          <p class="text-xs text-slate-500 font-medium mt-1">Retours du Terrain</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-2xl font-bold text-emerald-600">&lt; 300ms</p>
+          <p class="text-xs text-slate-500 font-medium mt-1">Temps de Réponse</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 3. BARRE DE FILTRAGE INTERACTIVE ==================== -->
+  <section id="articles-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-4 w-full">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-slate-200 pb-5">
+      
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900">Derniers articles publiés</h2>
+        <p class="text-xs text-slate-500 mt-1">Filtrer par thématique métier ou rechercher par mot-clé</p>
+      </div>
+
+      <!-- Filtres par Catégorie (Alpine.js réactif) -->
+      <div class="flex flex-wrap items-center gap-2">
+        <button @click="activeCategory = 'all'" 
+                :class="activeCategory === 'all' ? 'bg-indigo-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
+                class="px-3 py-1.5 rounded-full text-xs font-semibold transition">
+          Tous (<span x-text="articles.length"></span>)
+        </button>
+        <button @click="activeCategory = 'carriere'" 
+                :class="activeCategory === 'carriere' ? 'bg-indigo-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
+                class="px-3 py-1.5 rounded-full text-xs font-semibold transition">
+          Conseils Carrière
+        </button>
+        <button @click="activeCategory = 'laravel'" 
+                :class="activeCategory === 'laravel' ? 'bg-indigo-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
+                class="px-3 py-1.5 rounded-full text-xs font-semibold transition">
+          Tutoriels Laravel
+        </button>
+        <button @click="activeCategory = 'insertion'" 
+                :class="activeCategory === 'insertion' ? 'bg-indigo-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
+                class="px-3 py-1.5 rounded-full text-xs font-semibold transition">
+          Insertion
+        </button>
+        <button @click="activeCategory = 'architecture'" 
+                :class="activeCategory === 'architecture' ? 'bg-indigo-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
+                class="px-3 py-1.5 rounded-full text-xs font-semibold transition">
+          Architecture
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 4. GRILLE DES ARTICLES (RESPONSIVE) ==================== -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1">
+    
+    <!-- Grille de cartes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" x-show="filteredArticles().length > 0">
+      
+      <template x-for="article in filteredArticles()" :key="article.id">
+        <article class="flex flex-col bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-200 cursor-pointer"
+                 @click="openArticle(article)">
+          
+          <!-- Corps de la carte -->
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <!-- En-tête : Badge + Temps de lecture -->
+              <div class="flex items-center justify-between text-xs mb-3">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-semibold border"
+                      :class="article.categoryBadge"
+                      x-text="article.categoryLabel">
+                </span>
+                <span class="text-slate-400 font-medium" x-text="article.readTime"></span>
+              </div>
+
+              <!-- Titre -->
+              <h3 class="text-base font-bold text-slate-900 hover:text-indigo-600 transition line-clamp-2"
+                  x-text="article.title">
+              </h3>
+
+              <!-- Extrait -->
+              <p class="mt-2 text-xs text-slate-600 line-clamp-3 leading-relaxed"
+                 x-text="article.excerpt">
+              </p>
+            </div>
+
+            <!-- Pied de carte : Auteur & Date -->
+            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <img :src="article.authorAvatar" 
+                     :alt="article.author" 
+                     class="w-8 h-8 rounded-full object-cover border border-slate-200">
+                <div>
+                  <p class="text-xs font-semibold text-slate-900" x-text="article.author"></p>
+                  <p class="text-[10px] text-slate-400" x-text="article.date"></p>
+                </div>
+              </div>
+              <span class="text-xs font-semibold text-indigo-600 hover:text-indigo-800">Lire →</span>
+            </div>
+
+          </div>
+
+        </article>
+      </template>
+
+    </div>
+
+    <!-- État vide (Empty State) -->
+    <div x-show="filteredArticles().length === 0" 
+         class="text-center py-16 bg-white rounded-xl border border-slate-200 max-w-md mx-auto my-6 p-8">
+      <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mx-auto text-slate-400 mb-3">
+        🔍
+      </div>
+      <h3 class="text-sm font-bold text-slate-900">Aucun article trouvé</h3>
+      <p class="text-xs text-slate-500 mt-1">Aucun contenu ne correspond à vos filtres de recherche.</p>
+      <button @click="activeCategory = 'all'; searchQuery = ''" 
+              class="mt-4 px-4 py-2 bg-indigo-600 text-white text-xs font-semibold rounded-lg hover:bg-indigo-700 transition">
+        Réinitialiser les filtres
+      </button>
+    </div>
+
+    <!-- Contrôles de Pagination -->
+    <div class="mt-12 flex items-center justify-center gap-2" x-show="filteredArticles().length > 0">
+      <button class="px-3 py-1.5 border border-slate-200 rounded-lg text-xs font-medium text-slate-400 cursor-not-allowed bg-white">
+        ← Précédent
+      </button>
+      <button class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white">1</button>
+      <button class="px-3 py-1.5 border border-slate-200 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-100 bg-white">2</button>
+      <button class="px-3 py-1.5 border border-slate-200 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-100 bg-white">3</button>
+      <button class="px-3 py-1.5 border border-slate-200 rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 bg-white">
+        Suivant →
+      </button>
+    </div>
+
+  </main>
+
+  <!-- ==================== 5. MODALE INTERACTIVE DE LECTURE ==================== -->
+  <div x-show="modalOpen" 
+       x-transition.opacity 
+       class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4"
+       style="display: none;">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto"
+         @click.away="modalOpen = false">
+      
+      <button @click="modalOpen = false" 
+              class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1 rounded-lg">
+        ✕
+      </button>
+
+      <template x-if="selectedArticle">
+        <div>
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold border mb-3"
+                :class="selectedArticle.categoryBadge"
+                x-text="selectedArticle.categoryLabel">
+          </span>
+
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900" x-text="selectedArticle.title"></h2>
+          
+          <div class="flex items-center gap-3 my-4 pb-4 border-b border-slate-100">
+            <img :src="selectedArticle.authorAvatar" class="w-10 h-10 rounded-full object-cover">
+            <div>
+              <p class="text-xs font-bold text-slate-900" x-text="selectedArticle.author"></p>
+              <p class="text-[11px] text-slate-500" x-text="selectedArticle.authorRole"></p>
+            </div>
+            <span class="ml-auto text-xs text-slate-400" x-text="selectedArticle.date"></span>
+          </div>
+
+          <div class="prose prose-sm text-slate-700 leading-relaxed space-y-4">
+            <p class="text-sm font-medium text-slate-800 italic bg-indigo-50/50 p-4 rounded-xl border border-indigo-100"
+               x-text="selectedArticle.excerpt">
+            </p>
+            <p x-text="selectedArticle.content"></p>
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400" x-text="selectedArticle.readTime"></span>
+            <button @click="modalOpen = false" 
+                    class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-lg transition">
+              Fermer la lecture
+            </button>
+          </div>
+        </div>
+      </template>
+
+    </div>
+  </div>
+
+  <!-- ==================== 6. PIED DE PAGE (FOOTER) ==================== -->
+  <footer id="apropos" class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800">
+        
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-sm mb-3">
+            <span class="w-6 h-6 rounded bg-indigo-600 flex items-center justify-center text-xs">BL</span>
+            Blog des Lauréats
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            Plateforme communautaire de capitalisation et de partage d'expériences professionnelles entre lauréats et apprenants.
+          </p>
+        </div>
+
+        <div>
+          <p class="text-white font-semibold text-xs mb-3">Thématiques Clés</p>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white transition">Conseils Carrière & Recrutement</a></li>
+            <li><a href="#" class="hover:text-white transition">Tutoriels & Bonnes Pratiques Laravel</a></li>
+            <li><a href="#" class="hover:text-white transition">Retours d'Insertion en Entreprise</a></li>
+            <li><a href="#" class="hover:text-white transition">Architecture Logicielle & Sécurité</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-white font-semibold text-xs mb-3">Établissement & Gouvernance</p>
+          <p class="text-slate-400 leading-relaxed">
+            Projet conçu et réalisé selon les méthodes agiles Scrum et le processus 2TUP à Solicode Tanger.
+          </p>
+          <p class="mt-2 text-slate-500">Encadrant référent : ESSARRAJ Fouad</p>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px]">
+        <p>© 2026 Blog des Lauréats — Tous droits réservés.</p>
+        <p class="mt-2 sm:mt-0">Maquette HTML & CSS conforme Tailwind CSS & Preline UI.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
