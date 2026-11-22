@@ -25,9 +25,9 @@ Le dossier `.agents/` repose sur une séparation claire entre règles transversa
 
 ---
 
-## 2. Catalogue des 12 Skills de l'Écosystème
+## 2. Catalogue des 15 Skills de l'Écosystème
 
-L'écosystème comprend **12 skills complémentaires**, organisés en 5 familles d'activités :
+L'écosystème comprend **15 skills complémentaires**, organisés en 5 familles d'activités :
 
 ### A. Gouvernance & Ingénierie des Sessions
 
@@ -98,6 +98,21 @@ L'écosystème comprend **12 skills complémentaires**, organisés en 5 familles
   - Rôle : Gouverne le cadrage fonctionnel du produit (objectifs SMART, périmètre In/Out du MVP) et la justification rationnelle de la stack technique (Laravel 13, MySQL, Preline UI, Alpine.js).
   - Déclenchement : Cadrage initial de produit, matrice In/Out, dossier de faisabilité technique de la stack.
   - Missions associées : `missions/cadrer-perimetre.md`, `missions/justifier-stack.md`.
+
+- **[design-thinking-definition](./skills/design-thinking-definition/SKILL.md) (`/design-thinking-definition`) :**
+  - Rôle : Gouverne la phase Définition du Design Thinking : cadrage de la Vision Produit (Product Goal), énoncé du Point of View (POV) et de la proposition de valeur.
+  - Déclenchement : Formulation ou actualisation de la vision produit et du Product Goal.
+  - Missions associées : `missions/definir-vision-produit.md`.
+
+- **[design-thinking-empathie](./skills/design-thinking-empathie/SKILL.md) (`/design-thinking-empathie`) :**
+  - Rôle : Gouverne la phase Empathie du Design Thinking : immersion usagers, formalisation de la Carte d'Empathie (4 quadrants) et modélisation des fiches Personas.
+  - Déclenchement : Immersion terrain, recueil des besoins utilisateurs, modélisation de personas.
+  - Missions associées : `missions/formaliser-empathie.md`, `missions/modeliser-personas.md`.
+
+- **[scrum-product-backlog](./skills/scrum-product-backlog/SKILL.md) (`/scrum-product-backlog`) :**
+  - Rôle : Gouverne la conception, le découpage INVEST, la formulation des critères d'acceptation et l'ordonnancement MoSCoW du Product Backlog Scrum.
+  - Déclenchement : Initialisation du carnet de produit, découpage en User Stories, priorisation MoSCoW.
+  - Missions associées : `missions/ordonner-backlog.md`.
 
 ### E. Communication Inter-Agents
 
@@ -241,4 +256,7 @@ Pour mobiliser directement les compétences depuis le chat, le concepteur peut u
 - `/skills-planer` : Planifier l'écosystème préliminaire des compétences ou proposer un skill adapté au fil de l'eau.
 - `/init-depot` : Initialiser l'infrastructure Git et le README d'accueil vitrine.
 - `/cadrage-produit` : Cadrer le périmètre In/Out et justifier la stack technique.
+- `/design-thinking-definition` : Cadrer la vision produit et le Product Goal.
+- `/design-thinking-empathie` : Conduire l'immersion usagers, formaliser la carte d'empathie et les personas.
+- `/scrum-product-backlog` : Bâtir, découper en US INVEST et ordonner le carnet de produit selon MoSCoW.
 - `/skills-dev` : Auditer l'écosystème de compétences ou concevoir un nouveau skill.
