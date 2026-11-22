@@ -22,7 +22,7 @@ Formaliser et automatiser la boucle de co-conception réactive avec le concepteu
 - **Quand NE PAS l'activer** :
   - Création initiale d'une session à partir de zéro -> utiliser `conception-session`.
   - Évolution du référentiel universel d'ingénierie -> utiliser `flux-travail`.
-  - Cérémonies de fin de sprint -> utiliser `cloture-sprint`.
+  - Réalisation opérationnelle et clôture de sprint -> utiliser `realisation-sprint`.
 
 ## 3. Missions disponibles
 L'agent identifie le travail demandé par le concepteur et exécute la mission correspondante située dans `missions/` :

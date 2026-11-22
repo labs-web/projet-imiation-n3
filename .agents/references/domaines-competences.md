@@ -117,4 +117,4 @@ Tous les agents IA (en particulier l'**Agent Concepteur de Session** et l'**Agen
 - **Laravel Backend :** Code `D.321.1-laravel` | Slug dossier `laravel`
 - **Mobile Android :** Code `D.323.1-mobile` | Slug dossier `mobile`
 - **DevOps & Packaging :** Code `D.341.1-devops` | Slug dossier `devops`
-- **Conduite de Projet :** Code `D.351.2-realisation-projet` | Slug dossier `realisation-projet` | Skill associé `cloture-sprint`
+- **Conduite de Projet :** Code `D.351.2-realisation-projet` | Slug dossier `realisation-projet` | Skill associé `realisation-sprint`

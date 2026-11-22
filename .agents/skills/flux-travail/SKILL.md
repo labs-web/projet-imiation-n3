@@ -19,7 +19,7 @@ Le skill garantit la cohérence du processus unifié : Design Thinking, Gestion 
 - **Quand NE PAS l'activer** :
   - Conception, découpage ou mise à jour des flux de sessions de formation (`flux-travail/sessions/`) -> déléguer au skill `conception-session`.
   - Réalisation technique d'une fonctionnalité de code -> utiliser le skill métier dédié.
-  - Cérémonies de fin de sprint -> utiliser `cloture-sprint`.
+  - Réalisation opérationnelle et clôture de sprint -> utiliser `realisation-sprint`.
   - Production des tutoriels d'autoformation -> utiliser `realisation-ua-lab`.
 
 ## 3. Gouvernance et Interface avec `conception-session`

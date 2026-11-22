@@ -25,9 +25,9 @@ Le dossier `.agents/` repose sur une séparation claire entre règles transversa
 
 ---
 
-## 2. Catalogue des 11 Skills de l'Écosystème
+## 2. Catalogue des 12 Skills de l'Écosystème
 
-L'écosystème comprend **11 skills complémentaires**, organisés en 5 familles d'activités :
+L'écosystème comprend **12 skills complémentaires**, organisés en 5 familles d'activités :
 
 ### A. Gouvernance & Ingénierie des Sessions
 
@@ -50,6 +50,11 @@ L'écosystème comprend **11 skills complémentaires**, organisés en 5 familles
   - Rôle : Orchestre la boucle interactive de co-conception avec le concepteur. Analyse les sélections de lignes et remarques critiques, produit un artéfact interactif de révision avec demande de confirmation, puis applique les corrections sur les documents et synchronise les skills associés.
   - Déclenchement : Remarques du concepteur sur une session ou un document de cadrage, commande `/revision-et-change-skills` ou consigne "fixe le plan et les skills".
   - Missions associées : `missions/analyser-remarques.md`, `missions/generer-artefact-revision.md`, `missions/synchroniser-skills.md`.
+
+- **[skills-planer](./skills/skills-planer/SKILL.md) (`/skills-planer`) :**
+  - Rôle : Planifie l'écosystème de compétences (Skills et missions). S'assure de la couverture de chaque étape de sprint avant sa réalisation en arbitrant entre nouveau skill, ajout de mission (une mission pouvant couvrir plusieurs étapes), ou reconception. Produit également le plan préliminaire guide dans `docs/plan-preliminaire-skills.md`.
+  - Déclenchement : Avant de réaliser une étape de sprint (`/skills-planer`), ou cadrage préliminaire initial (`/skills-planer preliminaire`).
+  - Missions associées : `missions/couvrir-etape-sprint.md`, `missions/planifier-plan-preliminaire.md`, `missions/creer-skill.md`.
 
 - **[skills-dev](./skills/skills-dev/SKILL.md) (`/skills-dev`) :**
   - Rôle : Méta-gouvernance du système de compétences. Conçoit, audite et fait évoluer l'ensemble des skills, des missions et des règles permanentes du workspace.
@@ -77,15 +82,12 @@ L'écosystème comprend **11 skills complémentaires**, organisés en 5 familles
   - Rôle : Agit comme un mentor pédagogique pour guider l'apprenant à travers 5 étapes simples afin d'assimiler l'Agilité et d'appliquer le cadre Scrum à son projet web.
   - Déclenchement : Cadrage de vision produit, rédaction de User Stories, organisation du backlog et tenue des cérémonies agiles.
 
-### D. Clôture Agile & Gestion du Dépôt
+### D. Réalisation de Sprint & Gestion du Dépôt
 
-- **[cloture-sprint](./skills/cloture-sprint/SKILL.md) (`/cloture-sprint`) :**
-  - Rôle : Orchestre l'ensemble des rituels et documents de fin de sprint Scrum en déléguant à ses 4 missions spécialisées :
-    - `/cloture-sprint review` : Audit des 7 critères formels de la Definition of Done (DoD) et rédaction du procès-verbal contradictoire (`sprints/pv-review-[N].md`).
-    - `/cloture-sprint retrospective` : Animation de la rétrospective réflexive et engagements d'amélioration continue (`sprints/retrospective-[N].md`).
-    - `/cloture-sprint refinement` : Clôture des tâches terminées et réordonnancement du backlog produit (`scrum/product-backlog.md`).
-    - `/cloture-sprint debriefing` : Évaluation réflexive des compétences mobilisées et débriefing du Live Coding.
-  - Déclenchement : Cérémonies de clôture de sprint ou fin de session de formation.
+- **[realisation-sprint](./skills/realisation-sprint/SKILL.md) (`/realisation-sprint`) :**
+  - Rôle : Pilote l'exécution opérationnelle d'un sprint étape par étape, structurée en jalons d'ingénierie. Produit un artéfact interactif par jalon, attend la validation formelle du concepteur, puis exécute rigoureusement chaque étape avec production des livrables associés.
+  - Déclenchement : Lancement, exécution ou validation d'un jalon de sprint (`flux-travail/sessions/flux-travail-s{N}.md`).
+  - Missions associées : `missions/planifier-jalon.md`, `missions/executer-etape.md`, `missions/valider-jalon.md`.
 
 - **[gestion-depot](./skills/gestion-depot/SKILL.md) (`/gestion-depot`) :**
   - Rôle : Gère les opérations d'infrastructure Git/GitHub et le cycle de vie documentaire du projet.
@@ -158,8 +160,8 @@ La réalisation des livrables s'organise selon la nature du travail à produire 
   - Carnet de produit et découpage des exigences : `scrum/product-backlog.md`.
   - Code source applicatif : `src/` (Contrôleurs, Services, Modèles Eloquent, Vues Blade).
 
-### C. Réalisation des Livrables de Clôture de Sprint
-- **Compétence mobilisée :** `/cloture-sprint`.
+### C. Réalisation des Livrables de Sprint et Clôture
+- **Compétence mobilisée :** `/realisation-sprint`.
 - En fin de sprint, l'agent produit les artéfacts formels de validation :
   - Le procès-verbal contradictoire et audit DoD : `sprints/pv-review-[N].md`.
   - Le bilan rétrospectif et plan d'action d'amélioration : `sprints/retrospective-[N].md`.
@@ -230,6 +232,7 @@ Pour mobiliser directement les compétences depuis le chat, le concepteur peut u
 - `/realisation-ua-lab` : Produire l'arborescence complète d'un lab (fiche technique + présentation Marp + journal CLI).
 - `/marp` : Rédiger ou formater une présentation de diapositives conforme aux normes Solicode.
 - `/domaine-scrum` : Solliciter le mentor agile pour les rôles, User Stories, backlog et cérémonies.
-- `/cloture-sprint` : Déclencher les rituels de fin de sprint (revue DoD, rétrospective, backlog, bilan).
+- `/realisation-sprint` : Piloter la réalisation opérationnelle d'un sprint étape par étape par jalon.
+- `/skills-planer` : Planifier l'écosystème préliminaire des compétences ou proposer un skill adapté au fil de l'eau.
 - `/gestion-depot` : Préparer une nouvelle branche de sprint Git ou actualiser la documentation racine.
 - `/skills-dev` : Auditer l'écosystème de compétences ou concevoir un nouveau skill.

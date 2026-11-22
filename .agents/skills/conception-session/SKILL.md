@@ -21,7 +21,7 @@ Le skill applique des règles génériques de structuration de session, indépen
   - Découpage didactique interne d'une UA-Lab en tutoriels progressifs -> utiliser `conception-ua-lab`.
   - Modification du flux d'ingénierie universel (`flux-travail-generique.md`) -> utiliser `flux-travail`.
   - Rédaction détaillée des tutoriels d'autoformation -> utiliser `realisation-ua-lab`.
-  - Cérémonies de fin de sprint -> utiliser `cloture-sprint`.
+  - Réalisation opérationnelle et clôture de sprint -> utiliser `realisation-sprint`.
 
 ## 3. Missions disponibles
 L'agent identifie le travail demandé par le concepteur et exécute la mission correspondante située dans `missions/` :
