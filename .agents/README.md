@@ -25,9 +25,9 @@ Le dossier `.agents/` repose sur une séparation claire entre règles transversa
 
 ---
 
-## 2. Catalogue des 15 Skills de l'Écosystème
+## 2. Catalogue des 17 Skills de l'Écosystème
 
-L'écosystème comprend **15 skills complémentaires**, organisés en 5 familles d'activités :
+L'écosystème comprend **17 skills complémentaires**, organisés en 5 familles d'activités :
 
 ### A. Gouvernance & Ingénierie des Sessions
 
@@ -113,6 +113,16 @@ L'écosystème comprend **15 skills complémentaires**, organisés en 5 familles
   - Rôle : Gouverne la conception, le découpage INVEST, la formulation des critères d'acceptation et l'ordonnancement MoSCoW du Product Backlog Scrum.
   - Déclenchement : Initialisation du carnet de produit, découpage en User Stories, priorisation MoSCoW.
   - Missions associées : `missions/ordonner-backlog.md`.
+
+- **[scrum-sprint-planning](./skills/scrum-sprint-planning/SKILL.md) (`/scrum-sprint-planning`) :**
+  - Rôle : Gouverne la planification de sprint Scrum, la formulation du Sprint Goal, la sélection des User Stories du backlog et le découpage en tâches techniques.
+  - Déclenchement : Sprint Planning, engagement d'équipe, timeboxing et estimation des tâches.
+  - Missions associées : `missions/planifier-sprint.md`.
+
+- **[design-thinking-prototypage](./skills/design-thinking-prototypage/SKILL.md) (`/design-thinking-prototypage`) :**
+  - Rôle : Gouverne la phase Prototypage du Design Thinking : User Flow textuel, spécification d'UI Kit (Tailwind / Preline) et maquettes interactives responsives.
+  - Déclenchement : Modélisation des parcours utilisateurs, conception d'UI Kit, maquettage d'écrans.
+  - Missions associées : `missions/modeliser-user-flow.md`, `missions/concevoir-ui-kit.md`, `missions/prototyper-maquette.md`.
 
 ### E. Communication Inter-Agents
 
@@ -259,4 +269,6 @@ Pour mobiliser directement les compétences depuis le chat, le concepteur peut u
 - `/design-thinking-definition` : Cadrer la vision produit et le Product Goal.
 - `/design-thinking-empathie` : Conduire l'immersion usagers, formaliser la carte d'empathie et les personas.
 - `/scrum-product-backlog` : Bâtir, découper en US INVEST et ordonner le carnet de produit selon MoSCoW.
+- `/scrum-sprint-planning` : Planifier le sprint, formaliser le Sprint Goal et l'engagement d'équipe.
+- `/design-thinking-prototypage` : Modéliser le User Flow, concevoir l'UI Kit et prototyper les maquettes d'accueil.
 - `/skills-dev` : Auditer l'écosystème de compétences ou concevoir un nouveau skill.
