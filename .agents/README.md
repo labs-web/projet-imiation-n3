@@ -11,6 +11,7 @@ Le dossier `.agents/` repose sur une séparation claire entre règles transversa
 
 - **Règles Permanentes (`.agents/rules/`) :**
   - [regles-generales.md](./rules/regles-generales.md) : Consignes d'écriture universelles (français niveau A1 direct, phrases courtes Sujet + Verbe + Complément, interdiction absolue des tableaux Markdown, liens relatifs obligatoires, interdiction stricte de commit et push par l'IA).
+  - [affichage-skills.md](./rules/affichage-skills.md) : Règle d'affichage systématique et normalisé des compétences (skills) mobilisées en fin de chaque message ou interaction.
   - [regles-flux-sessions.md](./rules/regles-flux-sessions.md) : Normes de gouvernance des sessions de formation (découpage en phases typées `UA-Lab` vs `UA-Tâche`, règle des 3 UA-Tâches maximum par session, double livrable obligatoire par tutoriel-lab, durées indicatives non contraignantes).
   - [contexte-projet.md](./rules/contexte-projet.md) : Référentiel technique intangible du projet (Laravel 13, MySQL, Tailwind CSS avec Preline UI, Alpine.js, Spatie Laravel-Permission).
 - **Références Normatives (`.agents/references/`) :**

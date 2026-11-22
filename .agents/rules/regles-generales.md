@@ -61,13 +61,14 @@ Ces règles s'appliquent de manière générique à tous les fichiers et toutes 
 
 Tout agent opérant dans ce dépôt (notamment l'**Agent Réalisation de Sprint**) applique obligatoirement le socle normatif :
 - Identité et posture : `.agents/rules/persona.md`
-- Cartographie physique des livrables : `.agents/references/gestion-livrables.md`
-- Typologie et slugs des tutoriels : `.agents/references/typologie-uas-tutoriels.md`
+- Affichage obligatoire des skills : `.agents/rules/affichage-skills.md`
+- Cartographie physique des livrables : `.agents/references/organisation-livrables.md`
+- Typologie et slugs des tutoriels : `.agents/references/maturation-et-typologie-ua-tuto.md`
 - Stratégie des branches et conventions de commits : `.agents/references/gitflow.md`
 
 ---
 
-## 6. Gouvernance des Flux de Travail et des Sessions
+## 7. Gouvernance des Flux de Travail et des Sessions
 
 - **Référentiel universel vs Déclinaisons pédagogiques** :
   - Le flux générique d'ingénierie logicielle (`flux-travail/flux-travail-generique.md` - 25 étapes) est gouverné par le skill `flux-travail`.
