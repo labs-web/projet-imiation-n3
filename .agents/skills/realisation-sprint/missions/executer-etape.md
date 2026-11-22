@@ -1,35 +1,29 @@
 # Mission : Exécution Pas-à-Pas d'une Étape de Jalon (`executer-etape.md`)
 
 ## 1. Contexte & Rôle
-Après validation du plan de jalon par le concepteur, cette mission prend en charge la réalisation effective des étapes, en s'assurant au préalable que la compétence requise est disponible.
+Après validation du plan de jalon par le concepteur, cette mission pilote la réalisation unitaire de chaque étape du jalon selon un protocole strict et ordonné en 4 temps.
 
 ---
 
-## 2. Procédure Pas-à-Pas
+## 2. Protocole Obligatoire en 4 Temps par Étape
 
-1. **Vérification Préalable de Couverture en Compétence (Impératif) :**
-   - Identifier l'étape du flux de travail à exécuter et son livrable.
-   - Vérifier si un skill et une mission dédiés existent dans `.agents/skills/` pour cette étape (rappel : une mission peut couvrir plusieurs étapes).
-   - **Si la compétence ou la mission est absente ou inadaptée :**
-     - Suspendre immédiatement l'exécution directe.
-     - Déclencher `/skills-planer` (mission `couvrir-etape-sprint.md`) pour arbitrer entre : la création d'un nouveau skill, l'ajout d'une mission dans un skill existant, ou une reconception.
-     - Attendre la validation de l'artéfact interactif de compétence par le concepteur et la création physique du skill avant de reprendre l'étape.
+Pour chaque étape du flux de travail à réaliser :
 
-2. **Vérification des Prérequis de l'Étape :**
-   - S'assurer que les livrables des étapes antérieures sont disponibles et conformes.
-   - Identifier l'emplacement cible du livrable (ex : `sprints/sprint-0.md`, `docs/cadrage/note-cadrage.md`).
+1. **Temps 1 — Convocation Obligatoire de `skills-planer` :**
+   - Identifier l'étape du flux de travail et le livrable attendu.
+   - Convoquer immédiatement le skill `skills-planer` (mission `couvrir-etape-sprint.md`).
+   - `skills-planer` critique le plan préliminaire (`docs/plan-preliminaire-skills.md`) et conçoit la compétence requise (nouveau skill, mission dans un skill existant, ou reconception).
 
-3. **Réalisation de l'Activité d'Ingénierie via le Skill Dédié :**
-   - Mobiliser le skill et la mission responsables de l'étape.
-   - Produire le contenu technique en respectant scrupuleusement la stack de référence (Laravel 13, MySQL, Tailwind CSS avec Preline UI, Alpine.js).
-   - Appliquer les règles de rédaction :
-     - Français direct niveau A1/A2 (phrases courtes Sujet + Verbe + Complément).
-     - Interdiction stricte de tout tableau Markdown (`| ... |`) : listes à puces directes (`- `) exclusives.
-     - Liens relatifs exclusifs (`./`, `../`).
+2. **Temps 2 — Création Physique Immédiate de la Compétence :**
+   - `skills-planer` matérialise physiquement l'arborescence et les fichiers (`SKILL.md` $\le 75$ lignes et missions associées).
 
-4. **Contrôle Qualité Immédiat :**
-   - Vérifier la complétude et l'unicité du livrable généré.
-   - Mettre à jour le document de suivi du sprint (`sprints/sprint-[N].md`) pour consigner l'avancement.
+3. **Temps 3 — Soumission de la Compétence à Validation du Concepteur :**
+   - Émettre un artéfact interactif standardisé (`validation-skill-[nom].md` avec `RequestFeedback: true`).
+   - Présenter au concepteur : la compétence créée, ses fichiers, sa justification, et la critique du plan préliminaire.
+   - Suspendre toute modification en attente du clic sur *Proceed* par le concepteur.
 
-5. **Enchaînement ou Clôture :**
-   - Répéter la procédure pour les étapes suivantes du jalon, ou basculer vers `missions/valider-jalon.md` une fois toutes les étapes du jalon terminées.
+4. **Temps 4 — Réalisation Concrète de l'Étape :**
+   - Dès la compétence validée, mobiliser le skill créé pour exécuter l'étape d'ingénierie.
+   - Produire le livrable unique au format exigé (Laravel 13, MySQL, Tailwind/Preline, A1/A2, zéro tableau, liens relatifs).
+   - Mettre à jour le suivi d'avancement du sprint (`sprints/sprint-[N].md`).
+   - Passer à l'étape suivante du jalon en répétant le protocole, ou clore le jalon via `missions/valider-jalon.md`.
