@@ -25,9 +25,9 @@ Le dossier `.agents/` repose sur une séparation claire entre règles transversa
 
 ---
 
-## 2. Catalogue des 17 Skills de l'Écosystème
+## 2. Catalogue des 19 Skills de l'Écosystème
 
-L'écosystème comprend **17 skills complémentaires**, organisés en 5 familles d'activités :
+L'écosystème comprend **19 skills complémentaires**, organisés en 5 familles d'activités :
 
 ### A. Gouvernance & Ingénierie des Sessions
 
@@ -123,6 +123,16 @@ L'écosystème comprend **17 skills complémentaires**, organisés en 5 familles
   - Rôle : Gouverne la phase Prototypage du Design Thinking : User Flow textuel, spécification d'UI Kit (Tailwind / Preline) et maquettes interactives responsives.
   - Déclenchement : Modélisation des parcours utilisateurs, conception d'UI Kit, maquettage d'écrans.
   - Missions associées : `missions/modeliser-user-flow.md`, `missions/concevoir-ui-kit.md`, `missions/prototyper-maquette.md`.
+
+- **[scrum-sprint-review](./skills/scrum-sprint-review/SKILL.md) (`/scrum-sprint-review`) :**
+  - Rôle : Gouverne la conduite de la Sprint Review, la démonstration contradictoire de l'incrément devant le Product Owner, l'audit DoD et la décision Go/No-Go.
+  - Déclenchement : Démonstration de fin de sprint, audit d'acceptation, procès-verbal Go/No-Go.
+  - Missions associées : `missions/conduire-review.md`.
+
+- **[scrum-sprint-retrospective](./skills/scrum-sprint-retrospective/SKILL.md) (`/scrum-sprint-retrospective`) :**
+  - Rôle : Gouverne l'animation de la Rétrospective agile d'équipe, l'analyse réflexive du fonctionnement interne et le plan d'actions d'amélioration continue.
+  - Déclenchement : Rétrospective d'équipe en fin de sprint, bilan d'amélioration continue.
+  - Missions associées : `missions/animer-retrospective.md`.
 
 ### E. Communication Inter-Agents
 
@@ -271,4 +281,6 @@ Pour mobiliser directement les compétences depuis le chat, le concepteur peut u
 - `/scrum-product-backlog` : Bâtir, découper en US INVEST et ordonner le carnet de produit selon MoSCoW.
 - `/scrum-sprint-planning` : Planifier le sprint, formaliser le Sprint Goal et l'engagement d'équipe.
 - `/design-thinking-prototypage` : Modéliser le User Flow, concevoir l'UI Kit et prototyper les maquettes d'accueil.
+- `/scrum-sprint-review` : Conduire la revue de sprint, auditer la DoD et formaliser la décision Go/No-Go.
+- `/scrum-sprint-retrospective` : Animer la rétrospective d'équipe et définir le plan d'actions d'amélioration.
 - `/skills-dev` : Auditer l'écosystème de compétences ou concevoir un nouveau skill.
