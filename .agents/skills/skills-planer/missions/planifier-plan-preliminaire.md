@@ -2,7 +2,8 @@
 
 ## 1. Contexte & Rôle
 Cette mission analyse le [flux-travail-generique.md](../../../flux-travail/flux-travail-generique.md) (les 25 étapes universelles d'ingénierie logicielle) pour concevoir un **plan préliminaire d'architecture des compétences**.
-Ce plan ne crée pas les skills immédiatement : il sert de boussole et de guide méthodologique pour la planification progressive lors des sprints.
+- **Nature du livrable :** Ce plan constitue une **hypothèse de travail initiale** et un cadre guide global, et **non un dogme figé**.
+- **Principe d'évolution :** Ce document est expressément destiné à être **systématiquement critiqué et enrichi** à chaque étape de réalisation lors des sprints, afin de toujours proposer mieux.
 
 ---
 
@@ -19,8 +20,8 @@ Ce plan ne crée pas les skills immédiatement : il sert de boussole et de guide
    - Parcourir les 3 macro-phases : Sprint 0 (Cadrage, Design Macro), Cycle Itératif Dual-Track (Sprint N), et Phase Finale (Livraison & Clôture).
    - Identifier pour chaque étape : les compétences requises, les activités d'ingénierie et le livrable unique attendu.
 
-2. **Regroupement de Niveau 1 (Missions dans des Skills Métiers) :**
-   - Regrouper les étapes en compétences thématiques cohérentes :
+2. **Regroupement Préliminaire de Niveau 1 (Missions dans des Skills Métiers) :**
+   - Proposer une première projection thématique des compétences :
      - Cadrage & Gestion de Projet (Étapes 1, 3, 4).
      - Infrastructure & Configuration Git (Étape 2).
      - Design Thinking & UI Kit (Étapes 5, 6, 8, 9, 19).
@@ -33,6 +34,7 @@ Ce plan ne crée pas les skills immédiatement : il sert de boussole et de guide
 3. **Génération de l'Artéfact Interactif de Proposition :**
    - Générer un artéfact interactif standardisé (`plan-preliminaire-skills.md` avec `RequestFeedback: true`).
    - Présenter la matrice de couverture des 25 étapes et le rôle attendu de chaque compétence.
+   - Rappeler explicitement que cette matrice sera challengée et affinée à chaque sprint.
    - Demander la validation formelle du concepteur via le bouton *Proceed*.
 
 4. **Consignation Documentaire :**
