@@ -18,6 +18,7 @@ Elle prend en charge :
 
 2. **Conception & Création Physique Immédiate :**
    - Définir le skill et ses missions (rappel : une mission peut couvrir plusieurs étapes).
+   - **Exigence Absolue de Généricité :** Veiller rigoureusement à ce que la compétence soit formulée de façon **100% générique** pour n'importe quel projet d'ingénierie logicielle web, et exécutable pour un projet réel **sans dépendance à des tutoriels ou à des ateliers (labs)**.
    - Exécuter immédiatement la création physique des fichiers (`SKILL.md` $\le 75$ lignes et fichiers `missions/*.md`).
 
 3. **Soumission de l'Artéfact de Validation au Concepteur :**
@@ -25,6 +26,7 @@ Elle prend en charge :
    - Présenter au concepteur :
      - La compétence créée et ses fichiers sources prêts.
      - La critique du plan préliminaire et la justification de la solution adoptée.
+     - La démonstration de sa généricité et de son autonomie par rapport aux tutoriels/labs.
      - L'étape du flux débloquée par ce skill.
    - Attendre l'approbation formelle (*Proceed*) du concepteur.
 

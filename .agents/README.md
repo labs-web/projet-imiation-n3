@@ -89,10 +89,15 @@ L'écosystème comprend **12 skills complémentaires**, organisés en 5 familles
   - Déclenchement : Lancement, exécution ou validation d'un jalon de sprint (`flux-travail/sessions/flux-travail-s{N}.md`).
   - Missions associées : `missions/planifier-jalon.md`, `missions/executer-etape.md`, `missions/valider-jalon.md`.
 
-- **[gestion-depot](./skills/gestion-depot/SKILL.md) (`/gestion-depot`) :**
-  - Rôle : Gère les opérations d'infrastructure Git/GitHub et le cycle de vie documentaire du projet.
-  - Déclenchement : Initialisation du dépôt local et distant, bascule sur la branche active du sprint (`sprintN`), actualisation de la documentation d'accueil racine (`README.md`).
-  - Missions associées : `missions/init-depot.md`, `missions/init-projet.md`.
+- **[init-depot](./skills/init-depot/SKILL.md) (`/init-depot`) :**
+  - Rôle : Initialise l'infrastructure physique du dépôt Git (local/distant), configure le `.gitignore` adapté à Laravel 13, vérifie l'arborescence des dossiers et rédige le `README.md` d'accueil vitrine.
+  - Déclenchement : Initialisation du dépôt, audit de l'infrastructure physique et rédaction du README vitrine.
+  - Missions associées : `missions/initialiser-depot-git.md`, `missions/rediger-readme-accueil.md`.
+
+- **[cadrage-produit](./skills/cadrage-produit/SKILL.md) (`/cadrage-produit`) :**
+  - Rôle : Gouverne le cadrage fonctionnel du produit (objectifs SMART, périmètre In/Out du MVP) et la justification rationnelle de la stack technique (Laravel 13, MySQL, Preline UI, Alpine.js).
+  - Déclenchement : Cadrage initial de produit, matrice In/Out, dossier de faisabilité technique de la stack.
+  - Missions associées : `missions/cadrer-perimetre.md`, `missions/justifier-stack.md`.
 
 ### E. Communication Inter-Agents
 
@@ -234,5 +239,6 @@ Pour mobiliser directement les compétences depuis le chat, le concepteur peut u
 - `/domaine-scrum` : Solliciter le mentor agile pour les rôles, User Stories, backlog et cérémonies.
 - `/realisation-sprint` : Piloter la réalisation opérationnelle d'un sprint étape par étape par jalon.
 - `/skills-planer` : Planifier l'écosystème préliminaire des compétences ou proposer un skill adapté au fil de l'eau.
-- `/gestion-depot` : Préparer une nouvelle branche de sprint Git ou actualiser la documentation racine.
+- `/init-depot` : Initialiser l'infrastructure Git et le README d'accueil vitrine.
+- `/cadrage-produit` : Cadrer le périmètre In/Out et justifier la stack technique.
 - `/skills-dev` : Auditer l'écosystème de compétences ou concevoir un nouveau skill.

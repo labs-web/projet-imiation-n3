@@ -1,79 +1,87 @@
-# Blog des Lauréats - Projet d'Imitation Niveau 3
+# Blog des Lauréats
 
-## 1. Description du projet
-Le Blog des Lauréats est une application web conçue pour la communauté de Solicode Tanger.
-Les lauréats peuvent rédiger, publier et administrer leurs articles professionnels.
-Les apprenants actuels de Solicode peuvent consulter et lire ces retours d'expérience. L'application est déployée et accessible en ligne sur Internet.
+> Plateforme web de partage d'expériences, de publication d'articles professionnels et de valorisation des parcours des lauréats.
 
 ---
 
-## 2. Contexte et Objectifs
+## 1. Présentation du Projet
 
-### Contexte général
-- **Établissement** : Solicode Tanger.
-- **Promotion** : Niveau 3 - Développement Web et Mobile.
-- **Formateur référent** : ESSARRAJ Fouad.
-
-### Démarche pédagogique : Méthode par imitation
-Ce projet s'appuie sur la méthode par imitation pour guider l'apprenant pas à pas de A à Z :
-- **Tutoriels** : Guides complets détaillant les étapes et les résultats attendus.
-- **UA-Lab** : Laboratoires d'apprentissage guidés pour maîtriser les bases théoriques et pratiques.
-- **Lab** : Recherche autonome d'une solution technique validée par le formateur.
-- **Veille technologique** : Découverte et intégration de nouveaux outils ou composants.
-- **Tâches** : Actions pratiques d'ingénierie et d'organisation Scrum.
-
-### Composants pédagogiques (Approche Par Compétences - APC)
-- **Domaine de compétence** : Regroupement thématique des compétences du référentiel.
-- **Unité d'apprentissage (UA)** :
-  - **UA-Tuto** : Unité basée sur des tutoriels pas-à-pas.
-  - **UA-Lab** : Unité pratique guidée par le formateur.
-  - **UA-tâche** : Unité regroupant les tâches récurrentes de gestion Scrum à chaque sprint.
+Le **Blog des Lauréats** est une application web conçue pour créer un espace d'échange et de capitalisation d'expérience :
+- **Pour les lauréats :** Une plateforme d'expression pour rédiger, administrer et publier des articles techniques et professionnels relatant leurs parcours et retours d'expérience.
+- **Pour les apprenants :** Un espace de consultation fluide pour découvrir les retours du terrain, s'inspirer des bonnes pratiques et faciliter leur insertion professionnelle.
+- **Pour l'équipe de modération :** Un tableau de bord permettant de superviser les publications, d'administrer les catégories et de garantir la qualité des contenus.
 
 ---
 
-## 3. Stack technique et Architecture
-- **Framework Backend** : Laravel 12 (PHP).
-- **Architecture logicielle** : Architecture en 2 couches (Contrôleur mince -> Classe Service).
-- **Frontend & Vues** : Alpine.js (SPA, composants réactifs), gabarits Blade responsives, HTML5, CSS3, Tailwind CSS.
-- **Base de données** : MySQL.
-- **Modélisation** : Diagramme de contexte et cas d'utilisation avec Mermaid.
-- **Gestion de versions & Outils** : Git et GitHub CLI (`gh`).
-- **Intelligence Artificielle & Automatisation** : Agent Antigravity (Skills natifs et règles Always-On).
-- **Documentation et Présentations** : Markdown standard et Marp.
+## 2. Architecture & Stack Technique
+
+L'application s'appuie sur une architecture logicielle moderne, modulaire et robuste :
+- **Backend :** Laravel 13 (PHP), architecture en 2 couches (Contrôleurs minces -> Classes de Service métier).
+- **Base de données :** MySQL avec gestion stricte de l'intégrité relationnelle et des transactions.
+- **Interface & Design System :** Tailwind CSS avec la bibliothèque de composants accessibles Preline UI.
+- **Frontend Réactif :** Alpine.js pour l'interactivité dynamique légère directement intégrée dans les vues Blade.
+- **Sécurité & Contrôle d'Accès :** Spatie Laravel-Permission (RBAC) pour la gestion déclarative des rôles et autorisations.
+- **Automatisation & Ingénierie :** Agent Antigravity pour l'assistance méthodologique et le respect des standards.
 
 ---
 
-## 4. Organisation des dossiers
-- [.agents/](./.agents/) : Configuration native de l'Agent IA (règles permanentes et skills outillés avec leurs missions).
-- [docs/](./docs/) : Documentation libre, recherches et veilles technologiques personnelles.
-- [flux-travail/](./flux-travail/) : Référentiel méthodologique et suivi des étapes de réalisation du projet.
-- [issues/](./issues/) : Gestion et suivi des tâches et user stories du projet.
-- [presentations/](./presentations/) : Diaporamas Marp du projet et des restitutions de sprints.
-- [rapport/](./rapport/) : Rapport modulaire du projet, chapitres et script de compilation Node.js.
-- [sprints/](./sprints/) : Planification Scrum des sprints et suivi de la branche active.
-- [src/](./src/) : Code source de l'application Laravel (architecture 2 couches, contrôleurs, services, vues Blade).
-- [tutoriels/](./tutoriels/) : Restitution des tutoriels et ateliers pratiques organisés par domaine.
+## 3. Organisation du Dépôt
+
+L'arborescence du projet sépare rigoureusement la gouvernance, la documentation et le code source :
+- [.agents/](./.agents/) : Configuration permanente de l'Agent IA (règles de développement et compétences outillées).
+- [docs/](./docs/) : Livrables d'ingénierie logicielle (cadrage, analyse, conception, architecture, qualité).
+  - [docs/cadrage/](./docs/cadrage/) : Notes de cadrage fonctionnel et dossiers de justification technique.
+- [sprints/](./sprints/) : Feuilles d'engagement de sprint, procès-verbaux de revue et rétrospectives agiles.
+- [scrum/](./scrum/) : Product Backlog priorisé et raffiné.
+- [src/](./src/) : Code source de l'application Laravel (modèles, migrations, contrôleurs, services, vues Blade).
 
 ---
 
-## 5. Méthodologie de développement
-Le projet intègre les meilleures pratiques de l'ingénierie logicielle :
-- **Agile / Scrum** : Découpage par sprints, réunions quotidiennes et revues de sprint.
-- **Processus 2TUP** : Séparation claire entre la branche fonctionnelle et la branche technique.
-- **Design Thinking** : Conception centrée sur les besoins réels des utilisateurs.
-- **Modélisation UML** : Schémas de cas d'utilisation, diagrammes de classes et de séquences.
+## 4. Guide d'Installation et de Démarrage Rapide
+
+### Prérequis Logiciels
+- PHP 8.2 ou supérieur avec les extensions requises (pdo_mysql, mbstring, openssl).
+- Composer 2.x.
+- Node.js 18+ et gestionnaire de paquets NPM.
+- Serveur de base de données MySQL 8.x.
+- Client Git.
+
+### Installation Pas-à-Pas
+
+1. **Cloner le dépôt et se placer dans le projet :**
+   ```bash
+   git clone https://github.com/labs-web/projet-imiation-n3.git
+   cd projet-imiation-n3
+   ```
+
+2. **Installer les dépendances PHP et Node :**
+   ```bash
+   composer install
+   npm install
+   ```
+
+3. **Configurer l'environnement :**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+   Renseigner les accès MySQL dans le fichier `.env` (`DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`).
+
+4. **Exécuter les migrations et le peuplement des données :**
+   ```bash
+   php artisan migrate --seed
+   ```
+
+5. **Compiler les assets et lancer les serveurs :**
+   ```bash
+   npm run dev
+   php artisan serve
+   ```
+   L'application est alors accessible à l'adresse locale `http://localhost:8000`.
 
 ---
 
-## 6. Démarrage rapide
+## 5. Gouvernance Git & Cycle de Contribution
 
-### Prérequis
-- Git installé sur votre machine.
-- GitHub CLI (`gh`) configuré et authentifié.
-
-### Cloner le projet
-```bash
-git clone https://github.com/labs-web/projet-imiation-n3.git
-cd projet-imiation-n3
-git checkout sprint1
-```
+- **Convention de branches :** Tout travail actif est réalisé sur la branche de sprint (`sprint[N]`). La branche `main` est réservée aux versions stables livrées.
+- **Souveraineté humaine :** Les commits et les pushs sont obligatoirement exécutés par le développeur après validation des livrables.

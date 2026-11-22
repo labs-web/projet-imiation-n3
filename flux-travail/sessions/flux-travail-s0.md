@@ -1,123 +1,123 @@
-# Flux de Travail Opérationnel — Session S0 : Maquette de la Page d'Accueil
+# Flux de Travail OpÃ©rationnel â€” Session S0 : Maquette de la Page d'Accueil
 
-Ce document définit le flux de travail opérationnel du **Sprint 0**.
-Il est centré sur la production de son incrément majeur : la **Maquette de la Page d'Accueil** du Blog des Lauréats.
+Ce document dÃ©finit le flux de travail opÃ©rationnel du **Sprint 0**.
+Il est centrÃ© sur la production de son incrÃ©ment majeur : la **Maquette de la Page d'Accueil** du Blog des LaurÃ©ats.
 
-Le flux articule de manière cohérente les Unités d'Apprentissage d'ateliers pratiques (**UA-Lab**) et les Unités d'Apprentissage d'application opérationnelle sur le projet (**UA-Tâche**), totalisant **6 UAs**, **15 étapes chronologiques** et **22 tutoriels d'ingénierie**.
+Le flux articule de maniÃ¨re cohÃ©rente les UnitÃ©s d'Apprentissage d'ateliers pratiques (**UA-Lab**) et les UnitÃ©s d'Apprentissage d'application opÃ©rationnelle sur le projet (**UA-TÃ¢che**), totalisant **6 UAs**, **15 Ã©tapes chronologiques** et **22 tutoriels d'ingÃ©nierie**.
 
-Les durées temporelles (80 heures / 10 jours) sont fournies à titre purement indicatif pour les formateurs et le concepteur.
+Les durÃ©es temporelles (80 heures / 10 jours) sont fournies Ã  titre purement indicatif pour les formateurs et le concepteur.
 
 ---
 
 ## 1. Fiche d'Identification de la Session S0
 
 - **Identifiant :** Session S0 (Sprint 0)
-- **Titre centré sur l'incrément :** Maquette de la Page d'Accueil
-- **Incrément produit :** Maquette interactive de la page d'accueil avec son User Flow textuel, son UI Kit de composants validé, et le cadrage initial du produit (Product Backlog ordonné)
-- **Durée indicative :** 80 heures (10 jours ouvrés)
-- **Référentiel des compétences :** Conforme au document de référence [.agents/references/domaines-competences.md](../../.agents/references/domaines-competences.md)
-- **Domaines de compétences et Unités d'Apprentissage mobilisés :**
-  - Domaine Réalisation et Conduite de Projet (`D.351.2-realisation-projet`) :
-    - Unité d'apprentissage `UA.351.01` (UA-Tâche) : *Application Projet : Dépôt, Cadrage et Stack Technique* (Statut : **À réaliser**)
+- **Titre centrÃ© sur l'incrÃ©ment :** Maquette de la Page d'Accueil
+- **IncrÃ©ment produit :** Maquette interactive de la page d'accueil avec son User Flow textuel, son UI Kit de composants validÃ©, et le cadrage initial du produit (Product Backlog ordonnÃ©)
+- **DurÃ©e indicative :** 80 heures (10 jours ouvrÃ©s)
+- **RÃ©fÃ©rentiel des compÃ©tences :** Conforme au document de rÃ©fÃ©rence [.agents/references/domaines-competences.md](../../.agents/references/domaines-competences.md)
+- **Domaines de compÃ©tences et UnitÃ©s d'Apprentissage mobilisÃ©s :**
+  - Domaine RÃ©alisation et Conduite de Projet (`D.351.2-realisation-projet`) :
+    - UnitÃ© d'apprentissage `UA.351.21` (UA-TÃ¢che) : *Application Projet : DÃ©pÃ´t, Cadrage et Stack Technique* (Statut : **Ã€ rÃ©aliser**)
   - Domaine Scrum & Gouvernance Agile (`D.351.1-scrum`) :
-    - Unité d'apprentissage `UA.351.11` (UA-Lab) : *Initiation à la Démarche Agile et Cadre Scrum* (Statut : **Réalisée**)
+    - UnitÃ© d'apprentissage `UA.351.11` (UA-Lab) : *Initiation Ã  la DÃ©marche Agile et Cadre Scrum* (Statut : **RÃ©alisÃ©e**)
   - Domaine Conception & Design Thinking (`D.311.1-design`) :
-    - Unité d'apprentissage `UA.311.11` (UA-Lab) : *Design Thinking : Démarche Globale et Immersion Empathique* (Statut : **À réaliser**)
-    - Unité d'apprentissage `UA.311.12` (UA-Lab) : *Design Thinking : Parcours Utilisateur et Prototypage d'Interface* (Statut : **À réaliser**)
-    - Unité d'apprentissage `UA.311.13` (UA-Lab) : *Design Thinking : Tests d'Utilisabilité et Validation Ergonomique* (Statut : **À réaliser**)
-  - Domaine Réalisation et Conduite de Projet (`D.351.2-realisation-projet`) :
-    - Unité d'apprentissage `UA.351.02` (UA-Tâche) : *Application Projet : Validation d'Incrément et Clôture Agile* (Statut : **À réaliser**)
+    - UnitÃ© d'apprentissage `UA.311.11` (UA-Lab) : *Design Thinking : DÃ©marche Globale et Immersion Empathique* (Statut : **Ã€ rÃ©aliser**)
+    - UnitÃ© d'apprentissage `UA.311.12` (UA-Lab) : *Design Thinking : Parcours Utilisateur et Prototypage d'Interface* (Statut : **Ã€ rÃ©aliser**)
+    - UnitÃ© d'apprentissage `UA.311.13` (UA-Lab) : *Design Thinking : Tests d'UtilisabilitÃ© et Validation Ergonomique* (Statut : **Ã€ rÃ©aliser**)
+  - Domaine RÃ©alisation et Conduite de Projet (`D.351.2-realisation-projet`) :
+    - UnitÃ© d'apprentissage `UA.351.22` (UA-TÃ¢che) : *Application Projet : Validation d'IncrÃ©ment et ClÃ´ture Agile* (Statut : **Ã€ rÃ©aliser**)
 - **Objectif global d'apprentissage :**
-  - Cadrer le projet initial et configurer l'espace de développement Git officiel.
-  - Découvrir la méthode agile Scrum et organiser la gouvernance de promotion avec le Groupe 1 en Product Owner.
-  - Maîtriser les étapes amont du Design Thinking (Empathie, Définition) sur le cas Todo List, puis conduire l'immersion usagers et formaliser les Personas du Blog.
-  - Bâtir le Product Backlog initial ordonné selon MoSCoW et signer la feuille d'engagement d'équipe du Sprint 0.
-  - Maîtriser les étapes aval du Design Thinking (Idéation, Prototypage) pour modéliser le User Flow et prototyper la maquette d'accueil avec Tailwind CSS et Preline UI.
-  - Découvrir les protocoles de tests d'utilisabilité et valider formellement la maquette lors de la Sprint Review 0 (Jalon Go/No-Go).
+  - Cadrer le projet initial et configurer l'espace de dÃ©veloppement Git officiel.
+  - DÃ©couvrir la mÃ©thode agile Scrum et organiser la gouvernance de promotion avec le Groupe 1 en Product Owner.
+  - MaÃ®triser les Ã©tapes amont du Design Thinking (Empathie, DÃ©finition) sur le cas Todo List, puis conduire l'immersion usagers et formaliser les Personas du Blog.
+  - BÃ¢tir le Product Backlog initial ordonnÃ© selon MoSCoW et signer la feuille d'engagement d'Ã©quipe du Sprint 0.
+  - MaÃ®triser les Ã©tapes aval du Design Thinking (IdÃ©ation, Prototypage) pour modÃ©liser le User Flow et prototyper la maquette d'accueil avec Tailwind CSS et Preline UI.
+  - DÃ©couvrir les protocoles de tests d'utilisabilitÃ© et valider formellement la maquette lors de la Sprint Review 0 (Jalon Go/No-Go).
 
 ---
 
-## 2. Organisation de la Promotion et Prérequis de Lancement du Sprint 0
+## 2. Organisation de la Promotion et PrÃ©requis de Lancement du Sprint 0
 
-Pour lancer la dynamique collective du Sprint 0, l'organisation de la promotion repose sur un découpage en 5 groupes dont les numéros reflètent directement la priorité des missions d'ingénierie et d'accompagnement :
+Pour lancer la dynamique collective du Sprint 0, l'organisation de la promotion repose sur un dÃ©coupage en 5 groupes dont les numÃ©ros reflÃ¨tent directement la prioritÃ© des missions d'ingÃ©nierie et d'accompagnement :
 
-- **Condition d'accès aux Groupes Opérationnels 1 à 4 :**  
-  Pour être affecté dans l'un des groupes 1 à 4, chaque apprenant doit obligatoirement avoir validé les **5 labs initiaux prérequis fondamentaux** :
-  - `lab-startup` : Prise en main de l'environnement de développement et initialisation du poste.
-  - `lab-markdown` : Maîtrise de la rédaction documentaire structurée en Markdown standard.
+- **Condition d'accÃ¨s aux Groupes OpÃ©rationnels 1 Ã  4 :**  
+  Pour Ãªtre affectÃ© dans l'un des groupes 1 Ã  4, chaque apprenant doit obligatoirement avoir validÃ© les **5 labs initiaux prÃ©requis fondamentaux** :
+  - `lab-startup` : Prise en main de l'environnement de dÃ©veloppement et initialisation du poste.
+  - `lab-markdown` : MaÃ®trise de la rÃ©daction documentaire structurÃ©e en Markdown standard.
   - `lab-marp` : Conception de diaporamas professionnels au format Marp Markdown.
   - `lab-prompt` : Formulation de prompts d'assistance et interaction avec l'Agent IA copilote.
   - `lab-presentation-pro` : Posture professionnelle et animation de soutenance technique.
 
-- **Groupe 5 (Priorité 5 — Prérequis Fondamentaux & Sas de Rattrapage) :**  
-  Les apprenants n'ayant pas encore validé l'ensemble des 5 labs initiaux sont affectés au Groupe 5. Leur priorité absolue est de finaliser et faire valider ces prérequis indispensables avant d'intégrer les groupes opérationnels 1 à 4.
+- **Groupe 5 (PrioritÃ© 5 â€” PrÃ©requis Fondamentaux & Sas de Rattrapage) :**  
+  Les apprenants n'ayant pas encore validÃ© l'ensemble des 5 labs initiaux sont affectÃ©s au Groupe 5. Leur prioritÃ© absolue est de finaliser et faire valider ces prÃ©requis indispensables avant d'intÃ©grer les groupes opÃ©rationnels 1 Ã  4.
 
-- **Rôle Opérationnel des Groupes 1 à 4 (Exclusif aux Tuto-Tâches) :**  
-  *Règle méthodologique stricte :* Les groupes ne sont pas sollicités pendant le déroulement des séances d'UA-Lab (qui relèvent d'un apprentissage guidé par le formateur). Ils interviennent pour **débloquer et accompagner les apprenants sur les tuto-tâches** d'application projet avant et pendant leur réalisation :
-  - **Groupe 1 (Priorité 1 — Product Owner / Vision & Backlog) :**  
-    Porte la vision métier du *Blog des Lauréats*, priorise les User Stories initiales du Product Backlog et débloque les arbitrages fonctionnels sur les tâches de vision, de cadrage et de backlog. Il statue lors de la Sprint Review 0.
-  - **Groupe 2 (Priorité 2 — Design Thinking & Prototypage) :**  
-    Assure la cohérence de la démarche centrée utilisateur. Il guide et débloque les pairs sur les tâches d'immersion terrain, la formalisation des Cartes d'Empathie, la modélisation des fiches Personas, ainsi que sur le User Flow et les maquettes interactives.
-  - **Groupe 3 (Priorité 3 — Cadre Scrum & Organisation Agile) :**  
-    Veille à la bonne appropriation du cadre Scrum. Il guide et débloque les pairs sur la feuille d'engagement d'équipe (`sprint-0.md`) et le respect des cérémonies agiles.
-  - **Groupe 4 (Priorité 4 — Cadrage Transverse, Plan de Rapport & Diaporama) :**  
-    Prépare les formats de capitalisation transverses en travaillant sur son projet fil rouge : élaboration du plan type de rapport modulaire et du plan type de présentation de soutenance Marp.
+- **RÃ´le OpÃ©rationnel des Groupes 1 Ã  4 (Exclusif aux Tuto-TÃ¢ches) :**  
+  *RÃ¨gle mÃ©thodologique stricte :* Les groupes ne sont pas sollicitÃ©s pendant le dÃ©roulement des sÃ©ances d'UA-Lab (qui relÃ¨vent d'un apprentissage guidÃ© par le formateur). Ils interviennent pour **dÃ©bloquer et accompagner les apprenants sur les tuto-tÃ¢ches** d'application projet avant et pendant leur rÃ©alisation :
+  - **Groupe 1 (PrioritÃ© 1 â€” Product Owner / Vision & Backlog) :**  
+    Porte la vision mÃ©tier du *Blog des LaurÃ©ats*, priorise les User Stories initiales du Product Backlog et dÃ©bloque les arbitrages fonctionnels sur les tÃ¢ches de vision, de cadrage et de backlog. Il statue lors de la Sprint Review 0.
+  - **Groupe 2 (PrioritÃ© 2 â€” Design Thinking & Prototypage) :**  
+    Assure la cohÃ©rence de la dÃ©marche centrÃ©e utilisateur. Il guide et dÃ©bloque les pairs sur les tÃ¢ches d'immersion terrain, la formalisation des Cartes d'Empathie, la modÃ©lisation des fiches Personas, ainsi que sur le User Flow et les maquettes interactives.
+  - **Groupe 3 (PrioritÃ© 3 â€” Cadre Scrum & Organisation Agile) :**  
+    Veille Ã  la bonne appropriation du cadre Scrum. Il guide et dÃ©bloque les pairs sur la feuille d'engagement d'Ã©quipe (`sprint-0.md`) et le respect des cÃ©rÃ©monies agiles.
+  - **Groupe 4 (PrioritÃ© 4 â€” Cadrage Transverse, Plan de Rapport & Diaporama) :**  
+    PrÃ©pare les formats de capitalisation transverses en travaillant sur son projet fil rouge : Ã©laboration du plan type de rapport modulaire et du plan type de prÃ©sentation de soutenance Marp.
 
 ---
 
 ## 3. Cadre Tri-Projets
 
-- **Projet d'Imitation (*Blog des Lauréats*) :** Réalisation pas-à-pas en classe active des étapes de cadrage, d'empathie, de backlog, d'UI Kit et de la maquette de la page d'accueil.
-- **Projet Technique (*Portfolio Développeur*) :**
-  - En fin de sprint, chaque apprenant reproduit la réalisation concrète du sprint sur son portfolio personnel (initialisation du dépôt Git et maquette de sa propre page d'accueil).
-  - **Règle formelle d'exigence :** Les documents de cadrage et de conception (note de cadrage, personas, vision produit) **ne sont pas demandés** pour le portfolio dans la session. L'apprenant reste libre de les réaliser pour lui-même, mais ils ne font l'objet d'aucune évaluation formelle.
-- **Projet Fil Rouge (*Application Métier*, ex : Gestion de Cinéma) :** Cadrage fonctionnel, formalisation des Personas et initialisation du Product Backlog de l'application métier par les équipes projet.
+- **Projet d'Imitation (*Blog des LaurÃ©ats*) :** RÃ©alisation pas-Ã -pas en classe active des Ã©tapes de cadrage, d'empathie, de backlog, d'UI Kit et de la maquette de la page d'accueil.
+- **Projet Technique (*Portfolio DÃ©veloppeur*) :**
+  - En fin de sprint, chaque apprenant reproduit la rÃ©alisation concrÃ¨te du sprint sur son portfolio personnel (initialisation du dÃ©pÃ´t Git et maquette de sa propre page d'accueil).
+  - **RÃ¨gle formelle d'exigence :** Les documents de cadrage et de conception (note de cadrage, personas, vision produit) **ne sont pas demandÃ©s** pour le portfolio dans la session. L'apprenant reste libre de les rÃ©aliser pour lui-mÃªme, mais ils ne font l'objet d'aucune Ã©valuation formelle.
+- **Projet Fil Rouge (*Application MÃ©tier*, ex : Gestion de CinÃ©ma) :** Cadrage fonctionnel, formalisation des Personas et initialisation du Product Backlog de l'application mÃ©tier par les Ã©quipes projet.
 
 ---
 
-## 4. Déroulement Opérationnel des 6 Unités d'Apprentissage (15 Étapes — 22 Tutoriels)
+## 4. DÃ©roulement OpÃ©rationnel des 6 UnitÃ©s d'Apprentissage (15 Ã‰tapes â€” 22 Tutoriels)
 
 ```mermaid
 flowchart TD
-    subgraph UA1 ["UA.351.01 (UA-Tâche) : Dépôt, Cadrage & Stack Technique"]
-        E1["Étape 1 : Initialiser le dépôt Git et l'espace vitrine (T.351.012)"]
-        E2["Étape 2 : Cadrer le projet d'imitation In/Out (T.351.013)"]
-        E3["Étape 3 : Justifier la stack Laravel et architecture (T.351.014)"]
+    subgraph UA1 ["UA.351.21 (UA-TÃ¢che) : DÃ©pÃ´t, Cadrage & Stack Technique"]
+        E1["Ã‰tape 1 : Initialiser le dÃ©pÃ´t Git et l'espace vitrine (T.351.211)"]
+        E2["Ã‰tape 2 : Cadrer le projet d'imitation In/Out (T.351.212)"]
+        E3["Ã‰tape 3 : Justifier la stack Laravel et architecture (T.351.213)"]
         E1 --> E2 --> E3
     end
 
-    subgraph UA2 ["UA.351.11 (UA-Lab) : Initiation Démarche Agile Scrum & Vision"]
-        E4["Étape 4 : Ateliers Scrum sur Todo List (T.351.111 à T.351.115)"]
-        E5["Étape 5 : Définir la Vision Produit du Blog (T.351.015)"]
+    subgraph UA2 ["UA.351.11 (UA-Lab) : Initiation DÃ©marche Agile Scrum & Vision"]
+        E4["Ã‰tape 4 : Ateliers Scrum sur Todo List (T.351.111 Ã  T.351.115)"]
+        E5["Ã‰tape 5 : DÃ©finir la Vision Produit du Blog (T.351.116)"]
         E4 --> E5
     end
 
     subgraph UA3 ["UA.311.11 (UA-Lab) : Design Thinking : Empathie & Personas"]
-        E6["Étape 6 : Ateliers Design Thinking & Empathie Todo List (T.311.111 à T.311.113)"]
-        E7["Étape 7 : Conduire l'immersion & Carte d'Empathie Blog (T.311.114)"]
-        E8["Étape 8 : Modéliser les Personas utilisateurs du Blog (T.311.115)"]
+        E6["Ã‰tape 6 : Ateliers Design Thinking & Empathie Todo List (T.311.111 Ã  T.311.113)"]
+        E7["Ã‰tape 7 : Conduire l'immersion & Carte d'Empathie Blog (T.311.114)"]
+        E8["Ã‰tape 8 : ModÃ©liser les Personas utilisateurs du Blog (T.311.115)"]
         E6 --> E7 --> E8
     end
 
     subgraph UA2_Suite ["UA.351.11 (Suite) : Product Backlog & Engagement S0"]
-        E9["Étape 9 : Bâtir le Product Backlog initial du Blog MoSCoW (T.351.016)"]
-        E10["Étape 10 : Planifier le Sprint 0 et feuille d'engagement (T.351.011)"]
+        E9["Ã‰tape 9 : BÃ¢tir le Product Backlog initial du Blog MoSCoW (T.351.117)"]
+        E10["Ã‰tape 10 : Planifier le Sprint 0 et feuille d'engagement (T.351.118)"]
         E9 --> E10
     end
 
     subgraph UA4 ["UA.311.12 (UA-Lab) : Parcours Utilisateur & Prototypage Maquette"]
-        E11["Étape 11 : Ateliers User Flow & UI Kit Preline Todo List (T.311.121, T.311.122)"]
-        E12["Étape 12 : Modéliser le User Flow textuel Accueil Blog (T.311.123)"]
-        E13["Étape 13 : Concevoir l'UI Kit et Maquette Accueil Blog (T.351.021)"]
+        E11["Ã‰tape 11 : Ateliers User Flow & UI Kit Preline Todo List (T.311.121, T.311.122)"]
+        E12["Ã‰tape 12 : ModÃ©liser le User Flow textuel Accueil Blog (T.311.123)"]
+        E13["Ã‰tape 13 : Concevoir l'UI Kit et Maquette Accueil Blog (T.311.124)"]
         E11 --> E12 --> E13
     end
 
-    subgraph UA5 ["UA.311.13 (UA-Lab) : Tests d'Utilisabilité & Validation Ergonomique"]
-        E14["Étape 14 : Atelier Protocoles de tests et critères ergonomiques (T.311.131)"]
+    subgraph UA5 ["UA.311.13 (UA-Lab) : Tests d'UtilisabilitÃ© & Validation Ergonomique"]
+        E14["Ã‰tape 14 : Atelier Protocoles de tests et critÃ¨res ergonomiques (T.311.131)"]
     end
 
-    subgraph UA6 ["UA.351.02 (UA-Tâche) : Validation d'Incrément & Clôture Agile"]
-        E15["Étape 15 : Valider l'Incrément Maquette Review 0 & Rétrospective 0 (T.351.022)"]
+    subgraph UA6 ["UA.351.22 (UA-TÃ¢che) : Validation d'IncrÃ©ment & ClÃ´ture Agile"]
+        E15["Ã‰tape 15 : Valider l'IncrÃ©ment Maquette Review 0 & RÃ©trospective 0 (T.351.221)"]
     end
 
     UA1 --> UA2 --> UA3 --> UA2_Suite --> UA4 --> UA5 --> UA6
@@ -125,272 +125,272 @@ flowchart TD
 
 ---
 
-### Unité d'Apprentissage UA.351.01 (UA-Tâche) : Application Projet : Dépôt, Cadrage et Stack Technique
-*Domaine Réalisation et Conduite de Projet (`D.351.2-realisation-projet`)*
+### UnitÃ© d'Apprentissage UA.351.21 (UA-TÃ¢che) : Application Projet : DÃ©pÃ´t, Cadrage et Stack Technique
+*Domaine RÃ©alisation et Conduite de Projet (`D.351.2-realisation-projet`)*
 
-#### Étape 1 : Initialiser le dépôt Git et l'espace projet vitrine
-- **Fiche Tutoriel :** `T.351.012` | **Type :** `tuto-tache` | **Attribut étape :** `etape: 1` (`nav_order: 1`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.351.2-realisation-projet`
-- **Entrées :** Consignes du formateur et cahier des charges initial.
+#### Ã‰tape 1 : Initialiser le dÃ©pÃ´t Git et l'espace projet vitrine
+- **Fiche Tutoriel :** `T.351.211` | **Type :** `tuto-tache` | **Attribut Ã©tape :** `etape: 1` (`nav_order: 1`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.351.2-realisation-projet`
+- **EntrÃ©es :** Consignes du formateur et cahier des charges initial.
 - **Travail d'application sur le Blog :**
-  - Cloner le dépôt officiel `projet-imitation-n3`.
-  - Créer et basculer sur la branche de travail dédiée `sprint0`.
-  - Configurer l'arborescence standard conforme à `organisation-livrables.md`.
-  - Rédiger le `README.md` racine de présentation du produit, des objectifs et de la stack.
+  - Cloner le dÃ©pÃ´t officiel `projet-imitation-n3`.
+  - CrÃ©er et basculer sur la branche de travail dÃ©diÃ©e `sprint0`.
+  - Configurer l'arborescence standard conforme Ã  `organisation-livrables.md`.
+  - RÃ©diger le `README.md` racine de prÃ©sentation du produit, des objectifs et de la stack.
 - **Sortie (1 livrable) :** `README.md`.
 
-#### Étape 2 : Cadrer le projet d'imitation et rédiger la note de cadrage
-- **Fiche Tutoriel :** `T.351.013` | **Type :** `tuto-tache` | **Attribut étape :** `etape: 2` (`nav_order: 2`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.351.2-realisation-projet`
-- **Entrées :** Fiche d'expression des besoins brute du Blog des Lauréats de l'EFP.
+#### Ã‰tape 2 : Cadrer le projet d'imitation et rÃ©diger la note de cadrage
+- **Fiche Tutoriel :** `T.351.212` | **Type :** `tuto-tache` | **Attribut Ã©tape :** `etape: 2` (`nav_order: 2`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.351.2-realisation-projet`
+- **EntrÃ©es :** Fiche d'expression des besoins brute du Blog des LaurÃ©ats de l'EFP.
 - **Travail d'application sur le Blog :**
-  - Clarifier le contexte professionnel, la problématique et les objectifs mesurables.
-  - Définir les parties prenantes et leurs attentes clés.
-  - Établir la matrice de périmètre stricte : *In-Scope* (fonctionnalités cibles) vs *Out-of-Scope* (exclusions formelles du MVP).
-  - Identifier les contraintes réglementaires (RGPD), temporelles et d'accessibilité.
+  - Clarifier le contexte professionnel, la problÃ©matique et les objectifs mesurables.
+  - DÃ©finir les parties prenantes et leurs attentes clÃ©s.
+  - Ã‰tablir la matrice de pÃ©rimÃ¨tre stricte : *In-Scope* (fonctionnalitÃ©s cibles) vs *Out-of-Scope* (exclusions formelles du MVP).
+  - Identifier les contraintes rÃ©glementaires (RGPD), temporelles et d'accessibilitÃ©.
 - **Sortie (1 livrable) :** `docs/cadrage/note-cadrage.md`.
 
-#### Étape 3 : Justifier et valider le choix de la stack technologique (Laravel)
-- **Fiche Tutoriel :** `T.351.014` | **Type :** `tuto-tache` | **Attribut étape :** `etape: 3` (`nav_order: 3`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.351.2-realisation-projet`
-- **Entrées :** Note de cadrage `docs/cadrage/note-cadrage.md`.
+#### Ã‰tape 3 : Justifier et valider le choix de la stack technologique (Laravel)
+- **Fiche Tutoriel :** `T.351.213` | **Type :** `tuto-tache` | **Attribut Ã©tape :** `etape: 3` (`nav_order: 3`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.351.2-realisation-projet`
+- **EntrÃ©es :** Note de cadrage `docs/cadrage/note-cadrage.md`.
 - **Travail d'application sur le Blog :**
-  - Justifier formellement chaque brique technique retenue : Framework Backend (Laravel 13), Base de données (MySQL), Styling (Tailwind CSS avec Preline UI), Frontend réactif (Alpine.js), Assistance IA (Copilote Antigravity).
-  - Argumenter le choix architectural face aux contraintes de maintenabilité, sécurité (Policies/Gates, Spatie RBAC) et rapidité de prototypage.
+  - Justifier formellement chaque brique technique retenue : Framework Backend (Laravel 13), Base de donnÃ©es (MySQL), Styling (Tailwind CSS avec Preline UI), Frontend rÃ©actif (Alpine.js), Assistance IA (Copilote Antigravity).
+  - Argumenter le choix architectural face aux contraintes de maintenabilitÃ©, sÃ©curitÃ© (Policies/Gates, Spatie RBAC) et rapiditÃ© de prototypage.
 - **Sortie (1 livrable) :** `docs/cadrage/stack-technique.md`.
 
 ---
 
-### Unité d'Apprentissage UA.351.11 (UA-Lab) : Initiation à la Démarche Agile et Cadre Scrum
+### UnitÃ© d'Apprentissage UA.351.11 (UA-Lab) : Initiation Ã  la DÃ©marche Agile et Cadre Scrum
 *Domaine Scrum & Gouvernance Agile (`D.351.1-scrum`)*
 
-#### Étape 4 (Atelier 1/5) : Comprendre les principes fondamentaux et les valeurs de Scrum
-- **Fiche Tutoriel :** `T.351.111` | **Type :** `tuto-atelier-notions` | **Attribut étape :** `etape: 4` (`nav_order: 1`)
-- **Statut :** **Réalisé**
-- **Domaine de compétence :** `D.351.1-scrum`
-- **Entrées :** Manifeste Agile (4 valeurs, 12 principes) et Guide officiel Scrum.
-- **Notions fondamentales apprises :** Différence entre cycle en cascade et démarche empirique, piliers Scrum (Transparence, Inspection, Adaptation), rôles Scrum (PO, SM, Développeurs), 5 événements et 3 artéfacts.
-- **Livrables de référence formateur (cas Todo List) :**
+#### Ã‰tape 4 (Atelier 1/5) : Comprendre les principes fondamentaux et les valeurs de Scrum
+- **Fiche Tutoriel :** `T.351.111` | **Type :** `tuto-atelier-notions` | **Attribut Ã©tape :** `etape: 4` (`nav_order: 1`)
+- **Statut :** **RÃ©alisÃ©**
+- **Domaine de compÃ©tence :** `D.351.1-scrum`
+- **EntrÃ©es :** Manifeste Agile (4 valeurs, 12 principes) et Guide officiel Scrum.
+- **Notions fondamentales apprises :** DiffÃ©rence entre cycle en cascade et dÃ©marche empirique, piliers Scrum (Transparence, Inspection, Adaptation), rÃ´les Scrum (PO, SM, DÃ©veloppeurs), 5 Ã©vÃ©nements et 3 artÃ©facts.
+- **Livrables de rÃ©fÃ©rence formateur (cas Todo List) :**
   - Fiche d'atelier : `ua-lab/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md`.
   - Diaporama Marp : `ua-lab/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md`.
 
-#### Étape 4 (Atelier 2/5) : Formaliser la vision produit et cadrer les besoins utilisateurs
-- **Fiche Tutoriel :** `T.351.112` | **Type :** `tuto-atelier-notions` | **Attribut étape :** `etape: 4` (`nav_order: 2`)
-- **Statut :** **Réalisé**
-- **Domaine de compétence :** `D.351.1-scrum`
-- **Entrées :** Principes de modélisation du besoin utilisateur.
-- **Notions fondamentales apprises :** Formulation de la Vision Produit (Product Goal), structure standard d'une User Story, critères qualité INVEST, critères d'acceptation opérationnels.
-- **Livrables de référence formateur (cas Todo List) :**
+#### Ã‰tape 4 (Atelier 2/5) : Formaliser la vision produit et cadrer les besoins utilisateurs
+- **Fiche Tutoriel :** `T.351.112` | **Type :** `tuto-atelier-notions` | **Attribut Ã©tape :** `etape: 4` (`nav_order: 2`)
+- **Statut :** **RÃ©alisÃ©**
+- **Domaine de compÃ©tence :** `D.351.1-scrum`
+- **EntrÃ©es :** Principes de modÃ©lisation du besoin utilisateur.
+- **Notions fondamentales apprises :** Formulation de la Vision Produit (Product Goal), structure standard d'une User Story, critÃ¨res qualitÃ© INVEST, critÃ¨res d'acceptation opÃ©rationnels.
+- **Livrables de rÃ©fÃ©rence formateur (cas Todo List) :**
   - Fiche d'atelier : `ua-lab/scrum/initiation-scrum/vision-besoins/vision-besoins.md`.
   - Diaporama Marp : `ua-lab/scrum/initiation-scrum/vision-besoins/presentation-vision-besoins.md`.
 
-#### Étape 4 (Atelier 3/5) : Concevoir et ordonner un Product Backlog selon MoSCoW
-- **Fiche Tutoriel :** `T.351.113` | **Type :** `tuto-atelier-notions` | **Attribut étape :** `etape: 4` (`nav_order: 3`)
-- **Statut :** **Réalisé**
-- **Domaine de compétence :** `D.351.1-scrum`
-- **Entrées :** Liste brute d'exigences et techniques d'estimation agile relative.
-- **Notions fondamentales apprises :** Rôle du Product Backlog comme référentiel vivant, estimation agile (Story Points, suite de Fibonacci), méthode de priorisation MoSCoW (Must, Should, Could, Won't), rituels d'affinement (Refinement).
-- **Livrables de référence formateur (cas Todo List) :**
+#### Ã‰tape 4 (Atelier 3/5) : Concevoir et ordonner un Product Backlog selon MoSCoW
+- **Fiche Tutoriel :** `T.351.113` | **Type :** `tuto-atelier-notions` | **Attribut Ã©tape :** `etape: 4` (`nav_order: 3`)
+- **Statut :** **RÃ©alisÃ©**
+- **Domaine de compÃ©tence :** `D.351.1-scrum`
+- **EntrÃ©es :** Liste brute d'exigences et techniques d'estimation agile relative.
+- **Notions fondamentales apprises :** RÃ´le du Product Backlog comme rÃ©fÃ©rentiel vivant, estimation agile (Story Points, suite de Fibonacci), mÃ©thode de priorisation MoSCoW (Must, Should, Could, Won't), rituels d'affinement (Refinement).
+- **Livrables de rÃ©fÃ©rence formateur (cas Todo List) :**
   - Fiche d'atelier : `ua-lab/scrum/initiation-scrum/product-backlog/product-backlog.md`.
   - Diaporama Marp : `ua-lab/scrum/initiation-scrum/product-backlog/presentation-product-backlog.md`.
 
-#### Étape 4 (Atelier 4/5) : Planifier un Sprint et piloter l'exécution par la valeur
-- **Fiche Tutoriel :** `T.351.114` | **Type :** `tuto-atelier-notions` | **Attribut étape :** `etape: 4` (`nav_order: 4`)
-- **Statut :** **Réalisé**
-- **Domaine de compétence :** `D.351.1-scrum`
-- **Entrées :** Product Backlog ordonné et capacité nominale d'équipe.
-- **Notions fondamentales apprises :** Déroulement du Sprint Planning (Partie 1 Quoi / Partie 2 Comment), formulation du Sprint Goal, découpage des US en tâches techniques ($\le$ 8h), suivi au Daily Scrum et pilotage par le Burndown chart.
-- **Livrables de référence formateur (cas Todo List) :**
+#### Ã‰tape 4 (Atelier 4/5) : Planifier un Sprint et piloter l'exÃ©cution par la valeur
+- **Fiche Tutoriel :** `T.351.114` | **Type :** `tuto-atelier-notions` | **Attribut Ã©tape :** `etape: 4` (`nav_order: 4`)
+- **Statut :** **RÃ©alisÃ©**
+- **Domaine de compÃ©tence :** `D.351.1-scrum`
+- **EntrÃ©es :** Product Backlog ordonnÃ© et capacitÃ© nominale d'Ã©quipe.
+- **Notions fondamentales apprises :** DÃ©roulement du Sprint Planning (Partie 1 Quoi / Partie 2 Comment), formulation du Sprint Goal, dÃ©coupage des US en tÃ¢ches techniques ($\le$ 8h), suivi au Daily Scrum et pilotage par le Burndown chart.
+- **Livrables de rÃ©fÃ©rence formateur (cas Todo List) :**
   - Fiche d'atelier : `ua-lab/scrum/initiation-scrum/sprint-planning-execution/sprint-planning-execution.md`.
   - Diaporama Marp : `ua-lab/scrum/initiation-scrum/sprint-planning-execution/presentation-sprint-planning-execution.md`.
 
-#### Étape 4 (Atelier 5/5) : Conduire la Revue de Sprint et animer la Rétrospective d'équipe
-- **Fiche Tutoriel :** `T.351.115` | **Type :** `tuto-atelier-notions` | **Attribut étape :** `etape: 4` (`nav_order: 5`)
-- **Statut :** **Réalisé**
-- **Domaine de compétence :** `D.351.1-scrum`
-- **Entrées :** Incrément livrable et critères de la Definition of Done (DoD).
-- **Notions fondamentales apprises :** Démonstration contradictoire en Sprint Review devant le PO, validation formelle au regard de la DoD, animation réflexive de la Rétrospective et engagement sur des actions concrètes d'amélioration.
-- **Livrables de référence formateur (cas Todo List) :**
+#### Ã‰tape 4 (Atelier 5/5) : Conduire la Revue de Sprint et animer la RÃ©trospective d'Ã©quipe
+- **Fiche Tutoriel :** `T.351.115` | **Type :** `tuto-atelier-notions` | **Attribut Ã©tape :** `etape: 4` (`nav_order: 5`)
+- **Statut :** **RÃ©alisÃ©**
+- **Domaine de compÃ©tence :** `D.351.1-scrum`
+- **EntrÃ©es :** IncrÃ©ment livrable et critÃ¨res de la Definition of Done (DoD).
+- **Notions fondamentales apprises :** DÃ©monstration contradictoire en Sprint Review devant le PO, validation formelle au regard de la DoD, animation rÃ©flexive de la RÃ©trospective et engagement sur des actions concrÃ¨tes d'amÃ©lioration.
+- **Livrables de rÃ©fÃ©rence formateur (cas Todo List) :**
   - Fiche d'atelier : `ua-lab/scrum/initiation-scrum/revue-retrospective/revue-retrospective.md`.
   - Diaporama Marp : `ua-lab/scrum/initiation-scrum/revue-retrospective/presentation-revue-retrospective.md`.
 
-#### Étape 5 (Tâche 1) : Définir la Vision Produit (Product Goal) du Blog des Lauréats
-- **Fiche Tutoriel :** `T.351.015` | **Type :** `tuto-tache` | **Attribut étape :** `etape: 5` (`nav_order: 6`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.351.1-scrum`
-- **Accompagnement :** Débloqué par le **Groupe 1 (Product Owner)**.
-- **Entrées :** Note de cadrage `docs/cadrage/note-cadrage.md`.
+#### Ã‰tape 5 (TÃ¢che 1) : DÃ©finir la Vision Produit (Product Goal) du Blog des LaurÃ©ats
+- **Fiche Tutoriel :** `T.351.116` | **Type :** `tuto-tache` | **Attribut Ã©tape :** `etape: 5` (`nav_order: 6`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.351.1-scrum`
+- **Accompagnement :** DÃ©bloquÃ© par le **Groupe 1 (Product Owner)**.
+- **EntrÃ©es :** Note de cadrage `docs/cadrage/note-cadrage.md`.
 - **Travail d'application sur le Blog :**
-  - En concertation avec le Product Owner (Groupe 1), formaliser la Vision Produit définissant la proposition de valeur claire pour les apprenants et lauréats de l'EFP.
-  - Spécifier le positionnement éditorial, la cible et les métriques de succès stratégiques.
+  - En concertation avec le Product Owner (Groupe 1), formaliser la Vision Produit dÃ©finissant la proposition de valeur claire pour les apprenants et laurÃ©ats de l'EFP.
+  - SpÃ©cifier le positionnement Ã©ditorial, la cible et les mÃ©triques de succÃ¨s stratÃ©giques.
 - **Sortie (1 livrable) :** `docs/produit/vision-produit.md`.
 
-#### Étape 9 (Tâche 2) : Bâtir et ordonner le Product Backlog initial du Blog (MoSCoW)
-- **Fiche Tutoriel :** `T.351.016` | **Type :** `tuto-tache` | **Attribut étape :** `etape: 9` (`nav_order: 7`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.351.1-scrum`
-- **Accompagnement :** Débloqué par le **Groupe 1 (Product Owner)**.
-- **Entrées :** Vision Produit `docs/produit/vision-produit.md` et fiches Personas validées `docs/analyse/personas.md`.
+#### Ã‰tape 9 (TÃ¢che 2) : BÃ¢tir et ordonner le Product Backlog initial du Blog (MoSCoW)
+- **Fiche Tutoriel :** `T.351.117` | **Type :** `tuto-tache` | **Attribut Ã©tape :** `etape: 9` (`nav_order: 7`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.351.1-scrum`
+- **Accompagnement :** DÃ©bloquÃ© par le **Groupe 1 (Product Owner)**.
+- **EntrÃ©es :** Vision Produit `docs/produit/vision-produit.md` et fiches Personas validÃ©es `docs/analyse/personas.md`.
 - **Travail d'application sur le Blog :**
   - Animer l'atelier d'expression des besoins avec le PO (Groupe 1).
-  - Découper le produit en User Stories INVEST complètes avec critères d'acceptation testables.
-  - Ordonner rigoureusement le Product Backlog selon la méthode MoSCoW (Must, Should, Could, Won't) en isolant le périmètre prioritaire du Sprint 1.
+  - DÃ©couper le produit en User Stories INVEST complÃ¨tes avec critÃ¨res d'acceptation testables.
+  - Ordonner rigoureusement le Product Backlog selon la mÃ©thode MoSCoW (Must, Should, Could, Won't) en isolant le pÃ©rimÃ¨tre prioritaire du Sprint 1.
 - **Sortie (1 livrable) :** `scrum/product-backlog.md`.
 
-#### Étape 10 (Tâche 3) : Planifier le Sprint 0 et formaliser la feuille d'engagement d'équipe
-- **Fiche Tutoriel :** `T.351.011` | **Type :** `tuto-tache` | **Attribut étape :** `etape: 10` (`nav_order: 8`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.351.1-scrum`
-- **Accompagnement :** Débloqué par le **Groupe 3 (Cadre Scrum & Organisation Agile)**.
-- **Entrées :** Product Backlog ordonné `scrum/product-backlog.md` et capacité de travail de la promotion.
+#### Ã‰tape 10 (TÃ¢che 3) : Planifier le Sprint 0 et formaliser la feuille d'engagement d'Ã©quipe
+- **Fiche Tutoriel :** `T.351.118` | **Type :** `tuto-tache` | **Attribut Ã©tape :** `etape: 10` (`nav_order: 8`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.351.1-scrum`
+- **Accompagnement :** DÃ©bloquÃ© par le **Groupe 3 (Cadre Scrum & Organisation Agile)**.
+- **EntrÃ©es :** Product Backlog ordonnÃ© `scrum/product-backlog.md` et capacitÃ© de travail de la promotion.
 - **Travail d'application sur le Blog :**
-  - Définir l'objectif du Sprint 0 (*Sprint Goal* : production et validation de la maquette d'accueil, du User Flow et de l'UI Kit).
-  - Établir la composition des équipes et les rôles (PO, Scrum Master, Développeurs).
-  - Sélectionner les User Stories et découper les tâches d'ingénierie opérationnelle.
-  - Établir la Definition of Done (DoD) de la maquette et signer la feuille d'engagement d'équipe.
+  - DÃ©finir l'objectif du Sprint 0 (*Sprint Goal* : production et validation de la maquette d'accueil, du User Flow et de l'UI Kit).
+  - Ã‰tablir la composition des Ã©quipes et les rÃ´les (PO, Scrum Master, DÃ©veloppeurs).
+  - SÃ©lectionner les User Stories et dÃ©couper les tÃ¢ches d'ingÃ©nierie opÃ©rationnelle.
+  - Ã‰tablir la Definition of Done (DoD) de la maquette et signer la feuille d'engagement d'Ã©quipe.
 - **Sortie (1 livrable) :** `sprints/sprint-0.md`.
 
 ---
 
-### Unité d'Apprentissage UA.311.11 (UA-Lab) : Design Thinking : Démarche Globale et Immersion Empathique
+### UnitÃ© d'Apprentissage UA.311.11 (UA-Lab) : Design Thinking : DÃ©marche Globale et Immersion Empathique
 *Domaine Conception & Design Thinking (`D.311.1-design`)*
 
-#### Étape 6 (Atelier 1/3) : Découvrir la démarche globale du Design Thinking et ses 5 phases
-- **Fiche Tutoriel :** `T.311.111` | **Type :** `tuto-atelier` | **Attribut étape :** `etape: 6` (`nav_order: 1`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.311.1-design`
-- **Entrées :** Méthodologie du Double Diamant (Design Council).
-- **Travail d'atelier :** S'approprier les 5 phases (Empathie, Définition, Idéation, Prototypage, Test), distinguer les modes de pensée divergente et convergente.
+#### Ã‰tape 6 (Atelier 1/3) : DÃ©couvrir la dÃ©marche globale du Design Thinking et ses 5 phases
+- **Fiche Tutoriel :** `T.311.111` | **Type :** `tuto-atelier` | **Attribut Ã©tape :** `etape: 6` (`nav_order: 1`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.311.1-design`
+- **EntrÃ©es :** MÃ©thodologie du Double Diamant (Design Council).
+- **Travail d'atelier :** S'approprier les 5 phases (Empathie, DÃ©finition, IdÃ©ation, Prototypage, Test), distinguer les modes de pensÃ©e divergente et convergente.
 - **Livrables attendus (sur Todo List) :**
   - Fiche d'atelier : `tutoriels/design/design-thinking-empathie/demarche-design-thinking/demarche-design-thinking.md`.
   - Diaporama Marp : `tutoriels/design/design-thinking-empathie/demarche-design-thinking/presentation-demarche-design-thinking.md`.
 
-#### Étape 6 (Atelier 2/3) : Conduire une immersion utilisateur et formaliser la carte d'empathie
-- **Fiche Tutoriel :** `T.311.112` | **Type :** `tuto-atelier` | **Attribut étape :** `etape: 6` (`nav_order: 2`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.311.1-design`
-- **Entrées :** Techniques d'observation terrain et canevas de Carte d'Empathie.
+#### Ã‰tape 6 (Atelier 2/3) : Conduire une immersion utilisateur et formaliser la carte d'empathie
+- **Fiche Tutoriel :** `T.311.112` | **Type :** `tuto-atelier` | **Attribut Ã©tape :** `etape: 6` (`nav_order: 2`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.311.1-design`
+- **EntrÃ©es :** Techniques d'observation terrain et canevas de Carte d'Empathie.
 - **Travail d'atelier :** Mener l'immersion sur les usagers d'une Todo List, renseigner les 4 quadrants (Dit, Fait, Pense, Ressent) et formaliser les frustrations et gains.
 - **Livrables attendus (sur Todo List) :**
   - Fiche d'atelier : `tutoriels/design/design-thinking-empathie/immersion-empathie/immersion-empathie.md`.
   - Diaporama Marp : `tutoriels/design/design-thinking-empathie/immersion-empathie/presentation-immersion-empathie.md`.
 
-#### Étape 6 (Atelier 3/3) : Modéliser les profils utilisateurs types à travers les Personas
-- **Fiche Tutoriel :** `T.311.113` | **Type :** `tuto-atelier` | **Attribut étape :** `etape: 6` (`nav_order: 3`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.311.1-design`
-- **Entrées :** Carte d'Empathie Todo List validée.
-- **Travail d'atelier :** Modéliser un Persona archétypal sur Todo List (objectifs, motivations, scénario d'usage type).
+#### Ã‰tape 6 (Atelier 3/3) : ModÃ©liser les profils utilisateurs types Ã  travers les Personas
+- **Fiche Tutoriel :** `T.311.113` | **Type :** `tuto-atelier` | **Attribut Ã©tape :** `etape: 6` (`nav_order: 3`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.311.1-design`
+- **EntrÃ©es :** Carte d'Empathie Todo List validÃ©e.
+- **Travail d'atelier :** ModÃ©liser un Persona archÃ©typal sur Todo List (objectifs, motivations, scÃ©nario d'usage type).
 - **Livrables attendus (sur Todo List) :**
   - Fiche d'atelier : `tutoriels/design/design-thinking-empathie/empathie-personas/empathie-personas.md`.
   - Diaporama Marp : `tutoriels/design/design-thinking-empathie/empathie-personas/presentation-empathie-personas.md`.
 
-#### Étape 7 (Tâche 1) : Conduire l'immersion usagers et formaliser la Carte d'Empathie du Blog
-- **Fiche Tutoriel :** `T.311.114` | **Type :** `tuto-tache` | **Attribut étape :** `etape: 7` (`nav_order: 4`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.311.1-design`
-- **Accompagnement :** Débloqué par le **Groupe 2 (Design Thinking)**.
-- **Entrées :** Vision Produit `docs/produit/vision-produit.md` et grille de recueil terrain.
+#### Ã‰tape 7 (TÃ¢che 1) : Conduire l'immersion usagers et formaliser la Carte d'Empathie du Blog
+- **Fiche Tutoriel :** `T.311.114` | **Type :** `tuto-tache` | **Attribut Ã©tape :** `etape: 7` (`nav_order: 4`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.311.1-design`
+- **Accompagnement :** DÃ©bloquÃ© par le **Groupe 2 (Design Thinking)**.
+- **EntrÃ©es :** Vision Produit `docs/produit/vision-produit.md` et grille de recueil terrain.
 - **Travail d'application sur le Blog :**
-  - Mener l'immersion terrain auprès des profils clés (apprenants en recherche d'inspiration, lauréats souhaitant partager, formateurs).
-  - Synthétiser les verbatims et comportements observés dans la Carte d'Empathie du Blog.
+  - Mener l'immersion terrain auprÃ¨s des profils clÃ©s (apprenants en recherche d'inspiration, laurÃ©ats souhaitant partager, formateurs).
+  - SynthÃ©tiser les verbatims et comportements observÃ©s dans la Carte d'Empathie du Blog.
 - **Sortie (1 livrable) :** `docs/analyse/empathie.md`.
 
-#### Étape 8 (Tâche 2) : Modéliser et formaliser les Personas types du Blog des Lauréats
-- **Fiche Tutoriel :** `T.311.115` | **Type :** `tuto-tache` | **Attribut étape :** `etape: 8` (`nav_order: 5`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.311.1-design`
-- **Accompagnement :** Débloqué par le **Groupe 2 (Design Thinking)**.
-- **Entrées :** Carte d'Empathie du Blog `docs/analyse/empathie.md`.
+#### Ã‰tape 8 (TÃ¢che 2) : ModÃ©liser et formaliser les Personas types du Blog des LaurÃ©ats
+- **Fiche Tutoriel :** `T.311.115` | **Type :** `tuto-tache` | **Attribut Ã©tape :** `etape: 8` (`nav_order: 5`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.311.1-design`
+- **Accompagnement :** DÃ©bloquÃ© par le **Groupe 2 (Design Thinking)**.
+- **EntrÃ©es :** Carte d'Empathie du Blog `docs/analyse/empathie.md`.
 - **Travail d'application sur le Blog :**
-  - Formaliser les 3 fiches Personas détaillées du Blog des Lauréats :
-    - *Youssef*, apprenant en formation (besoin de retours d'expérience concrets et de conseils méthodologiques).
-    - *Sara*, lauréate en poste développeur web (volonté de valoriser son parcours et de transmettre son vécu).
-    - *Karim*, tuteur / responsable pédagogique EFP (souhait de créer du lien durable et de valoriser l'insertion des promotions).
-  - Spécifier leurs objectifs prioritaires, points de friction et opportunités fonctionnelles pour le Blog.
+  - Formaliser les 3 fiches Personas dÃ©taillÃ©es du Blog des LaurÃ©ats :
+    - *Youssef*, apprenant en formation (besoin de retours d'expÃ©rience concrets et de conseils mÃ©thodologiques).
+    - *Sara*, laurÃ©ate en poste dÃ©veloppeur web (volontÃ© de valoriser son parcours et de transmettre son vÃ©cu).
+    - *Karim*, tuteur / responsable pÃ©dagogique EFP (souhait de crÃ©er du lien durable et de valoriser l'insertion des promotions).
+  - SpÃ©cifier leurs objectifs prioritaires, points de friction et opportunitÃ©s fonctionnelles pour le Blog.
 - **Sortie (1 livrable) :** `docs/analyse/personas.md`.
 
 ---
 
-### Unité d'Apprentissage UA.311.12 (UA-Lab) : Design Thinking : Parcours Utilisateur et Prototypage d'Interface
+### UnitÃ© d'Apprentissage UA.311.12 (UA-Lab) : Design Thinking : Parcours Utilisateur et Prototypage d'Interface
 *Domaine Conception & Design Thinking (`D.311.1-design`)*
 
-#### Étape 11 (Atelier 1/2) : Modéliser un User Flow et concevoir l'architecture de navigation
-- **Fiche Tutoriel :** `T.311.121` | **Type :** `tuto-atelier` | **Attribut étape :** `etape: 11` (`nav_order: 1`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.311.1-design`
-- **Entrées :** Scénarios d'usage d'une Todo List.
-- **Travail d'atelier :** Maîtriser la syntaxe déclarative textuelle pour exprimer les flux utilisateurs (points d'entrée, actions utilisateur, décisions conditionnelles, écrans de sortie) appliquée au cas Todo List.
+#### Ã‰tape 11 (Atelier 1/2) : ModÃ©liser un User Flow et concevoir l'architecture de navigation
+- **Fiche Tutoriel :** `T.311.121` | **Type :** `tuto-atelier` | **Attribut Ã©tape :** `etape: 11` (`nav_order: 1`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.311.1-design`
+- **EntrÃ©es :** ScÃ©narios d'usage d'une Todo List.
+- **Travail d'atelier :** MaÃ®triser la syntaxe dÃ©clarative textuelle pour exprimer les flux utilisateurs (points d'entrÃ©e, actions utilisateur, dÃ©cisions conditionnelles, Ã©crans de sortie) appliquÃ©e au cas Todo List.
 - **Livrables attendus (sur Todo List) :**
   - Fiche d'atelier : `tutoriels/design/parcours-utilisateur-prototypage/user-flow/user-flow.md`.
   - Diaporama Marp : `tutoriels/design/parcours-utilisateur-prototypage/user-flow/presentation-user-flow.md`.
 
-#### Étape 11 (Atelier 2/2) : Concevoir un UI Kit de composants réutilisables avec Tailwind CSS et Preline UI
-- **Fiche Tutoriel :** `T.311.122` | **Type :** `tuto-atelier` | **Attribut étape :** `etape: 11` (`nav_order: 2`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.311.1-design`
-- **Entrées :** Notions d'Atomic Design et bibliothèque de composants Tailwind CSS / Preline UI.
-- **Travail d'atelier :** Concevoir une bibliothèque modulaire de composants d'interface sur Todo List (tokens de design, typographie, boutons, champs, alertes, cartes réutilisables).
+#### Ã‰tape 11 (Atelier 2/2) : Concevoir un UI Kit de composants rÃ©utilisables avec Tailwind CSS et Preline UI
+- **Fiche Tutoriel :** `T.311.122` | **Type :** `tuto-atelier` | **Attribut Ã©tape :** `etape: 11` (`nav_order: 2`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.311.1-design`
+- **EntrÃ©es :** Notions d'Atomic Design et bibliothÃ¨que de composants Tailwind CSS / Preline UI.
+- **Travail d'atelier :** Concevoir une bibliothÃ¨que modulaire de composants d'interface sur Todo List (tokens de design, typographie, boutons, champs, alertes, cartes rÃ©utilisables).
 - **Livrables attendus (sur Todo List) :**
   - Fiche d'atelier : `tutoriels/design/parcours-utilisateur-prototypage/prototypage-ui-kit/prototypage-ui-kit.md`.
   - Diaporama Marp : `tutoriels/design/parcours-utilisateur-prototypage/prototypage-ui-kit/presentation-prototypage-ui-kit.md`.
 
-#### Étape 12 (Tâche 1) : Modéliser le User Flow textuel de la Page d'Accueil du Blog
-- **Fiche Tutoriel :** `T.311.123` | **Type :** `tuto-tache` | **Attribut étape :** `etape: 12` (`nav_order: 3`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.311.1-design`
-- **Accompagnement :** Débloqué par le **Groupe 2 (Design Thinking)**.
-- **Entrées :** Fiches Personas `docs/analyse/personas.md` et User Stories du Product Backlog `scrum/product-backlog.md`.
+#### Ã‰tape 12 (TÃ¢che 1) : ModÃ©liser le User Flow textuel de la Page d'Accueil du Blog
+- **Fiche Tutoriel :** `T.311.123` | **Type :** `tuto-tache` | **Attribut Ã©tape :** `etape: 12` (`nav_order: 3`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.311.1-design`
+- **Accompagnement :** DÃ©bloquÃ© par le **Groupe 2 (Design Thinking)**.
+- **EntrÃ©es :** Fiches Personas `docs/analyse/personas.md` et User Stories du Product Backlog `scrum/product-backlog.md`.
 - **Travail d'application sur le Blog :**
-  - Modéliser en syntaxe déclarative textuelle le parcours utilisateur complet d'un apprenant visitant la page d'accueil du Blog (atterrissage sur la Hero section, parcours des articles récents, filtrage par tag/catégorie, clic vers la fiche lauréat détaillée).
-  - Cartographier les états d'erreur, les états de chargement et les transitions interactives.
+  - ModÃ©liser en syntaxe dÃ©clarative textuelle le parcours utilisateur complet d'un apprenant visitant la page d'accueil du Blog (atterrissage sur la Hero section, parcours des articles rÃ©cents, filtrage par tag/catÃ©gorie, clic vers la fiche laurÃ©at dÃ©taillÃ©e).
+  - Cartographier les Ã©tats d'erreur, les Ã©tats de chargement et les transitions interactives.
 - **Sortie (1 livrable) :** `docs/conception/user-flow.md`.
 
-#### Étape 13 (Tâche 2) : Concevoir l'UI Kit et prototyper la Maquette de la Page d'Accueil
-- **Fiche Tutoriel :** `T.351.021` | **Type :** `tuto-tache` | **Attribut étape :** `etape: 13` (`nav_order: 4`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.311.1-design`
-- **Accompagnement :** Débloqué par le **Groupe 2 (Design Thinking)**.
-- **Entrées :** User Flow `docs/conception/user-flow.md` et composants Preline UI.
+#### Ã‰tape 13 (TÃ¢che 2) : Concevoir l'UI Kit et prototyper la Maquette de la Page d'Accueil
+- **Fiche Tutoriel :** `T.311.124` | **Type :** `tuto-tache` | **Attribut Ã©tape :** `etape: 13` (`nav_order: 4`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.311.1-design`
+- **Accompagnement :** DÃ©bloquÃ© par le **Groupe 2 (Design Thinking)**.
+- **EntrÃ©es :** User Flow `docs/conception/user-flow.md` et composants Preline UI.
 - **Travail d'application sur le Blog :**
-  - Spécifier l'UI Kit officiel du Blog des Lauréats (palette de couleurs, typographie, boutons, badges, cartes d'articles, navbar avec logo, footer).
-  - Prototyper la maquette interactive et responsive de la page d'accueil du Blog (Hero section accueillante, grille d'articles, filtres par catégorie, pied de page).
+  - SpÃ©cifier l'UI Kit officiel du Blog des LaurÃ©ats (palette de couleurs, typographie, boutons, badges, cartes d'articles, navbar avec logo, footer).
+  - Prototyper la maquette interactive et responsive de la page d'accueil du Blog (Hero section accueillante, grille d'articles, filtres par catÃ©gorie, pied de page).
 - **Sorties (2 livrables) :** `docs/conception/ui-kit.md` et `docs/conception/maquettes-sprint-1.md`.
 
 ---
 
-### Unité d'Apprentissage UA.311.13 (UA-Lab) : Design Thinking : Tests d'Utilisabilité et Validation Ergonomique
+### UnitÃ© d'Apprentissage UA.311.13 (UA-Lab) : Design Thinking : Tests d'UtilisabilitÃ© et Validation Ergonomique
 *Domaine Conception & Design Thinking (`D.311.1-design`)*
 
-#### Étape 14 (Atelier 1/1) : Définir et exécuter les protocoles de tests d'utilisabilité et validation ergonomique
-- **Fiche Tutoriel :** `T.311.131` | **Type :** `tuto-atelier` | **Attribut étape :** `etape: 14` (`nav_order: 1`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.311.1-design`
-- **Entrées :** Maquette d'accueil et grille des heuristiques ergonomiques de Nielsen / Bastien & Scapin.
+#### Ã‰tape 14 (Atelier 1/1) : DÃ©finir et exÃ©cuter les protocoles de tests d'utilisabilitÃ© et validation ergonomique
+- **Fiche Tutoriel :** `T.311.131` | **Type :** `tuto-atelier` | **Attribut Ã©tape :** `etape: 14` (`nav_order: 1`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.311.1-design`
+- **EntrÃ©es :** Maquette d'accueil et grille des heuristiques ergonomiques de Nielsen / Bastien & Scapin.
 - **Travail d'atelier :**
-  - Définir un protocole d'évaluation ergonomique standardisé (scénarios de test, critères de succès, mesure du temps et des erreurs).
-  - Exécuter une session de test guidée et formaliser la grille d'évaluation des critères d'utilisabilité (guidage, charge de travail, contrôle explicite, adaptabilité, gestion des erreurs).
-- **Livrables attendus (méthodologie générale) :**
+  - DÃ©finir un protocole d'Ã©valuation ergonomique standardisÃ© (scÃ©narios de test, critÃ¨res de succÃ¨s, mesure du temps et des erreurs).
+  - ExÃ©cuter une session de test guidÃ©e et formaliser la grille d'Ã©valuation des critÃ¨res d'utilisabilitÃ© (guidage, charge de travail, contrÃ´le explicite, adaptabilitÃ©, gestion des erreurs).
+- **Livrables attendus (mÃ©thodologie gÃ©nÃ©rale) :**
   - Fiche d'atelier : `tutoriels/design/tests-utilisabilite/tests-utilisabilite-ergonomie/tests-utilisabilite-ergonomie.md`.
   - Diaporama Marp : `tutoriels/design/tests-utilisabilite/tests-utilisabilite-ergonomie/presentation-tests-utilisabilite-ergonomie.md`.
 
 ---
 
-### Unité d'Apprentissage UA.351.02 (UA-Tâche) : Application Projet : Validation d'Incrément et Clôture Agile
-*Domaine Réalisation et Conduite de Projet (`D.351.2-realisation-projet`)*
+### UnitÃ© d'Apprentissage UA.351.22 (UA-TÃ¢che) : Application Projet : Validation d'IncrÃ©ment et ClÃ´ture Agile
+*Domaine RÃ©alisation et Conduite de Projet (`D.351.2-realisation-projet`)*
 
-#### Étape 15 : Valider l'Incrément Maquette (Sprint Review 0 Go/No-Go) et animer la Rétrospective 0
-- **Fiche Tutoriel :** `T.351.022` | **Type :** `tuto-tache` | **Attribut étape :** `etape: 15` (`nav_order: 1`)
-- **Statut :** **À réaliser**
-- **Domaine de compétence :** `D.351.2-realisation-projet`
-- **Accompagnement :** Arbitré par le **Groupe 1 (Product Owner)** pour la Review et facilité par le **Groupe 3 (Cadre Scrum)** pour la Rétrospective.
-- **Entrées :** Note de cadrage, Product Backlog initial, UI Kit, maquette interactive de la page d'accueil, retours de tests ergonomiques et engagement `sprints/sprint-0.md`.
+#### Ã‰tape 15 : Valider l'IncrÃ©ment Maquette (Sprint Review 0 Go/No-Go) et animer la RÃ©trospective 0
+- **Fiche Tutoriel :** `T.351.221` | **Type :** `tuto-tache` | **Attribut Ã©tape :** `etape: 15` (`nav_order: 1`)
+- **Statut :** **Ã€ rÃ©aliser**
+- **Domaine de compÃ©tence :** `D.351.2-realisation-projet`
+- **Accompagnement :** ArbitrÃ© par le **Groupe 1 (Product Owner)** pour la Review et facilitÃ© par le **Groupe 3 (Cadre Scrum)** pour la RÃ©trospective.
+- **EntrÃ©es :** Note de cadrage, Product Backlog initial, UI Kit, maquette interactive de la page d'accueil, retours de tests ergonomiques et engagement `sprints/sprint-0.md`.
 - **Travail d'application sur le Blog :**
-  - Animer la séance de démonstration contradictoire de la maquette devant le Product Owner (Groupe 1) et les parties prenantes.
-  - Auditer rigoureusement les critères de la Definition of Done (DoD) de la maquette.
-  - Prononcer la décision collégiale Go/No-Go autorisant le lancement du Sprint 1 (Delivery applicatif Laravel).
-  - Mener la rétrospective réflexive d'équipe sur le déroulement du Sprint 0 et formaliser 2 engagements d'amélioration continue.
+  - Animer la sÃ©ance de dÃ©monstration contradictoire de la maquette devant le Product Owner (Groupe 1) et les parties prenantes.
+  - Auditer rigoureusement les critÃ¨res de la Definition of Done (DoD) de la maquette.
+  - Prononcer la dÃ©cision collÃ©giale Go/No-Go autorisant le lancement du Sprint 1 (Delivery applicatif Laravel).
+  - Mener la rÃ©trospective rÃ©flexive d'Ã©quipe sur le dÃ©roulement du Sprint 0 et formaliser 2 engagements d'amÃ©lioration continue.
 - **Sorties (2 livrables) :** `sprints/pv-review-0.md` et `sprints/retrospective-0.md`.

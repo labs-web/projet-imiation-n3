@@ -74,3 +74,11 @@ Tout agent opérant dans ce dépôt (notamment l'**Agent Réalisation de Sprint*
   - Le flux générique d'ingénierie logicielle (`flux-travail/flux-travail-generique.md` - 25 étapes) est gouverné par le skill `flux-travail`.
   - La conception, le découpage et l'audit des flux opérationnels de formation (`flux-travail/sessions/`) sont gouvernés par le skill `conception-session`.
   - Consulter obligatoirement le document de gouvernance : [regles-flux-sessions.md](./regles-flux-sessions.md).
+
+---
+
+## 8. Règle de Généricité des Compétences (Skills & Missions)
+
+- **Généricité universelle :** Tout skill et toute mission créés dans `.agents/skills/` doivent impérativement être **100% génériques**, valables pour n'importe quel projet d'ingénierie logicielle web, et jamais figés sur un projet particulier.
+- **Réalisation autonome sans tutoriels ni labs :** Les skills doivent être conçus pour réaliser un projet de développement réel en autonomie, sans dépendance à des tutoriels ou à des ateliers didactiques (`tutoriels/`, `ua-lab/`).
+- **Découplage strict Méthode vs Données :** Le skill porte la démarche méthodologique, la structure des livrables et les critères d'acceptation. Les données concrètes du projet sont lues dynamiquement au runtime depuis le contexte projet.
